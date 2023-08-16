@@ -8,11 +8,11 @@ const ArrayBar = (props) => {
   const style = {
     backgroundColor: color,
     height: `${value}px`,
-    width: '20px',
+    width: '1vw',
     margin: '0 2px',
     display: 'inline-block'
   };
   return <Box sx={style}></Box>;
 }
 
-export default ArrayBar;
+export default React.memo(ArrayBar);

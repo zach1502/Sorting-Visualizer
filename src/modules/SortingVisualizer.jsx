@@ -1,35 +1,44 @@
 import React, { useState } from 'react';
-import ArrayBar from '../components/ArrayBar';
+import { Box, Button, ButtonGroup } from '@mui/material';
+import ArrayDisplay from '../components/ArrayDisplay';
+
 import bubbleSort from '../algorithms/BubbleSort';
+import quickSort from '../algorithms/QuickSort';
 
 import _ from 'lodash';
 
 function SortingVisualizer() {
-  const [arr, setArr] = useState(generateRandomArray(20));
+  const [arr, setArr] = useState(generateRandomArray(50));
   const [steps, setSteps] = useState([]);
   const [currentStep, setCurrentStep] = useState(0);
   const [intervalId, setIntervalId] = useState(null);
 
   function generateRandomArray(length) {
-    return Array.from({ length }, () => {
-      return {
-        value: Math.floor(Math.random() * 100) + 1, // Random number between 1 and 100
-        isSorted: false,
-        isComparing: false
-      };
-    });
+    const numbers = Array.from({ length }, (_, i) => i + 1);
+
+    for (let i = numbers.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [numbers[i], numbers[j]] = [numbers[j], numbers[i]];
+    }
+
+    return numbers.map(num => ({
+      value: num,
+      isSorted: false,
+      isComparing: false,
+      isPartition: false,
+    }));
   }
 
   const startSorting = () => {
     const deepCopyArr = _.cloneDeep(arr);
-    const newSteps = [...bubbleSort(deepCopyArr)];
+    const newSteps = [...quickSort(deepCopyArr)];
     setSteps(newSteps);
     setCurrentStep(0);
-  
+
     if (intervalId) { // Clear any existing intervals
       clearInterval(intervalId);
     }
-    
+
     const newIntervalId = setInterval(() => {
       setCurrentStep(prevStep => {
         if (prevStep < newSteps.length - 1) {
@@ -40,11 +49,11 @@ function SortingVisualizer() {
           return prevStep;
         }
       });
-    }, 200);
-  
+    }, 100);
+
     setIntervalId(newIntervalId);
   }
-  
+
   const stopSorting = () => {
     if (intervalId) {
       clearInterval(intervalId);
@@ -62,22 +71,24 @@ function SortingVisualizer() {
 
   const displayArr = steps[currentStep] || arr;
 
+  console.debug(displayArr);
+
   return (
-    <div>
-      {displayArr.map((item, idx) => {
-        let color = "blue";
-        if (item.isComparing) {
-          color = "red";
-        } else if (item.isSorted) {
-          color = "green";
-        }
-        return <ArrayBar key={idx} value={item.value} color={color} />;
-      })}
-      <button onClick={startSorting}>Start</button>
-      <button onClick={stopSorting}>Stop</button>
-      <button onClick={stepForward}>Next</button>
-      <button onClick={stepBackward}>Back</button>
-    </div>
+    <Box>
+      <ButtonGroup
+        variant="contained"
+        aria-label="outlined primary button group"
+      >
+        <Button onClick={startSorting}>Start</Button>
+        <Button onClick={stopSorting}>Stop</Button>
+        <Button onClick={stepForward}>Next</Button>
+        <Button onClick={stepBackward}>Back</Button>
+      </ButtonGroup>
+
+      <Box>
+        <ArrayDisplay arr={displayArr} />
+      </Box>
+    </Box>
   );
 }
 
