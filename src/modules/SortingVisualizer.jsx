@@ -1,17 +1,20 @@
 import React, { useState } from 'react';
-import { Box, Button, ButtonGroup } from '@mui/material';
+import { Box, Button, ButtonGroup, Grid } from '@mui/material';
 import ArrayDisplay from '../components/ArrayDisplay';
+import AlgorithmSelector from '../components/AlgorithmSelector'
 
 import bubbleSort from '../algorithms/BubbleSort';
-import quickSort from '../algorithms/QuickSort';
 
 import _ from 'lodash';
 
 function SortingVisualizer() {
-  const [arr, setArr] = useState(generateRandomArray(50));
+
+  const [numElements, setNumElements] = useState(50); // [TODO] Add slider to change this
+  const [arr, setArr] = useState(generateRandomArray(numElements));
   const [steps, setSteps] = useState([]);
   const [currentStep, setCurrentStep] = useState(0);
   const [intervalId, setIntervalId] = useState(null);
+  const [algorithm, setAlgorithm] = useState({function: bubbleSort, name: "Bubble Sort"});
 
   function generateRandomArray(length) {
     const numbers = Array.from({ length }, (_, i) => i + 1);
@@ -31,7 +34,7 @@ function SortingVisualizer() {
 
   const startSorting = () => {
     const deepCopyArr = _.cloneDeep(arr);
-    const newSteps = [...quickSort(deepCopyArr)];
+    const newSteps = [...(algorithm.function)(deepCopyArr)];
     setSteps(newSteps);
     setCurrentStep(0);
 
@@ -54,11 +57,15 @@ function SortingVisualizer() {
     setIntervalId(newIntervalId);
   }
 
-  const stopSorting = () => {
+  const pauseSorting = () => {
     if (intervalId) {
       clearInterval(intervalId);
       setIntervalId(null);
     }
+  }
+
+  const stepReset = () => {
+    setCurrentStep(0);
   }
 
   const stepForward = () => {
@@ -71,22 +78,44 @@ function SortingVisualizer() {
 
   const displayArr = steps[currentStep] || arr;
 
-  console.debug(displayArr);
-
   return (
-    <Box>
-      <ButtonGroup
-        variant="contained"
-        aria-label="outlined primary button group"
-      >
-        <Button onClick={startSorting}>Start</Button>
-        <Button onClick={stopSorting}>Stop</Button>
-        <Button onClick={stepForward}>Next</Button>
-        <Button onClick={stepBackward}>Back</Button>
-      </ButtonGroup>
+    <Box mt={3} mx="auto" width="90%">
+      <Grid container spacing={2} justifyContent="space-between" alignItems="center">
+        {/* Control buttons */}
+        <Grid item>
+          <ButtonGroup
+            variant="contained"
+            aria-label="Control button group"
+          >
+            <Button onClick={startSorting}>Start</Button>
+            <Button onClick={pauseSorting}>Pause</Button>
+          </ButtonGroup>
+        </Grid>
+  
+        {/* Step buttons */}
+        <Grid item>
+          <ButtonGroup
+            variant="contained"
+            aria-label="Step button group"
+          >
+            <Button onClick={stepReset}>Reset</Button>
+            <Button onClick={stepBackward}>Step Backwards</Button>
+            <Button onClick={stepForward}>Step Forward</Button>
+          </ButtonGroup>
+        </Grid>
 
-      <Box>
-        <ArrayDisplay arr={displayArr} />
+        <Grid item>
+          <AlgorithmSelector setAlgorithm={setAlgorithm} algorithm={algorithm}/>
+        </Grid>
+      </Grid>
+  
+      {/* Display area */}
+      <Box mt={4} p={2} border={1} 
+        borderColor="grey.500" 
+        borderRadius="borderRadius"
+        height="50vh"
+      >
+        <ArrayDisplay arr={displayArr} numElements={numElements} />
       </Box>
     </Box>
   );

@@ -3,6 +3,7 @@ import ArrayBar from './ArrayBar';
 
 const ArrayDisplay = (props) => {
   const arr = props.arr;
+  const numElements = props.numElements;
 
   return (
     <>
@@ -15,7 +16,7 @@ const ArrayDisplay = (props) => {
         } else if (item.isPartition) {
           color = "orange";
         }
-        return <ArrayBar key={idx} value={item.value} color={color} />;
+        return <ArrayBar key={idx} value={item.value} color={color} numElements={numElements}/>;
       })}
     </>
   );
