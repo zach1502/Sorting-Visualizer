@@ -1,18 +1,43 @@
 import React from 'react';
 import bubbleSort from '../algorithms/BubbleSort';
 import quickSort from '../algorithms/QuickSort';
+import insertionSort from '../algorithms/InsertionSort';
+import selectionSort from '../algorithms/SelectionSort';
+import cocktailShakerSort from '../algorithms/CocktailShakerSort';
+import mergeSort from '../algorithms/MergeSort';
+import radixSort from '../algorithms/RadixSort';
 
 import { Select, MenuItem } from '@mui/material';
 
 const algorithms = [
   {
     name: 'Bubble Sort',
-    function: bubbleSort
+    function: bubbleSort,
   },
   {
     name: 'Quick Sort',
-    function: quickSort
+    function: quickSort,
   },
+  {
+    name: 'Merge Sort',
+    function: mergeSort,
+  },
+  {
+    name: 'Insertion Sort',
+    function: insertionSort,
+  },
+  {
+    name: 'Selection Sort',
+    function: selectionSort,
+  },
+  {
+    name: 'Cocktail Shaker Sort',
+    function: cocktailShakerSort,
+  },
+  {
+    name: 'Radix Sort',
+    function: radixSort,
+  }
 ];
 
 const AlgorithmSelector = (props) => {

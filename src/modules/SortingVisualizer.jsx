@@ -9,7 +9,7 @@ import _ from 'lodash';
 
 function SortingVisualizer() {
 
-  const [numElements, setNumElements] = useState(50); // [TODO] Add slider to change this
+  const [numElements, setNumElements] = useState(100); // [TODO] Add slider to change this
   const [arr, setArr] = useState(generateRandomArray(numElements));
   const [steps, setSteps] = useState([]);
   const [currentStep, setCurrentStep] = useState(0);
@@ -52,7 +52,7 @@ function SortingVisualizer() {
           return prevStep;
         }
       });
-    }, 100);
+    }, 50);
 
     setIntervalId(newIntervalId);
   }
