@@ -19,8 +19,6 @@ function* quickSort(arr, left = 0, right = arr.length - 1) {
   shallowCopy.isPartition = false;
   shallowCopy.isSorted = true;
 
-  yield _.cloneDeep(arr);
-
   yield* quickSort(arr, left, index - 1);
   yield* quickSort(arr, index, right);
 }

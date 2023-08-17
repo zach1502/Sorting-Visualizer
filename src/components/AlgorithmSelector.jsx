@@ -6,6 +6,9 @@ import selectionSort from '../algorithms/SelectionSort';
 import cocktailShakerSort from '../algorithms/CocktailShakerSort';
 import mergeSort from '../algorithms/MergeSort';
 import radixSort from '../algorithms/RadixSort';
+import introSort from '../algorithms/IntroSort';
+import heapSort from '../algorithms/HeapSort';
+import blockSort from '../algorithms/BlockSort';
 
 import { Select, MenuItem } from '@mui/material';
 
@@ -37,6 +40,18 @@ const algorithms = [
   {
     name: 'Radix Sort',
     function: radixSort,
+  },
+  {
+    name: 'Intro Sort',
+    function: introSort,
+  },
+  {
+    name: 'Heap Sort',
+    function: heapSort,
+  },
+  {
+    name: 'Block Sort',
+    function: blockSort,
   }
 ];
 

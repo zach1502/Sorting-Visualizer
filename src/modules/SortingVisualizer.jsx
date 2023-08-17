@@ -36,7 +36,6 @@ function SortingVisualizer() {
     const deepCopyArr = _.cloneDeep(arr);
     const newSteps = [...(algorithm.function)(deepCopyArr)];
     setSteps(newSteps);
-    setCurrentStep(0);
 
     if (intervalId) { // Clear any existing intervals
       clearInterval(intervalId);
@@ -78,6 +77,12 @@ function SortingVisualizer() {
 
   const displayArr = steps[currentStep] || arr;
 
+  const onAlgorithmChange = (event) => {
+    setAlgorithm(event.target.value);
+    pauseSorting();
+    setCurrentStep(0);
+  }
+
   return (
     <Box mt={3} mx="auto" width="90%">
       <Grid container spacing={2} justifyContent="space-between" alignItems="center">
@@ -105,7 +110,11 @@ function SortingVisualizer() {
         </Grid>
 
         <Grid item>
-          <AlgorithmSelector setAlgorithm={setAlgorithm} algorithm={algorithm}/>
+          <AlgorithmSelector 
+            setAlgorithm={setAlgorithm} 
+            algorithm={algorithm} 
+            onChange={onAlgorithmChange}
+          />
         </Grid>
       </Grid>
   
