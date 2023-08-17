@@ -32,30 +32,49 @@ function* merge(arr, l, m, r) {
 
   let i = 0, j = 0, k = l;
   while (i < len1 && j < len2) {
+
+    left[i].isComparing = true;
+    right[j].isComparing = true;
+    yield _.cloneDeep(arr);
+    left[i].isComparing = false;
+    right[j].isComparing = false;
+
     if (left[i].value <= right[j].value) {
       arr[k] = left[i];
+      if(l === 0 && r === arr.length-1){
+        arr[k].isSorted = true;
+      }
+
       i++;
     } else {
-      arr[k] = right[j];
+      arr[k] = _.cloneDeep(right[j]);
+      if(l === 0 && r === arr.length-1){
+        arr[k].isSorted = true;
+      }
       j++;
     }
+
     k++;
-    yield _.cloneDeep(arr);
   }
   while (i < len1) {
     arr[k] = left[i];
+    if(l === 0 && r === arr.length-1){
+      arr[k].isSorted = true;
+      yield _.cloneDeep(arr);
+    }
     k++;
     i++;
-    yield _.cloneDeep(arr);
-  }
-  while (j < len2) {
-    arr[k] = right[j];
-    k++;
-    j++;
-    yield _.cloneDeep(arr);
   }
 
-  yield _.cloneDeep(arr);
+  while (j < len2) {
+    arr[k] = right[j];
+    if(l === 0 && r === arr.length-1){
+      arr[k].isSorted = true;
+      yield _.cloneDeep(arr);
+    }
+    k++;
+    j++;
+  }
 }
 
 function* timsort(arr) {
@@ -74,11 +93,6 @@ function* timsort(arr) {
       }
     }
   }
-
-  for (let item of arr) {
-    item.isSorted = true;
-  }
-  yield _.cloneDeep(arr);
 }
 
 export default timsort;

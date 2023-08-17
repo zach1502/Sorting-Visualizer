@@ -36,9 +36,15 @@ function* merge(arr, left, mid, right) {
 
     if (L[i].value <= R[j].value) {
       arr[k] = L[i];
+      if(left === 0 && right === arr.length-1){
+        arr[k].isSorted = true;
+      }
       i++;
     } else {
-      arr[k] = R[j];
+      arr[k] = _.cloneDeep(R[j]);
+      if(left === 0 && right === arr.length-1){
+        arr[k].isSorted = true;
+      }
       j++;
     }
 
@@ -47,21 +53,24 @@ function* merge(arr, left, mid, right) {
 
   while (i < n1) {
     arr[k] = L[i];
+    if(left === 0 && right === arr.length-1){
+      arr[k].isSorted = true;
+      yield _.cloneDeep(arr);
+    }
+
     i++;
     k++;
   }
 
   while (j < n2) {
     arr[k] = R[j];
+    if(left === 0 && right === arr.length-1){
+      arr[k].isSorted = true;
+      yield _.cloneDeep(arr);
+    }
+
     j++;
     k++;
-  }
-
-  if (right === arr.length - 1 && left === 0){
-    for (let x = left; x <= right; x++) {
-      arr[x].isSorted = true;
-    }
-    yield _.cloneDeep(arr);
   }
 }
 
