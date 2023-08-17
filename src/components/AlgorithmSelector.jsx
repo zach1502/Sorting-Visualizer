@@ -9,6 +9,8 @@ import radixSort from '../algorithms/RadixSort';
 import introSort from '../algorithms/IntroSort';
 import heapSort from '../algorithms/HeapSort';
 import blockSort from '../algorithms/BlockSort';
+import shellSort from '../algorithms/ShellSort';
+import timSort from '../algorithms/TimSort';
 
 import { Select, MenuItem } from '@mui/material';
 
@@ -52,6 +54,14 @@ const algorithms = [
   {
     name: 'Block Sort',
     function: blockSort,
+  },
+  {
+    name: 'Shell Sort',
+    function: shellSort,
+  },
+  {
+    name: 'Tim Sort',
+    function: timSort,
   }
 ];
 
