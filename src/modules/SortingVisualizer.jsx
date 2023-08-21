@@ -65,6 +65,7 @@ function SortingVisualizer() {
 
   const stepReset = () => {
     setCurrentStep(0);
+    pauseSorting();
   }
 
   const stepForward = () => {
@@ -77,11 +78,6 @@ function SortingVisualizer() {
 
   const displayArr = steps[currentStep] || arr;
 
-  const onAlgorithmChange = (event) => {
-    pauseSorting();
-    setCurrentStep(0);
-  }
-
   return (
     <Box mt={3} mx="auto" width="90%">
       <Grid container spacing={2} justifyContent="space-between" alignItems="center">
@@ -91,7 +87,7 @@ function SortingVisualizer() {
             variant="contained"
             aria-label="Control button group"
           >
-            <Button onClick={startSorting}>Start</Button>
+            <Button onClick={startSorting}>Play</Button>
             <Button onClick={pauseSorting}>Pause</Button>
           </ButtonGroup>
         </Grid>
@@ -112,7 +108,7 @@ function SortingVisualizer() {
           <AlgorithmSelector 
             setAlgorithm={setAlgorithm} 
             algorithm={algorithm} 
-            onChange={onAlgorithmChange}
+            onChange={stepReset}
           />
         </Grid>
       </Grid>

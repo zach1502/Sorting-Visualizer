@@ -13,11 +13,14 @@ import shellSort from '../algorithms/ShellSort';
 import timSort from '../algorithms/TimSort';
 import exchangeSort from '../algorithms/ExchangeSort';
 import cycleSort from '../algorithms/CycleSort';
+import patienceSort from '../algorithms/PatienceSort';
+import smoothSort from '../algorithms/SmoothSort';
+import strandSort from '../algorithms/StrandSort.js';
+import combSort from '../algorithms/CombSort';
+import gnomeSort from '../algorithms/GnomeSort';
+import oddEvenSort from '../algorithms/OddEvenSort';
 
 import { Select, MenuItem } from '@mui/material';
-import patienceSort from '../algorithms/PatienceSort';
-import smoothSort from '../algorithms/SmoothSort'
-import strandSort from '../algorithms/StrandSort.js'
 
 const algorithms = [
   {
@@ -87,6 +90,18 @@ const algorithms = [
   {
     name: 'Strand Sort',
     function: strandSort,
+  },
+  {
+    name: 'Comb Sort',
+    function: combSort,
+  },
+  {
+    name: 'Gnome Sort',
+    function: gnomeSort,
+  },
+  {
+    name: 'Odd-Even Sort',
+    function: oddEvenSort,
   }
 ];
 
