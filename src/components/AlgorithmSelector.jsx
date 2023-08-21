@@ -20,7 +20,9 @@ import combSort from '../algorithms/CombSort';
 import gnomeSort from '../algorithms/GnomeSort';
 import oddEvenSort from '../algorithms/OddEvenSort';
 
+
 import { Select, MenuItem } from '@mui/material';
+import pigeonholeSort from '../algorithms/PigeonholeSort';
 
 const algorithms = [
   {
@@ -102,6 +104,10 @@ const algorithms = [
   {
     name: 'Odd-Even Sort',
     function: oddEvenSort,
+  },
+  {
+    name: 'Pigeonhole Sort',
+    function: pigeonholeSort,
   }
 ];
 
