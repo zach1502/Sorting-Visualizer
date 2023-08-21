@@ -1,6 +1,7 @@
 import _ from 'lodash';
 
 function* mergeSort(arr, left = 0, right = arr.length - 1) {
+  if (left === 0 && right === arr.length-1) yield _.cloneDeep(arr);
   if (left < right) {
     const mid = Math.floor((left + right) / 2);
 

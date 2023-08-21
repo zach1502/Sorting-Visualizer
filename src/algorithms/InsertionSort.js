@@ -1,6 +1,7 @@
 import _ from 'lodash';
 
 function* insertionSort(arr) {
+  yield _.cloneDeep(arr);
   arr[0].isSorted = true;
   for (let i = 1; i < arr.length; i++) {
     let key = arr[i];

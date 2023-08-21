@@ -1,6 +1,7 @@
 import _ from "lodash";
 
 function* quickSort(arr, left = 0, right = arr.length - 1) {
+  if (left === 0 && right === arr.length-1) yield _.cloneDeep(arr);
   if (left >= right) {
     arr[left].isSorted = true;
     yield _.cloneDeep(arr);

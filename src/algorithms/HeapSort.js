@@ -42,6 +42,7 @@ function* buildMaxHeap(arr) {
 }
 
 function* heapSort(arr) {
+  yield _.cloneDeep(arr);
   yield* buildMaxHeap(arr);
   const n = arr.length;
   for (let i = n - 1; i > 0; i--) {

@@ -1,6 +1,7 @@
 import _ from 'lodash';
 
 function* cocktailShakerSort(arr) {
+  yield _.cloneDeep(arr);
   let swapped = true;
   let start = 0;
   let end = arr.length;

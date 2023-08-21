@@ -49,6 +49,7 @@ function* countingSortForRadix(arr, exp, isLastIteration = false) {
 }
 
 function* radixSort(arr) {
+  yield _.cloneDeep(arr);
   let m = getMax(arr);
   let maxExp = Math.floor(Math.log10(m)) + 1;
 

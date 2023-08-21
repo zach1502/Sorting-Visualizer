@@ -54,6 +54,7 @@ function* merge(arr, start, mid, end, buffer) {
 }
 
 function* blockSort(arr) {
+  yield _.cloneDeep(arr);
   const n = arr.length;
   const blockSize = Math.floor(Math.sqrt(n));
   const buffer = new Array(blockSize);

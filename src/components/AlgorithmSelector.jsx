@@ -11,8 +11,13 @@ import heapSort from '../algorithms/HeapSort';
 import blockSort from '../algorithms/BlockSort';
 import shellSort from '../algorithms/ShellSort';
 import timSort from '../algorithms/TimSort';
+import exchangeSort from '../algorithms/ExchangeSort';
+import cycleSort from '../algorithms/CycleSort';
 
 import { Select, MenuItem } from '@mui/material';
+import patienceSort from '../algorithms/PatienceSort';
+import smoothSort from '../algorithms/SmoothSort'
+import strandSort from '../algorithms/StrandSort.js'
 
 const algorithms = [
   {
@@ -62,15 +67,37 @@ const algorithms = [
   {
     name: 'Tim Sort',
     function: timSort,
+  },
+  {
+    name: 'Exchange Sort',
+    function: exchangeSort,
+  },
+  {
+    name: 'Cycle Sort',
+    function: cycleSort,
+  },
+  {
+    name: 'Patience Sort',
+    function: patienceSort,
+  },
+  {
+    name: 'Smooth Sort',
+    function: smoothSort,
+  },
+  {
+    name: 'Strand Sort',
+    function: strandSort,
   }
 ];
 
 const AlgorithmSelector = (props) => {
   const setAlgorithm = props.setAlgorithm;
   const algorithm = props.algorithm;
+  const onChange = props.onChange;
+
   return (
     <Select
-      onChange={(e) => setAlgorithm(algorithms.find(algo => algo.name === e.target.value))}
+      onChange={(e) => {onChange(e); setAlgorithm(algorithms.find(algo => algo.name === e.target.value))}}
       value={algorithm.name}
     >
       {algorithms.map((algo, index) => (

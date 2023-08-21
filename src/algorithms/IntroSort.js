@@ -91,6 +91,7 @@ function* introsortUtil(arr, begin, end, depthLimit) {
 }
 
 function* introsort(arr) {
+  yield _.cloneDeep(arr);
   const depthLimit = 2 * Math.floor(Math.log(arr.length) / Math.LN2);
   yield* introsortUtil(arr, 0, arr.length - 1, depthLimit);
   for (let item of arr) {

@@ -1,6 +1,7 @@
 import _ from 'lodash';
 
 function* shellSort(arr) {
+  yield _.cloneDeep(arr);
   let n = arr.length;
   
   for (let gap = Math.floor(n / 2); gap > 0; gap = Math.floor(gap / 2)) {

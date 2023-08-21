@@ -1,6 +1,7 @@
 import _ from 'lodash';
 
 function* selectionSort(arr) {
+  yield _.cloneDeep(arr);
   for (let i = 0; i < arr.length - 1; i++) {
     let minIndex = i;
     arr[minIndex].isComparing = true;
