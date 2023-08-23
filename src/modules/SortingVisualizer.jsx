@@ -111,13 +111,17 @@ function SortingVisualizer() {
             onChange={stepReset}
           />
         </Grid>
+
       </Grid>
   
       {/* Display area */}
+
       <Box mt={4} p={2} border={1} 
+        display='flex'
         borderColor="grey.500" 
         borderRadius="borderRadius"
         height="50vh"
+        alignItems='flex-end'
       >
         <ArrayDisplay arr={displayArr} numElements={numElements} />
       </Box>

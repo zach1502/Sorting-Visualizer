@@ -27,8 +27,6 @@ function* pigeonholeSort(arr){
     sortedArray[value-1].isSorted = true;
     arr.shift();
 
-    console.log(removeGapsFromArray(sortedArray))
-
     yield _.cloneDeep([...arr, ...removeGapsFromArray(sortedArray)]);
   }
 

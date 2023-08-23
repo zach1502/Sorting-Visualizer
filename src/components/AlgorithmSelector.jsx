@@ -23,6 +23,7 @@ import oddEvenSort from '../algorithms/OddEvenSort';
 
 import { Select, MenuItem } from '@mui/material';
 import pigeonholeSort from '../algorithms/PigeonholeSort';
+import bucketSort from '../algorithms/BucketSort';
 
 const algorithms = [
   {
@@ -108,7 +109,11 @@ const algorithms = [
   {
     name: 'Pigeonhole Sort',
     function: pigeonholeSort,
-  }
+  },
+  {
+    name: 'Bucket Sort',
+    function: bucketSort,
+  },
 ];
 
 const AlgorithmSelector = (props) => {
