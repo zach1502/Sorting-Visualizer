@@ -2,7 +2,6 @@ import _ from 'lodash';
 
 let bucketOrder;
 
-// it is shuffled for visualization purposes so buckets are more distinct
 const shuffle = (array) => {
   let currentIndex = array.length, randomIndex;
   

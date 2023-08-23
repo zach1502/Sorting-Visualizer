@@ -20,14 +20,13 @@ function* shellSort(arr) {
       
       arr[j] = temp;
       temp.isComparing = false;
-      yield _.cloneDeep(arr);
     }
   }
   
   for (let item of arr) {
     item.isSorted = true;
+    yield _.cloneDeep(arr);
   }
-  yield _.cloneDeep(arr);
 }
 
 export default shellSort;

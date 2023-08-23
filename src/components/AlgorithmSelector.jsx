@@ -19,11 +19,18 @@ import strandSort from '../algorithms/StrandSort.js';
 import combSort from '../algorithms/CombSort';
 import gnomeSort from '../algorithms/GnomeSort';
 import oddEvenSort from '../algorithms/OddEvenSort';
-
-
-import { Select, MenuItem } from '@mui/material';
 import pigeonholeSort from '../algorithms/PigeonholeSort';
 import bucketSort from '../algorithms/BucketSort';
+import countingSort from '../algorithms/CountingSort';
+import spreadSort from '../algorithms/SpreadSort';
+import pancakeSort from '../algorithms/PancakeSort';
+import iCantBelieveItCanSort from '../algorithms/ICantBelieveItCanSort';
+import bitonicSort from '../algorithms/BitonicSort';
+import bogoSort from '../algorithms/BogoSort';
+import stoogeSort from '../algorithms/StoogeSort';
+import slowSort from '../algorithms/SlowSort';
+
+import { Select, MenuItem } from '@mui/material';
 
 const algorithms = [
   {
@@ -114,6 +121,38 @@ const algorithms = [
     name: 'Bucket Sort',
     function: bucketSort,
   },
+  {
+    name: 'Counting Sort',
+    function: countingSort,
+  },
+  {
+    name: 'Spread Sort',
+    function: spreadSort,
+  },
+  {
+    name: 'Pancake Sort',
+    function: pancakeSort,
+  },
+  {
+    name: 'I Can\'t Believe It Can Sort',
+    function: iCantBelieveItCanSort,
+  },
+  {
+    name: 'Bitonic Sort',
+    function: bitonicSort,
+  },
+  {
+    name: 'Bogo Sort',
+    function: bogoSort
+  },
+  {
+    name: 'Stooge Sort',
+    function: stoogeSort,
+  },
+  {
+    name: 'Slow Sort',
+    function: slowSort,
+  }
 ];
 
 const AlgorithmSelector = (props) => {
