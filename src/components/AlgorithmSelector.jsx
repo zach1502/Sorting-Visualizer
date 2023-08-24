@@ -29,8 +29,11 @@ import bitonicSort from '../algorithms/BitonicSort';
 import bogoSort from '../algorithms/BogoSort';
 import stoogeSort from '../algorithms/StoogeSort';
 import slowSort from '../algorithms/SlowSort';
+import stalinSort from '../algorithms/StalinSort';
 
 import { Select, MenuItem } from '@mui/material';
+import sleepSort from '../algorithms/SleepSort';
+import deleteSort from '../algorithms/DeleteSort';
 
 const algorithms = [
   {
@@ -152,6 +155,18 @@ const algorithms = [
   {
     name: 'Slow Sort',
     function: slowSort,
+  },
+  {
+    name: 'Stalin Sort',
+    function: stalinSort,
+  },
+  {
+    name: 'Sleep Sort',
+    function: sleepSort,
+  },
+  {
+    name: 'Delete Sort',
+    function: deleteSort,
   }
 ];
 
