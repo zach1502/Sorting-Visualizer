@@ -34,6 +34,7 @@ import stalinSort from '../algorithms/StalinSort';
 import { Select, MenuItem } from '@mui/material';
 import sleepSort from '../algorithms/SleepSort';
 import deleteSort from '../algorithms/DeleteSort';
+import treeSort from '../algorithms/TreeSort';
 
 const algorithms = [
   {
@@ -167,6 +168,10 @@ const algorithms = [
   {
     name: 'Delete Sort',
     function: deleteSort,
+  },
+  {
+    name: 'Tree Sort',
+    function: treeSort,
   }
 ];
 
