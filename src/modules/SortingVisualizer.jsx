@@ -121,6 +121,7 @@ function SortingVisualizer() {
         borderColor="grey.500" 
         borderRadius="borderRadius"
         height="50vh"
+        paddingTop={4}
         alignItems='flex-end'
       >
         <ArrayDisplay arr={displayArr} numElements={numElements} />
