@@ -2,19 +2,30 @@ import React, { useState } from 'react';
 import { Box, Button, ButtonGroup, Grid } from '@mui/material';
 import ArrayDisplay from '../components/ArrayDisplay';
 import AlgorithmSelector from '../components/AlgorithmSelector'
+import algorithmDescriptions from '../utils/AlgorithmDescriptions';
 
 import bubbleSort from '../algorithms/BubbleSort';
 
 import _ from 'lodash';
 
 function SortingVisualizer() {
-
   const [numElements, setNumElements] = useState(50); // [TODO] Add slider to change this
   const [arr, setArr] = useState(generateRandomArray(numElements));
   const [steps, setSteps] = useState([]);
   const [currentStep, setCurrentStep] = useState(0);
   const [intervalId, setIntervalId] = useState(null);
-  const [algorithm, setAlgorithm] = useState({function: bubbleSort, name: "Bubble Sort"});
+  const [algorithm, setAlgorithm] = useState({
+    name: 'Bubble Sort',
+    function: bubbleSort,
+    worseCase: 'n^2',
+    averageCase: 'n^2',
+    bestCase: 'n',
+    memory: '1',
+    stable: true,
+    method: 'Exchanging',
+    joke: false,
+  });
+  const [algorithmDescription, setAlgorithmDescription] = useState(algorithmDescriptions[algorithm.name]);
 
   function generateRandomArray(length) {
     const numbers = Array.from({ length }, (_, i) => i + 1);
@@ -91,7 +102,7 @@ function SortingVisualizer() {
             <Button onClick={pauseSorting}>Pause</Button>
           </ButtonGroup>
         </Grid>
-  
+
         {/* Step buttons */}
         <Grid item>
           <ButtonGroup
@@ -105,26 +116,34 @@ function SortingVisualizer() {
         </Grid>
 
         <Grid item>
-          <AlgorithmSelector 
-            setAlgorithm={setAlgorithm} 
-            algorithm={algorithm} 
+          <AlgorithmSelector
+            setAlgorithm={setAlgorithm}
+            algorithm={algorithm}
             onChange={stepReset}
           />
         </Grid>
-
       </Grid>
-  
+
       {/* Display area */}
 
-      <Box mt={4} p={2} border={1} 
+      <Box mt={2} p={2} border={1}
         display='flex'
-        borderColor="grey.500" 
+        borderColor="grey.500"
         borderRadius="borderRadius"
         height="50vh"
         paddingTop={4}
         alignItems='flex-end'
       >
         <ArrayDisplay arr={displayArr} numElements={numElements} />
+      </Box>
+      <Box mt={2} p={2} border={1}
+        display='flex'
+        borderColor="grey.500"
+        borderRadius="borderRadius"
+        height="20vh"
+        paddingTop={4}
+      >
+        {algorithmDescription.paragraphs[0]}
       </Box>
     </Box>
   );
