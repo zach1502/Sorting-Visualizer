@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Box, Button, ButtonGroup, Grid, Typography, Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from '@mui/material';
+import { Box, Button, ButtonGroup, Grid, Typography, Table, TableBody, TableCell, TableContainer, TableRow, Slider } from '@mui/material';
 import ArrayDisplay from '../components/ArrayDisplay';
 import AlgorithmSelector from '../components/AlgorithmSelector'
 import algorithmDescriptions from '../utils/AlgorithmDescriptions';
@@ -26,6 +26,7 @@ function SortingVisualizer() {
     joke: false,
   });
   const [algorithmDescription, setAlgorithmDescription] = useState(algorithmDescriptions[algorithm.name]);
+  const [speed, setSpeed] = useState(10); // ms
 
   function generateRandomArray(length) {
     const numbers = Array.from({ length }, (_, i) => i + 1);
@@ -62,7 +63,7 @@ function SortingVisualizer() {
           return prevStep;
         }
       });
-    }, 50);
+    }, speed);
 
     setIntervalId(newIntervalId);
   }

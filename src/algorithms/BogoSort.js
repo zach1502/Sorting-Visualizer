@@ -21,7 +21,6 @@ function* bogoSort(arr) {
   let tries = 0;
 
   while (maxTries !== tries && !isSorted(arr)) {
-    console.log(tries);
     yield _.cloneDeep(shuffle(arr));
     tries++;
   }

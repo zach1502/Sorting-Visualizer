@@ -4,7 +4,7 @@ import algorithms from '../utils/AlgorithmMetadata';
 
 const AlgorithmSelector = (props) => {
   const { setAlgorithm, algorithm, onChange } = props;
-  console.log(algorithm)
+
   return (
     <Autocomplete
       value={algorithm}
@@ -12,7 +12,6 @@ const AlgorithmSelector = (props) => {
         onChange(event);
         if (newValue) {
           setAlgorithm(newValue);
-          console.log(newValue)
         }
       }}
       options={algorithms}

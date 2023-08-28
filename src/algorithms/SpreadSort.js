@@ -34,7 +34,6 @@ function* spreadSort(arr) {
   const threshold = 16;
   let index = 0;
 
-  console.log(buckets)
   for (const bucket of buckets) {
     if (bucket.length <= threshold) {
       yield* insertionSort(bucket, buckets);

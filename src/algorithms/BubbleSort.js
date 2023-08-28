@@ -4,6 +4,8 @@ function* bubbleSort(arr) {
   yield _.cloneDeep(arr);
   let n = arr.length;
 
+  let swapped = false;
+
   for (let i = 0; i < n - 1; i++) {
     for (let j = 0; j < n - i - 1; j++) {
       arr[j].isComparing = true;
@@ -16,13 +18,20 @@ function* bubbleSort(arr) {
 
       if (arr[j].value > arr[j + 1].value) {
         [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]];
+        swapped = true;
       }
     }
     arr[n - i - 1].isSorted = true;
     yield _.cloneDeep(arr);
+
+    if (!swapped) {
+      break;
+    }
   }
 
-  arr[0].isSorted = true;
+  for (let i = 0; i < n; i++) {
+    arr[i].isSorted = true;
+  }
   yield _.cloneDeep(arr);
 }
 
