@@ -161,243 +161,1001 @@ const algorithmDescriptions = {
   },
 
   'Selection Sort': {
-    description: [
-      'text1',
-      'text2',
-      'text3',
-    ],
+    description: <>
+      <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
+        Selection Sort is a straightforward sorting algorithm that works by repeatedly selecting the minimum (or maximum) element from the unsorted portion of the list and swapping it with the first unsorted element.
+      </Typography>
+      <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
+        The process begins by initially considering the entire list as unsorted. In each iteration, the smallest (or largest) element from the unsorted portion of the list is selected and swapped with the first unsorted element, thus expanding the sorted portion of the list by one element. This process is repeated until the entire list is sorted.
+      </Typography>
+      <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
+        Selection Sort has a time complexity of O(n²) in all cases, making it inefficient for large lists. It is not a stable algorithm, meaning it does not necessarily preserve the relative order of equal keys. However, it is an in-place algorithm, as it does not require any additional memory space beyond what is needed to hold the input list.
+      </Typography>
+      <Typography variant="h3">Similar Algorithms</Typography>
+      <List>
+        <ListItem disablePadding>
+          <ListItemText
+            primaryTypographyProps={LIST_HEADER_STYLE}
+            primary='Selection Sort'
+            secondaryTypographyProps={LIST_ITEM_STYLE}
+            secondary='Selection Sort is similar to Insertion Sort. It also divides the list into a sorted and an unsorted region. However, instead of inserting each element in its correct position as in Insertion Sort, Selection Sort repeatedly selects the minimum (or maximum) element from the unsorted region and swaps it with the first unsorted element.'
+          />
+        </ListItem>
+        <ListItem disablePadding>
+          <ListItemText
+            primaryTypographyProps={LIST_HEADER_STYLE}
+            primary='Shell Sort'
+            secondaryTypographyProps={LIST_ITEM_STYLE}
+            secondary='Shell Sort is a generalization of Insertion Sort. It works by comparing elements separated by a gap of several positions. This way, it can move an element to its correct position in fewer swaps than regular Insertion Sort.'
+          />
+        </ListItem>
+      </List>
+    </>
   },
 
   'Cocktail Shaker Sort': {
-    description: [
-      'text1',
-      'text2',
-      'text3',
-    ],
+    description: <>
+      <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
+        Selection Sort is a straightforward sorting algorithm that works by repeatedly selecting the minimum (or maximum) element from the unsorted portion of the list and swapping it with the first unsorted element.
+      </Typography>
+      <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
+        The process begins by initially considering the entire list as unsorted. In each iteration, the smallest (or largest) element from the unsorted portion of the list is selected and swapped with the first unsorted element, thus expanding the sorted portion of the list by one element. This process is repeated until the entire list is sorted.
+      </Typography>
+      <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
+        Selection Sort has a time complexity of O(n²) in all cases, making it inefficient for large lists. It is not a stable algorithm, meaning it does not necessarily preserve the relative order of equal keys. However, it is an in-place algorithm, as it does not require any additional memory space beyond what is needed to hold the input list.
+      </Typography>
+      <Typography variant="h3">Similar Algorithms</Typography>
+      <List>
+        <ListItem disablePadding>
+          <ListItemText
+            primaryTypographyProps={LIST_HEADER_STYLE}
+            primary='Selection Sort'
+            secondaryTypographyProps={LIST_ITEM_STYLE}
+            secondary='Selection Sort is similar to Insertion Sort. It also divides the list into a sorted and an unsorted region. However, instead of inserting each element in its correct position as in Insertion Sort, Selection Sort repeatedly selects the minimum (or maximum) element from the unsorted region and swaps it with the first unsorted element.'
+          />
+        </ListItem>
+        <ListItem disablePadding>
+          <ListItemText
+            primaryTypographyProps={LIST_HEADER_STYLE}
+            primary='Shell Sort'
+            secondaryTypographyProps={LIST_ITEM_STYLE}
+            secondary='Shell Sort is a generalization of Insertion Sort. It works by comparing elements separated by a gap of several positions. This way, it can move an element to its correct position in fewer swaps than regular Insertion Sort.'
+          />
+        </ListItem>
+      </List>
+    </>
   },
 
   'Radix Sort': {
-    description: [
-      'text1',
-      'text2',
-      'text3',
-    ],
+    description: <>
+      <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
+        Selection Sort is a straightforward sorting algorithm that works by repeatedly selecting the minimum (or maximum) element from the unsorted portion of the list and swapping it with the first unsorted element.
+      </Typography>
+      <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
+        The process begins by initially considering the entire list as unsorted. In each iteration, the smallest (or largest) element from the unsorted portion of the list is selected and swapped with the first unsorted element, thus expanding the sorted portion of the list by one element. This process is repeated until the entire list is sorted.
+      </Typography>
+      <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
+        Selection Sort has a time complexity of O(n²) in all cases, making it inefficient for large lists. It is not a stable algorithm, meaning it does not necessarily preserve the relative order of equal keys. However, it is an in-place algorithm, as it does not require any additional memory space beyond what is needed to hold the input list.
+      </Typography>
+      <Typography variant="h3">Similar Algorithms</Typography>
+      <List>
+        <ListItem disablePadding>
+          <ListItemText
+            primaryTypographyProps={LIST_HEADER_STYLE}
+            primary='Selection Sort'
+            secondaryTypographyProps={LIST_ITEM_STYLE}
+            secondary='Selection Sort is similar to Insertion Sort. It also divides the list into a sorted and an unsorted region. However, instead of inserting each element in its correct position as in Insertion Sort, Selection Sort repeatedly selects the minimum (or maximum) element from the unsorted region and swaps it with the first unsorted element.'
+          />
+        </ListItem>
+        <ListItem disablePadding>
+          <ListItemText
+            primaryTypographyProps={LIST_HEADER_STYLE}
+            primary='Shell Sort'
+            secondaryTypographyProps={LIST_ITEM_STYLE}
+            secondary='Shell Sort is a generalization of Insertion Sort. It works by comparing elements separated by a gap of several positions. This way, it can move an element to its correct position in fewer swaps than regular Insertion Sort.'
+          />
+        </ListItem>
+      </List>
+    </>
   },
 
   'Intro Sort': {
-    description: [
-      'text1',
-      'text2',
-      'text3',
-    ],
+    description: <>
+      <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
+        Selection Sort is a straightforward sorting algorithm that works by repeatedly selecting the minimum (or maximum) element from the unsorted portion of the list and swapping it with the first unsorted element.
+      </Typography>
+      <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
+        The process begins by initially considering the entire list as unsorted. In each iteration, the smallest (or largest) element from the unsorted portion of the list is selected and swapped with the first unsorted element, thus expanding the sorted portion of the list by one element. This process is repeated until the entire list is sorted.
+      </Typography>
+      <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
+        Selection Sort has a time complexity of O(n²) in all cases, making it inefficient for large lists. It is not a stable algorithm, meaning it does not necessarily preserve the relative order of equal keys. However, it is an in-place algorithm, as it does not require any additional memory space beyond what is needed to hold the input list.
+      </Typography>
+      <Typography variant="h3">Similar Algorithms</Typography>
+      <List>
+        <ListItem disablePadding>
+          <ListItemText
+            primaryTypographyProps={LIST_HEADER_STYLE}
+            primary='Selection Sort'
+            secondaryTypographyProps={LIST_ITEM_STYLE}
+            secondary='Selection Sort is similar to Insertion Sort. It also divides the list into a sorted and an unsorted region. However, instead of inserting each element in its correct position as in Insertion Sort, Selection Sort repeatedly selects the minimum (or maximum) element from the unsorted region and swaps it with the first unsorted element.'
+          />
+        </ListItem>
+        <ListItem disablePadding>
+          <ListItemText
+            primaryTypographyProps={LIST_HEADER_STYLE}
+            primary='Shell Sort'
+            secondaryTypographyProps={LIST_ITEM_STYLE}
+            secondary='Shell Sort is a generalization of Insertion Sort. It works by comparing elements separated by a gap of several positions. This way, it can move an element to its correct position in fewer swaps than regular Insertion Sort.'
+          />
+        </ListItem>
+      </List>
+    </>
   },
 
   'Heap Sort': {
-    description: [
-      'text1',
-      'text2',
-      'text3',
-    ],
+    description: <>
+      <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
+        Selection Sort is a straightforward sorting algorithm that works by repeatedly selecting the minimum (or maximum) element from the unsorted portion of the list and swapping it with the first unsorted element.
+      </Typography>
+      <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
+        The process begins by initially considering the entire list as unsorted. In each iteration, the smallest (or largest) element from the unsorted portion of the list is selected and swapped with the first unsorted element, thus expanding the sorted portion of the list by one element. This process is repeated until the entire list is sorted.
+      </Typography>
+      <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
+        Selection Sort has a time complexity of O(n²) in all cases, making it inefficient for large lists. It is not a stable algorithm, meaning it does not necessarily preserve the relative order of equal keys. However, it is an in-place algorithm, as it does not require any additional memory space beyond what is needed to hold the input list.
+      </Typography>
+      <Typography variant="h3">Similar Algorithms</Typography>
+      <List>
+        <ListItem disablePadding>
+          <ListItemText
+            primaryTypographyProps={LIST_HEADER_STYLE}
+            primary='Selection Sort'
+            secondaryTypographyProps={LIST_ITEM_STYLE}
+            secondary='Selection Sort is similar to Insertion Sort. It also divides the list into a sorted and an unsorted region. However, instead of inserting each element in its correct position as in Insertion Sort, Selection Sort repeatedly selects the minimum (or maximum) element from the unsorted region and swaps it with the first unsorted element.'
+          />
+        </ListItem>
+        <ListItem disablePadding>
+          <ListItemText
+            primaryTypographyProps={LIST_HEADER_STYLE}
+            primary='Shell Sort'
+            secondaryTypographyProps={LIST_ITEM_STYLE}
+            secondary='Shell Sort is a generalization of Insertion Sort. It works by comparing elements separated by a gap of several positions. This way, it can move an element to its correct position in fewer swaps than regular Insertion Sort.'
+          />
+        </ListItem>
+      </List>
+    </>
   },
 
   'Block Sort': {
-    description: [
-      'text1',
-      'text2',
-      'text3',
-    ],
+    description: <>
+      <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
+        Selection Sort is a straightforward sorting algorithm that works by repeatedly selecting the minimum (or maximum) element from the unsorted portion of the list and swapping it with the first unsorted element.
+      </Typography>
+      <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
+        The process begins by initially considering the entire list as unsorted. In each iteration, the smallest (or largest) element from the unsorted portion of the list is selected and swapped with the first unsorted element, thus expanding the sorted portion of the list by one element. This process is repeated until the entire list is sorted.
+      </Typography>
+      <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
+        Selection Sort has a time complexity of O(n²) in all cases, making it inefficient for large lists. It is not a stable algorithm, meaning it does not necessarily preserve the relative order of equal keys. However, it is an in-place algorithm, as it does not require any additional memory space beyond what is needed to hold the input list.
+      </Typography>
+      <Typography variant="h3">Similar Algorithms</Typography>
+      <List>
+        <ListItem disablePadding>
+          <ListItemText
+            primaryTypographyProps={LIST_HEADER_STYLE}
+            primary='Selection Sort'
+            secondaryTypographyProps={LIST_ITEM_STYLE}
+            secondary='Selection Sort is similar to Insertion Sort. It also divides the list into a sorted and an unsorted region. However, instead of inserting each element in its correct position as in Insertion Sort, Selection Sort repeatedly selects the minimum (or maximum) element from the unsorted region and swaps it with the first unsorted element.'
+          />
+        </ListItem>
+        <ListItem disablePadding>
+          <ListItemText
+            primaryTypographyProps={LIST_HEADER_STYLE}
+            primary='Shell Sort'
+            secondaryTypographyProps={LIST_ITEM_STYLE}
+            secondary='Shell Sort is a generalization of Insertion Sort. It works by comparing elements separated by a gap of several positions. This way, it can move an element to its correct position in fewer swaps than regular Insertion Sort.'
+          />
+        </ListItem>
+      </List>
+    </>
   },
 
   'Shell Sort': {
-    description: [
-      'text1',
-      'text2',
-      'text3',
-    ],
+    description: <>
+      <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
+        Selection Sort is a straightforward sorting algorithm that works by repeatedly selecting the minimum (or maximum) element from the unsorted portion of the list and swapping it with the first unsorted element.
+      </Typography>
+      <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
+        The process begins by initially considering the entire list as unsorted. In each iteration, the smallest (or largest) element from the unsorted portion of the list is selected and swapped with the first unsorted element, thus expanding the sorted portion of the list by one element. This process is repeated until the entire list is sorted.
+      </Typography>
+      <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
+        Selection Sort has a time complexity of O(n²) in all cases, making it inefficient for large lists. It is not a stable algorithm, meaning it does not necessarily preserve the relative order of equal keys. However, it is an in-place algorithm, as it does not require any additional memory space beyond what is needed to hold the input list.
+      </Typography>
+      <Typography variant="h3">Similar Algorithms</Typography>
+      <List>
+        <ListItem disablePadding>
+          <ListItemText
+            primaryTypographyProps={LIST_HEADER_STYLE}
+            primary='Selection Sort'
+            secondaryTypographyProps={LIST_ITEM_STYLE}
+            secondary='Selection Sort is similar to Insertion Sort. It also divides the list into a sorted and an unsorted region. However, instead of inserting each element in its correct position as in Insertion Sort, Selection Sort repeatedly selects the minimum (or maximum) element from the unsorted region and swaps it with the first unsorted element.'
+          />
+        </ListItem>
+        <ListItem disablePadding>
+          <ListItemText
+            primaryTypographyProps={LIST_HEADER_STYLE}
+            primary='Shell Sort'
+            secondaryTypographyProps={LIST_ITEM_STYLE}
+            secondary='Shell Sort is a generalization of Insertion Sort. It works by comparing elements separated by a gap of several positions. This way, it can move an element to its correct position in fewer swaps than regular Insertion Sort.'
+          />
+        </ListItem>
+      </List>
+    </>
   },
 
   'Tim Sort': {
-    description: [
-      'text1',
-      'text2',
-      'text3',
-    ],
+    description: <>
+      <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
+        Selection Sort is a straightforward sorting algorithm that works by repeatedly selecting the minimum (or maximum) element from the unsorted portion of the list and swapping it with the first unsorted element.
+      </Typography>
+      <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
+        The process begins by initially considering the entire list as unsorted. In each iteration, the smallest (or largest) element from the unsorted portion of the list is selected and swapped with the first unsorted element, thus expanding the sorted portion of the list by one element. This process is repeated until the entire list is sorted.
+      </Typography>
+      <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
+        Selection Sort has a time complexity of O(n²) in all cases, making it inefficient for large lists. It is not a stable algorithm, meaning it does not necessarily preserve the relative order of equal keys. However, it is an in-place algorithm, as it does not require any additional memory space beyond what is needed to hold the input list.
+      </Typography>
+      <Typography variant="h3">Similar Algorithms</Typography>
+      <List>
+        <ListItem disablePadding>
+          <ListItemText
+            primaryTypographyProps={LIST_HEADER_STYLE}
+            primary='Selection Sort'
+            secondaryTypographyProps={LIST_ITEM_STYLE}
+            secondary='Selection Sort is similar to Insertion Sort. It also divides the list into a sorted and an unsorted region. However, instead of inserting each element in its correct position as in Insertion Sort, Selection Sort repeatedly selects the minimum (or maximum) element from the unsorted region and swaps it with the first unsorted element.'
+          />
+        </ListItem>
+        <ListItem disablePadding>
+          <ListItemText
+            primaryTypographyProps={LIST_HEADER_STYLE}
+            primary='Shell Sort'
+            secondaryTypographyProps={LIST_ITEM_STYLE}
+            secondary='Shell Sort is a generalization of Insertion Sort. It works by comparing elements separated by a gap of several positions. This way, it can move an element to its correct position in fewer swaps than regular Insertion Sort.'
+          />
+        </ListItem>
+      </List>
+    </>
   },
 
   'Exchange Sort': {
-    description: [
-      'text1',
-      'text2',
-      'text3',
-    ],
+    description: <>
+      <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
+        Selection Sort is a straightforward sorting algorithm that works by repeatedly selecting the minimum (or maximum) element from the unsorted portion of the list and swapping it with the first unsorted element.
+      </Typography>
+      <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
+        The process begins by initially considering the entire list as unsorted. In each iteration, the smallest (or largest) element from the unsorted portion of the list is selected and swapped with the first unsorted element, thus expanding the sorted portion of the list by one element. This process is repeated until the entire list is sorted.
+      </Typography>
+      <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
+        Selection Sort has a time complexity of O(n²) in all cases, making it inefficient for large lists. It is not a stable algorithm, meaning it does not necessarily preserve the relative order of equal keys. However, it is an in-place algorithm, as it does not require any additional memory space beyond what is needed to hold the input list.
+      </Typography>
+      <Typography variant="h3">Similar Algorithms</Typography>
+      <List>
+        <ListItem disablePadding>
+          <ListItemText
+            primaryTypographyProps={LIST_HEADER_STYLE}
+            primary='Selection Sort'
+            secondaryTypographyProps={LIST_ITEM_STYLE}
+            secondary='Selection Sort is similar to Insertion Sort. It also divides the list into a sorted and an unsorted region. However, instead of inserting each element in its correct position as in Insertion Sort, Selection Sort repeatedly selects the minimum (or maximum) element from the unsorted region and swaps it with the first unsorted element.'
+          />
+        </ListItem>
+        <ListItem disablePadding>
+          <ListItemText
+            primaryTypographyProps={LIST_HEADER_STYLE}
+            primary='Shell Sort'
+            secondaryTypographyProps={LIST_ITEM_STYLE}
+            secondary='Shell Sort is a generalization of Insertion Sort. It works by comparing elements separated by a gap of several positions. This way, it can move an element to its correct position in fewer swaps than regular Insertion Sort.'
+          />
+        </ListItem>
+      </List>
+    </>
   },
 
   'Cycle Sort': {
-    description: [
-      'text1',
-      'text2',
-      'text3',
-    ],
+    description: <>
+      <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
+        Selection Sort is a straightforward sorting algorithm that works by repeatedly selecting the minimum (or maximum) element from the unsorted portion of the list and swapping it with the first unsorted element.
+      </Typography>
+      <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
+        The process begins by initially considering the entire list as unsorted. In each iteration, the smallest (or largest) element from the unsorted portion of the list is selected and swapped with the first unsorted element, thus expanding the sorted portion of the list by one element. This process is repeated until the entire list is sorted.
+      </Typography>
+      <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
+        Selection Sort has a time complexity of O(n²) in all cases, making it inefficient for large lists. It is not a stable algorithm, meaning it does not necessarily preserve the relative order of equal keys. However, it is an in-place algorithm, as it does not require any additional memory space beyond what is needed to hold the input list.
+      </Typography>
+      <Typography variant="h3">Similar Algorithms</Typography>
+      <List>
+        <ListItem disablePadding>
+          <ListItemText
+            primaryTypographyProps={LIST_HEADER_STYLE}
+            primary='Selection Sort'
+            secondaryTypographyProps={LIST_ITEM_STYLE}
+            secondary='Selection Sort is similar to Insertion Sort. It also divides the list into a sorted and an unsorted region. However, instead of inserting each element in its correct position as in Insertion Sort, Selection Sort repeatedly selects the minimum (or maximum) element from the unsorted region and swaps it with the first unsorted element.'
+          />
+        </ListItem>
+        <ListItem disablePadding>
+          <ListItemText
+            primaryTypographyProps={LIST_HEADER_STYLE}
+            primary='Shell Sort'
+            secondaryTypographyProps={LIST_ITEM_STYLE}
+            secondary='Shell Sort is a generalization of Insertion Sort. It works by comparing elements separated by a gap of several positions. This way, it can move an element to its correct position in fewer swaps than regular Insertion Sort.'
+          />
+        </ListItem>
+      </List>
+    </>
   },
 
   'Patience Sort': {
-    description: [
-      'text1',
-      'text2',
-      'text3',
-    ],
+    description: <>
+      <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
+        Selection Sort is a straightforward sorting algorithm that works by repeatedly selecting the minimum (or maximum) element from the unsorted portion of the list and swapping it with the first unsorted element.
+      </Typography>
+      <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
+        The process begins by initially considering the entire list as unsorted. In each iteration, the smallest (or largest) element from the unsorted portion of the list is selected and swapped with the first unsorted element, thus expanding the sorted portion of the list by one element. This process is repeated until the entire list is sorted.
+      </Typography>
+      <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
+        Selection Sort has a time complexity of O(n²) in all cases, making it inefficient for large lists. It is not a stable algorithm, meaning it does not necessarily preserve the relative order of equal keys. However, it is an in-place algorithm, as it does not require any additional memory space beyond what is needed to hold the input list.
+      </Typography>
+      <Typography variant="h3">Similar Algorithms</Typography>
+      <List>
+        <ListItem disablePadding>
+          <ListItemText
+            primaryTypographyProps={LIST_HEADER_STYLE}
+            primary='Selection Sort'
+            secondaryTypographyProps={LIST_ITEM_STYLE}
+            secondary='Selection Sort is similar to Insertion Sort. It also divides the list into a sorted and an unsorted region. However, instead of inserting each element in its correct position as in Insertion Sort, Selection Sort repeatedly selects the minimum (or maximum) element from the unsorted region and swaps it with the first unsorted element.'
+          />
+        </ListItem>
+        <ListItem disablePadding>
+          <ListItemText
+            primaryTypographyProps={LIST_HEADER_STYLE}
+            primary='Shell Sort'
+            secondaryTypographyProps={LIST_ITEM_STYLE}
+            secondary='Shell Sort is a generalization of Insertion Sort. It works by comparing elements separated by a gap of several positions. This way, it can move an element to its correct position in fewer swaps than regular Insertion Sort.'
+          />
+        </ListItem>
+      </List>
+    </>
   },
 
   'Smooth Sort': {
-    description: [
-      'text1',
-      'text2',
-      'text3',
-    ],
+    description: <>
+      <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
+        Selection Sort is a straightforward sorting algorithm that works by repeatedly selecting the minimum (or maximum) element from the unsorted portion of the list and swapping it with the first unsorted element.
+      </Typography>
+      <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
+        The process begins by initially considering the entire list as unsorted. In each iteration, the smallest (or largest) element from the unsorted portion of the list is selected and swapped with the first unsorted element, thus expanding the sorted portion of the list by one element. This process is repeated until the entire list is sorted.
+      </Typography>
+      <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
+        Selection Sort has a time complexity of O(n²) in all cases, making it inefficient for large lists. It is not a stable algorithm, meaning it does not necessarily preserve the relative order of equal keys. However, it is an in-place algorithm, as it does not require any additional memory space beyond what is needed to hold the input list.
+      </Typography>
+      <Typography variant="h3">Similar Algorithms</Typography>
+      <List>
+        <ListItem disablePadding>
+          <ListItemText
+            primaryTypographyProps={LIST_HEADER_STYLE}
+            primary='Selection Sort'
+            secondaryTypographyProps={LIST_ITEM_STYLE}
+            secondary='Selection Sort is similar to Insertion Sort. It also divides the list into a sorted and an unsorted region. However, instead of inserting each element in its correct position as in Insertion Sort, Selection Sort repeatedly selects the minimum (or maximum) element from the unsorted region and swaps it with the first unsorted element.'
+          />
+        </ListItem>
+        <ListItem disablePadding>
+          <ListItemText
+            primaryTypographyProps={LIST_HEADER_STYLE}
+            primary='Shell Sort'
+            secondaryTypographyProps={LIST_ITEM_STYLE}
+            secondary='Shell Sort is a generalization of Insertion Sort. It works by comparing elements separated by a gap of several positions. This way, it can move an element to its correct position in fewer swaps than regular Insertion Sort.'
+          />
+        </ListItem>
+      </List>
+    </>
   },
 
   'Strand Sort': {
-    description: [
-      'text1',
-      'text2',
-      'text3',
-    ],
+    description: <>
+      <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
+        Selection Sort is a straightforward sorting algorithm that works by repeatedly selecting the minimum (or maximum) element from the unsorted portion of the list and swapping it with the first unsorted element.
+      </Typography>
+      <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
+        The process begins by initially considering the entire list as unsorted. In each iteration, the smallest (or largest) element from the unsorted portion of the list is selected and swapped with the first unsorted element, thus expanding the sorted portion of the list by one element. This process is repeated until the entire list is sorted.
+      </Typography>
+      <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
+        Selection Sort has a time complexity of O(n²) in all cases, making it inefficient for large lists. It is not a stable algorithm, meaning it does not necessarily preserve the relative order of equal keys. However, it is an in-place algorithm, as it does not require any additional memory space beyond what is needed to hold the input list.
+      </Typography>
+      <Typography variant="h3">Similar Algorithms</Typography>
+      <List>
+        <ListItem disablePadding>
+          <ListItemText
+            primaryTypographyProps={LIST_HEADER_STYLE}
+            primary='Selection Sort'
+            secondaryTypographyProps={LIST_ITEM_STYLE}
+            secondary='Selection Sort is similar to Insertion Sort. It also divides the list into a sorted and an unsorted region. However, instead of inserting each element in its correct position as in Insertion Sort, Selection Sort repeatedly selects the minimum (or maximum) element from the unsorted region and swaps it with the first unsorted element.'
+          />
+        </ListItem>
+        <ListItem disablePadding>
+          <ListItemText
+            primaryTypographyProps={LIST_HEADER_STYLE}
+            primary='Shell Sort'
+            secondaryTypographyProps={LIST_ITEM_STYLE}
+            secondary='Shell Sort is a generalization of Insertion Sort. It works by comparing elements separated by a gap of several positions. This way, it can move an element to its correct position in fewer swaps than regular Insertion Sort.'
+          />
+        </ListItem>
+      </List>
+    </>
   },
 
   'Comb Sort': {
-    description: [
-      'text1',
-      'text2',
-      'text3',
-    ],
+    description: <>
+      <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
+        Selection Sort is a straightforward sorting algorithm that works by repeatedly selecting the minimum (or maximum) element from the unsorted portion of the list and swapping it with the first unsorted element.
+      </Typography>
+      <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
+        The process begins by initially considering the entire list as unsorted. In each iteration, the smallest (or largest) element from the unsorted portion of the list is selected and swapped with the first unsorted element, thus expanding the sorted portion of the list by one element. This process is repeated until the entire list is sorted.
+      </Typography>
+      <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
+        Selection Sort has a time complexity of O(n²) in all cases, making it inefficient for large lists. It is not a stable algorithm, meaning it does not necessarily preserve the relative order of equal keys. However, it is an in-place algorithm, as it does not require any additional memory space beyond what is needed to hold the input list.
+      </Typography>
+      <Typography variant="h3">Similar Algorithms</Typography>
+      <List>
+        <ListItem disablePadding>
+          <ListItemText
+            primaryTypographyProps={LIST_HEADER_STYLE}
+            primary='Selection Sort'
+            secondaryTypographyProps={LIST_ITEM_STYLE}
+            secondary='Selection Sort is similar to Insertion Sort. It also divides the list into a sorted and an unsorted region. However, instead of inserting each element in its correct position as in Insertion Sort, Selection Sort repeatedly selects the minimum (or maximum) element from the unsorted region and swaps it with the first unsorted element.'
+          />
+        </ListItem>
+        <ListItem disablePadding>
+          <ListItemText
+            primaryTypographyProps={LIST_HEADER_STYLE}
+            primary='Shell Sort'
+            secondaryTypographyProps={LIST_ITEM_STYLE}
+            secondary='Shell Sort is a generalization of Insertion Sort. It works by comparing elements separated by a gap of several positions. This way, it can move an element to its correct position in fewer swaps than regular Insertion Sort.'
+          />
+        </ListItem>
+      </List>
+    </>
   },
 
   'Gnome Sort': {
-    description: [
-      'text1',
-      'text2',
-      'text3',
-    ],
+    description: <>
+      <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
+        Selection Sort is a straightforward sorting algorithm that works by repeatedly selecting the minimum (or maximum) element from the unsorted portion of the list and swapping it with the first unsorted element.
+      </Typography>
+      <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
+        The process begins by initially considering the entire list as unsorted. In each iteration, the smallest (or largest) element from the unsorted portion of the list is selected and swapped with the first unsorted element, thus expanding the sorted portion of the list by one element. This process is repeated until the entire list is sorted.
+      </Typography>
+      <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
+        Selection Sort has a time complexity of O(n²) in all cases, making it inefficient for large lists. It is not a stable algorithm, meaning it does not necessarily preserve the relative order of equal keys. However, it is an in-place algorithm, as it does not require any additional memory space beyond what is needed to hold the input list.
+      </Typography>
+      <Typography variant="h3">Similar Algorithms</Typography>
+      <List>
+        <ListItem disablePadding>
+          <ListItemText
+            primaryTypographyProps={LIST_HEADER_STYLE}
+            primary='Selection Sort'
+            secondaryTypographyProps={LIST_ITEM_STYLE}
+            secondary='Selection Sort is similar to Insertion Sort. It also divides the list into a sorted and an unsorted region. However, instead of inserting each element in its correct position as in Insertion Sort, Selection Sort repeatedly selects the minimum (or maximum) element from the unsorted region and swaps it with the first unsorted element.'
+          />
+        </ListItem>
+        <ListItem disablePadding>
+          <ListItemText
+            primaryTypographyProps={LIST_HEADER_STYLE}
+            primary='Shell Sort'
+            secondaryTypographyProps={LIST_ITEM_STYLE}
+            secondary='Shell Sort is a generalization of Insertion Sort. It works by comparing elements separated by a gap of several positions. This way, it can move an element to its correct position in fewer swaps than regular Insertion Sort.'
+          />
+        </ListItem>
+      </List>
+    </>
   },
 
   'Odd-Even Sort': {
-    description: [
-      'text1',
-      'text2',
-      'text3',
-    ],
+    description: <>
+      <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
+        Selection Sort is a straightforward sorting algorithm that works by repeatedly selecting the minimum (or maximum) element from the unsorted portion of the list and swapping it with the first unsorted element.
+      </Typography>
+      <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
+        The process begins by initially considering the entire list as unsorted. In each iteration, the smallest (or largest) element from the unsorted portion of the list is selected and swapped with the first unsorted element, thus expanding the sorted portion of the list by one element. This process is repeated until the entire list is sorted.
+      </Typography>
+      <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
+        Selection Sort has a time complexity of O(n²) in all cases, making it inefficient for large lists. It is not a stable algorithm, meaning it does not necessarily preserve the relative order of equal keys. However, it is an in-place algorithm, as it does not require any additional memory space beyond what is needed to hold the input list.
+      </Typography>
+      <Typography variant="h3">Similar Algorithms</Typography>
+      <List>
+        <ListItem disablePadding>
+          <ListItemText
+            primaryTypographyProps={LIST_HEADER_STYLE}
+            primary='Selection Sort'
+            secondaryTypographyProps={LIST_ITEM_STYLE}
+            secondary='Selection Sort is similar to Insertion Sort. It also divides the list into a sorted and an unsorted region. However, instead of inserting each element in its correct position as in Insertion Sort, Selection Sort repeatedly selects the minimum (or maximum) element from the unsorted region and swaps it with the first unsorted element.'
+          />
+        </ListItem>
+        <ListItem disablePadding>
+          <ListItemText
+            primaryTypographyProps={LIST_HEADER_STYLE}
+            primary='Shell Sort'
+            secondaryTypographyProps={LIST_ITEM_STYLE}
+            secondary='Shell Sort is a generalization of Insertion Sort. It works by comparing elements separated by a gap of several positions. This way, it can move an element to its correct position in fewer swaps than regular Insertion Sort.'
+          />
+        </ListItem>
+      </List>
+    </>
   },
 
   'Pigeonhole Sort': {
-    description: [
-      'text1',
-      'text2',
-      'text3',
-    ],
+    description: <>
+      <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
+        Selection Sort is a straightforward sorting algorithm that works by repeatedly selecting the minimum (or maximum) element from the unsorted portion of the list and swapping it with the first unsorted element.
+      </Typography>
+      <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
+        The process begins by initially considering the entire list as unsorted. In each iteration, the smallest (or largest) element from the unsorted portion of the list is selected and swapped with the first unsorted element, thus expanding the sorted portion of the list by one element. This process is repeated until the entire list is sorted.
+      </Typography>
+      <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
+        Selection Sort has a time complexity of O(n²) in all cases, making it inefficient for large lists. It is not a stable algorithm, meaning it does not necessarily preserve the relative order of equal keys. However, it is an in-place algorithm, as it does not require any additional memory space beyond what is needed to hold the input list.
+      </Typography>
+      <Typography variant="h3">Similar Algorithms</Typography>
+      <List>
+        <ListItem disablePadding>
+          <ListItemText
+            primaryTypographyProps={LIST_HEADER_STYLE}
+            primary='Selection Sort'
+            secondaryTypographyProps={LIST_ITEM_STYLE}
+            secondary='Selection Sort is similar to Insertion Sort. It also divides the list into a sorted and an unsorted region. However, instead of inserting each element in its correct position as in Insertion Sort, Selection Sort repeatedly selects the minimum (or maximum) element from the unsorted region and swaps it with the first unsorted element.'
+          />
+        </ListItem>
+        <ListItem disablePadding>
+          <ListItemText
+            primaryTypographyProps={LIST_HEADER_STYLE}
+            primary='Shell Sort'
+            secondaryTypographyProps={LIST_ITEM_STYLE}
+            secondary='Shell Sort is a generalization of Insertion Sort. It works by comparing elements separated by a gap of several positions. This way, it can move an element to its correct position in fewer swaps than regular Insertion Sort.'
+          />
+        </ListItem>
+      </List>
+    </>
   },
 
   'Bucket Sort': {
-    description: [
-      'text1',
-      'text2',
-      'text3',
-    ],
+    description: <>
+      <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
+        Selection Sort is a straightforward sorting algorithm that works by repeatedly selecting the minimum (or maximum) element from the unsorted portion of the list and swapping it with the first unsorted element.
+      </Typography>
+      <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
+        The process begins by initially considering the entire list as unsorted. In each iteration, the smallest (or largest) element from the unsorted portion of the list is selected and swapped with the first unsorted element, thus expanding the sorted portion of the list by one element. This process is repeated until the entire list is sorted.
+      </Typography>
+      <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
+        Selection Sort has a time complexity of O(n²) in all cases, making it inefficient for large lists. It is not a stable algorithm, meaning it does not necessarily preserve the relative order of equal keys. However, it is an in-place algorithm, as it does not require any additional memory space beyond what is needed to hold the input list.
+      </Typography>
+      <Typography variant="h3">Similar Algorithms</Typography>
+      <List>
+        <ListItem disablePadding>
+          <ListItemText
+            primaryTypographyProps={LIST_HEADER_STYLE}
+            primary='Selection Sort'
+            secondaryTypographyProps={LIST_ITEM_STYLE}
+            secondary='Selection Sort is similar to Insertion Sort. It also divides the list into a sorted and an unsorted region. However, instead of inserting each element in its correct position as in Insertion Sort, Selection Sort repeatedly selects the minimum (or maximum) element from the unsorted region and swaps it with the first unsorted element.'
+          />
+        </ListItem>
+        <ListItem disablePadding>
+          <ListItemText
+            primaryTypographyProps={LIST_HEADER_STYLE}
+            primary='Shell Sort'
+            secondaryTypographyProps={LIST_ITEM_STYLE}
+            secondary='Shell Sort is a generalization of Insertion Sort. It works by comparing elements separated by a gap of several positions. This way, it can move an element to its correct position in fewer swaps than regular Insertion Sort.'
+          />
+        </ListItem>
+      </List>
+    </>
   },
 
   'Counting Sort': {
-    description: [
-      'text1',
-      'text2',
-      'text3',
-    ],
+    description: <>
+      <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
+        Selection Sort is a straightforward sorting algorithm that works by repeatedly selecting the minimum (or maximum) element from the unsorted portion of the list and swapping it with the first unsorted element.
+      </Typography>
+      <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
+        The process begins by initially considering the entire list as unsorted. In each iteration, the smallest (or largest) element from the unsorted portion of the list is selected and swapped with the first unsorted element, thus expanding the sorted portion of the list by one element. This process is repeated until the entire list is sorted.
+      </Typography>
+      <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
+        Selection Sort has a time complexity of O(n²) in all cases, making it inefficient for large lists. It is not a stable algorithm, meaning it does not necessarily preserve the relative order of equal keys. However, it is an in-place algorithm, as it does not require any additional memory space beyond what is needed to hold the input list.
+      </Typography>
+      <Typography variant="h3">Similar Algorithms</Typography>
+      <List>
+        <ListItem disablePadding>
+          <ListItemText
+            primaryTypographyProps={LIST_HEADER_STYLE}
+            primary='Selection Sort'
+            secondaryTypographyProps={LIST_ITEM_STYLE}
+            secondary='Selection Sort is similar to Insertion Sort. It also divides the list into a sorted and an unsorted region. However, instead of inserting each element in its correct position as in Insertion Sort, Selection Sort repeatedly selects the minimum (or maximum) element from the unsorted region and swaps it with the first unsorted element.'
+          />
+        </ListItem>
+        <ListItem disablePadding>
+          <ListItemText
+            primaryTypographyProps={LIST_HEADER_STYLE}
+            primary='Shell Sort'
+            secondaryTypographyProps={LIST_ITEM_STYLE}
+            secondary='Shell Sort is a generalization of Insertion Sort. It works by comparing elements separated by a gap of several positions. This way, it can move an element to its correct position in fewer swaps than regular Insertion Sort.'
+          />
+        </ListItem>
+      </List>
+    </>
   },
 
   'Spread Sort': {
-    description: [
-      'text1',
-      'text2',
-      'text3',
-    ],
+    description: <>
+      <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
+        Selection Sort is a straightforward sorting algorithm that works by repeatedly selecting the minimum (or maximum) element from the unsorted portion of the list and swapping it with the first unsorted element.
+      </Typography>
+      <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
+        The process begins by initially considering the entire list as unsorted. In each iteration, the smallest (or largest) element from the unsorted portion of the list is selected and swapped with the first unsorted element, thus expanding the sorted portion of the list by one element. This process is repeated until the entire list is sorted.
+      </Typography>
+      <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
+        Selection Sort has a time complexity of O(n²) in all cases, making it inefficient for large lists. It is not a stable algorithm, meaning it does not necessarily preserve the relative order of equal keys. However, it is an in-place algorithm, as it does not require any additional memory space beyond what is needed to hold the input list.
+      </Typography>
+      <Typography variant="h3">Similar Algorithms</Typography>
+      <List>
+        <ListItem disablePadding>
+          <ListItemText
+            primaryTypographyProps={LIST_HEADER_STYLE}
+            primary='Selection Sort'
+            secondaryTypographyProps={LIST_ITEM_STYLE}
+            secondary='Selection Sort is similar to Insertion Sort. It also divides the list into a sorted and an unsorted region. However, instead of inserting each element in its correct position as in Insertion Sort, Selection Sort repeatedly selects the minimum (or maximum) element from the unsorted region and swaps it with the first unsorted element.'
+          />
+        </ListItem>
+        <ListItem disablePadding>
+          <ListItemText
+            primaryTypographyProps={LIST_HEADER_STYLE}
+            primary='Shell Sort'
+            secondaryTypographyProps={LIST_ITEM_STYLE}
+            secondary='Shell Sort is a generalization of Insertion Sort. It works by comparing elements separated by a gap of several positions. This way, it can move an element to its correct position in fewer swaps than regular Insertion Sort.'
+          />
+        </ListItem>
+      </List>
+    </>
   },
 
   'Pancake Sort': {
-    description: [
-      'text1',
-      'text2',
-      'text3',
-    ],
+    description: <>
+      <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
+        Selection Sort is a straightforward sorting algorithm that works by repeatedly selecting the minimum (or maximum) element from the unsorted portion of the list and swapping it with the first unsorted element.
+      </Typography>
+      <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
+        The process begins by initially considering the entire list as unsorted. In each iteration, the smallest (or largest) element from the unsorted portion of the list is selected and swapped with the first unsorted element, thus expanding the sorted portion of the list by one element. This process is repeated until the entire list is sorted.
+      </Typography>
+      <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
+        Selection Sort has a time complexity of O(n²) in all cases, making it inefficient for large lists. It is not a stable algorithm, meaning it does not necessarily preserve the relative order of equal keys. However, it is an in-place algorithm, as it does not require any additional memory space beyond what is needed to hold the input list.
+      </Typography>
+      <Typography variant="h3">Similar Algorithms</Typography>
+      <List>
+        <ListItem disablePadding>
+          <ListItemText
+            primaryTypographyProps={LIST_HEADER_STYLE}
+            primary='Selection Sort'
+            secondaryTypographyProps={LIST_ITEM_STYLE}
+            secondary='Selection Sort is similar to Insertion Sort. It also divides the list into a sorted and an unsorted region. However, instead of inserting each element in its correct position as in Insertion Sort, Selection Sort repeatedly selects the minimum (or maximum) element from the unsorted region and swaps it with the first unsorted element.'
+          />
+        </ListItem>
+        <ListItem disablePadding>
+          <ListItemText
+            primaryTypographyProps={LIST_HEADER_STYLE}
+            primary='Shell Sort'
+            secondaryTypographyProps={LIST_ITEM_STYLE}
+            secondary='Shell Sort is a generalization of Insertion Sort. It works by comparing elements separated by a gap of several positions. This way, it can move an element to its correct position in fewer swaps than regular Insertion Sort.'
+          />
+        </ListItem>
+      </List>
+    </>
   },
 
   'I Can\'t Believe It Can Sort': {
-    description: [
-      'text1',
-      'text2',
-      'text3',
-    ],
+    description: <>
+      <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
+        Selection Sort is a straightforward sorting algorithm that works by repeatedly selecting the minimum (or maximum) element from the unsorted portion of the list and swapping it with the first unsorted element.
+      </Typography>
+      <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
+        The process begins by initially considering the entire list as unsorted. In each iteration, the smallest (or largest) element from the unsorted portion of the list is selected and swapped with the first unsorted element, thus expanding the sorted portion of the list by one element. This process is repeated until the entire list is sorted.
+      </Typography>
+      <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
+        Selection Sort has a time complexity of O(n²) in all cases, making it inefficient for large lists. It is not a stable algorithm, meaning it does not necessarily preserve the relative order of equal keys. However, it is an in-place algorithm, as it does not require any additional memory space beyond what is needed to hold the input list.
+      </Typography>
+      <Typography variant="h3">Similar Algorithms</Typography>
+      <List>
+        <ListItem disablePadding>
+          <ListItemText
+            primaryTypographyProps={LIST_HEADER_STYLE}
+            primary='Selection Sort'
+            secondaryTypographyProps={LIST_ITEM_STYLE}
+            secondary='Selection Sort is similar to Insertion Sort. It also divides the list into a sorted and an unsorted region. However, instead of inserting each element in its correct position as in Insertion Sort, Selection Sort repeatedly selects the minimum (or maximum) element from the unsorted region and swaps it with the first unsorted element.'
+          />
+        </ListItem>
+        <ListItem disablePadding>
+          <ListItemText
+            primaryTypographyProps={LIST_HEADER_STYLE}
+            primary='Shell Sort'
+            secondaryTypographyProps={LIST_ITEM_STYLE}
+            secondary='Shell Sort is a generalization of Insertion Sort. It works by comparing elements separated by a gap of several positions. This way, it can move an element to its correct position in fewer swaps than regular Insertion Sort.'
+          />
+        </ListItem>
+      </List>
+    </>
   },
 
   'Bitonic Sort': {
-    description: [
-      'text1',
-      'text2',
-      'text3',
-    ],
+    description: <>
+      <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
+        Selection Sort is a straightforward sorting algorithm that works by repeatedly selecting the minimum (or maximum) element from the unsorted portion of the list and swapping it with the first unsorted element.
+      </Typography>
+      <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
+        The process begins by initially considering the entire list as unsorted. In each iteration, the smallest (or largest) element from the unsorted portion of the list is selected and swapped with the first unsorted element, thus expanding the sorted portion of the list by one element. This process is repeated until the entire list is sorted.
+      </Typography>
+      <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
+        Selection Sort has a time complexity of O(n²) in all cases, making it inefficient for large lists. It is not a stable algorithm, meaning it does not necessarily preserve the relative order of equal keys. However, it is an in-place algorithm, as it does not require any additional memory space beyond what is needed to hold the input list.
+      </Typography>
+      <Typography variant="h3">Similar Algorithms</Typography>
+      <List>
+        <ListItem disablePadding>
+          <ListItemText
+            primaryTypographyProps={LIST_HEADER_STYLE}
+            primary='Selection Sort'
+            secondaryTypographyProps={LIST_ITEM_STYLE}
+            secondary='Selection Sort is similar to Insertion Sort. It also divides the list into a sorted and an unsorted region. However, instead of inserting each element in its correct position as in Insertion Sort, Selection Sort repeatedly selects the minimum (or maximum) element from the unsorted region and swaps it with the first unsorted element.'
+          />
+        </ListItem>
+        <ListItem disablePadding>
+          <ListItemText
+            primaryTypographyProps={LIST_HEADER_STYLE}
+            primary='Shell Sort'
+            secondaryTypographyProps={LIST_ITEM_STYLE}
+            secondary='Shell Sort is a generalization of Insertion Sort. It works by comparing elements separated by a gap of several positions. This way, it can move an element to its correct position in fewer swaps than regular Insertion Sort.'
+          />
+        </ListItem>
+      </List>
+    </>
   },
 
   'Bogo Sort': {
-    description: [
-      'text1',
-      'text2',
-      'text3',
-    ],
+    description: <>
+      <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
+        Selection Sort is a straightforward sorting algorithm that works by repeatedly selecting the minimum (or maximum) element from the unsorted portion of the list and swapping it with the first unsorted element.
+      </Typography>
+      <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
+        The process begins by initially considering the entire list as unsorted. In each iteration, the smallest (or largest) element from the unsorted portion of the list is selected and swapped with the first unsorted element, thus expanding the sorted portion of the list by one element. This process is repeated until the entire list is sorted.
+      </Typography>
+      <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
+        Selection Sort has a time complexity of O(n²) in all cases, making it inefficient for large lists. It is not a stable algorithm, meaning it does not necessarily preserve the relative order of equal keys. However, it is an in-place algorithm, as it does not require any additional memory space beyond what is needed to hold the input list.
+      </Typography>
+      <Typography variant="h3">Similar Algorithms</Typography>
+      <List>
+        <ListItem disablePadding>
+          <ListItemText
+            primaryTypographyProps={LIST_HEADER_STYLE}
+            primary='Selection Sort'
+            secondaryTypographyProps={LIST_ITEM_STYLE}
+            secondary='Selection Sort is similar to Insertion Sort. It also divides the list into a sorted and an unsorted region. However, instead of inserting each element in its correct position as in Insertion Sort, Selection Sort repeatedly selects the minimum (or maximum) element from the unsorted region and swaps it with the first unsorted element.'
+          />
+        </ListItem>
+        <ListItem disablePadding>
+          <ListItemText
+            primaryTypographyProps={LIST_HEADER_STYLE}
+            primary='Shell Sort'
+            secondaryTypographyProps={LIST_ITEM_STYLE}
+            secondary='Shell Sort is a generalization of Insertion Sort. It works by comparing elements separated by a gap of several positions. This way, it can move an element to its correct position in fewer swaps than regular Insertion Sort.'
+          />
+        </ListItem>
+      </List>
+    </>
   },
 
   'Stooge Sort': {
-    description: [
-      'text1',
-      'text2',
-      'text3',
-    ],
+    description: <>
+      <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
+        Selection Sort is a straightforward sorting algorithm that works by repeatedly selecting the minimum (or maximum) element from the unsorted portion of the list and swapping it with the first unsorted element.
+      </Typography>
+      <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
+        The process begins by initially considering the entire list as unsorted. In each iteration, the smallest (or largest) element from the unsorted portion of the list is selected and swapped with the first unsorted element, thus expanding the sorted portion of the list by one element. This process is repeated until the entire list is sorted.
+      </Typography>
+      <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
+        Selection Sort has a time complexity of O(n²) in all cases, making it inefficient for large lists. It is not a stable algorithm, meaning it does not necessarily preserve the relative order of equal keys. However, it is an in-place algorithm, as it does not require any additional memory space beyond what is needed to hold the input list.
+      </Typography>
+      <Typography variant="h3">Similar Algorithms</Typography>
+      <List>
+        <ListItem disablePadding>
+          <ListItemText
+            primaryTypographyProps={LIST_HEADER_STYLE}
+            primary='Selection Sort'
+            secondaryTypographyProps={LIST_ITEM_STYLE}
+            secondary='Selection Sort is similar to Insertion Sort. It also divides the list into a sorted and an unsorted region. However, instead of inserting each element in its correct position as in Insertion Sort, Selection Sort repeatedly selects the minimum (or maximum) element from the unsorted region and swaps it with the first unsorted element.'
+          />
+        </ListItem>
+        <ListItem disablePadding>
+          <ListItemText
+            primaryTypographyProps={LIST_HEADER_STYLE}
+            primary='Shell Sort'
+            secondaryTypographyProps={LIST_ITEM_STYLE}
+            secondary='Shell Sort is a generalization of Insertion Sort. It works by comparing elements separated by a gap of several positions. This way, it can move an element to its correct position in fewer swaps than regular Insertion Sort.'
+          />
+        </ListItem>
+      </List>
+    </>
   },
 
   'Slow Sort': {
-    description: [
-      'text1',
-      'text2',
-      'text3',
-    ],
+    description: <>
+      <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
+        Selection Sort is a straightforward sorting algorithm that works by repeatedly selecting the minimum (or maximum) element from the unsorted portion of the list and swapping it with the first unsorted element.
+      </Typography>
+      <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
+        The process begins by initially considering the entire list as unsorted. In each iteration, the smallest (or largest) element from the unsorted portion of the list is selected and swapped with the first unsorted element, thus expanding the sorted portion of the list by one element. This process is repeated until the entire list is sorted.
+      </Typography>
+      <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
+        Selection Sort has a time complexity of O(n²) in all cases, making it inefficient for large lists. It is not a stable algorithm, meaning it does not necessarily preserve the relative order of equal keys. However, it is an in-place algorithm, as it does not require any additional memory space beyond what is needed to hold the input list.
+      </Typography>
+      <Typography variant="h3">Similar Algorithms</Typography>
+      <List>
+        <ListItem disablePadding>
+          <ListItemText
+            primaryTypographyProps={LIST_HEADER_STYLE}
+            primary='Selection Sort'
+            secondaryTypographyProps={LIST_ITEM_STYLE}
+            secondary='Selection Sort is similar to Insertion Sort. It also divides the list into a sorted and an unsorted region. However, instead of inserting each element in its correct position as in Insertion Sort, Selection Sort repeatedly selects the minimum (or maximum) element from the unsorted region and swaps it with the first unsorted element.'
+          />
+        </ListItem>
+        <ListItem disablePadding>
+          <ListItemText
+            primaryTypographyProps={LIST_HEADER_STYLE}
+            primary='Shell Sort'
+            secondaryTypographyProps={LIST_ITEM_STYLE}
+            secondary='Shell Sort is a generalization of Insertion Sort. It works by comparing elements separated by a gap of several positions. This way, it can move an element to its correct position in fewer swaps than regular Insertion Sort.'
+          />
+        </ListItem>
+      </List>
+    </>
   },
 
   'Stalin Sort': {
-    description: [
-      'text1',
-      'text2',
-      'text3',
-    ],
+    description: <>
+      <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
+        Selection Sort is a straightforward sorting algorithm that works by repeatedly selecting the minimum (or maximum) element from the unsorted portion of the list and swapping it with the first unsorted element.
+      </Typography>
+      <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
+        The process begins by initially considering the entire list as unsorted. In each iteration, the smallest (or largest) element from the unsorted portion of the list is selected and swapped with the first unsorted element, thus expanding the sorted portion of the list by one element. This process is repeated until the entire list is sorted.
+      </Typography>
+      <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
+        Selection Sort has a time complexity of O(n²) in all cases, making it inefficient for large lists. It is not a stable algorithm, meaning it does not necessarily preserve the relative order of equal keys. However, it is an in-place algorithm, as it does not require any additional memory space beyond what is needed to hold the input list.
+      </Typography>
+      <Typography variant="h3">Similar Algorithms</Typography>
+      <List>
+        <ListItem disablePadding>
+          <ListItemText
+            primaryTypographyProps={LIST_HEADER_STYLE}
+            primary='Selection Sort'
+            secondaryTypographyProps={LIST_ITEM_STYLE}
+            secondary='Selection Sort is similar to Insertion Sort. It also divides the list into a sorted and an unsorted region. However, instead of inserting each element in its correct position as in Insertion Sort, Selection Sort repeatedly selects the minimum (or maximum) element from the unsorted region and swaps it with the first unsorted element.'
+          />
+        </ListItem>
+        <ListItem disablePadding>
+          <ListItemText
+            primaryTypographyProps={LIST_HEADER_STYLE}
+            primary='Shell Sort'
+            secondaryTypographyProps={LIST_ITEM_STYLE}
+            secondary='Shell Sort is a generalization of Insertion Sort. It works by comparing elements separated by a gap of several positions. This way, it can move an element to its correct position in fewer swaps than regular Insertion Sort.'
+          />
+        </ListItem>
+      </List>
+    </>
   },
 
   'Sleep Sort': {
-    description: [
-      'text1',
-      'text2',
-      'text3',
-    ],
+    description: <>
+      <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
+        Selection Sort is a straightforward sorting algorithm that works by repeatedly selecting the minimum (or maximum) element from the unsorted portion of the list and swapping it with the first unsorted element.
+      </Typography>
+      <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
+        The process begins by initially considering the entire list as unsorted. In each iteration, the smallest (or largest) element from the unsorted portion of the list is selected and swapped with the first unsorted element, thus expanding the sorted portion of the list by one element. This process is repeated until the entire list is sorted.
+      </Typography>
+      <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
+        Selection Sort has a time complexity of O(n²) in all cases, making it inefficient for large lists. It is not a stable algorithm, meaning it does not necessarily preserve the relative order of equal keys. However, it is an in-place algorithm, as it does not require any additional memory space beyond what is needed to hold the input list.
+      </Typography>
+      <Typography variant="h3">Similar Algorithms</Typography>
+      <List>
+        <ListItem disablePadding>
+          <ListItemText
+            primaryTypographyProps={LIST_HEADER_STYLE}
+            primary='Selection Sort'
+            secondaryTypographyProps={LIST_ITEM_STYLE}
+            secondary='Selection Sort is similar to Insertion Sort. It also divides the list into a sorted and an unsorted region. However, instead of inserting each element in its correct position as in Insertion Sort, Selection Sort repeatedly selects the minimum (or maximum) element from the unsorted region and swaps it with the first unsorted element.'
+          />
+        </ListItem>
+        <ListItem disablePadding>
+          <ListItemText
+            primaryTypographyProps={LIST_HEADER_STYLE}
+            primary='Shell Sort'
+            secondaryTypographyProps={LIST_ITEM_STYLE}
+            secondary='Shell Sort is a generalization of Insertion Sort. It works by comparing elements separated by a gap of several positions. This way, it can move an element to its correct position in fewer swaps than regular Insertion Sort.'
+          />
+        </ListItem>
+      </List>
+    </>
   },
 
   'Delete Sort': {
-    description: [
-      'text1',
-      'text2',
-      'text3',
-    ],
+    description: <>
+      <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
+        Selection Sort is a straightforward sorting algorithm that works by repeatedly selecting the minimum (or maximum) element from the unsorted portion of the list and swapping it with the first unsorted element.
+      </Typography>
+      <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
+        The process begins by initially considering the entire list as unsorted. In each iteration, the smallest (or largest) element from the unsorted portion of the list is selected and swapped with the first unsorted element, thus expanding the sorted portion of the list by one element. This process is repeated until the entire list is sorted.
+      </Typography>
+      <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
+        Selection Sort has a time complexity of O(n²) in all cases, making it inefficient for large lists. It is not a stable algorithm, meaning it does not necessarily preserve the relative order of equal keys. However, it is an in-place algorithm, as it does not require any additional memory space beyond what is needed to hold the input list.
+      </Typography>
+      <Typography variant="h3">Similar Algorithms</Typography>
+      <List>
+        <ListItem disablePadding>
+          <ListItemText
+            primaryTypographyProps={LIST_HEADER_STYLE}
+            primary='Selection Sort'
+            secondaryTypographyProps={LIST_ITEM_STYLE}
+            secondary='Selection Sort is similar to Insertion Sort. It also divides the list into a sorted and an unsorted region. However, instead of inserting each element in its correct position as in Insertion Sort, Selection Sort repeatedly selects the minimum (or maximum) element from the unsorted region and swaps it with the first unsorted element.'
+          />
+        </ListItem>
+        <ListItem disablePadding>
+          <ListItemText
+            primaryTypographyProps={LIST_HEADER_STYLE}
+            primary='Shell Sort'
+            secondaryTypographyProps={LIST_ITEM_STYLE}
+            secondary='Shell Sort is a generalization of Insertion Sort. It works by comparing elements separated by a gap of several positions. This way, it can move an element to its correct position in fewer swaps than regular Insertion Sort.'
+          />
+        </ListItem>
+      </List>
+    </>
   },
 
   'Tree Sort': {
-    description: [
-      'text1',
-      'text2',
-      'text3',
-    ],
+    description: <>
+      <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
+        Selection Sort is a straightforward sorting algorithm that works by repeatedly selecting the minimum (or maximum) element from the unsorted portion of the list and swapping it with the first unsorted element.
+      </Typography>
+      <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
+        The process begins by initially considering the entire list as unsorted. In each iteration, the smallest (or largest) element from the unsorted portion of the list is selected and swapped with the first unsorted element, thus expanding the sorted portion of the list by one element. This process is repeated until the entire list is sorted.
+      </Typography>
+      <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
+        Selection Sort has a time complexity of O(n²) in all cases, making it inefficient for large lists. It is not a stable algorithm, meaning it does not necessarily preserve the relative order of equal keys. However, it is an in-place algorithm, as it does not require any additional memory space beyond what is needed to hold the input list.
+      </Typography>
+      <Typography variant="h3">Similar Algorithms</Typography>
+      <List>
+        <ListItem disablePadding>
+          <ListItemText
+            primaryTypographyProps={LIST_HEADER_STYLE}
+            primary='Insertion Sort'
+            secondaryTypographyProps={LIST_ITEM_STYLE}
+            secondary='Insertion Sort is similar in that it builds a sorted portion of the list one element at a time like Selection Sort, the method they use to do this is different.'
+          />
+        </ListItem>
+        <ListItem disablePadding>
+          <ListItemText
+            primaryTypographyProps={LIST_HEADER_STYLE}
+            primary='Heapsort Sort'
+            secondaryTypographyProps={LIST_ITEM_STYLE}
+            secondary='Heapsort is similar to Selection Sort as it also works by repeatedly selecting the maximum element from the unsorted portion of the list. However, Heapsort uses a binary heap data structure to efficiently find the maximum element, which improves its time complexity to O(n log n).'
+          />
+        </ListItem>
+        <ListItem disablePadding>
+          <ListItemText
+            primaryTypographyProps={LIST_HEADER_STYLE}
+            primary='Cycle Sort'
+            secondaryTypographyProps={LIST_ITEM_STYLE}
+            secondary='Cycle Sort is similar to Selection Sort as it also repeatedly selects the minimum element from the unsorted portion of the list. However, Cycle Sort minimizes the number of swaps by moving each element to its correct position in a cycle, which makes it more efficient in terms of the number of writes.'
+          />
+        </ListItem>
+      </List>
+    </>
   },
 }
 
