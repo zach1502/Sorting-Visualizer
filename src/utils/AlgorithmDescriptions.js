@@ -37,14 +37,6 @@ const algorithmDescriptions = {
           <ListItem disablePadding>
             <ListItemText
               primaryTypographyProps={LIST_HEADER_STYLE}
-              primary='Gnome Sort'
-              secondaryTypographyProps={LIST_ITEM_STYLE}
-              secondary='It continuously swaps the adjacent elements if they are in the wrong order, but then moves forward or backward depending on whether it made a swap or not.'
-            />
-          </ListItem>
-          <ListItem disablePadding>
-            <ListItemText
-              primaryTypographyProps={LIST_HEADER_STYLE}
               primary='Odd-Even Sort'
               secondaryTypographyProps={LIST_ITEM_STYLE}
               secondary='The list is divided into two separate groups - one containing elements at odd indices and the other, at even indices. The algorithm then sorts the odd indicies then the even indicies.'
@@ -176,17 +168,25 @@ const algorithmDescriptions = {
         <ListItem disablePadding>
           <ListItemText
             primaryTypographyProps={LIST_HEADER_STYLE}
-            primary='Selection Sort'
+            primary='Insertion Sort'
             secondaryTypographyProps={LIST_ITEM_STYLE}
-            secondary='Selection Sort is similar to Insertion Sort. It also divides the list into a sorted and an unsorted region. However, instead of inserting each element in its correct position as in Insertion Sort, Selection Sort repeatedly selects the minimum (or maximum) element from the unsorted region and swaps it with the first unsorted element.'
+            secondary='Insertion Sort is similar in that it builds a sorted portion of the list one element at a time like Selection Sort, the method they use to do this is different.'
           />
         </ListItem>
         <ListItem disablePadding>
           <ListItemText
             primaryTypographyProps={LIST_HEADER_STYLE}
-            primary='Shell Sort'
+            primary='Heapsort Sort'
             secondaryTypographyProps={LIST_ITEM_STYLE}
-            secondary='Shell Sort is a generalization of Insertion Sort. It works by comparing elements separated by a gap of several positions. This way, it can move an element to its correct position in fewer swaps than regular Insertion Sort.'
+            secondary='Heapsort is similar to Selection Sort as it also works by repeatedly selecting the maximum element from the unsorted portion of the list. However, Heapsort uses a binary heap data structure to efficiently find the maximum element, which improves its time complexity to O(n log n).'
+          />
+        </ListItem>
+        <ListItem disablePadding>
+          <ListItemText
+            primaryTypographyProps={LIST_HEADER_STYLE}
+            primary='Cycle Sort'
+            secondaryTypographyProps={LIST_ITEM_STYLE}
+            secondary='Cycle Sort is similar to Selection Sort as it also repeatedly selects the minimum element from the unsorted portion of the list. However, Cycle Sort minimizes the number of swaps by moving each element to its correct position in a cycle, which makes it more efficient in terms of the number of writes.'
           />
         </ListItem>
       </List>
@@ -196,30 +196,30 @@ const algorithmDescriptions = {
   'Cocktail Shaker Sort': {
     description: <>
       <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
-        Selection Sort is a straightforward sorting algorithm that works by repeatedly selecting the minimum (or maximum) element from the unsorted portion of the list and swapping it with the first unsorted element.
+        Cocktail Shaker Sort, also known as Bidirectional Bubble Sort, Shaker Sort, Ripple Sort, or Shuttle Sort, is a variation of the Bubble Sort algorithm. Similar to Bubble Sort, it compares adjacent elements and swaps them if they are in the wrong order. However, the key difference is that, unlike Bubble Sort, which only traverses the list in one direction, Cocktail Shaker Sort traverses the list in both directions - first from left to right, and then from right to left.
       </Typography>
       <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
-        The process begins by initially considering the entire list as unsorted. In each iteration, the smallest (or largest) element from the unsorted portion of the list is selected and swapped with the first unsorted element, thus expanding the sorted portion of the list by one element. This process is repeated until the entire list is sorted.
+        This two-way approach helps to slightly improve the efficiency of the algorithm by reducing the number of passes required to completely sort the list. The algorithm continues to make passes over the list, swapping adjacent elements if necessary, until a complete pass is made with no swaps, indicating that the list is sorted.
       </Typography>
       <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
-        Selection Sort has a time complexity of O(n²) in all cases, making it inefficient for large lists. It is not a stable algorithm, meaning it does not necessarily preserve the relative order of equal keys. However, it is an in-place algorithm, as it does not require any additional memory space beyond what is needed to hold the input list.
+        The time complexity of Cocktail Shaker Sort in the worst and average cases is O(n²), similar to Bubble Sort, making it inefficient for large lists. However, it can perform better than Bubble Sort on certain types of lists, such as ones where the majority of the elements are already in order. It is a stable and in-place sorting algorithm.
       </Typography>
       <Typography variant="h3">Similar Algorithms</Typography>
       <List>
         <ListItem disablePadding>
           <ListItemText
             primaryTypographyProps={LIST_HEADER_STYLE}
-            primary='Selection Sort'
+            primary='Bubble Sort'
             secondaryTypographyProps={LIST_ITEM_STYLE}
-            secondary='Selection Sort is similar to Insertion Sort. It also divides the list into a sorted and an unsorted region. However, instead of inserting each element in its correct position as in Insertion Sort, Selection Sort repeatedly selects the minimum (or maximum) element from the unsorted region and swaps it with the first unsorted element.'
+            secondary='Bubble Sort is the most basic version of Cocktail Shaker Sort and only sorts in one direction, from left to right, on each pass through the list.'
           />
         </ListItem>
         <ListItem disablePadding>
           <ListItemText
             primaryTypographyProps={LIST_HEADER_STYLE}
-            primary='Shell Sort'
+            primary='Comb Sort'
             secondaryTypographyProps={LIST_ITEM_STYLE}
-            secondary='Shell Sort is a generalization of Insertion Sort. It works by comparing elements separated by a gap of several positions. This way, it can move an element to its correct position in fewer swaps than regular Insertion Sort.'
+            secondary='Comb Sort is another variation of Bubble Sort, but instead of comparing adjacent elements, it compares elements at a certain "gap" distance, which decreases over time.'
           />
         </ListItem>
       </List>
@@ -229,30 +229,35 @@ const algorithmDescriptions = {
   'Radix Sort': {
     description: <>
       <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
-        Selection Sort is a straightforward sorting algorithm that works by repeatedly selecting the minimum (or maximum) element from the unsorted portion of the list and swapping it with the first unsorted element.
+        Radix Sort is a non-comparative sorting algorithm that works by distributing the elements into buckets according to their individual digits. 
+        Non-comparative sorting algorithms are not bounded by the O(n log n) time complexity lower limit of comparison-based sorting algorithms, which makes them more efficient for large lists.
+        Radix Sort is not widely used in practice, because of its high space complexity and because the constant factor of its time complexity is usually massive compared to other sorting algorithms.
       </Typography>
       <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
-        The process begins by initially considering the entire list as unsorted. In each iteration, the smallest (or largest) element from the unsorted portion of the list is selected and swapped with the first unsorted element, thus expanding the sorted portion of the list by one element. This process is repeated until the entire list is sorted.
+        It processes the digits of each number one at a time, starting from the least significant digit (LSD) to the most significant digit (MSD), or vice versa.
       </Typography>
       <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
-        Selection Sort has a time complexity of O(n²) in all cases, making it inefficient for large lists. It is not a stable algorithm, meaning it does not necessarily preserve the relative order of equal keys. However, it is an in-place algorithm, as it does not require any additional memory space beyond what is needed to hold the input list.
+        Initially, all elements are placed in a single bucket. Then, the elements are redistributed into separate buckets based on the current digit being considered. After redistribution, the buckets are gathered back together in order, and the process is repeated for the next digit until all digits have been considered.
+      </Typography>
+      <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
+        Radix Sort has a time complexity of O(nk/d), where n is the number of elements, and k is the number of digits in the input numbers and d is the digit size. It is a stable algorithm, which means it preserves the order of items with equal keys. However, it is not an in-place algorithm, as it may require a large amount of additional memory space to store the buckets during the sorting process.
       </Typography>
       <Typography variant="h3">Similar Algorithms</Typography>
       <List>
         <ListItem disablePadding>
           <ListItemText
             primaryTypographyProps={LIST_HEADER_STYLE}
-            primary='Selection Sort'
+            primary='Counting Sort'
             secondaryTypographyProps={LIST_ITEM_STYLE}
-            secondary='Selection Sort is similar to Insertion Sort. It also divides the list into a sorted and an unsorted region. However, instead of inserting each element in its correct position as in Insertion Sort, Selection Sort repeatedly selects the minimum (or maximum) element from the unsorted region and swaps it with the first unsorted element.'
+            secondary='Counting Sort is similar to Radix Sort as it is also a non-comparative sorting algorithm. It sorts the elements by counting the number of occurrences of each unique element and then uses this count to place them in their correct position. Radix Sort uses Counting Sort as a sub-routine.'
           />
         </ListItem>
         <ListItem disablePadding>
           <ListItemText
             primaryTypographyProps={LIST_HEADER_STYLE}
-            primary='Shell Sort'
+            primary='Bucket Sort'
             secondaryTypographyProps={LIST_ITEM_STYLE}
-            secondary='Shell Sort is a generalization of Insertion Sort. It works by comparing elements separated by a gap of several positions. This way, it can move an element to its correct position in fewer swaps than regular Insertion Sort.'
+            secondary='Bucket Sort is another non-comparative sorting algorithm that sorts elements into several buckets based on their values. Each bucket is then sorted individually, either using another sorting algorithm or by recursively applying the Bucket Sort algorithm. This is somewhat similar to the way Radix Sort sorts elements into buckets based on their digits.'
           />
         </ListItem>
       </List>
