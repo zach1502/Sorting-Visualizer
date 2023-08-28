@@ -154,52 +154,45 @@ function SortingVisualizer() {
             <Typography variant="h2" gutterBottom>
               {algorithm.name}
             </Typography>
-            {algorithmDescription.paragraphs.map((paragraph, index) => (
-              <Typography key={index} variant="body1" gutterBottom pt={1}>
-                {paragraph}
-              </Typography>
-            ))}
+            {algorithmDescription.paragraph}
           </Box>
         </Grid>
 
         <Grid item md={4} xs={12}>
           <TableContainer component={Box} border={1} borderColor="grey.500" borderRadius="borderRadius" mt={2} p={2}>
             <Table>
-              <TableHead>
-                <TableRow>
-                  <TableCell></TableCell>
-                  <TableCell></TableCell>
-                </TableRow>
-              </TableHead>
               <TableBody>
                 <TableRow>
-                  <TableCell>Worst Case</TableCell>
-                  <TableCell>{algorithm.worseCase}</TableCell>
+                  <TableCell><Typography>Sorting Method</Typography></TableCell>
+                  <TableCell><Typography>{algorithm.method}</Typography></TableCell>
                 </TableRow>
                 <TableRow>
-                  <TableCell>Average Case</TableCell>
-                  <TableCell>{algorithm.averageCase}</TableCell>
+                  <TableCell><Typography>Best Case</Typography></TableCell>
+                  <TableCell><Typography>{algorithm.bestCase}</Typography></TableCell>
                 </TableRow>
                 <TableRow>
-                  <TableCell>Best Case</TableCell>
-                  <TableCell>{algorithm.bestCase}</TableCell>
+                  <TableCell><Typography>Average Case</Typography></TableCell>
+                  <TableCell><Typography>{algorithm.averageCase}</Typography></TableCell>
                 </TableRow>
                 <TableRow>
-                  <TableCell>Memory</TableCell>
-                  <TableCell>{algorithm.memory}</TableCell>
+                  <TableCell><Typography>Worst Case</Typography></TableCell>
+                  <TableCell><Typography>{algorithm.worseCase}</Typography></TableCell>
                 </TableRow>
                 <TableRow>
-                  <TableCell>Stable</TableCell>
-                  <TableCell>{algorithm.stable ? 'Yes' : 'No'}</TableCell>
+                  <TableCell><Typography>Memory</Typography></TableCell>
+                  <TableCell><Typography>{algorithm.memory}</Typography></TableCell>
                 </TableRow>
                 <TableRow>
-                  <TableCell>Method</TableCell>
-                  <TableCell>{algorithm.method}</TableCell>
+                  <TableCell><Typography>Stable</Typography></TableCell>
+                  <TableCell><Typography>{algorithm.stable ? 'Yes' : 'No'}</Typography></TableCell>
                 </TableRow>
-                <TableRow>
-                  <TableCell>Joke</TableCell>
-                  <TableCell>{algorithm.joke ? 'Yes' : 'No'}</TableCell>
-                </TableRow>
+                {algorithm.joke ?
+                  <TableRow>
+                    <TableCell><Typography>Joke</Typography></TableCell>
+                    <TableCell><Typography>Yes</Typography></TableCell>
+                  </TableRow> :
+                  null
+                }
               </TableBody>
             </Table>
           </TableContainer>
