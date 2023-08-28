@@ -123,11 +123,41 @@ const algorithmDescriptions = {
   },
 
   'Insertion Sort': {
-    description: [
-      'text1',
-      'text2',
-      'text3',
-    ],
+    description:
+      <>
+        <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
+          Insertion Sort is a simple and intuitive sorting algorithm. It works by building a sorted section of the list one item at a time by repeatedly taking one element from the unsorted portion and inserting it into its correct position within the sorted portion.
+        </Typography>
+        <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
+          Imagine you are playing cards. As you pick up cards one by one, you sort them in your hand by inserting each card in its right place, so you always hold a sorted hand. Insertion Sort works in a similar way.
+        </Typography>
+        <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
+          The time complexity of Insertion Sort is O(n²) in the worst and average case, and O(n) in the best case (when the list is already sorted).
+          Insertion Sort tends to perform well on small lists or when the list is almost sorted, which makes it a good choice for sorting small amounts of data.
+        </Typography>
+        <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
+          It is a stable algorithm, which means that it preserves the order of items with equal keys. Additionally, it is an in-place algorithm, which means that it does not require any extra memory space to sort the list, making it a memory-efficient option.
+        </Typography>
+        <Typography variant="h3">Similar Algorithms</Typography>
+        <List>
+          <ListItem disablePadding>
+            <ListItemText
+              primaryTypographyProps={LIST_HEADER_STYLE}
+              primary='Selection Sort'
+              secondaryTypographyProps={LIST_ITEM_STYLE}
+              secondary='Selection Sort is similar to Insertion Sort. It also divides the list into a sorted and an unsorted region. However, instead of inserting each element in its correct position as in Insertion Sort, Selection Sort repeatedly selects the minimum (or maximum) element from the unsorted region and swaps it with the first unsorted element.'
+            />
+          </ListItem>
+          <ListItem disablePadding>
+            <ListItemText
+              primaryTypographyProps={LIST_HEADER_STYLE}
+              primary='Shell Sort'
+              secondaryTypographyProps={LIST_ITEM_STYLE}
+              secondary='Shell Sort is a generalization of Insertion Sort. It works by comparing elements separated by a gap of several positions. This way, it can move an element to its correct position in fewer swaps than regular Insertion Sort.'
+            />
+          </ListItem>
+        </List>
+      </>
   },
 
   'Selection Sort': {
