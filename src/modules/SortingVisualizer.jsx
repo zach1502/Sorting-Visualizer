@@ -155,7 +155,7 @@ function SortingVisualizer() {
             <Typography variant="h2" gutterBottom>
               {algorithm.name}
             </Typography>
-            {algorithmDescription.paragraph}
+            {algorithmDescription.description}
           </Box>
         </Grid>
 
