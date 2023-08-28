@@ -26,7 +26,7 @@ function SortingVisualizer() {
     joke: false,
   });
   const [algorithmDescription, setAlgorithmDescription] = useState(algorithmDescriptions[algorithm.name]);
-  const [speed, setSpeed] = useState(10); // ms
+  const [speed, setSpeed] = useState(40); // ms
 
   function generateRandomArray(length) {
     const numbers = Array.from({ length }, (_, i) => i + 1);
