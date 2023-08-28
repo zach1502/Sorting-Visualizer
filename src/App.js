@@ -5,7 +5,7 @@ import { Box } from '@mui/material';
 function App() {
   return (
     <>
-      <Box sx={{ height: '100vh', width: '100vw', backgroundColor: '#f5f5f5' }}>
+      <Box sx={{ height: '100%', width: '100%'}}>
         <Index/>
       </Box>
     </>

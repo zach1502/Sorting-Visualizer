@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Box, Button, ButtonGroup, Grid } from '@mui/material';
+import { Box, Button, ButtonGroup, Grid, Typography, Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from '@mui/material';
 import ArrayDisplay from '../components/ArrayDisplay';
 import AlgorithmSelector from '../components/AlgorithmSelector'
 import algorithmDescriptions from '../utils/AlgorithmDescriptions';
@@ -89,6 +89,10 @@ function SortingVisualizer() {
 
   const displayArr = steps[currentStep] || arr;
 
+  React.useEffect(() => {
+    setAlgorithmDescription(algorithmDescriptions[algorithm.name]);
+  }, [algorithm.name]);
+
   return (
     <Box mt={3} mx="auto" width="90%">
       <Grid container spacing={2} justifyContent="space-between" alignItems="center">
@@ -125,26 +129,82 @@ function SortingVisualizer() {
       </Grid>
 
       {/* Display area */}
+      <Grid item xs={12}>
+        <Box mt={2} p={2} border={1}
+          display='flex'
+          borderColor="grey.500"
+          borderRadius="borderRadius"
+          height="50vh"
+          width='100%'
+          paddingTop={4}
+          alignItems='flex-end'
+        >
+          <ArrayDisplay arr={displayArr} numElements={numElements} />
+        </Box>
+      </Grid>
 
-      <Box mt={2} p={2} border={1}
-        display='flex'
-        borderColor="grey.500"
-        borderRadius="borderRadius"
-        height="50vh"
-        paddingTop={4}
-        alignItems='flex-end'
-      >
-        <ArrayDisplay arr={displayArr} numElements={numElements} />
-      </Box>
-      <Box mt={2} p={2} border={1}
-        display='flex'
-        borderColor="grey.500"
-        borderRadius="borderRadius"
-        height="20vh"
-        paddingTop={4}
-      >
-        {algorithmDescription.paragraphs[0]}
-      </Box>
+      {/* Alg Info */}
+      <Grid container item spacing={2}>
+        <Grid item md={8} xs={12}>
+          <Box mt={2} p={2} border={1}
+            borderColor="grey.500"
+            borderRadius="borderRadius"
+            paddingTop={4}
+          >
+            <Typography variant="h2" gutterBottom>
+              {algorithm.name}
+            </Typography>
+            {algorithmDescription.paragraphs.map((paragraph, index) => (
+              <Typography key={index} variant="body1" gutterBottom pt={1}>
+                {paragraph}
+              </Typography>
+            ))}
+          </Box>
+        </Grid>
+
+        <Grid item md={4} xs={12}>
+          <TableContainer component={Box} border={1} borderColor="grey.500" borderRadius="borderRadius" mt={2} p={2}>
+            <Table>
+              <TableHead>
+                <TableRow>
+                  <TableCell></TableCell>
+                  <TableCell></TableCell>
+                </TableRow>
+              </TableHead>
+              <TableBody>
+                <TableRow>
+                  <TableCell>Worst Case</TableCell>
+                  <TableCell>{algorithm.worseCase}</TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell>Average Case</TableCell>
+                  <TableCell>{algorithm.averageCase}</TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell>Best Case</TableCell>
+                  <TableCell>{algorithm.bestCase}</TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell>Memory</TableCell>
+                  <TableCell>{algorithm.memory}</TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell>Stable</TableCell>
+                  <TableCell>{algorithm.stable ? 'Yes' : 'No'}</TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell>Method</TableCell>
+                  <TableCell>{algorithm.method}</TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell>Joke</TableCell>
+                  <TableCell>{algorithm.joke ? 'Yes' : 'No'}</TableCell>
+                </TableRow>
+              </TableBody>
+            </Table>
+          </TableContainer>
+        </Grid>
+      </Grid>
     </Box>
   );
 }
