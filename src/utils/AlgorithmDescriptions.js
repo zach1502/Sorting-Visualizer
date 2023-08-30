@@ -454,7 +454,7 @@ const algorithmDescriptions = {
         The algorithm starts by comparing the first element with every other element in the list. If any element is smaller than the first element, they are exchanged. Next, the second element is compared with all the elements (except the first one) and exchanged if necessary. This process continues until the entire list is sorted.
       </Typography>
       <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
-        Exchange Sort has a time complexity of O(n^2) in the worst case, which makes it inefficient for large lists. It is a simple algorithm, but there are more efficient algorithms available for sorting large lists. However, Exchange Sort is an in-place algorithm, as it does not require additional memory space to temporarily store elements during the sorting process.
+        Exchange Sort has a time complexity of O(n²) in the worst case, which makes it inefficient for large lists. It is a simple algorithm, but there are more efficient algorithms available for sorting large lists. However, Exchange Sort is an in-place algorithm, as it does not require additional memory space to temporarily store elements during the sorting process.
       </Typography>
       <Typography variant="h3">Similar Algorithms</Typography>
       <List>
@@ -488,7 +488,7 @@ const algorithmDescriptions = {
         Cycle Sort minimizes the number of writes to the original list, which makes it more efficient than other algorithms in terms of the number of writes.
       </Typography>
       <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
-        Cycle Sort has a time complexity of O(n^2) in all cases, which makes it less efficient compared to other sorting algorithms. However, it is an in-place algorithm, which means that it does not require additional memory space to sort the list. Also, it is a stable algorithm, which means that it preserves the order of items with equal keys.
+        Cycle Sort has a time complexity of O(n²) in all cases, which makes it less efficient compared to other sorting algorithms. However, it is an in-place algorithm, which means that it does not require additional memory space to sort the list. Also, it is a stable algorithm, which means that it preserves the order of items with equal keys.
       </Typography>
       <Typography variant="h3">Similar Algorithms</Typography>
       <List>
@@ -521,7 +521,7 @@ const algorithmDescriptions = {
         Once all the cards are dealt, you then pick them back up, starting with the smallest pile (which will have the smallest 'card' on top), and then the next smallest, and so on, until all the cards are back in your hand. The cards will now be sorted.
       </Typography>
       <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
-        Patience Sort has an average time complexity of O(n log n), which makes it efficient. However, the worst-case time complexity is O(n^2), which can happen if the input list is in reverse order. It is a stable algorithm, which means that it preserves the order of items with equal keys. It is also an in-place algorithm, as it only requires a constant amount of extra memory.
+        Patience Sort has an average time complexity of O(n log n), which makes it efficient. However, the worst-case time complexity is O(n²), which can happen if the input list is in reverse order. It is a stable algorithm, which means that it preserves the order of items with equal keys. It is also an in-place algorithm, as it only requires a constant amount of extra memory.
       </Typography>
       <Typography variant="h3">Similar Algorithms</Typography>
       <List>
@@ -603,7 +603,7 @@ const algorithmDescriptions = {
         Once the end of the list is reached, the created sublist is then merged into the result list. This process is repeated until all elements have been moved to the result list, which is then sorted.
       </Typography>
       <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
-        Strand Sort is a stable algorithm, which means that it preserves the order of items with equal keys. However, it is not an in-place algorithm, as it requires additional memory space to temporarily store the sublists during the merging process. The time complexity of Strand Sort in the worst case is O(n^2), but it works more efficiently on partially sorted lists.
+        Strand Sort is a stable algorithm, which means that it preserves the order of items with equal keys. However, it is not an in-place algorithm, as it requires additional memory space to temporarily store the sublists during the merging process. The time complexity of Strand Sort in the worst case is O(n²), but it works more efficiently on partially sorted lists.
       </Typography>
       <Typography variant="h3">Similar Algorithms</Typography>
       <List>
@@ -636,7 +636,7 @@ const algorithmDescriptions = {
         The gap starts as a large value, usually the length of the list divided by a factor (1.3 is commonly used), and is then shrunk in each iteration, usually by dividing it by the same factor, until the gap is 1, and the algorithm behaves like Bubble Sort. This process helps to move large values to the right side of the list and small values to the left side more quickly than Bubble Sort, which speeds up the sorting process.
       </Typography>
       <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
-        Comb Sort has a time complexity of O(n^2) in the worst case, but it usually performs much better and can be close to O(n log n) on average. It is not a stable algorithm, which means it does not preserve the order of items with equal keys, but it is an in-place algorithm, as it does not require any additional memory space.
+        Comb Sort has a time complexity of O(n²) in the worst case, but it usually performs much better and can be close to O(n log n) on average. It is not a stable algorithm, which means it does not preserve the order of items with equal keys, but it is an in-place algorithm, as it does not require any additional memory space.
       </Typography>
       <Typography variant="h3">Similar Algorithms</Typography>
       <List>
@@ -669,7 +669,7 @@ const algorithmDescriptions = {
         In Gnome Sort, you start at the second element of the list and compare it with the one before. If the current element is smaller than the previous one, you swap them and move one position backward. If the current element is greater or equal, you move one position forward. You repeat this process until the entire list is sorted.
       </Typography>
       <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
-        Gnome Sort has a worst-case time complexity of O(n^2), which makes it less efficient for large lists. However, it is easy to implement and can perform better for small lists or lists that are mostly sorted. It is a stable algorithm, which means that it preserves the order of items with equal keys. Additionally, it is an in-place algorithm, as it does not require additional memory space.
+        Gnome Sort has a worst-case time complexity of O(n²), which makes it less efficient for large lists. However, it is easy to implement and can perform better for small lists or lists that are mostly sorted. It is a stable algorithm, which means that it preserves the order of items with equal keys. Additionally, it is an in-place algorithm, as it does not require additional memory space.
       </Typography>
       <Typography variant="h3">Similar Algorithms</Typography>
       <List>
@@ -702,7 +702,7 @@ const algorithmDescriptions = {
         The process is repeated until the list is sorted. The main advantage of this algorithm is its ability to quickly sort already almost-sorted data.
       </Typography>
       <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
-        The time complexity of Odd-Even Sort in the worst case is O(n^2), which makes it inefficient on large lists, and it is generally not used in practice for sorting large data volumes. It is a stable algorithm, which means that it preserves the order of items with equal keys. It is also an in-place algorithm, as it only requires a constant amount of extra memory.
+        The time complexity of Odd-Even Sort in the worst case is O(n²), which makes it inefficient on large lists, and it is generally not used in practice for sorting large data volumes. It is a stable algorithm, which means that it preserves the order of items with equal keys. It is also an in-place algorithm, as it only requires a constant amount of extra memory.
       </Typography>
       <Typography variant="h3">Similar Algorithms</Typography>
       <List>
@@ -828,30 +828,30 @@ const algorithmDescriptions = {
   'Spread Sort': {
     description: <>
       <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
-        Selection Sort is a straightforward sorting algorithm that works by repeatedly selecting the minimum (or maximum) element from the unsorted portion of the list and swapping it with the first unsorted element.
+        Spread Sort is a hybrid sorting algorithm that combines the principles of distribution and comparison-based sorting. It works by first distributing the elements into buckets based on their individual digits (like in Radix Sort), and then sorting these buckets using a comparison-based sorting algorithm (like Quick Sort).
       </Typography>
       <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
-        The process begins by initially considering the entire list as unsorted. In each iteration, the smallest (or largest) element from the unsorted portion of the list is selected and swapped with the first unsorted element, thus expanding the sorted portion of the list by one element. This process is repeated until the entire list is sorted.
+        The algorithm begins by finding the maximum and minimum elements in the array. It then uses this range to distribute the elements into buckets. Each bucket represents a range of values, and elements are placed into buckets based on their value. Once all elements are distributed, the buckets are sorted using a comparison-based sorting algorithm.
       </Typography>
       <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
-        Selection Sort has a time complexity of O(n²) in all cases, making it inefficient for large lists. It is not a stable algorithm, meaning it does not necessarily preserve the relative order of equal keys. However, it is an in-place algorithm, as it does not require any additional memory space beyond what is needed to hold the input list.
+        Spread Sort is faster than other general-purpose algorithms like Quick Sort and Merge Sort for large datasets and with a limited key range. It is an in-place algorithm but is not stable, which means that the order of items with equal keys might not be preserved.
       </Typography>
       <Typography variant="h3">Similar Algorithms</Typography>
       <List>
         <ListItem disablePadding>
           <ListItemText
             primaryTypographyProps={LIST_HEADER_STYLE}
-            primary='Selection Sort'
+            primary='Radix Sort'
             secondaryTypographyProps={LIST_ITEM_STYLE}
-            secondary='Selection Sort is similar to Insertion Sort. It also divides the list into a sorted and an unsorted region. However, instead of inserting each element in its correct position as in Insertion Sort, Selection Sort repeatedly selects the minimum (or maximum) element from the unsorted region and swaps it with the first unsorted element.'
+            secondary='Radix Sort is a non-comparison based sorting algorithm that distributes the elements into buckets based on their individual digits, similar to the distribution phase of Spread Sort.'
           />
         </ListItem>
         <ListItem disablePadding>
           <ListItemText
             primaryTypographyProps={LIST_HEADER_STYLE}
-            primary='Shell Sort'
+            primary='Bucket Sort'
             secondaryTypographyProps={LIST_ITEM_STYLE}
-            secondary='Shell Sort is a generalization of Insertion Sort. It works by comparing elements separated by a gap of several positions. This way, it can move an element to its correct position in fewer swaps than regular Insertion Sort.'
+            secondary='Bucket Sort is another distribution-based sorting algorithm that divides the array into a number of buckets and then sorts these buckets individually, similar to the process followed in Spread Sort.'
           />
         </ListItem>
       </List>
@@ -861,13 +861,13 @@ const algorithmDescriptions = {
   'Pancake Sort': {
     description: <>
       <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
-        Selection Sort is a straightforward sorting algorithm that works by repeatedly selecting the minimum (or maximum) element from the unsorted portion of the list and swapping it with the first unsorted element.
+        Pancake Sort is a fun and interesting sorting algorithm that sorts a list of elements by repeatedly flipping (reversing) sections of the list. Imagine you have a stack of pancakes, and you want to sort them from smallest at the top to largest at the bottom. The only allowed operation is to insert a spatula anywhere in the stack and flip all pancakes above it.
       </Typography>
       <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
-        The process begins by initially considering the entire list as unsorted. In each iteration, the smallest (or largest) element from the unsorted portion of the list is selected and swapped with the first unsorted element, thus expanding the sorted portion of the list by one element. This process is repeated until the entire list is sorted.
+        The algorithm works by moving the current largest pancake to the top with a flip, and then moving it to its correct position with another flip. This process is repeated for each pancake in the stack until the entire stack is sorted.
       </Typography>
       <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
-        Selection Sort has a time complexity of O(n²) in all cases, making it inefficient for large lists. It is not a stable algorithm, meaning it does not necessarily preserve the relative order of equal keys. However, it is an in-place algorithm, as it does not require any additional memory space beyond what is needed to hold the input list.
+        Pancake Sort has a time complexity of O(n²) in the worst case, which is not very efficient compared to other sorting algorithms like Merge Sort. However, it is an in-place algorithm, meaning it doesn't require any additional memory space except for the list itself.
       </Typography>
       <Typography variant="h3">Similar Algorithms</Typography>
       <List>
@@ -876,15 +876,15 @@ const algorithmDescriptions = {
             primaryTypographyProps={LIST_HEADER_STYLE}
             primary='Selection Sort'
             secondaryTypographyProps={LIST_ITEM_STYLE}
-            secondary='Selection Sort is similar to Insertion Sort. It also divides the list into a sorted and an unsorted region. However, instead of inserting each element in its correct position as in Insertion Sort, Selection Sort repeatedly selects the minimum (or maximum) element from the unsorted region and swaps it with the first unsorted element.'
+            secondary='Similar to Pancake Sort, Selection Sort also works by repeatedly selecting the maximum element from the unsorted section of the list and moving it to its correct position, but it does so by swapping elements instead of flipping sections of the list.'
           />
         </ListItem>
         <ListItem disablePadding>
           <ListItemText
             primaryTypographyProps={LIST_HEADER_STYLE}
-            primary='Shell Sort'
+            primary='Bubble Sort'
             secondaryTypographyProps={LIST_ITEM_STYLE}
-            secondary='Shell Sort is a generalization of Insertion Sort. It works by comparing elements separated by a gap of several positions. This way, it can move an element to its correct position in fewer swaps than regular Insertion Sort.'
+            secondary='Bubble Sort is another simple comparison-based sorting algorithm like Pancake Sort, but it works by repeatedly swapping adjacent elements if they are in the wrong order, instead of flipping sections of the list.'
           />
         </ListItem>
       </List>
@@ -894,30 +894,30 @@ const algorithmDescriptions = {
   'I Can\'t Believe It Can Sort': {
     description: <>
       <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
-        Selection Sort is a straightforward sorting algorithm that works by repeatedly selecting the minimum (or maximum) element from the unsorted portion of the list and swapping it with the first unsorted element.
+        'I Can't Believe It Can Sort' is simply a poorly implemented Bubble Sort or Insertion Sort. It is a simple sorting algorithm that works by comparing each element in the list with every other element and swapping them if they are in the wrong order. This algorithm is similar to Bubble Sort, but instead of only comparing adjacent elements, it compares every element with every other element.
       </Typography>
       <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
-        The process begins by initially considering the entire list as unsorted. In each iteration, the smallest (or largest) element from the unsorted portion of the list is selected and swapped with the first unsorted element, thus expanding the sorted portion of the list by one element. This process is repeated until the entire list is sorted.
+        The algorithm iterates through the list multiple times, and in each iteration, it compares the current element with every other element in the list. If the current element is smaller than the compared element, it swaps them. This process continues until the entire list is sorted.
       </Typography>
       <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
-        Selection Sort has a time complexity of O(n²) in all cases, making it inefficient for large lists. It is not a stable algorithm, meaning it does not necessarily preserve the relative order of equal keys. However, it is an in-place algorithm, as it does not require any additional memory space beyond what is needed to hold the input list.
+        While the algorithm's name humorously implies disbelief in its ability to sort, it will indeed sort the list, but it is very inefficient. It has a time complexity of O(n²), which means it is not suitable for large lists as the number of comparisons and swaps increases quadratically with the size of the list. Additionally, it is not a stable algorithm, meaning it does not preserve the original order of equal elements.
       </Typography>
       <Typography variant="h3">Similar Algorithms</Typography>
       <List>
         <ListItem disablePadding>
           <ListItemText
             primaryTypographyProps={LIST_HEADER_STYLE}
-            primary='Selection Sort'
+            primary='Bubble Sort'
             secondaryTypographyProps={LIST_ITEM_STYLE}
-            secondary='Selection Sort is similar to Insertion Sort. It also divides the list into a sorted and an unsorted region. However, instead of inserting each element in its correct position as in Insertion Sort, Selection Sort repeatedly selects the minimum (or maximum) element from the unsorted region and swaps it with the first unsorted element.'
+            secondary={`Bubble Sort is a simple comparison-based algorithm that repeatedly swaps adjacent elements if they are in the wrong order. "I Can't Believe It Can Sort" is similar in that it also involves repeated comparisons and swaps, but it compares each element with every other element, not just adjacent ones. This is an optimization to "I Can\'t Believe It Can Sort".`}
           />
         </ListItem>
         <ListItem disablePadding>
           <ListItemText
             primaryTypographyProps={LIST_HEADER_STYLE}
-            primary='Shell Sort'
+            primary='Selection Sort'
             secondaryTypographyProps={LIST_ITEM_STYLE}
-            secondary='Shell Sort is a generalization of Insertion Sort. It works by comparing elements separated by a gap of several positions. This way, it can move an element to its correct position in fewer swaps than regular Insertion Sort.'
+            secondary={'Selection Sort is another comparison-based algorithm that works by repeatedly finding the minimum element from the unsorted part of the list and swapping it with the first unsorted element. It is also an optimization to "I Can\'t Believe It Can Sort".'}
           />
         </ListItem>
       </List>
@@ -927,30 +927,30 @@ const algorithmDescriptions = {
   'Bitonic Sort': {
     description: <>
       <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
-        Selection Sort is a straightforward sorting algorithm that works by repeatedly selecting the minimum (or maximum) element from the unsorted portion of the list and swapping it with the first unsorted element.
+        Bitonic Sort is an algorithm designed to sort sequences in parallel, which makes it particularly well-suited for implementation in systems with multiple processors. The algorithm works by first constructing a bitonic sequence, which is a sequence of numbers that first increases monotonically, and then decreases monotonically. For example, the sequence [3, 4, 7, 8, 6, 2] is bitonic because it first increases from 3 to 8, and then decreases from 8 to 2.
       </Typography>
       <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
-        The process begins by initially considering the entire list as unsorted. In each iteration, the smallest (or largest) element from the unsorted portion of the list is selected and swapped with the first unsorted element, thus expanding the sorted portion of the list by one element. This process is repeated until the entire list is sorted.
+        The bitonic sequence is then split into two halves, and each half is recursively sorted using the Bitonic Sort algorithm. The unique aspect of Bitonic Sort is that one half is sorted in ascending order and the other half in descending order. Finally, the two sorted halves are merged into a single sorted sequence.
       </Typography>
       <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
-        Selection Sort has a time complexity of O(n²) in all cases, making it inefficient for large lists. It is not a stable algorithm, meaning it does not necessarily preserve the relative order of equal keys. However, it is an in-place algorithm, as it does not require any additional memory space beyond what is needed to hold the input list.
+        Bitonic Sort has a time complexity of O(n log² n), making it less efficient than algorithms like Merge Sort for single-processor systems. However, its ability to perform multiple operations in parallel can make it faster on systems with multiple processors. It is not a stable algorithm, meaning it doesn’t preserve the relative order of equal elements, and it is an in-place algorithm, meaning it doesn’t require additional memory space besides the input list.
       </Typography>
       <Typography variant="h3">Similar Algorithms</Typography>
       <List>
         <ListItem disablePadding>
           <ListItemText
             primaryTypographyProps={LIST_HEADER_STYLE}
-            primary='Selection Sort'
+            primary='QuickSort'
             secondaryTypographyProps={LIST_ITEM_STYLE}
-            secondary='Selection Sort is similar to Insertion Sort. It also divides the list into a sorted and an unsorted region. However, instead of inserting each element in its correct position as in Insertion Sort, Selection Sort repeatedly selects the minimum (or maximum) element from the unsorted region and swaps it with the first unsorted element.'
+            secondary='Like Bitonic Sort, QuickSort also divides the list into two parts and sorts them.'
           />
         </ListItem>
         <ListItem disablePadding>
           <ListItemText
             primaryTypographyProps={LIST_HEADER_STYLE}
-            primary='Shell Sort'
+            primary='Merge Sort'
             secondaryTypographyProps={LIST_ITEM_STYLE}
-            secondary='Shell Sort is a generalization of Insertion Sort. It works by comparing elements separated by a gap of several positions. This way, it can move an element to its correct position in fewer swaps than regular Insertion Sort.'
+            secondary='Similar to Bitonic Sort, Merge Sort also divides the list into two halves and sorts them.'
           />
         </ListItem>
       </List>
