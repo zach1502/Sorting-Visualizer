@@ -663,30 +663,30 @@ const algorithmDescriptions = {
   'Gnome Sort': {
     description: <>
       <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
-        Selection Sort is a straightforward sorting algorithm that works by repeatedly selecting the minimum (or maximum) element from the unsorted portion of the list and swapping it with the first unsorted element.
+        Gnome Sort, also known as Stupid Sort, is a simple sorting algorithm that is similar to the way someone might sort a deck of playing cards in their hands. Imagine you have a deck of cards and you want to sort them. You would start at the left and compare the current card with the previous card. If the current card is smaller, you would swap them and then compare with the card before. You repeat this process until the current card is greater, then move to the next card.
       </Typography>
       <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
-        The process begins by initially considering the entire list as unsorted. In each iteration, the smallest (or largest) element from the unsorted portion of the list is selected and swapped with the first unsorted element, thus expanding the sorted portion of the list by one element. This process is repeated until the entire list is sorted.
+        In Gnome Sort, you start at the second element of the list and compare it with the one before. If the current element is smaller than the previous one, you swap them and move one position backward. If the current element is greater or equal, you move one position forward. You repeat this process until the entire list is sorted.
       </Typography>
       <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
-        Selection Sort has a time complexity of O(n²) in all cases, making it inefficient for large lists. It is not a stable algorithm, meaning it does not necessarily preserve the relative order of equal keys. However, it is an in-place algorithm, as it does not require any additional memory space beyond what is needed to hold the input list.
+        Gnome Sort has a worst-case time complexity of O(n^2), which makes it less efficient for large lists. However, it is easy to implement and can perform better for small lists or lists that are mostly sorted. It is a stable algorithm, which means that it preserves the order of items with equal keys. Additionally, it is an in-place algorithm, as it does not require additional memory space.
       </Typography>
       <Typography variant="h3">Similar Algorithms</Typography>
       <List>
         <ListItem disablePadding>
           <ListItemText
             primaryTypographyProps={LIST_HEADER_STYLE}
-            primary='Selection Sort'
+            primary='Bubble Sort'
             secondaryTypographyProps={LIST_ITEM_STYLE}
-            secondary='Selection Sort is similar to Insertion Sort. It also divides the list into a sorted and an unsorted region. However, instead of inserting each element in its correct position as in Insertion Sort, Selection Sort repeatedly selects the minimum (or maximum) element from the unsorted region and swaps it with the first unsorted element.'
+            secondary='Bubble Sort is similar to Gnome Sort in that it compares adjacent elements and swaps them if they are in the wrong order. The process is repeated until the entire list is sorted.'
           />
         </ListItem>
         <ListItem disablePadding>
           <ListItemText
             primaryTypographyProps={LIST_HEADER_STYLE}
-            primary='Shell Sort'
+            primary='Insertion Sort'
             secondaryTypographyProps={LIST_ITEM_STYLE}
-            secondary='Shell Sort is a generalization of Insertion Sort. It works by comparing elements separated by a gap of several positions. This way, it can move an element to its correct position in fewer swaps than regular Insertion Sort.'
+            secondary='Insertion Sort is similar to Gnome Sort as it builds the final sorted array one element at a time, by comparing the current element with the previous ones and placing it at its correct position.'
           />
         </ListItem>
       </List>
@@ -696,30 +696,22 @@ const algorithmDescriptions = {
   'Odd-Even Sort': {
     description: <>
       <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
-        Selection Sort is a straightforward sorting algorithm that works by repeatedly selecting the minimum (or maximum) element from the unsorted portion of the list and swapping it with the first unsorted element.
+        Odd-Even Sort, also known as Brick Sort, is a relatively simple sorting algorithm, developed originally for use on parallel processors with local interconnections. It's a comparison based algorithm that works by repeatedly stepping through the list, comparing each pair of adjacent elements and swapping them if they are in the wrong order. This algorithm is divided into two phases- the odd phase and the even phase. In the odd phase, the algorithm performs all the comparisons and swaps on odd index, and in the even phase, it performs all the comparisons and swaps on even index.
       </Typography>
       <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
-        The process begins by initially considering the entire list as unsorted. In each iteration, the smallest (or largest) element from the unsorted portion of the list is selected and swapped with the first unsorted element, thus expanding the sorted portion of the list by one element. This process is repeated until the entire list is sorted.
+        The process is repeated until the list is sorted. The main advantage of this algorithm is its ability to quickly sort already almost-sorted data.
       </Typography>
       <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
-        Selection Sort has a time complexity of O(n²) in all cases, making it inefficient for large lists. It is not a stable algorithm, meaning it does not necessarily preserve the relative order of equal keys. However, it is an in-place algorithm, as it does not require any additional memory space beyond what is needed to hold the input list.
+        The time complexity of Odd-Even Sort in the worst case is O(n^2), which makes it inefficient on large lists, and it is generally not used in practice for sorting large data volumes. It is a stable algorithm, which means that it preserves the order of items with equal keys. It is also an in-place algorithm, as it only requires a constant amount of extra memory.
       </Typography>
       <Typography variant="h3">Similar Algorithms</Typography>
       <List>
         <ListItem disablePadding>
           <ListItemText
             primaryTypographyProps={LIST_HEADER_STYLE}
-            primary='Selection Sort'
+            primary='Bubble Sort'
             secondaryTypographyProps={LIST_ITEM_STYLE}
-            secondary='Selection Sort is similar to Insertion Sort. It also divides the list into a sorted and an unsorted region. However, instead of inserting each element in its correct position as in Insertion Sort, Selection Sort repeatedly selects the minimum (or maximum) element from the unsorted region and swaps it with the first unsorted element.'
-          />
-        </ListItem>
-        <ListItem disablePadding>
-          <ListItemText
-            primaryTypographyProps={LIST_HEADER_STYLE}
-            primary='Shell Sort'
-            secondaryTypographyProps={LIST_ITEM_STYLE}
-            secondary='Shell Sort is a generalization of Insertion Sort. It works by comparing elements separated by a gap of several positions. This way, it can move an element to its correct position in fewer swaps than regular Insertion Sort.'
+            secondary='Bubble Sort is similar to Odd-Even Sort in that they both repeatedly step through the list, compare each pair of adjacent items and swap them if they are in the wrong order. The main difference is that Bubble Sort does this in one pass through the list, whereas Odd-Even Sort does this in two passes - one for odd indexed elements and one for even indexed elements.'
           />
         </ListItem>
       </List>
@@ -729,30 +721,22 @@ const algorithmDescriptions = {
   'Pigeonhole Sort': {
     description: <>
       <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
-        Selection Sort is a straightforward sorting algorithm that works by repeatedly selecting the minimum (or maximum) element from the unsorted portion of the list and swapping it with the first unsorted element.
+        Pigeonhole Sort is a sorting algorithm that works by distributing the items to be sorted into pigeonholes (categories) based on the key of each item. Each pigeonhole corresponds to a range of key values. For example, if the range of key values is from 1 to 10, then ten pigeonholes can be created, one for each key value.
       </Typography>
       <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
-        The process begins by initially considering the entire list as unsorted. In each iteration, the smallest (or largest) element from the unsorted portion of the list is selected and swapped with the first unsorted element, thus expanding the sorted portion of the list by one element. This process is repeated until the entire list is sorted.
+        The algorithm consists of three stages. In the first stage, the items are distributed into their respective pigeonholes. In the second stage, each pigeonhole is sorted individually. If the pigeonholes are of size 1, then this step is trivial. In the third stage, the items are gathered back from the pigeonholes to get the sorted list.
       </Typography>
       <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
-        Selection Sort has a time complexity of O(n²) in all cases, making it inefficient for large lists. It is not a stable algorithm, meaning it does not necessarily preserve the relative order of equal keys. However, it is an in-place algorithm, as it does not require any additional memory space beyond what is needed to hold the input list.
+        Pigeonhole Sort is a stable algorithm, which means that it preserves the order of items with equal keys. Its time complexity is O(n + N), where n is the number of items to be sorted, and N is the range of key values. This makes it suitable for lists with relatively small ranges of key values. However, it may not be practical for lists with a large range of key values because it requires a lot of memory to store the pigeonholes.
       </Typography>
       <Typography variant="h3">Similar Algorithms</Typography>
       <List>
         <ListItem disablePadding>
           <ListItemText
             primaryTypographyProps={LIST_HEADER_STYLE}
-            primary='Selection Sort'
+            primary='Radix Sort'
             secondaryTypographyProps={LIST_ITEM_STYLE}
-            secondary='Selection Sort is similar to Insertion Sort. It also divides the list into a sorted and an unsorted region. However, instead of inserting each element in its correct position as in Insertion Sort, Selection Sort repeatedly selects the minimum (or maximum) element from the unsorted region and swaps it with the first unsorted element.'
-          />
-        </ListItem>
-        <ListItem disablePadding>
-          <ListItemText
-            primaryTypographyProps={LIST_HEADER_STYLE}
-            primary='Shell Sort'
-            secondaryTypographyProps={LIST_ITEM_STYLE}
-            secondary='Shell Sort is a generalization of Insertion Sort. It works by comparing elements separated by a gap of several positions. This way, it can move an element to its correct position in fewer swaps than regular Insertion Sort.'
+            secondary='Radix Sort is similar to Pigeonhole Sort as it also involves distributing the items into buckets based on their keys. However, Radix Sort distributes the items based on individual digits of the keys rather than the entire key.'
           />
         </ListItem>
       </List>
@@ -762,30 +746,38 @@ const algorithmDescriptions = {
   'Bucket Sort': {
     description: <>
       <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
-        Selection Sort is a straightforward sorting algorithm that works by repeatedly selecting the minimum (or maximum) element from the unsorted portion of the list and swapping it with the first unsorted element.
+        Bucket Sort is a sorting algorithm that distributes the elements of an array into a number of buckets. Each bucket is then sorted individually, either using a different sorting algorithm, or by recursively applying the bucket sort algorithm.
       </Typography>
       <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
-        The process begins by initially considering the entire list as unsorted. In each iteration, the smallest (or largest) element from the unsorted portion of the list is selected and swapped with the first unsorted element, thus expanding the sorted portion of the list by one element. This process is repeated until the entire list is sorted.
+        The basic idea behind Bucket Sort is to take advantage of the fact that if there are N uniformly distributed random numbers, dividing them into M intervals (or buckets), each bucket will contain approximately N/M numbers. This can greatly reduce the number of comparisons needed to sort the numbers.
       </Typography>
       <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
-        Selection Sort has a time complexity of O(n²) in all cases, making it inefficient for large lists. It is not a stable algorithm, meaning it does not necessarily preserve the relative order of equal keys. However, it is an in-place algorithm, as it does not require any additional memory space beyond what is needed to hold the input list.
+        The time complexity of bucket sort is O(n + k), where n is the number of elements to be sorted, and k is the number of buckets. It is an efficient algorithm when the values of the elements are evenly distributed across the buckets. However, it may perform poorly if the values are not evenly distributed. It is a stable algorithm, as it preserves the relative order of elements with equal values, but it is not an in-place algorithm, as it requires additional memory space for the buckets.
       </Typography>
       <Typography variant="h3">Similar Algorithms</Typography>
       <List>
         <ListItem disablePadding>
           <ListItemText
             primaryTypographyProps={LIST_HEADER_STYLE}
-            primary='Selection Sort'
+            primary='Radix Sort'
             secondaryTypographyProps={LIST_ITEM_STYLE}
-            secondary='Selection Sort is similar to Insertion Sort. It also divides the list into a sorted and an unsorted region. However, instead of inserting each element in its correct position as in Insertion Sort, Selection Sort repeatedly selects the minimum (or maximum) element from the unsorted region and swaps it with the first unsorted element.'
+            secondary='Radix Sort is similar to Bucket Sort as it distributes the elements into buckets. However, it does this based on the individual digits of the numbers at each pass.'
           />
         </ListItem>
         <ListItem disablePadding>
           <ListItemText
             primaryTypographyProps={LIST_HEADER_STYLE}
-            primary='Shell Sort'
+            primary='Counting Sort'
             secondaryTypographyProps={LIST_ITEM_STYLE}
-            secondary='Shell Sort is a generalization of Insertion Sort. It works by comparing elements separated by a gap of several positions. This way, it can move an element to its correct position in fewer swaps than regular Insertion Sort.'
+            secondary='Counting Sort is similar to Bucket Sort as it also distributes the elements into buckets, but it does this by counting the occurrence of each element.'
+          />
+        </ListItem>
+        <ListItem disablePadding>
+          <ListItemText
+            primaryTypographyProps={LIST_HEADER_STYLE}
+            primary='Pigeonhole Sort'
+            secondaryTypographyProps={LIST_ITEM_STYLE}
+            secondary='Pigeonhole Sort is another algorithm similar to Bucket Sort. It works by assigning each element to a pigeonhole based on its value and then collecting the elements from the pigeonholes to get the sorted order.'
           />
         </ListItem>
       </List>
@@ -795,30 +787,38 @@ const algorithmDescriptions = {
   'Counting Sort': {
     description: <>
       <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
-        Selection Sort is a straightforward sorting algorithm that works by repeatedly selecting the minimum (or maximum) element from the unsorted portion of the list and swapping it with the first unsorted element.
+        Counting Sort is a non-comparison based sorting algorithm that sorts integers in an array by counting the number of occurrences of each integer in the input array. It is particularly efficient when the range of integers in the array (the difference between the maximum and minimum values) is not significantly larger than the number of elements in the array.
       </Typography>
       <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
-        The process begins by initially considering the entire list as unsorted. In each iteration, the smallest (or largest) element from the unsorted portion of the list is selected and swapped with the first unsorted element, thus expanding the sorted portion of the list by one element. This process is repeated until the entire list is sorted.
+        The algorithm works by counting the number of times each value appears in the original array and storing that count in a separate array. Then, the count array is used to reconstruct a sorted version of the original array.
       </Typography>
       <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
-        Selection Sort has a time complexity of O(n²) in all cases, making it inefficient for large lists. It is not a stable algorithm, meaning it does not necessarily preserve the relative order of equal keys. However, it is an in-place algorithm, as it does not require any additional memory space beyond what is needed to hold the input list.
+        Counting Sort has a time complexity of O(n + k), where n is the number of elements in the array, and k is the range of the input values. It is a stable algorithm, which means it preserves the relative order of equal elements, but it is not an in-place algorithm, as it requires additional memory space to store the count array. Additionally, it only works for sorting integers and is not suitable for sorting floating-point numbers or strings.
       </Typography>
       <Typography variant="h3">Similar Algorithms</Typography>
       <List>
         <ListItem disablePadding>
           <ListItemText
             primaryTypographyProps={LIST_HEADER_STYLE}
-            primary='Selection Sort'
+            primary='Radix Sort'
             secondaryTypographyProps={LIST_ITEM_STYLE}
-            secondary='Selection Sort is similar to Insertion Sort. It also divides the list into a sorted and an unsorted region. However, instead of inserting each element in its correct position as in Insertion Sort, Selection Sort repeatedly selects the minimum (or maximum) element from the unsorted region and swaps it with the first unsorted element.'
+            secondary='Radix Sort is similar to Counting Sort as it also sorts integers by distributing them into buckets, but it does so digit by digit, starting from the least significant digit to the most significant.'
           />
         </ListItem>
         <ListItem disablePadding>
           <ListItemText
             primaryTypographyProps={LIST_HEADER_STYLE}
-            primary='Shell Sort'
+            primary='Bucket Sort'
             secondaryTypographyProps={LIST_ITEM_STYLE}
-            secondary='Shell Sort is a generalization of Insertion Sort. It works by comparing elements separated by a gap of several positions. This way, it can move an element to its correct position in fewer swaps than regular Insertion Sort.'
+            secondary='Bucket Sort is similar to Counting Sort as it also distributes the elements into buckets. However, in Bucket Sort, the buckets are sorted individually, and then the sorted buckets are concatenated to get the final sorted list.'
+          />
+        </ListItem>
+        <ListItem disablePadding>
+          <ListItemText
+            primaryTypographyProps={LIST_HEADER_STYLE}
+            primary='Pigeonhole Sort'
+            secondaryTypographyProps={LIST_ITEM_STYLE}
+            secondary='Pigeonhole Sort is another variant of Counting Sort, which works by creating an array of pigeonholes (buckets) and placing each element in the appropriate pigeonhole based on its value. Then, the pigeonholes are visited in order and the elements are collected to form the sorted list.'
           />
         </ListItem>
       </List>
