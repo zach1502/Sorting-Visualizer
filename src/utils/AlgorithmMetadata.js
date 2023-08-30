@@ -301,9 +301,9 @@ const algorithms = [
   {
     name: 'Pancake Sort',
     function: pancakeSort,
-    worseCase: 'n',
-    averageCase: 'n',
-    bestCase: '1',
+    worseCase: 'n²',
+    averageCase: 'n²',
+    bestCase: 'n²',
     memory: '1',
     stable: false,
     method: 'Exchanging',

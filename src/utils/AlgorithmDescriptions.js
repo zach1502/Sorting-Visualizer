@@ -960,30 +960,22 @@ const algorithmDescriptions = {
   'Bogo Sort': {
     description: <>
       <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
-        Selection Sort is a straightforward sorting algorithm that works by repeatedly selecting the minimum (or maximum) element from the unsorted portion of the list and swapping it with the first unsorted element.
+        Bogo Sort is a highly inefficient sorting algorithm, if you can even call it a sorting algorithm.
       </Typography>
       <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
-        The process begins by initially considering the entire list as unsorted. In each iteration, the smallest (or largest) element from the unsorted portion of the list is selected and swapped with the first unsorted element, thus expanding the sorted portion of the list by one element. This process is repeated until the entire list is sorted.
+        The algorithm works by randomly shuffling the elements of the list and then checking if the list is sorted. If it is, the algorithm stops; otherwise, it repeats the process. This process is repeated until a sorted list is obtained.
       </Typography>
       <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
-        Selection Sort has a time complexity of O(n²) in all cases, making it inefficient for large lists. It is not a stable algorithm, meaning it does not necessarily preserve the relative order of equal keys. However, it is an in-place algorithm, as it does not require any additional memory space beyond what is needed to hold the input list.
+        Bogo Sort has an unbounded worst-case time complexity and an average case time complexity of O(n * n!). It is used as a humorous example of a naive and inefficient algorithm.
       </Typography>
       <Typography variant="h3">Similar Algorithms</Typography>
       <List>
         <ListItem disablePadding>
           <ListItemText
             primaryTypographyProps={LIST_HEADER_STYLE}
-            primary='Selection Sort'
+            primary='Stooge Sort'
             secondaryTypographyProps={LIST_ITEM_STYLE}
-            secondary='Selection Sort is similar to Insertion Sort. It also divides the list into a sorted and an unsorted region. However, instead of inserting each element in its correct position as in Insertion Sort, Selection Sort repeatedly selects the minimum (or maximum) element from the unsorted region and swaps it with the first unsorted element.'
-          />
-        </ListItem>
-        <ListItem disablePadding>
-          <ListItemText
-            primaryTypographyProps={LIST_HEADER_STYLE}
-            primary='Shell Sort'
-            secondaryTypographyProps={LIST_ITEM_STYLE}
-            secondary='Shell Sort is a generalization of Insertion Sort. It works by comparing elements separated by a gap of several positions. This way, it can move an element to its correct position in fewer swaps than regular Insertion Sort.'
+            secondary='Stooge Sort is another inefficient algorithm that works by recursively dividing the list into three equal parts and then sorting the first two thirds, the last two thirds, and then the first two thirds again. This process is repeated until the entire list is sorted. It is similar to Bogo Sort in its inefficiency and impracticality.'
           />
         </ListItem>
       </List>
@@ -993,30 +985,30 @@ const algorithmDescriptions = {
   'Stooge Sort': {
     description: <>
       <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
-        Selection Sort is a straightforward sorting algorithm that works by repeatedly selecting the minimum (or maximum) element from the unsorted portion of the list and swapping it with the first unsorted element.
+        Stooge Sort is a highly inefficient sorting algorithm that works by recursively dividing the list into three roughly equal parts and then sorting the first two thirds, the last two thirds, and then the first two thirds again.
       </Typography>
       <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
-        The process begins by initially considering the entire list as unsorted. In each iteration, the smallest (or largest) element from the unsorted portion of the list is selected and swapped with the first unsorted element, thus expanding the sorted portion of the list by one element. This process is repeated until the entire list is sorted.
+        This process is repeated recursively, which means that the divided parts are themselves divided into smaller parts until each part consists of only one or two elements. A list with one or two elements is considered sorted. Then, the merging process begins by combining the smaller parts into larger sorted parts, until all the elements are merged back into a single sorted list.
       </Typography>
       <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
-        Selection Sort has a time complexity of O(n²) in all cases, making it inefficient for large lists. It is not a stable algorithm, meaning it does not necessarily preserve the relative order of equal keys. However, it is an in-place algorithm, as it does not require any additional memory space beyond what is needed to hold the input list.
+        Stooge Sort has a time complexity of O(n^2.71) which makes it extremely inefficient and impractical for sorting large lists.
       </Typography>
       <Typography variant="h3">Similar Algorithms</Typography>
       <List>
         <ListItem disablePadding>
           <ListItemText
             primaryTypographyProps={LIST_HEADER_STYLE}
-            primary='Selection Sort'
+            primary='Slow Sort'
             secondaryTypographyProps={LIST_ITEM_STYLE}
-            secondary='Selection Sort is similar to Insertion Sort. It also divides the list into a sorted and an unsorted region. However, instead of inserting each element in its correct position as in Insertion Sort, Selection Sort repeatedly selects the minimum (or maximum) element from the unsorted region and swaps it with the first unsorted element.'
+            secondary='Slow Sort is another inefficient sorting algorithm that works by recursively dividing the list. Multiply and Surrender.'
           />
         </ListItem>
         <ListItem disablePadding>
           <ListItemText
             primaryTypographyProps={LIST_HEADER_STYLE}
-            primary='Shell Sort'
+            primary='Bogo Sort'
             secondaryTypographyProps={LIST_ITEM_STYLE}
-            secondary='Shell Sort is a generalization of Insertion Sort. It works by comparing elements separated by a gap of several positions. This way, it can move an element to its correct position in fewer swaps than regular Insertion Sort.'
+            secondary='Bogo Sort is also a highly inefficient sorting algorithm.'
           />
         </ListItem>
       </List>
@@ -1026,13 +1018,13 @@ const algorithmDescriptions = {
   'Slow Sort': {
     description: <>
       <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
-        Selection Sort is a straightforward sorting algorithm that works by repeatedly selecting the minimum (or maximum) element from the unsorted portion of the list and swapping it with the first unsorted element.
+        Slow Sort is an intentionally inefficient sorting algorithm that is based on the principle of multiply and surrender, the opposite of the practical strategy of divide and conquer. The algorithm works by recursively dividing the list into two halves, sorting each half, and then merging them back together, but with an additional step that checks and swaps the maximum elements of each half if necessary.
       </Typography>
       <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
-        The process begins by initially considering the entire list as unsorted. In each iteration, the smallest (or largest) element from the unsorted portion of the list is selected and swapped with the first unsorted element, thus expanding the sorted portion of the list by one element. This process is repeated until the entire list is sorted.
+        The process is repeated recursively, which means that the divided sublists are themselves divided into even smaller sublists until each sublist consists of only one element. A list with one element is considered sorted. Then, the merging process begins by combining the single-element lists into larger sorted lists, until all the elements are merged back into a single sorted list.
       </Typography>
       <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
-        Selection Sort has a time complexity of O(n²) in all cases, making it inefficient for large lists. It is not a stable algorithm, meaning it does not necessarily preserve the relative order of equal keys. However, it is an in-place algorithm, as it does not require any additional memory space beyond what is needed to hold the input list.
+        Slow Sort has a time complexity of O(n^log(n)) in all cases, which makes it extremely inefficient. It is not a stable algorithm, and it is also not an in-place algorithm, as it requires additional memory space to temporarily store the sublists during the merging process.
       </Typography>
       <Typography variant="h3">Similar Algorithms</Typography>
       <List>
@@ -1045,12 +1037,22 @@ const algorithmDescriptions = {
           />
         </ListItem>
         <ListItem disablePadding>
-          <ListItemText
-            primaryTypographyProps={LIST_HEADER_STYLE}
-            primary='Shell Sort'
-            secondaryTypographyProps={LIST_ITEM_STYLE}
-            secondary='Shell Sort is a generalization of Insertion Sort. It works by comparing elements separated by a gap of several positions. This way, it can move an element to its correct position in fewer swaps than regular Insertion Sort.'
-          />
+          <ListItem disablePadding>
+            <ListItemText
+              primaryTypographyProps={LIST_HEADER_STYLE}
+              primary='Bogo Sort'
+              secondaryTypographyProps={LIST_ITEM_STYLE}
+              secondary='Bogo Sort is another intentionally inefficient algorithm. It randomly generates permutations of its input until it finds one that is sorted.'
+            />
+          </ListItem>
+          <ListItem disablePadding>
+            <ListItemText
+              primaryTypographyProps={LIST_HEADER_STYLE}
+              primary='Stooge Sort'
+              secondaryTypographyProps={LIST_ITEM_STYLE}
+              secondary='Stooge Sort is a recursive sorting algorithm that is also intentially bad.'
+            />
+          </ListItem>
         </ListItem>
       </List>
     </>
@@ -1059,30 +1061,22 @@ const algorithmDescriptions = {
   'Stalin Sort': {
     description: <>
       <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
-        Selection Sort is a straightforward sorting algorithm that works by repeatedly selecting the minimum (or maximum) element from the unsorted portion of the list and swapping it with the first unsorted element.
+        Stalin Sort is a humorous 'sorting' algorithm that 'sorts' a list by simply removing all elements that are not in the correct order. It iterates through the list once and removes any element that is smaller than the maximum seen so far, effectively 'deleting' all elements that are not already in the correct position.
       </Typography>
       <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
-        The process begins by initially considering the entire list as unsorted. In each iteration, the smallest (or largest) element from the unsorted portion of the list is selected and swapped with the first unsorted element, thus expanding the sorted portion of the list by one element. This process is repeated until the entire list is sorted.
+        The algorithm gets its name from the infamous dictator of the USSR, Joseph Stalin. The algorithm 'erases' elements from the list instead of actually sorting them.
       </Typography>
       <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
-        Selection Sort has a time complexity of O(n²) in all cases, making it inefficient for large lists. It is not a stable algorithm, meaning it does not necessarily preserve the relative order of equal keys. However, it is an in-place algorithm, as it does not require any additional memory space beyond what is needed to hold the input list.
+        While Stalin Sort has an amazing time complexity of O(n), it is far from a practical sorting algorithm, as it does not actually sort the list, but merely removes 'undesirable' elements.
       </Typography>
       <Typography variant="h3">Similar Algorithms</Typography>
       <List>
         <ListItem disablePadding>
           <ListItemText
             primaryTypographyProps={LIST_HEADER_STYLE}
-            primary='Selection Sort'
+            primary='Delete Sort'
             secondaryTypographyProps={LIST_ITEM_STYLE}
-            secondary='Selection Sort is similar to Insertion Sort. It also divides the list into a sorted and an unsorted region. However, instead of inserting each element in its correct position as in Insertion Sort, Selection Sort repeatedly selects the minimum (or maximum) element from the unsorted region and swaps it with the first unsorted element.'
-          />
-        </ListItem>
-        <ListItem disablePadding>
-          <ListItemText
-            primaryTypographyProps={LIST_HEADER_STYLE}
-            primary='Shell Sort'
-            secondaryTypographyProps={LIST_ITEM_STYLE}
-            secondary='Shell Sort is a generalization of Insertion Sort. It works by comparing elements separated by a gap of several positions. This way, it can move an element to its correct position in fewer swaps than regular Insertion Sort.'
+            secondary='Delete Sort also works by removing elements from the list.'
           />
         </ListItem>
       </List>
@@ -1092,30 +1086,22 @@ const algorithmDescriptions = {
   'Sleep Sort': {
     description: <>
       <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
-        Selection Sort is a straightforward sorting algorithm that works by repeatedly selecting the minimum (or maximum) element from the unsorted portion of the list and swapping it with the first unsorted element.
+        Sleep Sort is a humorous and unconventional sorting algorithm that works by assigning a sleep time to each element in the list based on its value, and then starts a separate thread for each element that will "wake up" and place the element in the right spot in the array after its sleep time is over.
       </Typography>
       <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
-        The process begins by initially considering the entire list as unsorted. In each iteration, the smallest (or largest) element from the unsorted portion of the list is selected and swapped with the first unsorted element, thus expanding the sorted portion of the list by one element. This process is repeated until the entire list is sorted.
+        For example, if the list is [3, 1, 4] with a delay of 1 second, the algorithm will start three threads that will sleep for 3, 1, and 4 seconds respectively, and then print the value. As a result, the numbers will be placed in the correct order, effectively sorting the list.
       </Typography>
       <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
-        Selection Sort has a time complexity of O(n²) in all cases, making it inefficient for large lists. It is not a stable algorithm, meaning it does not necessarily preserve the relative order of equal keys. However, it is an in-place algorithm, as it does not require any additional memory space beyond what is needed to hold the input list.
+        Sleep Sort is a joke sorting algorithm. It is guarenteed to take delay * maxElement in the array. It is also not stable or in-place, as it requires additional memory for the threads and does not guarentee the preservation of the order of items with equal keys.
       </Typography>
       <Typography variant="h3">Similar Algorithms</Typography>
       <List>
         <ListItem disablePadding>
           <ListItemText
             primaryTypographyProps={LIST_HEADER_STYLE}
-            primary='Selection Sort'
+            primary='No Clue'
             secondaryTypographyProps={LIST_ITEM_STYLE}
-            secondary='Selection Sort is similar to Insertion Sort. It also divides the list into a sorted and an unsorted region. However, instead of inserting each element in its correct position as in Insertion Sort, Selection Sort repeatedly selects the minimum (or maximum) element from the unsorted region and swaps it with the first unsorted element.'
-          />
-        </ListItem>
-        <ListItem disablePadding>
-          <ListItemText
-            primaryTypographyProps={LIST_HEADER_STYLE}
-            primary='Shell Sort'
-            secondaryTypographyProps={LIST_ITEM_STYLE}
-            secondary='Shell Sort is a generalization of Insertion Sort. It works by comparing elements separated by a gap of several positions. This way, it can move an element to its correct position in fewer swaps than regular Insertion Sort.'
+            secondary='It is pretty unique.'
           />
         </ListItem>
       </List>
@@ -1125,30 +1111,19 @@ const algorithmDescriptions = {
   'Delete Sort': {
     description: <>
       <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
-        Selection Sort is a straightforward sorting algorithm that works by repeatedly selecting the minimum (or maximum) element from the unsorted portion of the list and swapping it with the first unsorted element.
+        Delete Sort is a humorous and unconventional "sorting" algorithm. Instead of actually sorting the elements in the list, Delete Sort simply deletes the entire list. As a result, there are no elements left to be in the wrong order, and so, technically, the list is "sorted".
       </Typography>
       <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
-        The process begins by initially considering the entire list as unsorted. In each iteration, the smallest (or largest) element from the unsorted portion of the list is selected and swapped with the first unsorted element, thus expanding the sorted portion of the list by one element. This process is repeated until the entire list is sorted.
-      </Typography>
-      <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
-        Selection Sort has a time complexity of O(n²) in all cases, making it inefficient for large lists. It is not a stable algorithm, meaning it does not necessarily preserve the relative order of equal keys. However, it is an in-place algorithm, as it does not require any additional memory space beyond what is needed to hold the input list.
+        The algorithm works by traversing the list and removing each element until there are no elements left. Because the entire list is deleted, the time complexity of Delete Sort is O(n), where n is the number of elements in the list. However, it is important to note that this is a joke algorithm and should not be used in any real-world applications.
       </Typography>
       <Typography variant="h3">Similar Algorithms</Typography>
       <List>
         <ListItem disablePadding>
           <ListItemText
             primaryTypographyProps={LIST_HEADER_STYLE}
-            primary='Selection Sort'
+            primary='Stalin Sort'
             secondaryTypographyProps={LIST_ITEM_STYLE}
-            secondary='Selection Sort is similar to Insertion Sort. It also divides the list into a sorted and an unsorted region. However, instead of inserting each element in its correct position as in Insertion Sort, Selection Sort repeatedly selects the minimum (or maximum) element from the unsorted region and swaps it with the first unsorted element.'
-          />
-        </ListItem>
-        <ListItem disablePadding>
-          <ListItemText
-            primaryTypographyProps={LIST_HEADER_STYLE}
-            primary='Shell Sort'
-            secondaryTypographyProps={LIST_ITEM_STYLE}
-            secondary='Shell Sort is a generalization of Insertion Sort. It works by comparing elements separated by a gap of several positions. This way, it can move an element to its correct position in fewer swaps than regular Insertion Sort.'
+            secondary='Stalin Sort also deletes elements from the array.'
           />
         </ListItem>
       </List>
@@ -1158,38 +1133,22 @@ const algorithmDescriptions = {
   'Tree Sort': {
     description: <>
       <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
-        Selection Sort is a straightforward sorting algorithm that works by repeatedly selecting the minimum (or maximum) element from the unsorted portion of the list and swapping it with the first unsorted element.
+        Tree Sort is a sorting algorithm that builds a binary search tree from the elements to be sorted, and then traverses the tree (in-order) to get the elements in sorted order. The algorithm starts by inserting the first element of the list into the tree, and then proceeds to insert each subsequent element in its appropriate position in the tree.
       </Typography>
       <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
-        The process begins by initially considering the entire list as unsorted. In each iteration, the smallest (or largest) element from the unsorted portion of the list is selected and swapped with the first unsorted element, thus expanding the sorted portion of the list by one element. This process is repeated until the entire list is sorted.
+        After all the elements have been inserted into the tree, the tree is traversed in in-order (left, root, right), and the elements are collected in a list during the traversal. This results in a list of elements sorted in ascending order.
       </Typography>
       <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
-        Selection Sort has a time complexity of O(n²) in all cases, making it inefficient for large lists. It is not a stable algorithm, meaning it does not necessarily preserve the relative order of equal keys. However, it is an in-place algorithm, as it does not require any additional memory space beyond what is needed to hold the input list.
+        The time complexity of Tree Sort is O(n log n) in the average case, which makes it efficient for sorting lists of elements. However, in the worst case, when the input list is already sorted or sorted in reverse order, the binary search tree becomes a linked list, and the time complexity degrades to O(n^2). It is a stable algorithm, as it preserves the order of items with equal keys. It is not an in-place algorithm, as it requires additional memory space to construct the binary search tree.
       </Typography>
       <Typography variant="h3">Similar Algorithms</Typography>
       <List>
         <ListItem disablePadding>
           <ListItemText
             primaryTypographyProps={LIST_HEADER_STYLE}
-            primary='Insertion Sort'
+            primary='Heap Sort'
             secondaryTypographyProps={LIST_ITEM_STYLE}
-            secondary='Insertion Sort is similar in that it builds a sorted portion of the list one element at a time like Selection Sort, the method they use to do this is different.'
-          />
-        </ListItem>
-        <ListItem disablePadding>
-          <ListItemText
-            primaryTypographyProps={LIST_HEADER_STYLE}
-            primary='Heapsort Sort'
-            secondaryTypographyProps={LIST_ITEM_STYLE}
-            secondary='Heapsort is similar to Selection Sort as it also works by repeatedly selecting the maximum element from the unsorted portion of the list. However, Heapsort uses a binary heap data structure to efficiently find the maximum element, which improves its time complexity to O(n log n).'
-          />
-        </ListItem>
-        <ListItem disablePadding>
-          <ListItemText
-            primaryTypographyProps={LIST_HEADER_STYLE}
-            primary='Cycle Sort'
-            secondaryTypographyProps={LIST_ITEM_STYLE}
-            secondary='Cycle Sort is similar to Selection Sort as it also repeatedly selects the minimum element from the unsorted portion of the list. However, Cycle Sort minimizes the number of swaps by moving each element to its correct position in a cycle, which makes it more efficient in terms of the number of writes.'
+            secondary='Heap Sort is similar to Tree Sort as it also builds a tree structure (heap) from the elements to be sorted, and then sorts the elements by repeatedly extracting the minimum/maximum element from the heap.'
           />
         </ListItem>
       </List>
