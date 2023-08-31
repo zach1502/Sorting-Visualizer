@@ -2,6 +2,7 @@
 import React from 'react';
 import { Box, AppBar, Toolbar, Typography, Button, Container, Link as MuiLink } from '@mui/material';
 import { Link } from 'react-router-dom';
+import BackToTop from '../utils/ScrollToTop';
 
 function Layout({ children }) {
   return (
@@ -11,11 +12,13 @@ function Layout({ children }) {
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             Sorting Visualizer
           </Typography>
+          <Button color="inherit" component={Link} to="/">Home</Button>
           <Button color="inherit" component={Link} to="/sorting">Sorting Visualizer</Button>
         </Toolbar>
       </AppBar>
 
       <Container>
+        <div id="back-to-top-anchor" />
         {children}
       </Container>
 
@@ -27,6 +30,7 @@ function Layout({ children }) {
           </MuiLink>
         </Typography>
       </Box>
+      <BackToTop />
     </Box>
   );
 }
