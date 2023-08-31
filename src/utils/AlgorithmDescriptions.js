@@ -337,6 +337,31 @@ const algorithmDescriptions = {
       </List>
     </>
   },
+  
+  'Tree Sort': {
+    description: <>
+      <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
+        Tree Sort is a sorting algorithm that builds a binary search tree from the elements to be sorted, and then traverses the tree (in-order) to get the elements in sorted order. The algorithm starts by inserting the first element of the list into the tree, and then proceeds to insert each subsequent element in its appropriate position in the tree.
+      </Typography>
+      <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
+        After all the elements have been inserted into the tree, the tree is traversed in in-order (left, root, right), and the elements are collected in a list during the traversal. This results in a list of elements sorted in ascending order.
+      </Typography>
+      <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
+        The time complexity of Tree Sort is O(n log n) in the average case, which makes it efficient for sorting lists of elements. However, in the worst case, when the input list is already sorted or sorted in reverse order, the binary search tree becomes a linked list, and the time complexity degrades to O(n^2). It is a stable algorithm, as it preserves the order of items with equal keys. It is not an in-place algorithm, as it requires additional memory space to construct the binary search tree.
+      </Typography>
+      <Typography variant="h3">Similar Algorithms</Typography>
+      <List>
+        <ListItem disablePadding>
+          <ListItemText
+            primaryTypographyProps={LIST_HEADER_STYLE}
+            primary='Heap Sort'
+            secondaryTypographyProps={LIST_ITEM_STYLE}
+            secondary='Heap Sort is similar to Tree Sort as it also builds a tree structure (heap) from the elements to be sorted, and then sorts the elements by repeatedly extracting the minimum/maximum element from the heap.'
+          />
+        </ListItem>
+      </List>
+    </>
+  },
 
   'Block Sort': {
     description: <>
@@ -1124,31 +1149,6 @@ const algorithmDescriptions = {
             primary='Stalin Sort'
             secondaryTypographyProps={LIST_ITEM_STYLE}
             secondary='Stalin Sort also deletes elements from the array.'
-          />
-        </ListItem>
-      </List>
-    </>
-  },
-
-  'Tree Sort': {
-    description: <>
-      <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
-        Tree Sort is a sorting algorithm that builds a binary search tree from the elements to be sorted, and then traverses the tree (in-order) to get the elements in sorted order. The algorithm starts by inserting the first element of the list into the tree, and then proceeds to insert each subsequent element in its appropriate position in the tree.
-      </Typography>
-      <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
-        After all the elements have been inserted into the tree, the tree is traversed in in-order (left, root, right), and the elements are collected in a list during the traversal. This results in a list of elements sorted in ascending order.
-      </Typography>
-      <Typography variant="body1" gutterBottom pt={1} fontSize={'1rem'}>
-        The time complexity of Tree Sort is O(n log n) in the average case, which makes it efficient for sorting lists of elements. However, in the worst case, when the input list is already sorted or sorted in reverse order, the binary search tree becomes a linked list, and the time complexity degrades to O(n^2). It is a stable algorithm, as it preserves the order of items with equal keys. It is not an in-place algorithm, as it requires additional memory space to construct the binary search tree.
-      </Typography>
-      <Typography variant="h3">Similar Algorithms</Typography>
-      <List>
-        <ListItem disablePadding>
-          <ListItemText
-            primaryTypographyProps={LIST_HEADER_STYLE}
-            primary='Heap Sort'
-            secondaryTypographyProps={LIST_ITEM_STYLE}
-            secondary='Heap Sort is similar to Tree Sort as it also builds a tree structure (heap) from the elements to be sorted, and then sorts the elements by repeatedly extracting the minimum/maximum element from the heap.'
           />
         </ListItem>
       </List>

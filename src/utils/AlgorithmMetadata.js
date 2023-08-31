@@ -134,6 +134,17 @@ const algorithms = [
     joke: false,
   },
   {
+    name: 'Tree Sort',
+    function: treeSort,
+    worseCase: 'n log(n)',
+    averageCase: 'n log(n)',
+    bestCase: 'n log(n)',
+    memory: 'n',
+    stable: true,
+    method: 'Insertion',
+    joke: false,
+  },
+  {
     name: 'Block Sort',
     function: blockSort,
     worseCase: 'n log(n)',
@@ -397,17 +408,6 @@ const algorithms = [
     method: 'Deleting',
     joke: true,
   },
-  {
-    name: 'Tree Sort',
-    function: treeSort,
-    worseCase: 'n log(n)',
-    averageCase: 'n log(n)',
-    bestCase: 'n log(n)',
-    memory: 'n',
-    stable: true,
-    method: 'Insertion',
-    joke: false,
-  }
 ];
 
 export default algorithms;
