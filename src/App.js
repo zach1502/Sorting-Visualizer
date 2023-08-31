@@ -1,14 +1,12 @@
 import React from 'react';
-import Index from './pages';
-import { Box } from '@mui/material';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import SortingVisualizer from './pages/SortingVisualizer';
 
 function App() {
   return (
-    <>
-      <Box sx={{ height: '100%', width: '100%'}}>
-        <Index/>
-      </Box>
-    </>
+    <Router>
+      <Route path="/" exact component={SortingVisualizer} />
+    </Router>
   );
 }
 
