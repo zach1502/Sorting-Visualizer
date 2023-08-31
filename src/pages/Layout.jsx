@@ -10,10 +10,10 @@ function Layout({ children }) {
       <AppBar position="static">
         <Toolbar>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            Sorting Visualizer
+            Algorithm Visualizer
           </Typography>
           <Button color="inherit" component={Link} to="/">Home</Button>
-          <Button color="inherit" component={Link} to="/sorting">Sorting Visualizer</Button>
+          <Button color="inherit" component={Link} to="/sorting">Sorting</Button>
         </Toolbar>
       </AppBar>
 
