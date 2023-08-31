@@ -93,7 +93,7 @@ function SortingVisualizer() {
     <Box mt={3} mx="auto" 
       display={'flex'}
       flexDirection={'column'}
-      height={'100vh'}
+      height={'100%'}
       width={'90%'}
     >
       <Grid container spacing={2} justifyContent="space-between" alignItems="center">
