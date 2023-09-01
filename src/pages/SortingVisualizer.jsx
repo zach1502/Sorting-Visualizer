@@ -45,12 +45,15 @@ function SortingVisualizer() {
     joke: false,
   });
   const [algorithmDescription, setAlgorithmDescription] = React.useState(algorithmDescriptions[algorithm.name]);
-  const [speed, setSpeed] = React.useState(40); // ms
+  const speeds = [50, 20, 5];
+  const [speed, setSpeed] = React.useState(speeds[0]);
 
-  const startSorting = React.useCallback(() => {
+  const startSorting = () => {
     const deepCopyArr = _.cloneDeep(arr);
     const newSteps = [...(algorithm.function)(deepCopyArr)];
     setSteps(newSteps);
+
+    if (intervalId) clearInterval(intervalId);
 
     const newIntervalId = setInterval(() => {
       setCurrentStep((prevStep) => {
@@ -64,11 +67,11 @@ function SortingVisualizer() {
     }, speed);
 
     setIntervalId(newIntervalId);
-  }, [arr, algorithm.function, speed]);
+  }
 
-  const pauseSorting = React.useCallback(() => {
+  const pauseSorting = () => {
     clearInterval(intervalId);
-  }, [intervalId]);
+  };
 
   const stepReset = React.useCallback(() => {
     setCurrentStep(0);
@@ -89,6 +92,17 @@ function SortingVisualizer() {
     setAlgorithmDescription(algorithmDescriptions[algorithm.name]);
   }, [algorithm.name]);
 
+  const cycleSpeeds = () => {
+    setSpeed(prevSpeed => {
+      const nextSpeedIndex = (speeds.indexOf(prevSpeed) + 1) % speeds.length;
+      return speeds[nextSpeedIndex];
+    });
+  
+    pauseSorting();
+    startSorting();
+  };
+  
+
   return (
     <Box mt={3} mx="auto" 
       display={'flex'}
@@ -98,7 +112,7 @@ function SortingVisualizer() {
     >
       <Grid container spacing={2} justifyContent="space-between" alignItems="center">
         <Grid item>
-          <ControlButtons startSorting={startSorting} pauseSorting={pauseSorting} />
+          <ControlButtons startSorting={startSorting} pauseSorting={pauseSorting} cycleSpeeds={cycleSpeeds} speed={speed}/>
         </Grid>
 
         <Grid item>
