@@ -15,10 +15,10 @@ function ControlButtons({ startSorting, pauseSorting, cycleSpeeds, speed }) {
         return <SignalCellularAlt1BarIcon />;
       case 20:
         return <SignalCellularAlt2BarIcon />;
-      case 1:
+      case 10:
         return <SignalCellularAltIcon />;
       default:
-        return <SignalCellularAltIcon />;
+        return <>NICe</>;
     }
   };
 

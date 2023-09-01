@@ -11,6 +11,8 @@ import StepButtons from '../modules/StepButtons';
 import bubbleSort from '../algorithms/BubbleSort';
 import _ from 'lodash';
 
+let timeoutId = null;
+
 function SortingVisualizer() {
   const generateRandomArray = React.useCallback((length) => {
     const numbers = Array.from({ length }, (_, i) => ({
@@ -32,7 +34,6 @@ function SortingVisualizer() {
   const [arr, setArr] = React.useState(generateRandomArray(numElements));
   const [steps, setSteps] = React.useState([]);
   const [currentStep, setCurrentStep] = React.useState(0);
-  const [intervalId, setIntervalId] = React.useState(null);
   const [algorithm, setAlgorithm] = React.useState({
     name: 'Bubble Sort',
     function: bubbleSort,
@@ -45,7 +46,7 @@ function SortingVisualizer() {
     joke: false,
   });
   const [algorithmDescription, setAlgorithmDescription] = React.useState(algorithmDescriptions[algorithm.name]);
-  const speeds = [50, 20, 5];
+  const speeds = [50, 20, 10];
   const [speed, setSpeed] = React.useState(speeds[0]);
 
   const startSorting = () => {
@@ -53,24 +54,21 @@ function SortingVisualizer() {
     const newSteps = [...(algorithm.function)(deepCopyArr)];
     setSteps(newSteps);
 
-    if (intervalId) clearInterval(intervalId);
+    const stepThrough = (step) => {
+      step = Math.max(0, step);
+      step = Math.min(step, newSteps.length - 1);
+      setCurrentStep(step);
+      if (step < newSteps.length - 1) {
+        if (timeoutId) clearTimeout(timeoutId);
+        timeoutId = setTimeout(() => {stepThrough(step + 1); console.log(timeoutId, speed)}, speed);
+      }
+    }
 
-    const newIntervalId = setInterval(() => {
-      setCurrentStep((prevStep) => {
-        if (prevStep < newSteps.length - 1) {
-          return prevStep + 1;
-        } else {
-          clearInterval(newIntervalId);
-          return prevStep;
-        }
-      });
-    }, speed);
-
-    setIntervalId(newIntervalId);
+    stepThrough(currentStep);
   }
 
   const pauseSorting = () => {
-    clearInterval(intervalId);
+    if (timeoutId) clearTimeout(timeoutId);
   };
 
   const stepReset = React.useCallback(() => {
@@ -97,11 +95,12 @@ function SortingVisualizer() {
       const nextSpeedIndex = (speeds.indexOf(prevSpeed) + 1) % speeds.length;
       return speeds[nextSpeedIndex];
     });
-  
-    pauseSorting();
-    startSorting();
   };
-  
+
+  React.useEffect(() => {
+    if (timeoutId)
+      startSorting();
+  }, [speed]);
 
   return (
     <Box mt={3} mx="auto" 
