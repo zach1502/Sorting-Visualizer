@@ -19,6 +19,7 @@ const AlgorithmSelector = (props) => {
       renderInput={(params) => (
         <TextField {...params} label="Select Algorithm" variant="outlined" sx={{ width: '265px' }} />
       )}
+      isOptionEqualToValue={(option, value) => option.name === value.name}
     />
   );
 };

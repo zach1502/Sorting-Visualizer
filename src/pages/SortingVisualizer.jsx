@@ -46,7 +46,7 @@ function SortingVisualizer() {
     joke: false,
   });
   const [algorithmDescription, setAlgorithmDescription] = React.useState(algorithmDescriptions[algorithm.name]);
-  const speeds = [50, 20, 10];
+  const speeds = [50, 20, 1];
   const [speed, setSpeed] = React.useState(speeds[0]);
 
   const startSorting = () => {
@@ -60,7 +60,7 @@ function SortingVisualizer() {
       setCurrentStep(step);
       if (step < newSteps.length - 1) {
         if (timeoutId) clearTimeout(timeoutId);
-        timeoutId = setTimeout(() => {stepThrough(step + 1); console.log(timeoutId, speed)}, speed);
+        timeoutId = setTimeout(() => stepThrough(step + 1), speed);
       }
     }
 
