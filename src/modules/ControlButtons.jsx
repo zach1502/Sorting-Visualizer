@@ -8,17 +8,20 @@ import SignalCellularAltIcon from '@mui/icons-material/SignalCellularAlt';
 import PauseIcon from '@mui/icons-material/Pause';
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 
-function ControlButtons({ startSorting, pauseSorting, cycleSpeeds, speed }) {
+function ControlButtons({ startSorting, pauseSorting, cycleSpeeds, speed}) {
+  const SLOW_STEPS = 50;
+  const MEDIUM_STEPS = 20;
+  const FAST_STEPS = 1;
   const getSpeedIcon = () => {
     switch (speed) {
-      case 50:
+      case SLOW_STEPS:
         return <SignalCellularAlt1BarIcon />;
-      case 20:
+      case MEDIUM_STEPS:
         return <SignalCellularAlt2BarIcon />;
-      case 10:
+      case FAST_STEPS:
         return <SignalCellularAltIcon />;
       default:
-        return <>NICe</>;
+        return <>Error</>;
     }
   };
 
