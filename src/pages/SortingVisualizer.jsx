@@ -30,7 +30,7 @@ function SortingVisualizer() {
     return numbers;
   }, []);
 
-  const [numElements, setNumElements] = React.useState(50); // [TODO] Add slider to change this
+  const [numElements, setNumElements] = React.useState(30); // [TODO] Add slider to change this
   const [arr, setArr] = React.useState(generateRandomArray(numElements));
   const [steps, setSteps] = React.useState([]);
   const [currentStep, setCurrentStep] = React.useState(0);
@@ -46,7 +46,7 @@ function SortingVisualizer() {
     joke: false,
   });
   const [algorithmDescription, setAlgorithmDescription] = React.useState(algorithmDescriptions[algorithm.name]);
-  const speeds = [50, 20, 1];
+  const speeds = [500, 100, 1];
   const [speed, setSpeed] = React.useState(speeds[0]);
 
   const startSorting = () => {
@@ -87,7 +87,7 @@ function SortingVisualizer() {
   console.log(steps[currentStep])
 
   const displayArr = steps[currentStep]?.array || arr;
-  const annotation = steps[currentStep]?.message || null;
+  const annotation = steps[currentStep]?.message;
 
   React.useEffect(() => {
     setAlgorithmDescription(algorithmDescriptions[algorithm.name]);

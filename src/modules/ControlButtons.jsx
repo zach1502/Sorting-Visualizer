@@ -9,8 +9,8 @@ import PauseIcon from '@mui/icons-material/Pause';
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 
 function ControlButtons({ startSorting, pauseSorting, cycleSpeeds, speed}) {
-  const SLOW_STEPS = 50;
-  const MEDIUM_STEPS = 20;
+  const SLOW_STEPS = 500;
+  const MEDIUM_STEPS = 100;
   const FAST_STEPS = 1;
   const getSpeedIcon = () => {
     switch (speed) {

@@ -26,9 +26,10 @@ function* bubbleSort(arr) {
       arr[j + 1].isComparing = false;
     }
     arr[n - i - 1].isSorted = true;
-    yield { array: _.cloneDeep(arr), message: `${arr[n - i - 1].value} is sorted` };
+    yield { array: _.cloneDeep(arr), message: `${arr[n - i - 1].value} is sorted in the right spot` };
 
     if (!swapped) {
+      yield { array: _.cloneDeep(arr), message: 'Performed no swaps during this pass, so we know it is sorted already!' };
       break;
     }
   }
