@@ -84,7 +84,10 @@ function SortingVisualizer() {
     if (currentStep > 0) setCurrentStep((prev) => prev - 1);
   }, [currentStep]);
 
-  const displayArr = steps[currentStep] || arr;
+  console.log(steps[currentStep])
+
+  const displayArr = steps[currentStep]?.array || arr;
+  const annotation = steps[currentStep]?.message || null;
 
   React.useEffect(() => {
     setAlgorithmDescription(algorithmDescriptions[algorithm.name]);
@@ -126,6 +129,8 @@ function SortingVisualizer() {
       <Grid item xs={12}>
         <SortingContainer arr={displayArr} numElements={numElements} />
       </Grid>
+
+      {annotation}
 
       <AlgorithmInfo algorithm={algorithm} algorithmDescription={algorithmDescription} />
     </Box>

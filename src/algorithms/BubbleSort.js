@@ -1,7 +1,7 @@
-import _ from "lodash";
+import _ from 'lodash';
 
 function* bubbleSort(arr) {
-  yield _.cloneDeep(arr);
+  yield { array: _.cloneDeep(arr), message: 'Starting bubble sort' };
   let n = arr.length;
 
   for (let i = 0; i < n - 1; i++) {
@@ -11,19 +11,22 @@ function* bubbleSort(arr) {
       arr[j].isComparing = true;
       arr[j + 1].isComparing = true;
 
-      yield _.cloneDeep(arr);
+      yield { array: _.cloneDeep(arr), message: `Comparing ${arr[j].value} and ${arr[j + 1].value}` };
 
       if (arr[j].value > arr[j + 1].value) {
+        yield { array: _.cloneDeep(arr), message: `${arr[j].value} is greater than ${arr[j + 1].value}, so swapping` };
         [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]];
-        yield _.cloneDeep(arr);
+        yield { array: _.cloneDeep(arr), message: 'Swapped' };
         swapped = true;
+      } else {
+        yield { array: _.cloneDeep(arr), message: `${arr[j].value} is not greater than ${arr[j + 1].value}, so not swapping` };
       }
 
       arr[j].isComparing = false;
       arr[j + 1].isComparing = false;
     }
     arr[n - i - 1].isSorted = true;
-    yield _.cloneDeep(arr);
+    yield { array: _.cloneDeep(arr), message: `${arr[n - i - 1].value} is sorted` };
 
     if (!swapped) {
       break;
@@ -33,7 +36,7 @@ function* bubbleSort(arr) {
   for (let i = 0; i < n; i++) {
     arr[i].isSorted = true;
   }
-  yield _.cloneDeep(arr);
+  yield { array: _.cloneDeep(arr), message: 'Array is sorted' };
 }
 
 export default bubbleSort;
