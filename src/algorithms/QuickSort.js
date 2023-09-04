@@ -1,53 +1,48 @@
 import _ from "lodash";
 
 function* quickSort(arr, left = 0, right = arr.length - 1) {
-  if (left === 0 && right === arr.length-1) yield _.cloneDeep(arr);
+  if (left === 0 && right === arr.length - 1) {
+    yield { array: _.cloneDeep(arr), message: `Starting quick sort` };
+  }
+
   if (left >= right) {
     arr[left].isSorted = true;
-    yield _.cloneDeep(arr);
+    yield { array: _.cloneDeep(arr), message: `${arr[left].value} is in the right spot` };
     return;
   }
 
-  let pivotIndex = Math.floor((left + right) / 2);
-  let pivot = arr[pivotIndex].value;
-
-  arr[pivotIndex].isPartition = true;
-  yield _.cloneDeep(arr);
-  const shallowCopy = arr[pivotIndex];
-
-  let index = yield* partition(arr, left, right, pivot);
-
-  shallowCopy.isPartition = false;
-  shallowCopy.isSorted = true;
+  let index = yield* partition(arr, left, right);
 
   yield* quickSort(arr, left, index - 1);
-  yield* quickSort(arr, index, right);
+  yield* quickSort(arr, index + 1, right);
 }
 
-function* partition(arr, left, right, pivot) {
-  while (left <= right) {
-    while (arr[left].value < pivot) {
-      left++;
+function* partition(arr, left, right) {
+  let pivot = arr[right].value;
+  arr[right].isPartition = true;
+  yield { array: _.cloneDeep(arr), message: `Choosing ${pivot} as pivot` };
+
+  let i = left;
+  for (let j = left; j < right; j++) {
+    arr[j].isComparing = true;
+    yield { array: _.cloneDeep(arr), message: `Comparing ${arr[j].value} and ${pivot}` };
+    
+    if (arr[j].value <= pivot) {
+      yield { array: _.cloneDeep(arr), message: `Swapping ${arr[i].value} and ${arr[j].value} as ${arr[j].value} is less than or equal to ${pivot}` };
+      arr[j].isComparing = false;
+      [arr[i], arr[j]] = [arr[j], arr[i]];
+      i++;
     }
 
-    while (arr[right].value > pivot) {
-      right--;
-    }
-
-    if (left <= right) {
-      [arr[left], arr[right]] = [arr[right], arr[left]];
-
-      arr[left].isComparing = true;
-      arr[right].isComparing = true;
-      yield _.cloneDeep(arr);
-      arr[left].isComparing = false;
-      arr[right].isComparing = false;
-
-      left++;
-      right--;
-    }
+    arr[j].isComparing = false;
   }
-  return left;
+
+  yield { array: _.cloneDeep(arr), message: `Swapping pivot ${pivot} into its sorted position` };
+  [arr[i], arr[right]] = [arr[right], arr[i]];
+  arr[right].isPartition = false;
+  arr[i].isSorted = true;
+
+  return i;
 }
 
 export default quickSort;
