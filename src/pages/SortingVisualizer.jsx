@@ -86,8 +86,6 @@ function SortingVisualizer() {
     if (currentStep > 0) setCurrentStep((prev) => prev - 1);
   }, [currentStep]);
 
-  console.log(steps[currentStep])
-
   const displayArr = steps[currentStep]?.array || steps[currentStep] ||arr;
   const annotation = steps[currentStep]?.message;
 

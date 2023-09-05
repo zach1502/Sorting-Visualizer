@@ -1,77 +1,85 @@
 import _ from 'lodash';
 
-function* mergeSort(arr, left = 0, right = arr.length - 1) {
-  if (left === 0 && right === arr.length-1) yield _.cloneDeep(arr);
-  if (left < right) {
-    const mid = Math.floor((left + right) / 2);
+function* mergeSort(array, leftIndex = 0, rightIndex = array.length - 1) {
+  if (leftIndex === 0 && rightIndex === array.length - 1) {
+    yield { array: _.cloneDeep(array), message: 'Starting merge sort' };
+  }
 
-    yield* mergeSort(arr, left, mid);
-    yield* mergeSort(arr, mid + 1, right);
-    yield* merge(arr, left, mid, right);
+  if (leftIndex < rightIndex) {
+    const middleIndex = Math.floor((leftIndex + rightIndex) / 2);
+
+    yield* mergeSort(array, leftIndex, middleIndex);
+    yield* mergeSort(array, middleIndex + 1, rightIndex);
+    yield* merge(array, leftIndex, middleIndex, rightIndex);
+  }
+
+  if (leftIndex === 0 && rightIndex === array.length - 1) {
+    array.forEach(el => el.isSorted = true);
+    yield { array: _.cloneDeep(array), message: 'Merge sort complete!' };
   }
 }
 
-function* merge(arr, left, mid, right) {
-  const n1 = mid - left + 1;
-  const n2 = right - mid;
+function* merge(array, leftIndex, middleIndex, rightIndex) {
+  const leftSize = middleIndex - leftIndex + 1;
+  const rightSize = rightIndex - middleIndex;
 
-  let L = new Array(n1);
-  let R = new Array(n2);
+  let leftSubArray = new Array(leftSize);
+  let rightSubArray = new Array(rightSize);
 
-  for (let i = 0; i < n1; i++) {
-    L[i] = arr[left + i];
+  for (let i = 0; i < leftSize; i++) {
+    leftSubArray[i] = array[leftIndex + i];
   }
-  for (let j = 0; j < n2; j++) {
-    R[j] = arr[mid + 1 + j];
+  for (let j = 0; j < rightSize; j++) {
+    rightSubArray[j] = array[middleIndex + 1 + j];
   }
 
-  let i = 0, j = 0, k = left;
-  while (i < n1 && j < n2) {
+  yield { array: _.cloneDeep(array), message: `Merging sub-arrays from index ${leftIndex} to ${rightIndex}` };
 
-    L[i].isComparing = true;
-    R[j].isComparing = true;
-    yield _.cloneDeep(arr);
+  let leftPointer = 0, rightPointer = 0, mergePointer = leftIndex;
+  while (leftPointer < leftSize && rightPointer < rightSize) {
 
-    L[i].isComparing = false;
-    R[j].isComparing = false;
+    leftSubArray[leftPointer].isComparing = true;
+    rightSubArray[rightPointer].isComparing = true;
+    yield { array: _.cloneDeep(array), message: `Comparing ${leftSubArray[leftPointer].value} and ${rightSubArray[rightPointer].value}` };
+    rightSubArray[rightPointer].isComparing = false;
 
-    if (L[i].value <= R[j].value) {
-      arr[k] = L[i];
-      if(left === 0 && right === arr.length-1){
-        arr[k].isSorted = true;
-      }
-      i++;
+    if (leftSubArray[leftPointer].value <= rightSubArray[rightPointer].value) {
+      array[mergePointer] = _.cloneDeep(leftSubArray[leftPointer]);
+      array[mergePointer].isComparing = false;
+      yield { array: _.cloneDeep(array), message: `Placing ${leftSubArray[leftPointer].value} into the merged array` };
+      leftPointer++;
+      rightSubArray[rightPointer].isComparing = false;
     } else {
-      arr[k] = _.cloneDeep(R[j]);
-      if(left === 0 && right === arr.length-1){
-        arr[k].isSorted = true;
-      }
-      j++;
+      array[mergePointer] = _.cloneDeep(rightSubArray[rightPointer]);
+      array[mergePointer].isComparing = false;
+      yield { array: _.cloneDeep(array), message: `Placing ${rightSubArray[rightPointer].value} into the merged array` };
+      rightPointer++;
+      leftSubArray[leftPointer].isComparing = false;
     }
 
-    k++;
+    array[mergePointer].isComparing = false;
+    array[mergePointer].isSorted = true;
+    mergePointer++;
+
+    array[mergePointer].isPartition = true;
+
+    if (leftIndex === 0 && rightIndex === array.length - 1) {
+      array[mergePointer].isSorted = true;
+    }
   }
 
-  while (i < n1) {
-    arr[k] = L[i];
-    if(left === 0 && right === arr.length-1){
-      arr[k].isSorted = true;
-      yield _.cloneDeep(arr);
-    }
-
-    i++;
-    k++;
+  while (leftPointer < leftSize) {
+    array[mergePointer] = leftSubArray[leftPointer];
+    yield { array: _.cloneDeep(array), message: `Remaining elements from the left sub-array are placed into the merged array ${leftSubArray.filter((_, index) => index >= leftPointer).map(el => el.value)}` };
+    leftPointer++;
+    mergePointer++;
   }
 
-  while (j < n2) {
-    arr[k] = R[j];
-    if(left === 0 && right === arr.length-1){
-      arr[k].isSorted = true;
-      yield _.cloneDeep(arr);
-    }
-
-    j++;
-    k++;
+  while (rightPointer < rightSize) {
+    array[mergePointer] = rightSubArray[rightPointer];
+    yield { array: _.cloneDeep(array), message: `Remaining elements from the right sub-array are placed into the merged array ${rightSubArray.filter((_, index) => index >= rightPointer).map(el => el.value)}` };
+    rightPointer++;
+    mergePointer++;
   }
 }
 
