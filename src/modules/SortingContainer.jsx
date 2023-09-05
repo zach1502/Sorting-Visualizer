@@ -1,3 +1,4 @@
+import React from "react";
 import ArrayDisplay from '../components/ArrayDisplay';
 import { Box } from '@mui/material';
 
