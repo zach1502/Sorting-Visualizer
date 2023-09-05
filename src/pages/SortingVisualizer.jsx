@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Grid } from '@mui/material';
+import { Box, Grid, Typography } from '@mui/material';
 import AlgorithmSelector from '../components/AlgorithmSelector'
 import algorithmDescriptions from '../utils/AlgorithmDescriptions';
 
@@ -86,7 +86,7 @@ function SortingVisualizer() {
     if (currentStep > 0) setCurrentStep((prev) => prev - 1);
   }, [currentStep]);
 
-  const displayArr = steps[currentStep]?.array || steps[currentStep] ||arr;
+  const displayArr = steps[currentStep]?.array || steps[currentStep] || arr;
   const annotation = steps[currentStep]?.message;
 
   React.useEffect(() => {
@@ -106,7 +106,7 @@ function SortingVisualizer() {
   }, [speed]);
 
   return (
-    <Box mt={3} mx="auto" 
+    <Box mt={3} mx="auto"
       display={'flex'}
       flexDirection={'column'}
       height={'100%'}
@@ -114,7 +114,7 @@ function SortingVisualizer() {
     >
       <Grid container spacing={2} justifyContent="space-between" alignItems="center">
         <Grid item>
-          <ControlButtons startSorting={startSorting} pauseSorting={pauseSorting} cycleSpeeds={cycleSpeeds} speed={speed}/>
+          <ControlButtons startSorting={startSorting} pauseSorting={pauseSorting} cycleSpeeds={cycleSpeeds} speed={speed} />
         </Grid>
 
         <Grid item>
@@ -130,7 +130,62 @@ function SortingVisualizer() {
         <SortingContainer arr={displayArr} numElements={numElements} />
       </Grid>
 
-      {annotation}
+      <Grid item xs={12}>
+        <Box 
+          display={'flex'}
+          flexDirection={'row'}
+          justifyContent={'space-evenly'}
+          alignItems={'center'}
+          width={'100%'}
+          padding={2}
+          border={1}
+          borderColor="grey.500"
+          mt={2}
+        >
+          <Box display={'flex'} flexDirection={'row'}>
+            <Box width={20} height={20} bgcolor="red" marginRight={1}></Box>
+            <Typography variant="body1">Unsorted</Typography>
+          </Box>
+          <Box display={'flex'} flexDirection={'row'}>
+            <Box width={20} height={20} bgcolor="blue" marginRight={1}></Box>
+            <Typography variant="body1">Comparing/Looking at</Typography>
+          </Box>
+          <Box display={'flex'} flexDirection={'row'}>
+            <Box width={20} height={20} bgcolor="orange" marginRight={1}></Box>
+            <Typography variant="body1">Partition</Typography>
+          </Box>
+          <Box display={'flex'} flexDirection={'row'}>
+            <Box width={20} height={20} bgcolor="green" marginRight={1}></Box>
+            <Typography variant="body1">Sorted</Typography>
+          </Box>
+        </Box>
+      </Grid>
+
+
+      <Grid item xs={12}>
+        <Box mt={2} mb={2}
+          display='flex'
+          border={1}
+          borderColor="grey.500"
+          padding={2}
+          width={'100%'}
+        >
+
+          <Grid container>
+            <Grid item xs={12}>
+              <Typography variant="h5">
+                Annotations
+              </Typography>
+            </Grid>
+            <Grid item xs={12}>
+              <Typography variant="body1">
+                {annotation || 'To help you understand what is happening in the algorithm, some text will appear here.'}
+              </Typography>
+            </Grid>
+          </Grid>
+
+        </Box>
+      </Grid>
 
       <AlgorithmInfo algorithm={algorithm} algorithmDescription={algorithmDescription} />
     </Box>

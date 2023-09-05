@@ -4,7 +4,7 @@ function AlgorithmInfo({ algorithm, algorithmDescription }) {
   return (
     <Grid container item spacing={2}>
       <Grid item md={8} xs={12}>
-        <Box mt={2} p={2} border={1} borderColor="grey.500" borderRadius="borderRadius" paddingTop={4}>
+        <Box p={2} border={1} borderColor="grey.500" borderRadius="borderRadius" paddingTop={4}>
           <Typography variant="h2" gutterBottom>
             {algorithm.name}
           </Typography>
@@ -13,7 +13,7 @@ function AlgorithmInfo({ algorithm, algorithmDescription }) {
       </Grid>
 
       <Grid item md={4} xs={12}>
-        <TableContainer component={Box} border={1} borderColor="grey.500" borderRadius="borderRadius" mt={2} p={2}>
+        <TableContainer component={Box} border={1} borderColor="grey.500" borderRadius="borderRadius" p={2}>
           <Table>
             <TableBody>
               <TableRow>

@@ -6,7 +6,6 @@ function SortingContainer({ arr, numElements }) {
     <Box mt={2} p={2} border={1}
       display='flex'
       borderColor="grey.500"
-      borderRadius="borderRadius"
       height="50vh"
       width='100%'
       paddingTop={4}
