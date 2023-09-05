@@ -7,6 +7,8 @@ import AlgorithmInfo from '../modules/AlgorithmInfo';
 import ControlButtons from '../modules/ControlButtons';
 import SortingContainer from '../modules/SortingContainer';
 import StepButtons from '../modules/StepButtons';
+import Legend from '../modules/Legend';
+import Annotations from '../modules/Annotations';
 
 import bubbleSort from '../algorithms/BubbleSort';
 import _ from 'lodash';
@@ -130,61 +132,14 @@ function SortingVisualizer() {
         <SortingContainer arr={displayArr} numElements={numElements} />
       </Grid>
 
+      {/* LEGEND */}
       <Grid item xs={12}>
-        <Box 
-          display={'flex'}
-          flexDirection={'row'}
-          justifyContent={'space-evenly'}
-          alignItems={'center'}
-          width={'100%'}
-          padding={2}
-          border={1}
-          borderColor="grey.500"
-          mt={2}
-        >
-          <Box display={'flex'} flexDirection={'row'}>
-            <Box width={20} height={20} bgcolor="red" marginRight={1}></Box>
-            <Typography variant="body1">Unsorted</Typography>
-          </Box>
-          <Box display={'flex'} flexDirection={'row'}>
-            <Box width={20} height={20} bgcolor="blue" marginRight={1}></Box>
-            <Typography variant="body1">Comparing/Looking at</Typography>
-          </Box>
-          <Box display={'flex'} flexDirection={'row'}>
-            <Box width={20} height={20} bgcolor="orange" marginRight={1}></Box>
-            <Typography variant="body1">Partition</Typography>
-          </Box>
-          <Box display={'flex'} flexDirection={'row'}>
-            <Box width={20} height={20} bgcolor="green" marginRight={1}></Box>
-            <Typography variant="body1">Sorted</Typography>
-          </Box>
-        </Box>
+        <Legend />
       </Grid>
 
-
+      {/* Annotations */}
       <Grid item xs={12}>
-        <Box mt={2} mb={2}
-          display='flex'
-          border={1}
-          borderColor="grey.500"
-          padding={2}
-          width={'100%'}
-        >
-
-          <Grid container>
-            <Grid item xs={12}>
-              <Typography variant="h5">
-                Annotations
-              </Typography>
-            </Grid>
-            <Grid item xs={12}>
-              <Typography variant="body1">
-                {annotation || 'To help you understand what is happening in the algorithm, some text will appear here.'}
-              </Typography>
-            </Grid>
-          </Grid>
-
-        </Box>
+        <Annotations annotation={annotation} />
       </Grid>
 
       <AlgorithmInfo algorithm={algorithm} algorithmDescription={algorithmDescription} />

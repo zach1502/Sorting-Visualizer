@@ -34,4 +34,4 @@ function ControlButtons({ startSorting, pauseSorting, cycleSpeeds, speed}) {
   );
 }
 
-export default ControlButtons;
+export default React.memo(ControlButtons);

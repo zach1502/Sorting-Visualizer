@@ -10,4 +10,4 @@ function StepButtons({ stepReset, stepBackward, stepForward }) {
   );
 }
 
-export default StepButtons;
+export default React.memo(StepButtons);

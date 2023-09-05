@@ -16,4 +16,4 @@ function SortingContainer({ arr, numElements }) {
   );
 }
 
-export default SortingContainer;
+export default React.memo(SortingContainer);

@@ -1,3 +1,4 @@
+import React from 'react';
 import { Box, Grid, Table, TableBody, TableContainer, TableRow, TableCell, Typography } from '@mui/material';
 
 function AlgorithmInfo({ algorithm, algorithmDescription }) {
@@ -55,4 +56,4 @@ function AlgorithmInfo({ algorithm, algorithmDescription }) {
   );
 }
 
-export default AlgorithmInfo;
+export default React.memo(AlgorithmInfo);

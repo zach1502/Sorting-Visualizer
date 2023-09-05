@@ -22,4 +22,4 @@ const ArrayDisplay = (props) => {
   );
 }
 
-export default ArrayDisplay;
+export default React.memo(ArrayDisplay);
