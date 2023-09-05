@@ -1,37 +1,41 @@
 import _ from 'lodash';
 
 function* insertionSort(arr) {
-  yield _.cloneDeep(arr);
+  yield { array: _.cloneDeep(arr), message: 'Starting insertion sort' };
+  
   arr[0].isSorted = true;
   for (let i = 1; i < arr.length; i++) {
-    let key = arr[i];
-    key.isComparing = true;
-
-    let j = i - 1;
-    if (j >= 0) arr[j].isComparing = true;
-    yield _.cloneDeep(arr);
-    if (j >= 0) arr[j].isComparing = false;
-
-    while (j >= 0 && arr[j].value > key.value) {
-      arr[j + 1] = arr[j];
-
-      if (j - 1 >= 0) arr[j - 1].isComparing = true;
-      yield _.cloneDeep(arr);
-      if (j - 1 >= 0) arr[j - 1].isComparing = false;
-
-      j = j - 1;
+    arr[i].isComparing = true;
+    
+    yield { array: _.cloneDeep(arr), message: `Inserting ${arr[i].value} into the sorted portion of the array` };
+    
+    let j = i;
+    yield { array: _.cloneDeep(arr), message: `Checking if ${arr[j].value} < ${arr[j - 1].value}` };
+    while (j > 0 && arr[j - 1].value > arr[j].value) {
+      arr[j].isComparing = true;
+      arr[j - 1].isComparing = true;
+      
+      // Swap the elements
+      [arr[j], arr[j - 1]] = [arr[j - 1], arr[j]];
+      
+      yield { array: _.cloneDeep(arr), message: `Swapped ${arr[j].value} with ${arr[j - 1].value}` };
+      
+      arr[j - 1].isComparing = false;
+      arr[j].isComparing = false;
+      
+      yield { array: _.cloneDeep(arr), message: `Checking if ${arr[j].value} < ${arr[j - 1].value}` };
+      j--;
     }
-    arr[j + 1] = key;
-    key.isComparing = false;
-    key.isSorted = true;
 
-    yield _.cloneDeep(arr);
+    arr[i].isComparing = false;
+    arr[j].isSorted = true;
+    yield { array: _.cloneDeep(arr), message: `${arr[j].value} is now in the correct position` };
   }
 
   for (let k = 0; k < arr.length; k++) {
     arr[k].isSorted = true;
   }
-  yield _.cloneDeep(arr);
+  yield { array: _.cloneDeep(arr), message: 'Insertion sort completed!' };
 }
 
 export default insertionSort;
