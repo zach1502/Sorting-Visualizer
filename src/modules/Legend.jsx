@@ -10,9 +10,11 @@ const Legend = () => {
       alignItems={'center'}
       width={'100%'}
       padding={2}
-      border={1}
+      // border 1 all around except the top
+      borderBottom={1}
+      borderLeft={1}
+      borderRight={1}
       borderColor="grey.500"
-      mt={2}
     >
       <Box display={'flex'} flexDirection={'row'}>
         <Box width={20} height={20} bgcolor="red" marginRight={1}></Box>
