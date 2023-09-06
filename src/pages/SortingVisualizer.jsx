@@ -130,14 +130,9 @@ function SortingVisualizer() {
 
       <Grid item xs={12}>
         <SortingContainer arr={displayArr} numElements={numElements} />
-      </Grid>
-
-      {/* LEGEND */}
-      <Grid item xs={12}>
         <Legend />
       </Grid>
 
-      {/* Annotations */}
       <Grid item xs={12}>
         <Annotations annotation={annotation} />
       </Grid>

@@ -18,7 +18,7 @@ function Annotations({ annotation }) {
         </Grid>
         <Grid item xs={12}>
           <Typography variant="body1">
-            {annotation || 'To help you understand what is happening in the algorithm, some text will appear here.'}
+            {annotation || 'To help you understand what is happening in the algorithm, some text will appear here. If this doesn\'t change, it isn\'t available for this algorithm.'}
           </Typography>
         </Grid>
       </Grid>

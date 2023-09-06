@@ -14,43 +14,48 @@ function AlgorithmInfo({ algorithm, algorithmDescription }) {
       </Grid>
 
       <Grid item md={4} xs={12}>
-        <TableContainer component={Box} border={1} borderColor="grey.500" borderRadius="borderRadius" p={2}>
-          <Table>
-            <TableBody>
-              <TableRow>
-                <TableCell><Typography>Sorting Method</Typography></TableCell>
-                <TableCell><Typography>{algorithm.method}</Typography></TableCell>
-              </TableRow>
-              <TableRow>
-                <TableCell><Typography>Best Case</Typography></TableCell>
-                <TableCell><Typography>{algorithm.bestCase}</Typography></TableCell>
-              </TableRow>
-              <TableRow>
-                <TableCell><Typography>Average Case</Typography></TableCell>
-                <TableCell><Typography>{algorithm.averageCase}</Typography></TableCell>
-              </TableRow>
-              <TableRow>
-                <TableCell><Typography>Worst Case</Typography></TableCell>
-                <TableCell><Typography>{algorithm.worseCase}</Typography></TableCell>
-              </TableRow>
-              <TableRow>
-                <TableCell><Typography>Memory</Typography></TableCell>
-                <TableCell><Typography>{algorithm.memory}</Typography></TableCell>
-              </TableRow>
-              <TableRow>
-                <TableCell><Typography>Stable</Typography></TableCell>
-                <TableCell><Typography>{algorithm.stable ? 'Yes' : 'No'}</Typography></TableCell>
-              </TableRow>
-              {algorithm.joke ?
+        <Box
+          display="flex"
+          flexDirection={'column'}
+        >
+          <TableContainer component={Box} border={1} borderColor="grey.500" borderRadius="borderRadius" p={2}>
+            <Table>
+              <TableBody>
                 <TableRow>
-                  <TableCell><Typography>Joke</Typography></TableCell>
-                  <TableCell><Typography>Yes</Typography></TableCell>
-                </TableRow> :
-                null
-              }
-            </TableBody>
-          </Table>
-        </TableContainer>
+                  <TableCell><Typography>Sorting Method</Typography></TableCell>
+                  <TableCell><Typography>{algorithm.method}</Typography></TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell><Typography>Best Case</Typography></TableCell>
+                  <TableCell><Typography>O({algorithm.bestCase})</Typography></TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell><Typography>Average Case</Typography></TableCell>
+                  <TableCell><Typography>O({algorithm.averageCase})</Typography></TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell><Typography>Worst Case</Typography></TableCell>
+                  <TableCell><Typography>O({algorithm.worseCase})</Typography></TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell><Typography>Memory</Typography></TableCell>
+                  <TableCell><Typography>O({algorithm.memory})</Typography></TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell><Typography>Stable</Typography></TableCell>
+                  <TableCell><Typography>{algorithm.stable ? 'Yes' : 'No'}</Typography></TableCell>
+                </TableRow>
+                {algorithm.joke ?
+                  <TableRow>
+                    <TableCell><Typography>Joke</Typography></TableCell>
+                    <TableCell><Typography>Yes</Typography></TableCell>
+                  </TableRow> :
+                  null
+                }
+              </TableBody>
+            </Table>
+          </TableContainer>
+        </Box>
       </Grid>
     </Grid>
   );
