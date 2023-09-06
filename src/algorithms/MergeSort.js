@@ -2,20 +2,24 @@ import _ from 'lodash';
 
 function* mergeSort(array, leftIndex = 0, rightIndex = array.length - 1) {
   if (leftIndex === 0 && rightIndex === array.length - 1) {
+    yield { array: _.cloneDeep(array), message: null };
     yield { array: _.cloneDeep(array), message: 'Starting merge sort' };
   }
 
   if (leftIndex < rightIndex) {
     const middleIndex = Math.floor((leftIndex + rightIndex) / 2);
 
+    yield { array: _.cloneDeep(array), message: `Running merge sort on the left partition (indicies ${leftIndex} to ${middleIndex})` };
     yield* mergeSort(array, leftIndex, middleIndex);
+    yield { array: _.cloneDeep(array), message: `Running merge sort on the left partition (indicies ${middleIndex+1} to ${rightIndex})` };
     yield* mergeSort(array, middleIndex + 1, rightIndex);
+    yield { array: _.cloneDeep(array), message: `Merging Time!` };
     yield* merge(array, leftIndex, middleIndex, rightIndex);
   }
 
   if (leftIndex === 0 && rightIndex === array.length - 1) {
     array.forEach(el => el.isSorted = true);
-    yield { array: _.cloneDeep(array), message: 'Merge sort complete!' };
+    yield { array: _.cloneDeep(array), message: 'Merge sort completed!' };
   }
 }
 
@@ -40,7 +44,7 @@ function* merge(array, leftIndex, middleIndex, rightIndex) {
 
     leftSubArray[leftPointer].isComparing = true;
     rightSubArray[rightPointer].isComparing = true;
-    yield { array: _.cloneDeep(array), message: `Comparing ${leftSubArray[leftPointer].value} and ${rightSubArray[rightPointer].value}. Remaining left array values: [${showArrayContents(leftSubArray, leftPointer)}]. Remaining right array values: [${showArrayContents(rightSubArray, rightPointer)}]` };
+    yield { array: _.cloneDeep(array), message: `Comparing ${leftSubArray[leftPointer].value} and ${rightSubArray[rightPointer].value}.\nRemaining left array values:   [${showArrayContents(leftSubArray, leftPointer)}].\nRemaining right array values: [${showArrayContents(rightSubArray, rightPointer)}]` };
     rightSubArray[rightPointer].isComparing = false;
 
     if (leftSubArray[leftPointer].value <= rightSubArray[rightPointer].value) {

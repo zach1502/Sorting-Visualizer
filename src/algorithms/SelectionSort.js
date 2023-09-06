@@ -1,6 +1,7 @@
 import _ from 'lodash';
 
 function* selectionSort(arr) {
+  yield { array: _.cloneDeep(arr), message: null };
   yield { array: _.cloneDeep(arr), message: 'Starting Selection sort' };
 
   for (let i = 0; i < arr.length - 1; i++) {
@@ -43,7 +44,7 @@ function* selectionSort(arr) {
   }
 
   arr[arr.length - 1].isSorted = true;
-  yield { array: _.cloneDeep(arr), message: 'Selection sort completed' };
+  yield { array: _.cloneDeep(arr), message: 'Selection sort completed!' };
 }
 
 export default selectionSort;

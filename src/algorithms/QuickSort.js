@@ -2,6 +2,7 @@ import _ from "lodash";
 
 function* quickSort(arr, left = 0, right = arr.length - 1) {
   if (left === 0 && right === arr.length - 1) {
+    yield { array: _.cloneDeep(arr), message: null };
     yield { array: _.cloneDeep(arr), message: `Starting quick sort` };
   }
 
@@ -11,10 +12,17 @@ function* quickSort(arr, left = 0, right = arr.length - 1) {
     return;
   }
 
+  yield { array: _.cloneDeep(arr), message: `Start partitioning` };
   let index = yield* partition(arr, left, right);
 
+  yield { array: _.cloneDeep(arr), message: `Run Quick Sort on Indicies ${left} and ${index-1}` };
   yield* quickSort(arr, left, index - 1);
+  yield { array: _.cloneDeep(arr), message: `Run Quick Sort on Indicies ${index + 1} and ${right}` };
   yield* quickSort(arr, index + 1, right);
+
+  if (left === 0 && right === arr.length - 1) {
+    yield { array: _.cloneDeep(arr), message: `Quick sort completed!` };
+  }
 }
 
 function* partition(arr, left, right) {

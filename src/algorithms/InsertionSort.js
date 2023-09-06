@@ -1,6 +1,7 @@
 import _ from 'lodash';
 
 function* insertionSort(arr) {
+  yield { array: _.cloneDeep(arr), message: null };
   yield { array: _.cloneDeep(arr), message: 'Starting insertion sort' };
   
   arr[0].isSorted = true;

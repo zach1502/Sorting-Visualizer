@@ -1,6 +1,7 @@
 import _ from 'lodash';
 
 function* bubbleSort(arr) {
+  yield { array: _.cloneDeep(arr), message: null };
   yield { array: _.cloneDeep(arr), message: 'Starting bubble sort' };
   let n = arr.length;
 
@@ -37,7 +38,7 @@ function* bubbleSort(arr) {
   for (let i = 0; i < n; i++) {
     arr[i].isSorted = true;
   }
-  yield { array: _.cloneDeep(arr), message: 'Array is sorted' };
+  yield { array: _.cloneDeep(arr), message: 'Bubble sort completed!' };
 }
 
 export default bubbleSort;
