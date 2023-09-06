@@ -40,7 +40,7 @@ function* merge(array, leftIndex, middleIndex, rightIndex) {
 
     leftSubArray[leftPointer].isComparing = true;
     rightSubArray[rightPointer].isComparing = true;
-    yield { array: _.cloneDeep(array), message: `Comparing ${leftSubArray[leftPointer].value} and ${rightSubArray[rightPointer].value}` };
+    yield { array: _.cloneDeep(array), message: `Comparing ${leftSubArray[leftPointer].value} and ${rightSubArray[rightPointer].value}. Remaining left array values: [${showArrayContents(leftSubArray, leftPointer)}]. Remaining right array values: [${showArrayContents(rightSubArray, rightPointer)}]` };
     rightSubArray[rightPointer].isComparing = false;
 
     if (leftSubArray[leftPointer].value <= rightSubArray[rightPointer].value) {
@@ -61,8 +61,6 @@ function* merge(array, leftIndex, middleIndex, rightIndex) {
     array[mergePointer].isSorted = true;
     mergePointer++;
 
-    array[mergePointer].isPartition = true;
-
     if (leftIndex === 0 && rightIndex === array.length - 1) {
       array[mergePointer].isSorted = true;
     }
@@ -70,17 +68,21 @@ function* merge(array, leftIndex, middleIndex, rightIndex) {
 
   while (leftPointer < leftSize) {
     array[mergePointer] = leftSubArray[leftPointer];
-    yield { array: _.cloneDeep(array), message: `Remaining elements from the left sub-array are placed into the merged array ${leftSubArray.filter((_, index) => index >= leftPointer).map(el => el.value)}` };
+    yield { array: _.cloneDeep(array), message: `Remaining elements from the left sub-array are placed into the merged array ${showArrayContents(leftSubArray, leftPointer)}` };
     leftPointer++;
     mergePointer++;
   }
 
   while (rightPointer < rightSize) {
     array[mergePointer] = rightSubArray[rightPointer];
-    yield { array: _.cloneDeep(array), message: `Remaining elements from the right sub-array are placed into the merged array ${rightSubArray.filter((_, index) => index >= rightPointer).map(el => el.value)}` };
+    yield { array: _.cloneDeep(array), message: `Remaining elements from the right sub-array are placed into the merged array ${showArrayContents(rightSubArray, rightPointer)}` };
     rightPointer++;
     mergePointer++;
   }
+}
+
+function showArrayContents(arr, i) {
+  return arr.filter((_, index) => index >= i).map(el => el.value)
 }
 
 export default mergeSort;

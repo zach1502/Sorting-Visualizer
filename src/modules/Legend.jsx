@@ -10,7 +10,6 @@ const Legend = () => {
       alignItems={'center'}
       width={'100%'}
       padding={2}
-      // border 1 all around except the top
       borderBottom={1}
       borderLeft={1}
       borderRight={1}

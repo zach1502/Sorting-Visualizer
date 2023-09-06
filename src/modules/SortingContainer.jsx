@@ -4,7 +4,8 @@ import { Box } from '@mui/material';
 
 function SortingContainer({ arr, numElements }) {
   return (
-    <Box mt={2} p={2} border={1}
+    <Box mt={2} p={2} 
+      border={1}
       display='flex'
       borderColor="grey.500"
       height="50vh"
