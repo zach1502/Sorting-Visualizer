@@ -4,11 +4,7 @@
 #include <random>
 #include <vector>
 
-#include "sorting_algorithms/BubbleSort.hpp"
-#include "sorting_algorithms/InsertionSort.hpp"
-#include "sorting_algorithms/QuickSortHoare.hpp"
-#include "sorting_algorithms/QuickSortLomuto.hpp"
-#include "sorting_algorithms/SelectionSort.hpp"
+#include "sorting_algorithms/AllAlgorithms.hpp"
 
 bool vectorIsEqual(const std::vector<int> &lhs, const std::vector<int> &rhs) {
   if (lhs.size() != rhs.size()) {
@@ -36,14 +32,6 @@ void generateRandomData(size_t size, std::vector<int> &data) {
 
 // test for all sorting algorithms
 int main() {
-  std::vector<std::pair<std::string, void (*)(std::vector<int> &)>> algorithms =
-      {
-          {"BubbleSort", BubbleSort},
-          {"SelectionSort", SelectionSort},
-          {"InsertionSort", InsertionSort},
-          {"QuickSortLomuto", QuickSortLomuto},
-          {"QuickSortHoare", QuickSortHoare},
-      };
 
   std::vector<int> data(100);
   generateRandomData(data.size(), data);

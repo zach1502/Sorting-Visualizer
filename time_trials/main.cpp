@@ -6,12 +6,7 @@
 #include <random>
 #include <vector>
 
-// Include all sorting headers
-#include "sorting_algorithms/BubbleSort.hpp"
-#include "sorting_algorithms/InsertionSort.hpp"
-#include "sorting_algorithms/QuickSortHoare.hpp"
-#include "sorting_algorithms/QuickSortLomuto.hpp"
-#include "sorting_algorithms/SelectionSort.hpp"
+#include "sorting_algorithms/AllAlgorithms.hpp"
 
 enum TrialType { Random, PartiallySorted, Reversed, Sorted, Dupes, ManyDupes };
 const std::string TYPE_LOOK_UP[6] = {"Random", "PartiallySorted", "Reversed",
@@ -153,19 +148,10 @@ double runTrial(void (*sortingAlgorithm)(std::vector<int> &),
 int main() {
   std::ofstream csvFile("results.csv");
 
-  std::vector<std::pair<std::string, void (*)(std::vector<int> &)>> algorithms =
-      {
-          {"BubbleSort", BubbleSort},
-          {"SelectionSort", SelectionSort},
-          {"InsertionSort", InsertionSort},
-          {"QuickSortLomuto", QuickSortLomuto},
-          {"QuickSortHoare", QuickSortHoare},
-      };
-
   for (const auto &[name, func] : algorithms) {
     for (const auto &type :
          {Random, PartiallySorted, Reversed, Sorted, Dupes, ManyDupes}) {
-      for (int size = 1; size <= (1 << 17); size <<= 1) {
+      for (int size = 1; size <= (1 << 18); size <<= 1) {
         std::cout << "Running " << name << " Using Data Type: " << type
                   << "With Array Size: " << size << "..." << std::endl;
         try {
