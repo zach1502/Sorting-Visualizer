@@ -13,20 +13,21 @@
 #include "sorting_algorithms/AllAlgorithms.hpp"
 #include "utils/DataGeneration.hpp"
 
+enum TrialType { Random, PartiallySorted, Reversed, Sorted, Dupes, ManyDupes };
+const std::string TYPE_LOOK_UP[6] = {"Random", "PartiallySorted", "Reversed",
+                                     "Sorted", "Dupes",           "ManyDupes"};
+
 // file
 std::mutex fileMutex;
 
 // work
 std::mutex mtx;
 std::condition_variable cv;
-std::queue<std::pair<std::string, void (*)(std::vector<int>&)>> workQueue;
+using TaskType =
+    std::tuple<std::string, void (*)(std::vector<int>&), TrialType>;
+std::queue<TaskType> workQueue;
+const TaskType STOP_SIGNAL = {"STOP", nullptr, Random};
 
-const std::pair<std::string, void (*)(std::vector<int>&)> STOP_SIGNAL = {
-    "STOP", nullptr};
-
-enum TrialType { Random, PartiallySorted, Reversed, Sorted, Dupes, ManyDupes };
-const std::string TYPE_LOOK_UP[6] = {"Random", "PartiallySorted", "Reversed",
-                                     "Sorted", "Dupes",           "ManyDupes"};
 const int TRIAL_COUNT = 10;
 const int MAX_GEN_RETRY_COUNT = 100;
 const int MAX_SORT_RETRY_COUNT = 100;
@@ -119,7 +120,7 @@ double runTrial(void (*sortingAlgorithm)(std::vector<int>&),
 
 void workerThread() {
   while (true) {
-    std::pair<std::string, void (*)(std::vector<int>&)> task;
+    TaskType task;
     {
       std::unique_lock<std::mutex> lock(mtx);
       cv.wait(lock, [] { return !workQueue.empty(); });
@@ -131,28 +132,26 @@ void workerThread() {
       break;  // Exit the loop and thus exit the thread
     }
 
-    for (const auto& type :
-         {Random, PartiallySorted, Reversed, Sorted, Dupes, ManyDupes}) {
-      for (int size = 2; size <= (1 << 20); size <<= 1) {
-        std::cout << "Running " << task.first << " Using Data Type: " << type
-                  << "With Array Size: " << size << "..." << std::endl;
-        try {
-          double avgTime = runTrial(task.second, type, size);
-          std::lock_guard<std::mutex> lock(fileMutex);
-          std::ofstream csvFile("results.csv",
-                                std::ios::app);  // Open in append mode
-          csvFile << task.first << "," << TYPE_LOOK_UP[type] << "," << size
-                  << "," << avgTime << std::endl;
-          csvFile.close();
-        } catch (std::exception& e) {
-          std::lock_guard<std::mutex> lock(fileMutex);
-          std::ofstream csvFile("results.csv",
-                                std::ios::app);  // Open in append mode
-          csvFile << task.first << "," << TYPE_LOOK_UP[type] << "," << size
-                  << ","
-                  << "FAILED BECAUSE OF: " << e.what() << std::endl;
-          csvFile.close();
-        }
+    auto& [name, func, type] = task;
+
+    for (int size = 2; size <= (1 << 20); size <<= 1) {
+      std::cout << "Running " << name << " Using Data Type: " << type
+                << "With Array Size: " << size << "..." << std::endl;
+      try {
+        double avgTime = runTrial(func, type, size);
+        std::lock_guard<std::mutex> lock(fileMutex);
+        std::ofstream csvFile("results.csv",
+                              std::ios::app);  // Open in append mode
+        csvFile << name << "," << TYPE_LOOK_UP[type] << "," << size << ","
+                << avgTime << std::endl;
+        csvFile.close();
+      } catch (std::exception& e) {
+        std::lock_guard<std::mutex> lock(fileMutex);
+        std::ofstream csvFile("results.csv",
+                              std::ios::app);  // Open in append mode
+        csvFile << name << "," << TYPE_LOOK_UP[type] << "," << size << ","
+                << "FAILED BECAUSE OF: " << e.what() << std::endl;
+        csvFile.close();
       }
     }
   }
@@ -165,7 +164,10 @@ int main() {
 
   // load it up
   for (const auto& algorithm : algorithms) {
-    workQueue.push(algorithm);
+    for (const auto& type :
+         {Random, PartiallySorted, Reversed, Sorted, Dupes, ManyDupes}) {
+      workQueue.push({algorithm.first, algorithm.second, type});
+    }
   }
 
   // stop signals to the end
@@ -185,5 +187,6 @@ int main() {
     t.join();
   }
 
+  csvFile.close();
   return 0;
 }
