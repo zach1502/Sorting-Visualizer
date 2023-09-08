@@ -5,6 +5,7 @@
 #include <vector>
 
 #include "sorting_algorithms/AllAlgorithms.hpp"
+#include "utils/DataGeneration.hpp"
 
 bool vectorIsEqual(const std::vector<int> &lhs, const std::vector<int> &rhs) {
   if (lhs.size() != rhs.size()) {
@@ -20,15 +21,6 @@ bool vectorIsEqual(const std::vector<int> &lhs, const std::vector<int> &rhs) {
   return true;
 }
 
-void generateRandomData(size_t size, std::vector<int> &data) {
-  std::random_device rd;
-  std::mt19937 gen(rd());
-  std::uniform_int_distribution<> distrib(0, INT_MAX);
-
-  for (size_t i = 0; i < size; i++) {
-    data[i] = distrib(gen);
-  }
-}
 
 // test for all sorting algorithms
 int main() {

@@ -1,12 +1,28 @@
 #include <chrono>
+#include <condition_variable>
 #include <filesystem>
 #include <fstream>
 #include <iomanip>
 #include <iostream>
+#include <mutex>
+#include <queue>
 #include <random>
+#include <thread>
 #include <vector>
 
 #include "sorting_algorithms/AllAlgorithms.hpp"
+#include "utils/DataGeneration.hpp"
+
+// file
+std::mutex fileMutex;
+
+// work
+std::mutex mtx;
+std::condition_variable cv;
+std::queue<std::pair<std::string, void (*)(std::vector<int>&)>> workQueue;
+
+const std::pair<std::string, void (*)(std::vector<int>&)> STOP_SIGNAL = {
+    "STOP", nullptr};
 
 enum TrialType { Random, PartiallySorted, Reversed, Sorted, Dupes, ManyDupes };
 const std::string TYPE_LOOK_UP[6] = {"Random", "PartiallySorted", "Reversed",
@@ -15,60 +31,7 @@ const int TRIAL_COUNT = 10;
 const int MAX_GEN_RETRY_COUNT = 100;
 const int MAX_SORT_RETRY_COUNT = 100;
 
-void generateRandomData(size_t size, std::vector<int> &data) {
-  std::random_device rd;
-  std::mt19937 gen(rd());
-  std::uniform_int_distribution<> distrib(0, INT_MAX);
-
-  for (size_t i = 0; i < size; i++) {
-    data[i] = distrib(gen);
-  }
-}
-
-void generatePartiallySortedData(size_t size, std::vector<int> &data) {
-  for (size_t i = 0; i < size; i++) {
-    data[i] = i;
-  }
-
-  std::random_device rd;
-  std::mt19937 generator(rd());
-  std::uniform_int_distribution<size_t> dist(0, size - 1);
-
-  size_t numSwaps = static_cast<size_t>(0.05 * size);
-  for (size_t i = 0; i < numSwaps; i++) {
-    size_t idx1 = dist(generator);
-    size_t idx2 = dist(generator);
-    std::swap(data[idx1], data[idx2]);
-  }
-}
-
-void generateReversedData(size_t size, std::vector<int> &data) {
-  for (size_t i = 0; i < size; i++) {
-    data[i] = size - i;
-  }
-}
-
-void generateSortedData(size_t size, std::vector<int> &data) {
-  for (size_t i = 0; i < size; i++) {
-    data[i] = i;
-  }
-}
-
-void generateDupedData(size_t size, bool manyDupes, std::vector<int> &data) {
-  const int modifier = ((int)manyDupes) * 2;
-  std::random_device rd;
-  std::mt19937 gen(rd());
-
-  // pigeonhole principle
-  std::uniform_int_distribution<> distrib(
-      0, size >> (3 + modifier));  // size / 8 or / 32
-
-  for (size_t i = 0; i < size; i++) {
-    data[i] = distrib(gen);
-  }
-}
-
-void generateData(TrialType type, int size, std::vector<int> &data) {
+void generateData(TrialType type, int size, std::vector<int>& data) {
   switch (type) {
     case Random:
       generateRandomData(size, data);
@@ -87,12 +50,13 @@ void generateData(TrialType type, int size, std::vector<int> &data) {
   }
 }
 
-double runTrial(void (*sortingAlgorithm)(std::vector<int> &),
+double runTrial(void (*sortingAlgorithm)(std::vector<int>&),
                 TrialType type = Random, int size = 10000) {
   long double averageDuration = 0.0;
 
   int sortRetryCounter = 0;
 
+  // For each trial
   for (int i = 1; i <= TRIAL_COUNT; i++) {
     std::cout << "Trial " << i << "...";
 
@@ -106,26 +70,33 @@ double runTrial(void (*sortingAlgorithm)(std::vector<int> &),
         data.resize(size);
         generateData(type, size, data);
         unsuccessful = false;
-      } catch (std::bad_alloc &e) {
+      } catch (std::bad_alloc& e) {
         std::cout << "Failed to reserve memory for array of size " << size
                   << " Retrying..." << std::endl;
         retryCounter++;
-        if (retryCounter > MAX_GEN_RETRY_COUNT) return -1;
+        if (retryCounter > MAX_GEN_RETRY_COUNT) {
+          throw std::runtime_error("Failed to allocate array of size " +
+                                   std::to_string(size) + " after " +
+                                   std::to_string(MAX_SORT_RETRY_COUNT) +
+                                   " attempts: ERROR: " + e.what());
+        }
       }
     }
 
+    // run the sorting algorithm
     auto start = std::chrono::high_resolution_clock::now();
     try {
       sortingAlgorithm(data);
-    } catch (std::bad_alloc &e) {
+    } catch (const std::exception& e) {
       std::cout << "Failed to sort array of size " << size << " Retrying..."
                 << std::endl;
       i--;
 
       if (sortRetryCounter > MAX_SORT_RETRY_COUNT) {
-        throw std::runtime_error(
-            "Failed to sort array of size " + std::to_string(size) + " after " +
-            std::to_string(MAX_SORT_RETRY_COUNT) + " attempts");
+        throw std::runtime_error("Failed to sort array of size " +
+                                 std::to_string(size) + " after " +
+                                 std::to_string(MAX_SORT_RETRY_COUNT) +
+                                 " attempts: ERROR: " + e.what());
       }
 
       sortRetryCounter++;
@@ -133,6 +104,7 @@ double runTrial(void (*sortingAlgorithm)(std::vector<int> &),
     };
     auto end = std::chrono::high_resolution_clock::now();
 
+    // keep track
     double duration =
         std::chrono::duration_cast<std::chrono::milliseconds>(end - start)
             .count();
@@ -145,30 +117,97 @@ double runTrial(void (*sortingAlgorithm)(std::vector<int> &),
   return averageDuration;
 }
 
-int main() {
-  std::ofstream csvFile("results.csv");
+void executeForAlgorithm(
+    const std::pair<std::string, void (*)(std::vector<int>&)>& algorithm) {
+  for (const auto& type :
+       {Random, PartiallySorted, Reversed, Sorted, Dupes, ManyDupes}) {
+    for (int size = 2; size <= (1 << 20); size <<= 1) {
+      std::cout << "Running " << algorithm.first << " Using Data Type: " << type
+                << "With Array Size: " << size << "..." << std::endl;
+      try {
+        double avgTime = runTrial(algorithm.second, type, size);
+        std::lock_guard<std::mutex> lock(fileMutex);
+        std::ofstream csvFile("results.csv",
+                              std::ios::app);  // Open in append mode
+        csvFile << algorithm.first << "," << TYPE_LOOK_UP[type] << "," << size
+                << "," << avgTime << std::endl;
+        csvFile.close();
+      } catch (std::exception& e) {
+        std::lock_guard<std::mutex> lock(fileMutex);
+        std::ofstream csvFile("results.csv",
+                              std::ios::app);  // Open in append mode
+        csvFile << algorithm.first << "," << TYPE_LOOK_UP[type] << "," << size
+                << ","
+                << "FAILED BECAUSE OF: " << e.what() << std::endl;
+        csvFile.close();
+      }
+    }
+  }
+}
 
-  for (const auto &[name, func] : algorithms) {
-    for (const auto &type :
+void workerThread() {
+  while (true) {
+    std::pair<std::string, void (*)(std::vector<int>&)> task;
+    {
+      std::unique_lock<std::mutex> lock(mtx);
+      cv.wait(lock, [] { return !workQueue.empty(); });
+      task = workQueue.front();
+      workQueue.pop();
+    }
+
+    if (task == STOP_SIGNAL) {
+      break;  // Exit the loop and thus exit the thread
+    }
+
+    // Your testing code
+    for (const auto& type :
          {Random, PartiallySorted, Reversed, Sorted, Dupes, ManyDupes}) {
-      for (int size = 1; size <= (1 << 18); size <<= 1) {
-        std::cout << "Running " << name << " Using Data Type: " << type
+      for (int size = 2; size <= (1 << 20); size <<= 1) {
+        std::cout << "Running " << task.first << " Using Data Type: " << type
                   << "With Array Size: " << size << "..." << std::endl;
         try {
-          double avgTime = runTrial(func, type, size);
-          csvFile << name << "," << TYPE_LOOK_UP[type] << "," << size << ","
-                  << avgTime << std::endl;
-        } catch (std::runtime_error &e) {
-          csvFile << name << "," << TYPE_LOOK_UP[type] << "," << size << ","
-                  << "FAILED BECAUSE OF MEMORY ALLOCATION ISSUES" << std::endl;
+          double avgTime = runTrial(task.second, type, size);
+          std::lock_guard<std::mutex> lock(fileMutex);
+          std::ofstream csvFile("results.csv",
+                                std::ios::app);  // Open in append mode
+          csvFile << task.first << "," << TYPE_LOOK_UP[type] << "," << size
+                  << "," << avgTime << std::endl;
+          csvFile.close();
+        } catch (std::exception& e) {
+          std::lock_guard<std::mutex> lock(fileMutex);
+          std::ofstream csvFile("results.csv",
+                                std::ios::app);  // Open in append mode
+          csvFile << task.first << "," << TYPE_LOOK_UP[type] << "," << size
+                  << ","
+                  << "FAILED BECAUSE OF: " << e.what() << std::endl;
+          csvFile.close();
         }
       }
-
-      csvFile << "\n";
     }
-    csvFile << "\n";
+  }
+}
+
+int main() {
+  // clear prev data
+  std::ofstream csvFile("results.csv");
+  csvFile.close();
+
+  // load it up
+  for (const auto& algorithm : algorithms) {
+    workQueue.push(algorithm);
   }
 
-  csvFile.close();
+  // Start 4 worker threads
+  std::vector<std::thread> threads;
+  for (int i = 0; i < 4; ++i) {
+    threads.emplace_back(workerThread);
+  }
+
+  // Join all threads (in real code, you'd want a way to exit the threads
+  // cleanly)
+  for (auto& t : threads) {
+    t.join();
+  }
+
   return 0;
 }
