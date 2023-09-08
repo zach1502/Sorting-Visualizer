@@ -117,34 +117,6 @@ double runTrial(void (*sortingAlgorithm)(std::vector<int>&),
   return averageDuration;
 }
 
-void executeForAlgorithm(
-    const std::pair<std::string, void (*)(std::vector<int>&)>& algorithm) {
-  for (const auto& type :
-       {Random, PartiallySorted, Reversed, Sorted, Dupes, ManyDupes}) {
-    for (int size = 2; size <= (1 << 20); size <<= 1) {
-      std::cout << "Running " << algorithm.first << " Using Data Type: " << type
-                << "With Array Size: " << size << "..." << std::endl;
-      try {
-        double avgTime = runTrial(algorithm.second, type, size);
-        std::lock_guard<std::mutex> lock(fileMutex);
-        std::ofstream csvFile("results.csv",
-                              std::ios::app);  // Open in append mode
-        csvFile << algorithm.first << "," << TYPE_LOOK_UP[type] << "," << size
-                << "," << avgTime << std::endl;
-        csvFile.close();
-      } catch (std::exception& e) {
-        std::lock_guard<std::mutex> lock(fileMutex);
-        std::ofstream csvFile("results.csv",
-                              std::ios::app);  // Open in append mode
-        csvFile << algorithm.first << "," << TYPE_LOOK_UP[type] << "," << size
-                << ","
-                << "FAILED BECAUSE OF: " << e.what() << std::endl;
-        csvFile.close();
-      }
-    }
-  }
-}
-
 void workerThread() {
   while (true) {
     std::pair<std::string, void (*)(std::vector<int>&)> task;
@@ -159,7 +131,6 @@ void workerThread() {
       break;  // Exit the loop and thus exit the thread
     }
 
-    // Your testing code
     for (const auto& type :
          {Random, PartiallySorted, Reversed, Sorted, Dupes, ManyDupes}) {
       for (int size = 2; size <= (1 << 20); size <<= 1) {
@@ -195,6 +166,11 @@ int main() {
   // load it up
   for (const auto& algorithm : algorithms) {
     workQueue.push(algorithm);
+  }
+
+  // stop signals to the end
+  for (int i = 0; i < 4; ++i) {
+    workQueue.push(STOP_SIGNAL);
   }
 
   // Start 4 worker threads
