@@ -1,6 +1,6 @@
 #pragma once
 
-#include <algorithm>  // for std::swap
+#include <algorithm>
 #include <vector>
 
 void BubbleSort(std::vector<int>& arr) {

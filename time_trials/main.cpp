@@ -1,17 +1,24 @@
 #include <chrono>
 #include <filesystem>
 #include <fstream>
+#include <iomanip>
 #include <iostream>
 #include <random>
 #include <vector>
-#include <iomanip>
 
 // Include all sorting headers
 #include "sorting_algorithms/BubbleSort.hpp"
+#include "sorting_algorithms/InsertionSort.hpp"
+#include "sorting_algorithms/QuickSortHoare.hpp"
+#include "sorting_algorithms/QuickSortLomuto.hpp"
+#include "sorting_algorithms/SelectionSort.hpp"
 
 enum TrialType { Random, PartiallySorted, Reversed, Sorted, Dupes, ManyDupes };
-const int TRIAL_COUNT = 30;
+const std::string TYPE_LOOK_UP[6] = {"Random", "PartiallySorted", "Reversed",
+                                     "Sorted", "Dupes",           "ManyDupes"};
+const int TRIAL_COUNT = 10;
 const int MAX_GEN_RETRY_COUNT = 100;
+const int MAX_SORT_RETRY_COUNT = 100;
 
 void generateRandomData(size_t size, std::vector<int> &data) {
   std::random_device rd;
@@ -53,12 +60,13 @@ void generateSortedData(size_t size, std::vector<int> &data) {
 }
 
 void generateDupedData(size_t size, bool manyDupes, std::vector<int> &data) {
-  const int modifier = ((int) manyDupes) * 2;
+  const int modifier = ((int)manyDupes) * 2;
   std::random_device rd;
   std::mt19937 gen(rd());
 
   // pigeonhole principle
-  std::uniform_int_distribution<> distrib(0, size >> (3 + modifier)); // size / 8 or / 32
+  std::uniform_int_distribution<> distrib(
+      0, size >> (3 + modifier));  // size / 8 or / 32
 
   for (size_t i = 0; i < size; i++) {
     data[i] = distrib(gen);
@@ -84,13 +92,15 @@ void generateData(TrialType type, int size, std::vector<int> &data) {
   }
 }
 
-double runTrial(void (*sortingAlgorithm)(std::vector<int>&),
+double runTrial(void (*sortingAlgorithm)(std::vector<int> &),
                 TrialType type = Random, int size = 10000) {
   long double averageDuration = 0.0;
 
+  int sortRetryCounter = 0;
+
   for (int i = 1; i <= TRIAL_COUNT; i++) {
     std::cout << "Trial " << i << "...";
-    
+
     // try and reserve memory for array length size
     std::vector<int> data;
     bool unsuccessful = true;
@@ -101,25 +111,41 @@ double runTrial(void (*sortingAlgorithm)(std::vector<int>&),
         data.resize(size);
         generateData(type, size, data);
         unsuccessful = false;
-      } catch (std::bad_alloc& e) {
-        std::cout << "Failed to reserve memory for array of size " << size << " Retrying..." << std::endl;
+      } catch (std::bad_alloc &e) {
+        std::cout << "Failed to reserve memory for array of size " << size
+                  << " Retrying..." << std::endl;
         retryCounter++;
         if (retryCounter > MAX_GEN_RETRY_COUNT) return -1;
       }
     }
 
     auto start = std::chrono::high_resolution_clock::now();
-    sortingAlgorithm(data);
+    try {
+      sortingAlgorithm(data);
+    } catch (std::bad_alloc &e) {
+      std::cout << "Failed to sort array of size " << size << " Retrying..."
+                << std::endl;
+      i--;
+
+      if (sortRetryCounter > MAX_SORT_RETRY_COUNT) {
+        throw std::runtime_error(
+            "Failed to sort array of size " + std::to_string(size) + " after " +
+            std::to_string(MAX_SORT_RETRY_COUNT) + " attempts");
+      }
+
+      sortRetryCounter++;
+      continue;
+    };
     auto end = std::chrono::high_resolution_clock::now();
 
     double duration =
-        std::chrono::duration_cast<std::chrono::microseconds>(end - start)
+        std::chrono::duration_cast<std::chrono::milliseconds>(end - start)
             .count();
 
-    averageDuration = (i - 1) * averageDuration/i + duration/i;
-    std::cout << " took " << std::setprecision(15) << duration << " microseconds" << std::endl;
+    averageDuration = (i - 1) * averageDuration / i + duration / i;
+    std::cout << " took " << std::setprecision(15) << duration
+              << " milliseconds" << std::endl;
   }
-
 
   return averageDuration;
 }
@@ -127,18 +153,29 @@ double runTrial(void (*sortingAlgorithm)(std::vector<int>&),
 int main() {
   std::ofstream csvFile("results.csv");
 
-  std::vector<std::pair<std::string, void (*)(std::vector<int>&)>> algorithms =
+  std::vector<std::pair<std::string, void (*)(std::vector<int> &)>> algorithms =
       {
           {"BubbleSort", BubbleSort},
-          // ... other algorithms ...
+          {"SelectionSort", SelectionSort},
+          {"InsertionSort", InsertionSort},
+          {"QuickSortLomuto", QuickSortLomuto},
+          {"QuickSortHoare", QuickSortHoare},
       };
 
-  for (const auto& [name, func] : algorithms) {
-    for (const auto& type : {Random, PartiallySorted, Reversed, Sorted, Dupes, ManyDupes}) {
-      for (int size = 1; size <= (1 << 16); size <<= 1){
-        std::cout << "Running " << name << " Using Data Type: " << type << "With Array Size: " << size << "..." << std::endl;
-        double avgTime = runTrial(func, type, size);
-        csvFile << name << "," << type << "," << size << "," << avgTime << std::endl;
+  for (const auto &[name, func] : algorithms) {
+    for (const auto &type :
+         {Random, PartiallySorted, Reversed, Sorted, Dupes, ManyDupes}) {
+      for (int size = 1; size <= (1 << 17); size <<= 1) {
+        std::cout << "Running " << name << " Using Data Type: " << type
+                  << "With Array Size: " << size << "..." << std::endl;
+        try {
+          double avgTime = runTrial(func, type, size);
+          csvFile << name << "," << TYPE_LOOK_UP[type] << "," << size << ","
+                  << avgTime << std::endl;
+        } catch (std::runtime_error &e) {
+          csvFile << name << "," << TYPE_LOOK_UP[type] << "," << size << ","
+                  << "FAILED BECAUSE OF MEMORY ALLOCATION ISSUES" << std::endl;
+        }
       }
 
       csvFile << "\n";
