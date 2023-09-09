@@ -27,9 +27,9 @@ std::mutex fileMutex;
 std::mutex mtx;
 std::condition_variable cv;
 using TaskType =
-    std::tuple<std::string, void (*)(std::vector<int>&), TrialType>;
+    std::tuple<std::string, void (*)(std::vector<int>&), int, TrialType>;
 std::queue<TaskType> workQueue;
-const TaskType STOP_SIGNAL = {"STOP", nullptr, Random};
+const TaskType STOP_SIGNAL = {"STOP", nullptr, NULL, Random};
 
 // consts
 const int TRIAL_COUNT = 10;
@@ -37,28 +37,10 @@ const int MAX_GEN_RETRY_COUNT = 100;
 const int MAX_SORT_RETRY_COUNT = 100;
 const int MAX_THREAD_COUNT = 8;
 
-const int MIN_ARRAY_SIZE = 10;
-const int MAX_ARRAY_SIZE = 5000000;
-
-//{from, to}
-const std::unordered_map<int, int> trialSizes = {
-    {10, 50},
-    {50, 100},
-    {100, 500},
-    {500, 1000},
-    {1000, 5000},
-    {5000, 10000},
-    {10000, 50000},
-    {50000, 100000},
-    {100000, 500000},
-    {500000, 1000000},
-    {1000000, 2000000},
-    {2000000, 5000000},
-    {5000000, 10000000},
-};
+const int MIN_ARRAY_SIZE = 16;
 
 int getNextArraySize(int size) {
-  return trialSizes.at(size);
+  return size << 1;
 }
 
 void generateData(TrialType type, int size, std::vector<int>& data) {
@@ -161,11 +143,11 @@ void workerThread() {
       break;  // Exit the loop and thus exit the thread
     }
 
-    auto& [name, func, type] = task;
+    const auto& [name, func, MAX_ARRAY_SIZE, type] = task;
 
     for (int size = MIN_ARRAY_SIZE; size <= MAX_ARRAY_SIZE; size = getNextArraySize(size)) {
       std::cout << "Running " << name << " Using Data Type: " << type
-                << "With Array Size: " << size << "..." << std::endl;
+                << " With Array Size: " << size << "..." << std::endl;
       try {
         double avgTime = runTrial(func, type, size);
         std::lock_guard<std::mutex> lock(fileMutex);
@@ -205,14 +187,14 @@ void reformatCSV(const std::string& inputFilename,
   }
 
   // Read current CSV data and store in a map of maps for easy lookup
-  std::map<std::string, std::map<int, std::map<std::string, double>>> dataMap;
+  std::map<std::string, std::map<int, std::map<std::string, std::string>>> dataMap;
   std::string line;
 
   while (std::getline(inFile, line)) {
     std::istringstream ss(line);
     std::string name, type;
     int size;
-    double time;
+    std::string time;
 
     std::getline(ss, name, ',');
     std::getline(ss, type, ',');
@@ -258,14 +240,14 @@ void reformatCSVByType(const std::string& inputFilename, const std::string& outp
         return;
     }
 
-    std::map<std::string, std::map<int, std::map<std::string, double>>> dataMap;
+    std::map<std::string, std::map<int, std::map<std::string, std::string>>> dataMap;
     std::string line;
 
     while (std::getline(inFile, line)) {
         std::istringstream ss(line);
         std::string name, type;
         int size;
-        double time;
+        std::string time;
 
         std::getline(ss, name, ',');
         std::getline(ss, type, ',');
@@ -319,7 +301,10 @@ int main() {
   for (const auto& algorithm : algorithms) {
     for (const auto& type :
          {Random, PartiallySorted, Reversed, Sorted, Dupes, ManyDupes}) {
-      workQueue.push({algorithm.first, algorithm.second, type});
+
+      const auto& [name, func, MAX_ARRAY_SIZE] = algorithm;
+
+      workQueue.push({name, func, MAX_ARRAY_SIZE, type});
     }
   }
 

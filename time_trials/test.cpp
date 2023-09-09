@@ -33,9 +33,15 @@ int main() {
 
   bool isFailed = false;
 
-  for (auto &[name, algorithm] : algorithms) {
+  for (auto &[name, algorithm, _] : algorithms) {
     std::vector<int> dataCopy(data);
-    algorithm(dataCopy);
+    try {
+      algorithm(dataCopy);
+    } catch (std::exception &e) {
+      std::cout << name << " failed with exception: " << e.what() << std::endl;
+      isFailed = true;
+      continue;
+    }
 
     if (vectorIsEqual(dataCopy, sortedData)) {
       std::cout << name << " passed" << std::endl;
