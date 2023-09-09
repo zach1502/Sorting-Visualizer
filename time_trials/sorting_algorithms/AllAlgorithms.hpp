@@ -17,12 +17,12 @@
   const std::vector<std::pair<std::string, void (*)(std::vector<int> &)>> algorithms =
       {
           {"RadixSort", RadixSort},
-          {"BubbleSort", BubbleSort},
-          {"SelectionSort", SelectionSort},
-          {"InsertionSort", InsertionSort},
+          // {"BubbleSort", BubbleSort},
+          // {"SelectionSort", SelectionSort},
+          // {"InsertionSort", InsertionSort},
           {"QuickSortLomuto", QuickSortLomuto},
           {"QuickSortHoare", QuickSortHoare},
-          {"MergeSort", MergeSort},
-          {"CocktailShakerSort", CocktailShakerSort},
-          {"IntroSort", IntroSort},
+          // {"MergeSort", MergeSort},
+          // {"CocktailShakerSort", CocktailShakerSort},
+          // {"IntroSort", IntroSort},
       };
