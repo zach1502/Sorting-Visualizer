@@ -38,7 +38,7 @@ const int MAX_SORT_RETRY_COUNT = 100;
 const int MAX_THREAD_COUNT = 8;
 
 const int MIN_ARRAY_SIZE = 10;
-const int MAX_ARRAY_SIZE = 50000000;
+const int MAX_ARRAY_SIZE = 5000000;
 
 //{from, to}
 const std::unordered_map<int, int> trialSizes = {
@@ -249,6 +249,62 @@ void reformatCSV(const std::string& inputFilename,
   outFile.close();
 }
 
+void reformatCSVByType(const std::string& inputFilename, const std::string& outputFilename) {
+    std::ifstream inFile(inputFilename);
+    std::ofstream outFile(outputFilename);
+
+    if (!inFile.is_open() || !outFile.is_open()) {
+        std::cerr << "Failed to open files." << std::endl;
+        return;
+    }
+
+    std::map<std::string, std::map<int, std::map<std::string, double>>> dataMap;
+    std::string line;
+
+    while (std::getline(inFile, line)) {
+        std::istringstream ss(line);
+        std::string name, type;
+        int size;
+        double time;
+
+        std::getline(ss, name, ',');
+        std::getline(ss, type, ',');
+        ss >> size;
+        std::getline(ss, line, ',');  // To discard the comma
+        ss >> time;
+
+        dataMap[type][size][name] = time;
+    }
+
+    for (const auto& [type, sizeMap] : dataMap) {
+        outFile << type << std::endl;
+        outFile << "n";
+        
+        // Write headers
+        for (const auto& [size, nameMap] : sizeMap) {
+            for (const auto& [name, time] : nameMap) {
+                outFile << "," << name;
+            }
+            break;  // Only need to write the headers once
+        }
+        outFile << std::endl;
+
+        // Write data
+        for (const auto& [size, nameMap] : sizeMap) {
+            outFile << size;
+            for (const auto& [name, time] : nameMap) {
+                outFile << "," << time;
+            }
+            outFile << std::endl;
+        }
+        
+        outFile << std::endl;
+    }
+
+    inFile.close();
+    outFile.close();
+}
+
 int main() {
   // speed up
   std::ios_base::sync_with_stdio(NULL);
@@ -285,6 +341,7 @@ int main() {
   csvFile.close();
 
   reformatCSV("results.csv", "formatted_results.csv");
+  reformatCSVByType("results.csv", "formatted_results_by_type.csv");
 
   return 0;
 }
