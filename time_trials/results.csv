@@ -1,150 +1,2490 @@
+RadixSort,Random,16,0
+RadixSort,Sorted,16,0
+RadixSort,PartiallySorted,16,0
+BubbleSort,Random,16,0
+RadixSort,Reversed,16,0
+RadixSort,ManyDupes,16,0
+BubbleSort,PartiallySorted,16,0
+RadixSort,Dupes,16,0
+RadixSort,Random,32,0
+RadixSort,Sorted,32,0
+RadixSort,PartiallySorted,32,0
+BubbleSort,Random,32,0
+RadixSort,ManyDupes,32,0.1
+RadixSort,Reversed,32,0
+BubbleSort,PartiallySorted,32,0
+RadixSort,Dupes,32,0.1
+RadixSort,PartiallySorted,64,0
+RadixSort,Random,64,0
+RadixSort,Sorted,64,0
+RadixSort,Reversed,64,0
+RadixSort,ManyDupes,64,0.1
+BubbleSort,Random,64,0
+BubbleSort,PartiallySorted,64,0
+RadixSort,Dupes,64,0
+RadixSort,Sorted,128,0.2
+RadixSort,Random,128,0.1
+RadixSort,PartiallySorted,128,0
+RadixSort,Reversed,128,0
+BubbleSort,PartiallySorted,128,0
+RadixSort,Dupes,128,0
+BubbleSort,Random,128,0
+RadixSort,ManyDupes,128,0
+RadixSort,Sorted,256,0.1
+RadixSort,PartiallySorted,256,0.1
+RadixSort,Random,256,0
+RadixSort,Reversed,256,0.1
+BubbleSort,Random,256,0.2
+BubbleSort,PartiallySorted,256,0.2
+RadixSort,Dupes,256,0
+RadixSort,ManyDupes,256,0
+RadixSort,Random,512,0.1
+RadixSort,Sorted,512,0
+RadixSort,PartiallySorted,512,0.1
+RadixSort,Reversed,512,0.3
+RadixSort,Dupes,512,0.4
+RadixSort,ManyDupes,512,0.1
+BubbleSort,PartiallySorted,512,0.5
+BubbleSort,Random,512,0.1
+RadixSort,PartiallySorted,1024,0
+RadixSort,Reversed,1024,0.3
+RadixSort,Sorted,1024,0.3
+RadixSort,Random,1024,0.3
+RadixSort,Dupes,1024,0.3
+RadixSort,ManyDupes,1024,0.2
+BubbleSort,PartiallySorted,1024,0.6
+BubbleSort,Random,1024,0.5
+RadixSort,PartiallySorted,2048,0.4
+RadixSort,Reversed,2048,0.4
+RadixSort,Dupes,2048,0.4
+RadixSort,Sorted,2048,0.4
+RadixSort,Random,2048,0.4
+RadixSort,ManyDupes,2048,0.4
+RadixSort,PartiallySorted,4096,0.8
+RadixSort,Reversed,4096,1.2
+RadixSort,Dupes,4096,1
+RadixSort,ManyDupes,4096,0.7
+RadixSort,Sorted,4096,1.2
+RadixSort,Random,4096,0.9
+BubbleSort,PartiallySorted,2048,3.4
+BubbleSort,Random,2048,3.3
+RadixSort,PartiallySorted,8192,2.6
+RadixSort,Dupes,8192,2
+RadixSort,ManyDupes,8192,2.3
+RadixSort,Random,8192,1.9
+RadixSort,Reversed,8192,2.4
+RadixSort,Sorted,8192,2.6
+RadixSort,Dupes,16384,5.2
+RadixSort,Reversed,16384,5
+RadixSort,ManyDupes,16384,5.2
+RadixSort,PartiallySorted,16384,5.6
+RadixSort,Random,16384,5.4
+RadixSort,Sorted,16384,5.6
+BubbleSort,PartiallySorted,4096,16
+BubbleSort,Random,4096,15.9
+RadixSort,Reversed,32768,10.6
+RadixSort,ManyDupes,32768,10.8
+RadixSort,Dupes,32768,11.3
+RadixSort,PartiallySorted,32768,10.8
+RadixSort,Sorted,32768,11.3
+RadixSort,Random,32768,11.5
+RadixSort,Reversed,65536,23
+RadixSort,ManyDupes,65536,23.9
+RadixSort,Dupes,65536,23.6
+RadixSort,Sorted,65536,23.1
+RadixSort,PartiallySorted,65536,24.1
+RadixSort,Random,65536,23.6
+BubbleSort,PartiallySorted,8192,68.9
+BubbleSort,Random,8192,69.4
+RadixSort,ManyDupes,131072,44.4
+RadixSort,Reversed,131072,44.9
+RadixSort,Sorted,131072,44.1
+RadixSort,Dupes,131072,48.7
+RadixSort,PartiallySorted,131072,47.5
+RadixSort,Random,131072,45.4
+RadixSort,Reversed,262144,92.5
+RadixSort,ManyDupes,262144,96.2
+RadixSort,Sorted,262144,93.2
+RadixSort,PartiallySorted,262144,94.5
+RadixSort,Dupes,262144,97.7
+RadixSort,Random,262144,95.4
+RadixSort,ManyDupes,524288,194.6
+RadixSort,Reversed,524288,192.4
+BubbleSort,PartiallySorted,16384,325.6
+RadixSort,Sorted,524288,195.2
+BubbleSort,Random,16384,326.1
+RadixSort,PartiallySorted,524288,193.1
+RadixSort,Dupes,524288,197.1
+RadixSort,Random,524288,188.7
+RadixSort,Reversed,1048576,349.1
+RadixSort,ManyDupes,1048576,359.1
+RadixSort,Sorted,1048576,360.7
+RadixSort,Dupes,1048576,359.7
+RadixSort,PartiallySorted,1048576,362.2
+RadixSort,Random,1048576,357
+RadixSort,ManyDupes,2097152,771.2
+RadixSort,Sorted,2097152,761.5
+RadixSort,Reversed,2097152,777.5
+RadixSort,Dupes,2097152,759.5
+RadixSort,PartiallySorted,2097152,774.8
+RadixSort,Random,2097152,744.3
+BubbleSort,Random,32768,1407.6
+BubbleSort,PartiallySorted,32768,1410.2
+RadixSort,ManyDupes,4194304,1455.3
+RadixSort,Sorted,4194304,1440.5
+RadixSort,Dupes,4194304,1460.5
+RadixSort,Reversed,4194304,1464.3
+RadixSort,PartiallySorted,4194304,1466.2
+RadixSort,Random,4194304,1461.1
+RadixSort,ManyDupes,8388608,2953.2
+RadixSort,Sorted,8388608,2951.1
+RadixSort,Dupes,8388608,2952.3
+RadixSort,Reversed,8388608,2951.7
+RadixSort,PartiallySorted,8388608,2942.9
+RadixSort,Random,8388608,2912.8
+BubbleSort,PartiallySorted,65536,6015.1
+BubbleSort,Random,65536,6020.6
+RadixSort,ManyDupes,16777216,5832.9
+RadixSort,Sorted,16777216,5766.7
+RadixSort,Reversed,16777216,5730.7
+RadixSort,Dupes,16777216,5795.2
+RadixSort,PartiallySorted,16777216,5771.2
+RadixSort,Random,16777216,5790.5
+RadixSort,ManyDupes,33554432,11517.2
+RadixSort,Reversed,33554432,11428.8
+RadixSort,Sorted,33554432,11524.7
+RadixSort,Dupes,33554432,11569.1
+RadixSort,PartiallySorted,33554432,11490.1
+RadixSort,Random,33554432,11581.5
+BubbleSort,Random,131072,24421
+BubbleSort,PartiallySorted,131072,24492.8
+RadixSort,ManyDupes,67108864,23148.7
+RadixSort,Reversed,67108864,23008.6
+RadixSort,Reversed,134217728,FAILED BECAUSE OF: Failed to allocate array of size 134217728 after 100 attempts: ERROR: std::bad_alloc
+RadixSort,Reversed,268435456,FAILED BECAUSE OF: Failed to allocate array of size 268435456 after 100 attempts: ERROR: std::bad_alloc
+BubbleSort,Reversed,16,0
+BubbleSort,Reversed,32,0
+BubbleSort,Reversed,64,0
+BubbleSort,Reversed,128,0
+BubbleSort,Reversed,256,0
+BubbleSort,Reversed,512,0.1
+BubbleSort,Reversed,1024,0.6
+BubbleSort,Reversed,2048,3
+BubbleSort,Reversed,4096,15
+BubbleSort,Reversed,8192,69.4
+RadixSort,Dupes,67108864,23293.5
+RadixSort,Sorted,67108864,23323.8
+BubbleSort,Reversed,16384,305.1
+RadixSort,PartiallySorted,67108864,23200.3
+RadixSort,PartiallySorted,134217728,FAILED BECAUSE OF: Failed to allocate array of size 134217728 after 100 attempts: ERROR: std::bad_alloc
+RadixSort,PartiallySorted,268435456,FAILED BECAUSE OF: Failed to allocate array of size 268435456 after 100 attempts: ERROR: std::bad_alloc
+BubbleSort,Sorted,16,0
+BubbleSort,Sorted,32,0
+BubbleSort,Sorted,64,0
+BubbleSort,Sorted,128,0
+BubbleSort,Sorted,256,0
+BubbleSort,Sorted,512,0.1
+BubbleSort,Sorted,1024,0.5
+BubbleSort,Sorted,2048,3.7
+BubbleSort,Sorted,4096,15
+BubbleSort,Sorted,8192,66.5
+BubbleSort,Sorted,16384,301
+BubbleSort,Reversed,32768,1340
+BubbleSort,Sorted,32768,1328.7
+RadixSort,Random,67108864,23165.6
+BubbleSort,Reversed,65536,5863.7
+BubbleSort,Sorted,65536,5881.5
+BubbleSort,Reversed,131072,24867.8
+BubbleSort,Sorted,131072,24838.9
+BubbleSort,Random,262144,102539.1
+BubbleSort,Dupes,16,0
+BubbleSort,Dupes,32,0
+BubbleSort,Dupes,64,0
+BubbleSort,Dupes,128,0
+BubbleSort,Dupes,256,0.1
+BubbleSort,Dupes,512,0.4
+BubbleSort,Dupes,1024,0.6
+BubbleSort,Dupes,2048,3.4
+BubbleSort,Dupes,4096,15.3
+BubbleSort,Dupes,8192,68.9
+BubbleSort,PartiallySorted,262144,102715.3
+BubbleSort,ManyDupes,16,0
+BubbleSort,ManyDupes,32,0
+BubbleSort,ManyDupes,64,0
+BubbleSort,ManyDupes,128,0.1
+BubbleSort,ManyDupes,256,0
+BubbleSort,ManyDupes,512,0.2
+BubbleSort,ManyDupes,1024,0.5
+BubbleSort,ManyDupes,2048,3.3
+BubbleSort,ManyDupes,4096,13.7
+BubbleSort,ManyDupes,8192,68.1
+BubbleSort,Dupes,16384,303.3
+BubbleSort,ManyDupes,16384,303.1
+BubbleSort,Dupes,32768,1363.5
+BubbleSort,ManyDupes,32768,1363.8
+RadixSort,ManyDupes,134217728,45455
+RadixSort,ManyDupes,268435456,FAILED BECAUSE OF: Failed to allocate array of size 268435456 after 100 attempts: ERROR: std::bad_alloc
+SelectionSort,Random,16,0
+SelectionSort,Random,32,0
+SelectionSort,Random,64,0
+SelectionSort,Random,128,0
+SelectionSort,Random,256,0
+SelectionSort,Random,512,0
+SelectionSort,Random,1024,0.5
+SelectionSort,Random,2048,1.2
+SelectionSort,Random,4096,6.2
+SelectionSort,Random,8192,27
+SelectionSort,Random,16384,101.8
+SelectionSort,Random,32768,423.8
+SelectionSort,Random,65536,1573.4
+RadixSort,Dupes,134217728,45636.4
+RadixSort,Dupes,268435456,FAILED BECAUSE OF: Failed to allocate array of size 268435456 after 100 attempts: ERROR: std::bad_alloc
+SelectionSort,PartiallySorted,16,0
+SelectionSort,PartiallySorted,32,0
+SelectionSort,PartiallySorted,64,0
+SelectionSort,PartiallySorted,128,0
+SelectionSort,PartiallySorted,256,0
+SelectionSort,PartiallySorted,512,0.2
+SelectionSort,PartiallySorted,1024,0.2
+SelectionSort,PartiallySorted,2048,1.3
+SelectionSort,PartiallySorted,4096,6.1
+SelectionSort,PartiallySorted,8192,31.8
+SelectionSort,PartiallySorted,16384,119.8
+BubbleSort,Dupes,65536,5928.7
+BubbleSort,ManyDupes,65536,5891.6
+SelectionSort,PartiallySorted,32768,404
+SelectionSort,PartiallySorted,65536,1608.5
+SelectionSort,Random,131072,6500.8
+RadixSort,Sorted,134217728,44941.6
+SelectionSort,PartiallySorted,131072,6566.5
+BubbleSort,Dupes,131072,25204.8
+BubbleSort,ManyDupes,131072,25087
+RadixSort,Random,134217728,45035.6
+RadixSort,Random,268435456,FAILED BECAUSE OF: Failed to allocate array of size 268435456 after 100 attempts: ERROR: std::bad_alloc
+SelectionSort,Reversed,16,0
+SelectionSort,Reversed,32,0
+SelectionSort,Reversed,64,0
+SelectionSort,Reversed,128,0
+SelectionSort,Reversed,256,0
+SelectionSort,Reversed,512,0
+SelectionSort,Reversed,1024,0.5
+SelectionSort,Reversed,2048,3.3
+SelectionSort,Reversed,4096,10.4
+SelectionSort,Reversed,8192,33.5
+SelectionSort,Reversed,16384,116.3
+SelectionSort,Random,262144,25859.9
+SelectionSort,Sorted,16,0
+SelectionSort,Sorted,32,0
+SelectionSort,Sorted,64,0
+SelectionSort,Sorted,128,0
+SelectionSort,Sorted,256,0
+SelectionSort,Sorted,512,0.2
+SelectionSort,Sorted,1024,0.3
+SelectionSort,Sorted,2048,1.3
+SelectionSort,Sorted,4096,6
+SelectionSort,Sorted,8192,25.9
+SelectionSort,Sorted,16384,97.3
+SelectionSort,Reversed,32768,434.1
+SelectionSort,Sorted,32768,394.8
+SelectionSort,Reversed,65536,1692.1
+SelectionSort,Sorted,65536,1684.6
+SelectionSort,PartiallySorted,262144,25710.9
+SelectionSort,Dupes,16,0
+SelectionSort,Dupes,32,0
+SelectionSort,Dupes,64,0
+SelectionSort,Dupes,128,0
+SelectionSort,Dupes,256,0
+SelectionSort,Dupes,512,0
+SelectionSort,Dupes,1024,0.3
+SelectionSort,Dupes,2048,1.3
+SelectionSort,Dupes,4096,6.7
+SelectionSort,Dupes,8192,26.7
+SelectionSort,Dupes,16384,97.6
+SelectionSort,Dupes,32768,411
+SelectionSort,Dupes,65536,1607.9
+SelectionSort,Reversed,131072,6490.6
+SelectionSort,Sorted,131072,6464.8
+SelectionSort,Dupes,131072,6388.2
+BubbleSort,Reversed,262144,103381.1
+SelectionSort,ManyDupes,16,0
+SelectionSort,ManyDupes,32,0
+SelectionSort,ManyDupes,64,0
+SelectionSort,ManyDupes,128,0
+SelectionSort,ManyDupes,256,0
+SelectionSort,ManyDupes,512,0.2
+SelectionSort,ManyDupes,1024,0.5
+SelectionSort,ManyDupes,2048,1.4
+SelectionSort,ManyDupes,4096,6.8
+SelectionSort,ManyDupes,8192,27.1
+SelectionSort,ManyDupes,16384,112.2
+SelectionSort,ManyDupes,32768,397.9
+BubbleSort,Sorted,262144,103063.3
+InsertionSort,Random,16,0
+InsertionSort,Random,32,0
+InsertionSort,Random,64,0
+InsertionSort,Random,128,0
+InsertionSort,Random,256,0.1
+InsertionSort,Random,512,0
+InsertionSort,Random,1024,0.2
+InsertionSort,Random,2048,0.7
+InsertionSort,Random,4096,2.7
+InsertionSort,Random,8192,10.6
+InsertionSort,Random,16384,54.2
+InsertionSort,Random,32768,190.1
+InsertionSort,Random,65536,716
+SelectionSort,ManyDupes,65536,1579.4
+InsertionSort,Random,131072,2943.6
+SelectionSort,ManyDupes,131072,6676.8
+InsertionSort,Random,262144,12184.2
+InsertionSort,PartiallySorted,16,0
+InsertionSort,PartiallySorted,32,0
+InsertionSort,PartiallySorted,64,0
+InsertionSort,PartiallySorted,128,0
+InsertionSort,PartiallySorted,256,0
+InsertionSort,PartiallySorted,512,0
+InsertionSort,PartiallySorted,1024,0.1
+InsertionSort,PartiallySorted,2048,0.3
+InsertionSort,PartiallySorted,4096,2.1
+InsertionSort,PartiallySorted,8192,10.6
+InsertionSort,PartiallySorted,16384,47.1
+InsertionSort,PartiallySorted,32768,191
+InsertionSort,PartiallySorted,65536,764.5
+SelectionSort,Sorted,262144,25779.5
+InsertionSort,Reversed,16,0
+InsertionSort,Reversed,32,0
+InsertionSort,Reversed,64,0
+InsertionSort,Reversed,128,0
+InsertionSort,Reversed,256,0
+InsertionSort,Reversed,512,0
+InsertionSort,Reversed,1024,0.1
+InsertionSort,Reversed,2048,0.5
+InsertionSort,Reversed,4096,2.3
+InsertionSort,Reversed,8192,11.4
+InsertionSort,Reversed,16384,41.9
+SelectionSort,Reversed,262144,26027.1
+InsertionSort,Sorted,16,0
+InsertionSort,Sorted,32,0
+InsertionSort,Sorted,64,0
+InsertionSort,Sorted,128,0
+InsertionSort,Sorted,256,0
+InsertionSort,Sorted,512,0
+InsertionSort,Sorted,1024,0.2
+InsertionSort,Sorted,2048,0.4
+InsertionSort,Sorted,4096,2.5
+InsertionSort,Sorted,8192,11
+InsertionSort,Sorted,16384,49.2
+InsertionSort,Reversed,32768,190.1
+InsertionSort,Sorted,32768,193.2
+InsertionSort,PartiallySorted,131072,3002.9
+InsertionSort,Reversed,65536,762.2
+InsertionSort,Sorted,65536,760.1
+InsertionSort,Reversed,131072,3030.8
+InsertionSort,Sorted,131072,2976.9
+SelectionSort,Dupes,262144,25863.7
+InsertionSort,Dupes,16,0
+InsertionSort,Dupes,32,0
+InsertionSort,Dupes,64,0
+InsertionSort,Dupes,128,0
+InsertionSort,Dupes,256,0
+InsertionSort,Dupes,512,0
+InsertionSort,Dupes,1024,0.1
+InsertionSort,Dupes,2048,0.4
+InsertionSort,Dupes,4096,2.4
+InsertionSort,Dupes,8192,11.4
+InsertionSort,Dupes,16384,51.4
+InsertionSort,Dupes,32768,187.4
+InsertionSort,Dupes,65536,747
+InsertionSort,Dupes,131072,2943
+InsertionSort,PartiallySorted,262144,11847.2
+InsertionSort,ManyDupes,16,0
+InsertionSort,ManyDupes,32,0
+InsertionSort,ManyDupes,64,0
+InsertionSort,ManyDupes,128,0
+InsertionSort,ManyDupes,256,0
+InsertionSort,ManyDupes,512,0
+InsertionSort,ManyDupes,1024,0
+InsertionSort,ManyDupes,2048,0.3
+InsertionSort,ManyDupes,4096,2.3
+InsertionSort,ManyDupes,8192,12.5
+InsertionSort,ManyDupes,16384,48
+InsertionSort,ManyDupes,32768,191.6
+InsertionSort,ManyDupes,65536,756.3
+SelectionSort,ManyDupes,262144,25793.6
 QuickSortLomuto,Random,16,0
-QuickSortLomuto,PartiallySorted,16,0
-QuickSortLomuto,Reversed,16,0
-QuickSortLomuto,Sorted,16,0
-QuickSortLomuto,Dupes,16,0
-QuickSortLomuto,ManyDupes,16,0
 QuickSortLomuto,Random,32,0
-QuickSortLomuto,PartiallySorted,32,0
-QuickSortLomuto,Reversed,32,0
-QuickSortLomuto,Sorted,32,0
-QuickSortLomuto,Dupes,32,0
-QuickSortLomuto,ManyDupes,32,0
 QuickSortLomuto,Random,64,0
-QuickSortLomuto,PartiallySorted,64,0
-QuickSortLomuto,Reversed,64,0
-QuickSortLomuto,Sorted,64,0
-QuickSortLomuto,Dupes,64,0
-QuickSortLomuto,ManyDupes,64,0
 QuickSortLomuto,Random,128,0
-QuickSortLomuto,Reversed,128,0
-QuickSortLomuto,PartiallySorted,128,0
-QuickSortLomuto,Sorted,128,0
-QuickSortLomuto,Dupes,128,0
 QuickSortLomuto,Random,256,0
-QuickSortLomuto,ManyDupes,128,0
-QuickSortLomuto,PartiallySorted,256,0
-QuickSortLomuto,Reversed,256,0.1
-QuickSortLomuto,Random,512,0.1
-QuickSortLomuto,PartiallySorted,512,0
-QuickSortLomuto,Reversed,512,0
-QuickSortLomuto,Dupes,256,0
-QuickSortLomuto,Sorted,256,0
-QuickSortLomuto,ManyDupes,256,0
-QuickSortLomuto,Dupes,512,0
-QuickSortLomuto,Random,1024,0
-QuickSortLomuto,Sorted,512,0.1
-QuickSortLomuto,ManyDupes,512,0
-QuickSortLomuto,PartiallySorted,1024,0
-QuickSortLomuto,Reversed,1024,0
-QuickSortLomuto,Dupes,1024,0.2
-QuickSortLomuto,Sorted,1024,0
-QuickSortLomuto,ManyDupes,1024,0.1
-QuickSortLomuto,Random,2048,0.1
-QuickSortLomuto,PartiallySorted,2048,0
-QuickSortLomuto,Reversed,2048,0.1
-QuickSortLomuto,Dupes,2048,0
-QuickSortLomuto,Sorted,2048,0
-QuickSortLomuto,ManyDupes,2048,0.1
-QuickSortLomuto,PartiallySorted,4096,0.1
-QuickSortLomuto,Random,4096,0.1
-QuickSortLomuto,Reversed,4096,0.1
-QuickSortLomuto,Dupes,4096,0.1
-QuickSortLomuto,Sorted,4096,0.2
-QuickSortLomuto,ManyDupes,4096,0.2
-QuickSortLomuto,PartiallySorted,8192,0.3
-QuickSortLomuto,Reversed,8192,0.4
-QuickSortLomuto,Dupes,8192,0.3
+QuickSortLomuto,Random,512,0
+QuickSortLomuto,Random,1024,0.1
+QuickSortLomuto,Random,2048,0
+QuickSortLomuto,Random,4096,0.2
 QuickSortLomuto,Random,8192,0.5
-QuickSortLomuto,Sorted,8192,0.3
-QuickSortLomuto,ManyDupes,8192,0.2
+QuickSortLomuto,Random,16384,0.5
+QuickSortLomuto,Random,32768,1.5
+QuickSortLomuto,Random,65536,3.4
+QuickSortLomuto,Random,131072,7.8
+QuickSortLomuto,Random,262144,17.8
+QuickSortLomuto,Random,524288,38.3
+QuickSortLomuto,Random,1048576,84
+QuickSortLomuto,Random,2097152,170.2
+QuickSortLomuto,Random,4194304,357.2
+InsertionSort,Reversed,262144,12000.1
+QuickSortLomuto,PartiallySorted,16,0
+QuickSortLomuto,PartiallySorted,32,0
+QuickSortLomuto,PartiallySorted,64,0
+QuickSortLomuto,PartiallySorted,128,0
+QuickSortLomuto,PartiallySorted,256,0
+QuickSortLomuto,PartiallySorted,512,0
+QuickSortLomuto,PartiallySorted,1024,0
+QuickSortLomuto,PartiallySorted,2048,0.1
+QuickSortLomuto,PartiallySorted,4096,0.2
+QuickSortLomuto,PartiallySorted,8192,0.2
 QuickSortLomuto,PartiallySorted,16384,0.6
-QuickSortLomuto,Reversed,16384,0.5
-QuickSortLomuto,Dupes,16384,0.6
-QuickSortLomuto,ManyDupes,16384,0.8
-QuickSortLomuto,Sorted,16384,0.6
-QuickSortLomuto,Random,16384,0.6
-QuickSortLomuto,ManyDupes,32768,1.5
+QuickSortLomuto,PartiallySorted,32768,1.7
+QuickSortLomuto,PartiallySorted,65536,3.7
+QuickSortLomuto,PartiallySorted,131072,8.4
+QuickSortLomuto,PartiallySorted,262144,17.9
+InsertionSort,Sorted,262144,12008.2
+QuickSortLomuto,Reversed,16,0
+QuickSortLomuto,Reversed,32,0
+QuickSortLomuto,Reversed,64,0
+QuickSortLomuto,Reversed,128,0
+QuickSortLomuto,Reversed,256,0
+QuickSortLomuto,Reversed,512,0
+QuickSortLomuto,Reversed,1024,0
+QuickSortLomuto,Reversed,2048,0
+QuickSortLomuto,Reversed,4096,0.3
+QuickSortLomuto,Reversed,8192,0.3
+QuickSortLomuto,Reversed,16384,0.6
 QuickSortLomuto,Reversed,32768,1.5
-QuickSortLomuto,Dupes,32768,1.4
-QuickSortLomuto,PartiallySorted,32768,1.5
-QuickSortLomuto,Sorted,32768,1.5
-QuickSortLomuto,Random,32768,1.7
-QuickSortLomuto,ManyDupes,65536,3.8
 QuickSortLomuto,Reversed,65536,3.7
-QuickSortLomuto,Dupes,65536,3.6
-QuickSortLomuto,Sorted,65536,3.4
-QuickSortLomuto,PartiallySorted,65536,3.3
-QuickSortLomuto,Random,65536,3.8
-QuickSortLomuto,ManyDupes,131072,9.1
-QuickSortLomuto,Dupes,131072,9.1
-QuickSortLomuto,Reversed,131072,9
-QuickSortLomuto,Sorted,131072,9
-QuickSortLomuto,PartiallySorted,131072,8.5
-QuickSortLomuto,Random,131072,9
-QuickSortLomuto,ManyDupes,262144,17.8
-QuickSortLomuto,Dupes,262144,17.5
-QuickSortLomuto,Sorted,262144,17.8
-QuickSortLomuto,PartiallySorted,262144,17.6
-QuickSortLomuto,Reversed,262144,18.3
-QuickSortLomuto,Random,262144,18.1
-QuickSortLomuto,ManyDupes,524288,37.4
-QuickSortLomuto,Dupes,524288,37.7
-QuickSortLomuto,Sorted,524288,38.6
-QuickSortLomuto,Reversed,524288,38
-QuickSortLomuto,PartiallySorted,524288,37.9
-QuickSortLomuto,Random,524288,38.7
-QuickSortLomuto,ManyDupes,1048576,77.9
-QuickSortLomuto,Sorted,1048576,79
-QuickSortLomuto,Reversed,1048576,79.4
+QuickSortLomuto,PartiallySorted,524288,39.3
+QuickSortLomuto,Reversed,131072,8.2
+QuickSortLomuto,Reversed,262144,18.8
+QuickSortLomuto,Reversed,524288,39.3
+QuickSortLomuto,PartiallySorted,1048576,84.1
+QuickSortLomuto,Reversed,1048576,83.1
+QuickSortLomuto,PartiallySorted,2097152,171.5
+InsertionSort,ManyDupes,131072,3024.7
+QuickSortLomuto,Reversed,2097152,173.9
+QuickSortLomuto,Random,8388608,757
+QuickSortLomuto,PartiallySorted,4194304,362.2
+QuickSortLomuto,Reversed,4194304,363.6
+QuickSortLomuto,PartiallySorted,8388608,757.3
+QuickSortLomuto,Reversed,8388608,755.6
+QuickSortLomuto,Random,16777216,1564.6
+QuickSortLomuto,Reversed,16777216,1559.1
+QuickSortLomuto,PartiallySorted,16777216,1555.5
+InsertionSort,Dupes,262144,11924.2
+QuickSortLomuto,Sorted,16,0
+QuickSortLomuto,Sorted,32,0
+QuickSortLomuto,Sorted,64,0
+QuickSortLomuto,Sorted,128,0
+QuickSortLomuto,Sorted,256,0
+QuickSortLomuto,Sorted,512,0
+QuickSortLomuto,Sorted,1024,0
+QuickSortLomuto,Sorted,2048,0
+QuickSortLomuto,Sorted,4096,0.1
+QuickSortLomuto,Sorted,8192,0
+QuickSortLomuto,Sorted,16384,0.5
+QuickSortLomuto,Sorted,32768,1.9
+QuickSortLomuto,Sorted,65536,4.1
+QuickSortLomuto,Sorted,131072,8.6
+QuickSortLomuto,Sorted,262144,19.9
+QuickSortLomuto,Sorted,524288,39.6
+QuickSortLomuto,Sorted,1048576,80.2
+QuickSortLomuto,Sorted,2097152,175
+QuickSortLomuto,Sorted,4194304,367.4
+QuickSortLomuto,Sorted,8388608,761.1
+QuickSortLomuto,Random,33554432,3260.9
+QuickSortLomuto,Sorted,16777216,1586.9
+QuickSortLomuto,Reversed,33554432,3276.3
+QuickSortLomuto,PartiallySorted,33554432,3295.2
+InsertionSort,ManyDupes,262144,12226.1
+QuickSortLomuto,Dupes,16,0
+QuickSortLomuto,Dupes,32,0
+QuickSortLomuto,Dupes,64,0
+QuickSortLomuto,Dupes,128,0
+QuickSortLomuto,Dupes,256,0
+QuickSortLomuto,Dupes,512,0
+QuickSortLomuto,Dupes,1024,0
+QuickSortLomuto,Dupes,2048,0.1
+QuickSortLomuto,Dupes,4096,0.3
+QuickSortLomuto,Dupes,8192,0.2
+QuickSortLomuto,Dupes,16384,0.8
+QuickSortLomuto,Dupes,32768,1.5
+QuickSortLomuto,Dupes,65536,3.7
+QuickSortLomuto,Dupes,131072,8.7
+QuickSortLomuto,Sorted,33554432,3309.5
+QuickSortLomuto,Dupes,262144,17.7
+QuickSortLomuto,Dupes,524288,37.9
 QuickSortLomuto,Dupes,1048576,82
-QuickSortLomuto,PartiallySorted,1048576,79.2
-QuickSortLomuto,Random,1048576,81.2
-QuickSortLomuto,ManyDupes,2097152,164
-QuickSortLomuto,Sorted,2097152,163.8
-QuickSortLomuto,Dupes,2097152,163.3
-QuickSortLomuto,Reversed,2097152,165.1
-QuickSortLomuto,PartiallySorted,2097152,165.7
-QuickSortLomuto,Random,2097152,164.8
-QuickSortLomuto,ManyDupes,4194304,347.1
-QuickSortLomuto,Reversed,4194304,340.5
-QuickSortLomuto,Sorted,4194304,349.9
-QuickSortLomuto,Dupes,4194304,347.9
-QuickSortLomuto,PartiallySorted,4194304,341.4
-QuickSortLomuto,Random,4194304,341.5
-QuickSortLomuto,ManyDupes,8388608,734.3
-QuickSortLomuto,Reversed,8388608,727.6
-QuickSortLomuto,Sorted,8388608,734.4
-QuickSortLomuto,Dupes,8388608,733.2
-QuickSortLomuto,PartiallySorted,8388608,728.3
-QuickSortLomuto,Random,8388608,727.9
-QuickSortLomuto,ManyDupes,16777216,1544.1
-QuickSortLomuto,Reversed,16777216,1530.8
-QuickSortLomuto,Sorted,16777216,1542.4
-QuickSortLomuto,Dupes,16777216,1547.5
-QuickSortLomuto,PartiallySorted,16777216,1532.2
-QuickSortLomuto,Random,16777216,1516.8
-QuickSortLomuto,ManyDupes,33554432,3064.1
-QuickSortLomuto,Reversed,33554432,3070.4
-QuickSortLomuto,Dupes,33554432,3100.8
-QuickSortLomuto,Sorted,33554432,3088.3
-QuickSortLomuto,PartiallySorted,33554432,3105.9
-QuickSortLomuto,Random,33554432,3096.8
-QuickSortLomuto,ManyDupes,67108864,6443.5
-QuickSortLomuto,Dupes,67108864,6386.5
-QuickSortLomuto,Sorted,67108864,6402.3
-QuickSortLomuto,Reversed,67108864,6409
-QuickSortLomuto,PartiallySorted,67108864,6440.2
-QuickSortLomuto,Random,67108864,6483.7
-QuickSortLomuto,ManyDupes,134217728,13672.3
-QuickSortLomuto,ManyDupes,268435456,FAILED BECAUSE OF: Failed to allocate array of size 268435456 after 100 attempts: ERROR: std::bad_alloc
-QuickSortLomuto,Dupes,134217728,13727.3
-QuickSortLomuto,Dupes,268435456,FAILED BECAUSE OF: Failed to allocate array of size 268435456 after 100 attempts: ERROR: std::bad_alloc
-QuickSortLomuto,Sorted,134217728,13674.7
-QuickSortLomuto,Sorted,268435456,FAILED BECAUSE OF: Failed to allocate array of size 268435456 after 100 attempts: ERROR: std::bad_alloc
-QuickSortLomuto,Reversed,134217728,13661.9
-QuickSortLomuto,PartiallySorted,134217728,13546.2
+QuickSortLomuto,Dupes,2097152,177.9
+QuickSortLomuto,Dupes,4194304,363.4
+QuickSortLomuto,Dupes,8388608,759.7
+QuickSortLomuto,Dupes,16777216,1551.6
+QuickSortLomuto,Reversed,67108864,6901.7
+QuickSortLomuto,PartiallySorted,67108864,6805.7
+QuickSortLomuto,PartiallySorted,134217728,FAILED BECAUSE OF: Failed to allocate array of size 134217728 after 100 attempts: ERROR: std::bad_alloc
 QuickSortLomuto,PartiallySorted,268435456,FAILED BECAUSE OF: Failed to allocate array of size 268435456 after 100 attempts: ERROR: std::bad_alloc
-QuickSortLomuto,Random,134217728,13459
-QuickSortLomuto,Reversed,268435456,26796.8
-QuickSortLomuto,Random,268435456,26674.1
+QuickSortLomuto,ManyDupes,16,0
+QuickSortLomuto,ManyDupes,32,0
+QuickSortLomuto,ManyDupes,64,0
+QuickSortLomuto,ManyDupes,128,0
+QuickSortLomuto,ManyDupes,256,0
+QuickSortLomuto,ManyDupes,512,0
+QuickSortLomuto,ManyDupes,1024,0.1
+QuickSortLomuto,ManyDupes,2048,0.1
+QuickSortLomuto,ManyDupes,4096,0.2
+QuickSortLomuto,ManyDupes,8192,0.1
+QuickSortLomuto,ManyDupes,16384,0.6
+QuickSortLomuto,ManyDupes,32768,1.4
+QuickSortLomuto,ManyDupes,65536,3.6
+QuickSortLomuto,ManyDupes,131072,8.2
+QuickSortLomuto,ManyDupes,262144,19
+QuickSortLomuto,ManyDupes,524288,40
+QuickSortLomuto,ManyDupes,1048576,81.9
+QuickSortLomuto,ManyDupes,2097152,177.4
+QuickSortLomuto,Random,67108864,6837.3
+QuickSortLomuto,Random,134217728,FAILED BECAUSE OF: Failed to allocate array of size 134217728 after 100 attempts: ERROR: std::bad_alloc
+QuickSortLomuto,Random,268435456,FAILED BECAUSE OF: Failed to allocate array of size 268435456 after 100 attempts: ERROR: std::bad_alloc
+QuickSortHoare,Random,16,0.1
+QuickSortHoare,Random,32,0
+QuickSortHoare,Random,64,0
+QuickSortHoare,Random,128,0.1
+QuickSortHoare,Random,256,0
+QuickSortHoare,Random,512,0.1
+QuickSortHoare,Random,1024,0
+QuickSortHoare,Random,2048,0.2
+QuickSortHoare,Random,4096,0.2
+QuickSortHoare,Random,8192,0.6
+QuickSortHoare,Random,16384,1
+QuickSortHoare,Random,32768,1.9
+QuickSortHoare,Random,65536,4.9
+QuickSortHoare,Random,131072,10.2
+QuickSortHoare,Random,262144,21.4
+QuickSortHoare,Random,524288,46.4
+QuickSortHoare,Random,1048576,94.3
+QuickSortLomuto,ManyDupes,4194304,362.1
+QuickSortHoare,Random,2097152,197.3
+QuickSortHoare,Random,4194304,408.5
+QuickSortLomuto,ManyDupes,8388608,765.8
+QuickSortHoare,Random,8388608,846.9
+QuickSortLomuto,Dupes,33554432,3290
+QuickSortLomuto,Sorted,67108864,6876.1
+QuickSortLomuto,Sorted,134217728,FAILED BECAUSE OF: Failed to allocate array of size 134217728 after 100 attempts: ERROR: std::bad_alloc
+QuickSortLomuto,Sorted,268435456,FAILED BECAUSE OF: Failed to allocate array of size 268435456 after 100 attempts: ERROR: std::bad_alloc
+QuickSortHoare,PartiallySorted,16,0
+QuickSortHoare,PartiallySorted,32,0
+QuickSortHoare,PartiallySorted,64,0
+QuickSortHoare,PartiallySorted,128,0
+QuickSortHoare,PartiallySorted,256,0
+QuickSortHoare,PartiallySorted,512,0.1
+QuickSortHoare,PartiallySorted,1024,0
+QuickSortHoare,PartiallySorted,2048,0.1
+QuickSortHoare,PartiallySorted,4096,0.2
+QuickSortHoare,PartiallySorted,8192,0.5
+QuickSortHoare,PartiallySorted,16384,0.7
+QuickSortHoare,PartiallySorted,32768,2.3
+QuickSortHoare,PartiallySorted,65536,4.9
+QuickSortHoare,PartiallySorted,131072,10.3
+QuickSortHoare,PartiallySorted,262144,21.4
+QuickSortHoare,PartiallySorted,524288,44.8
+QuickSortLomuto,ManyDupes,16777216,1598.9
+QuickSortHoare,PartiallySorted,1048576,95.2
+QuickSortHoare,PartiallySorted,2097152,198.1
+QuickSortHoare,PartiallySorted,4194304,416.5
+QuickSortHoare,Random,16777216,1766.4
+QuickSortHoare,PartiallySorted,8388608,863.5
+QuickSortLomuto,ManyDupes,33554432,3317.1
+QuickSortHoare,PartiallySorted,16777216,1787.1
+QuickSortHoare,Random,33554432,3670.3
+QuickSortLomuto,Dupes,67108864,6841.6
+QuickSortLomuto,Dupes,134217728,FAILED BECAUSE OF: Failed to allocate array of size 134217728 after 100 attempts: ERROR: std::bad_alloc
+QuickSortLomuto,Dupes,268435456,FAILED BECAUSE OF: Failed to allocate array of size 268435456 after 100 attempts: ERROR: std::bad_alloc
+QuickSortHoare,Reversed,16,0
+QuickSortHoare,Reversed,32,0
+QuickSortHoare,Reversed,64,0
+QuickSortHoare,Reversed,128,0
+QuickSortHoare,Reversed,256,0
+QuickSortHoare,Reversed,512,0
+QuickSortHoare,Reversed,1024,0
+QuickSortHoare,Reversed,2048,0
+QuickSortHoare,Reversed,4096,0.1
+QuickSortHoare,Reversed,8192,0.5
+QuickSortHoare,Reversed,16384,0.7
+QuickSortHoare,Reversed,32768,2.3
+QuickSortHoare,Reversed,65536,4.1
+QuickSortHoare,Reversed,131072,10.1
+QuickSortHoare,Reversed,262144,21.5
+QuickSortHoare,Reversed,524288,44.4
+QuickSortHoare,Reversed,1048576,94.2
+QuickSortHoare,Reversed,2097152,197.6
+QuickSortHoare,Reversed,4194304,411.3
+QuickSortHoare,PartiallySorted,33554432,3659.5
+QuickSortHoare,Reversed,8388608,851.1
+QuickSortLomuto,ManyDupes,67108864,6842.1
+QuickSortLomuto,ManyDupes,134217728,FAILED BECAUSE OF: Failed to allocate array of size 134217728 after 100 attempts: ERROR: std::bad_alloc
+QuickSortLomuto,ManyDupes,268435456,FAILED BECAUSE OF: Failed to allocate array of size 268435456 after 100 attempts: ERROR: std::bad_alloc
+QuickSortHoare,Sorted,16,0
+QuickSortHoare,Sorted,32,0
+QuickSortHoare,Sorted,64,0
+QuickSortHoare,Sorted,128,0
+QuickSortHoare,Sorted,256,0.1
+QuickSortHoare,Sorted,512,0
+QuickSortHoare,Sorted,1024,0
+QuickSortHoare,Sorted,2048,0.1
+QuickSortHoare,Sorted,4096,0.2
+QuickSortHoare,Sorted,8192,0.4
+QuickSortHoare,Sorted,16384,1
+QuickSortHoare,Sorted,32768,1.3
+QuickSortHoare,Reversed,16777216,1763.8
+QuickSortHoare,Sorted,65536,4.5
+QuickSortHoare,Sorted,131072,10
+QuickSortHoare,Sorted,262144,21.3
+QuickSortHoare,Sorted,524288,45.8
+QuickSortHoare,Sorted,1048576,95
+RadixSort,Sorted,268435456,88081.4
+QuickSortHoare,Dupes,16,0
+QuickSortHoare,Dupes,32,0
+QuickSortHoare,Dupes,64,0
+QuickSortHoare,Dupes,128,0
+QuickSortHoare,Dupes,256,0
+QuickSortHoare,Dupes,512,0
+QuickSortHoare,Dupes,1024,0
+QuickSortHoare,Dupes,2048,0
+QuickSortHoare,Dupes,4096,0.1
+QuickSortHoare,Dupes,8192,0.2
+QuickSortHoare,Dupes,16384,0.6
+QuickSortHoare,Dupes,32768,1.8
+QuickSortHoare,Dupes,65536,4.7
+QuickSortHoare,Dupes,131072,10.5
+QuickSortHoare,Dupes,262144,22.5
+QuickSortHoare,Dupes,524288,46.2
+QuickSortHoare,Sorted,2097152,197.9
+QuickSortHoare,Dupes,1048576,97.7
+QuickSortHoare,Dupes,2097152,195.6
+QuickSortHoare,Sorted,4194304,410.9
+QuickSortHoare,Dupes,4194304,404.9
+QuickSortLomuto,Reversed,134217728,14190.1
+QuickSortHoare,Sorted,8388608,849.3
+QuickSortHoare,Dupes,8388608,852
+QuickSortHoare,Sorted,16777216,1775.1
+QuickSortHoare,Reversed,33554432,3655.5
+QuickSortHoare,Dupes,16777216,1765
+QuickSortHoare,Random,67108864,7534.4
+QuickSortHoare,PartiallySorted,67108864,7539.6
+QuickSortHoare,Sorted,33554432,3674.7
+QuickSortHoare,Dupes,33554432,3650.3
+BubbleSort,ManyDupes,262144,103069.6
+QuickSortHoare,ManyDupes,16,0
+QuickSortHoare,ManyDupes,32,0
+QuickSortHoare,ManyDupes,64,0
+QuickSortHoare,ManyDupes,128,0
+QuickSortHoare,ManyDupes,256,0
+QuickSortHoare,ManyDupes,512,0
+QuickSortHoare,ManyDupes,1024,0
+QuickSortHoare,ManyDupes,2048,0.1
+QuickSortHoare,ManyDupes,4096,0.3
+QuickSortHoare,ManyDupes,8192,0.3
+QuickSortHoare,ManyDupes,16384,0.5
+QuickSortHoare,ManyDupes,32768,1.9
+QuickSortHoare,ManyDupes,65536,4.9
+QuickSortHoare,ManyDupes,131072,10.2
+QuickSortHoare,ManyDupes,262144,21.6
+BubbleSort,Dupes,262144,103250.4
+MergeSort,Random,16,0
+MergeSort,Random,32,0
+MergeSort,Random,64,0
+MergeSort,Random,128,0
+MergeSort,Random,256,0.1
+MergeSort,Random,512,0
+MergeSort,Random,1024,0.1
+MergeSort,Random,2048,0.5
+MergeSort,Random,4096,1.1
+MergeSort,Random,8192,2.8
+QuickSortHoare,ManyDupes,524288,46.6
+MergeSort,Random,16384,5.8
+MergeSort,Random,32768,11.7
+MergeSort,Random,65536,24.1
+MergeSort,Random,131072,51.5
+QuickSortHoare,ManyDupes,1048576,97.2
+MergeSort,Random,262144,101.2
+QuickSortHoare,ManyDupes,2097152,193.2
+MergeSort,Random,524288,215.1
+QuickSortHoare,ManyDupes,4194304,416.7
+MergeSort,Random,1048576,468.7
+QuickSortHoare,Reversed,67108864,7555.7
+QuickSortHoare,ManyDupes,8388608,876.9
+MergeSort,Random,2097152,897.5
+MergeSort,Random,4194304,1793.2
+QuickSortHoare,ManyDupes,16777216,1767.1
+QuickSortHoare,Sorted,67108864,7653.9
+QuickSortHoare,Sorted,134217728,FAILED BECAUSE OF: Failed to allocate array of size 134217728 after 100 attempts: ERROR: std::bad_alloc
+QuickSortHoare,Sorted,268435456,FAILED BECAUSE OF: Failed to allocate array of size 268435456 after 100 attempts: ERROR: std::bad_alloc
+MergeSort,PartiallySorted,16,0
+MergeSort,PartiallySorted,32,0
+MergeSort,PartiallySorted,64,0
+MergeSort,PartiallySorted,128,0
+MergeSort,PartiallySorted,256,0
+MergeSort,PartiallySorted,512,0.2
+MergeSort,PartiallySorted,1024,0.1
+MergeSort,PartiallySorted,2048,0.7
+MergeSort,PartiallySorted,4096,1.1
+MergeSort,PartiallySorted,8192,2.7
+MergeSort,PartiallySorted,16384,5.5
+MergeSort,PartiallySorted,32768,11.9
+MergeSort,PartiallySorted,65536,24.9
+MergeSort,PartiallySorted,131072,49.8
+QuickSortHoare,Dupes,67108864,7582.5
+QuickSortHoare,Dupes,134217728,FAILED BECAUSE OF: Failed to allocate array of size 134217728 after 100 attempts: ERROR: std::bad_alloc
+QuickSortHoare,Dupes,268435456,FAILED BECAUSE OF: Failed to allocate array of size 268435456 after 100 attempts: ERROR: std::bad_alloc
+MergeSort,Reversed,16,0
+MergeSort,Reversed,32,0
+MergeSort,Reversed,64,0
+MergeSort,Reversed,128,0
+MergeSort,Reversed,256,0
+MergeSort,Reversed,512,0.1
+MergeSort,Reversed,1024,0.1
+MergeSort,Reversed,2048,0.2
+MergeSort,Reversed,4096,1.4
+MergeSort,Reversed,8192,3.2
+MergeSort,Reversed,16384,5.9
+MergeSort,PartiallySorted,262144,106.4
+MergeSort,Reversed,32768,13.4
+MergeSort,Reversed,65536,26.3
+MergeSort,Reversed,131072,48.4
+MergeSort,Reversed,262144,110.9
+MergeSort,PartiallySorted,524288,219.9
+MergeSort,Reversed,524288,218.6
+MergeSort,PartiallySorted,1048576,445.5
+MergeSort,Reversed,1048576,417.1
+MergeSort,PartiallySorted,2097152,874.4
+MergeSort,Reversed,2097152,898.9
+MergeSort,Random,8388608,3723.2
+QuickSortHoare,ManyDupes,33554432,3680.3
+MergeSort,PartiallySorted,4194304,1810.9
+MergeSort,Reversed,4194304,1814.7
+MergeSort,PartiallySorted,8388608,3728.8
+MergeSort,Reversed,8388608,3700.2
+QuickSortHoare,PartiallySorted,134217728,15715
+QuickSortHoare,PartiallySorted,268435456,FAILED BECAUSE OF: Failed to allocate array of size 268435456 after 100 attempts: ERROR: std::bad_alloc
+MergeSort,Sorted,16,0
+MergeSort,Sorted,32,0
+MergeSort,Sorted,64,0
+MergeSort,Sorted,128,0
+MergeSort,Sorted,256,0.2
+MergeSort,Sorted,512,0.1
+MergeSort,Sorted,1024,0.2
+MergeSort,Sorted,2048,0.5
+MergeSort,Sorted,4096,0.8
+MergeSort,Sorted,8192,2.6
+MergeSort,Sorted,16384,6.2
+MergeSort,Sorted,32768,12.5
+MergeSort,Sorted,65536,27.8
+MergeSort,Sorted,131072,52.7
+MergeSort,Sorted,262144,104.3
+MergeSort,Sorted,524288,219.7
+QuickSortHoare,Random,134217728,15706.3
+QuickSortHoare,Random,268435456,FAILED BECAUSE OF: Failed to allocate array of size 268435456 after 100 attempts: ERROR: std::bad_alloc
+MergeSort,Dupes,16,0
+MergeSort,Dupes,32,0
+MergeSort,Dupes,64,0
+MergeSort,Dupes,128,0
+MergeSort,Dupes,256,0.2
+MergeSort,Dupes,512,0.1
+MergeSort,Dupes,1024,0.1
+MergeSort,Dupes,2048,0.4
+MergeSort,Dupes,4096,1
+MergeSort,Dupes,8192,2.5
+MergeSort,Dupes,16384,6.1
+MergeSort,Dupes,32768,13.4
+MergeSort,Dupes,65536,26.6
+MergeSort,Sorted,1048576,445.4
+MergeSort,Dupes,131072,60.2
+MergeSort,Dupes,262144,117.1
+MergeSort,Dupes,524288,261.9
+MergeSort,Dupes,1048576,490.7
+MergeSort,Sorted,2097152,928
+MergeSort,Random,16777216,7551
+MergeSort,Dupes,2097152,963
+QuickSortHoare,ManyDupes,67108864,7599.2
+MergeSort,Sorted,4194304,1794.6
+MergeSort,Dupes,4194304,1976.7
+QuickSortHoare,Reversed,134217728,15642.6
+QuickSortHoare,Reversed,268435456,FAILED BECAUSE OF: Failed to allocate array of size 268435456 after 100 attempts: ERROR: std::bad_alloc
+MergeSort,ManyDupes,16,0
+MergeSort,ManyDupes,32,0.1
+MergeSort,ManyDupes,64,0
+MergeSort,ManyDupes,128,0
+MergeSort,ManyDupes,256,0.1
+MergeSort,ManyDupes,512,0.2
+MergeSort,ManyDupes,1024,0.2
+MergeSort,ManyDupes,2048,0.9
+MergeSort,ManyDupes,4096,1.3
+MergeSort,ManyDupes,8192,3.7
+MergeSort,ManyDupes,16384,8.2
+MergeSort,ManyDupes,32768,14.9
+MergeSort,ManyDupes,65536,35.3
+MergeSort,ManyDupes,131072,59.2
+MergeSort,ManyDupes,262144,133.5
+MergeSort,PartiallySorted,16777216,7545.8
+MergeSort,ManyDupes,524288,236.8
+MergeSort,Reversed,16777216,7952.8
+MergeSort,Sorted,8388608,3682.8
+MergeSort,ManyDupes,1048576,519
+MergeSort,ManyDupes,2097152,1080.8
+MergeSort,Dupes,8388608,4045
+MergeSort,ManyDupes,4194304,2111.9
+QuickSortLomuto,Reversed,268435456,29246.4
+CocktailShakerSort,Random,16,0
+CocktailShakerSort,Random,32,0
+CocktailShakerSort,Random,64,0
+CocktailShakerSort,Random,128,0
+CocktailShakerSort,Random,256,0
+CocktailShakerSort,Random,512,0.2
+CocktailShakerSort,Random,1024,0.6
+CocktailShakerSort,Random,2048,3.1
+CocktailShakerSort,Random,4096,13.4
+CocktailShakerSort,Random,8192,57.8
+CocktailShakerSort,Random,16384,255.2
+CocktailShakerSort,Random,32768,1083.1
+MergeSort,ManyDupes,8388608,4245.8
+MergeSort,Sorted,16777216,7419
+MergeSort,Dupes,16777216,8063.9
+CocktailShakerSort,Random,65536,4534.6
+MergeSort,Random,33554432,15376.4
+QuickSortHoare,ManyDupes,134217728,15703
+MergeSort,PartiallySorted,33554432,16191.8
+MergeSort,ManyDupes,16777216,8720.6
+MergeSort,Reversed,33554432,16242
+MergeSort,Sorted,33554432,15747.1
+MergeSort,Dupes,33554432,17338.5
+CocktailShakerSort,Random,131072,19416.4
+MergeSort,ManyDupes,33554432,19388
+MergeSort,Random,67108864,32526.8
+MergeSort,PartiallySorted,67108864,34538.7
+MergeSort,PartiallySorted,134217728,FAILED BECAUSE OF: Failed to allocate array of size 134217728 after 100 attempts: ERROR: std::bad_alloc
+MergeSort,PartiallySorted,268435456,FAILED BECAUSE OF: Failed to allocate array of size 268435456 after 100 attempts: ERROR: std::bad_alloc
+CocktailShakerSort,PartiallySorted,16,0
+CocktailShakerSort,PartiallySorted,32,0
+CocktailShakerSort,PartiallySorted,64,0
+CocktailShakerSort,PartiallySorted,128,0.1
+CocktailShakerSort,PartiallySorted,256,0
+CocktailShakerSort,PartiallySorted,512,0.1
+CocktailShakerSort,PartiallySorted,1024,0.6
+CocktailShakerSort,PartiallySorted,2048,2.8
+CocktailShakerSort,PartiallySorted,4096,13.4
+CocktailShakerSort,PartiallySorted,8192,59.1
+MergeSort,Reversed,67108864,34844.6
+CocktailShakerSort,PartiallySorted,16384,257.4
+QuickSortHoare,ManyDupes,268435456,33413.8
+CocktailShakerSort,Reversed,16,0
+CocktailShakerSort,Reversed,32,0
+CocktailShakerSort,Reversed,64,0
+CocktailShakerSort,Reversed,128,0
+CocktailShakerSort,Reversed,256,0
+CocktailShakerSort,Reversed,512,0
+CocktailShakerSort,Reversed,1024,0.4
+CocktailShakerSort,Reversed,2048,2.9
+CocktailShakerSort,Reversed,4096,12.8
+CocktailShakerSort,Reversed,8192,59.5
+CocktailShakerSort,Reversed,16384,259.1
+CocktailShakerSort,PartiallySorted,32768,1150.4
+CocktailShakerSort,Reversed,32768,1087.8
+MergeSort,Sorted,67108864,31783.4
+CocktailShakerSort,PartiallySorted,65536,4666.5
+CocktailShakerSort,Reversed,65536,4716.1
+MergeSort,Dupes,67108864,34680.5
+MergeSort,ManyDupes,67108864,34277
+CocktailShakerSort,PartiallySorted,131072,19295.8
+CocktailShakerSort,Reversed,131072,19335.4
+CocktailShakerSort,Random,262144,78066.8
+CocktailShakerSort,Sorted,16,0
+CocktailShakerSort,Sorted,32,0
+CocktailShakerSort,Sorted,64,0
+CocktailShakerSort,Sorted,128,0
+CocktailShakerSort,Sorted,256,0
+CocktailShakerSort,Sorted,512,0.1
+CocktailShakerSort,Sorted,1024,0.6
+CocktailShakerSort,Sorted,2048,4.6
+CocktailShakerSort,Sorted,4096,15.6
+CocktailShakerSort,Sorted,8192,66.8
+CocktailShakerSort,Sorted,16384,270.2
+CocktailShakerSort,Sorted,32768,1114.4
+CocktailShakerSort,Sorted,65536,4759.3
+MergeSort,Random,134217728,66491
+MergeSort,Random,268435456,FAILED BECAUSE OF: Failed to allocate array of size 268435456 after 100 attempts: ERROR: std::bad_alloc
+CocktailShakerSort,Dupes,16,0
+CocktailShakerSort,Dupes,32,0
+CocktailShakerSort,Dupes,64,0
+CocktailShakerSort,Dupes,128,0.1
+CocktailShakerSort,Dupes,256,0
+CocktailShakerSort,Dupes,512,0.1
+CocktailShakerSort,Dupes,1024,0.7
+CocktailShakerSort,Dupes,2048,2.8
+CocktailShakerSort,Dupes,4096,13.7
+MergeSort,Sorted,134217728,65315.9
+MergeSort,Sorted,268435456,FAILED BECAUSE OF: Failed to allocate array of size 268435456 after 100 attempts: ERROR: std::bad_alloc
+CocktailShakerSort,ManyDupes,16,0
+CocktailShakerSort,ManyDupes,32,0
+CocktailShakerSort,ManyDupes,64,0
+CocktailShakerSort,ManyDupes,128,0
+CocktailShakerSort,ManyDupes,256,0
+CocktailShakerSort,ManyDupes,512,0.1
+CocktailShakerSort,ManyDupes,1024,0.5
+CocktailShakerSort,ManyDupes,2048,2.9
+CocktailShakerSort,ManyDupes,4096,13.3
+CocktailShakerSort,Dupes,8192,59.2
+CocktailShakerSort,ManyDupes,8192,59.2
+CocktailShakerSort,Dupes,16384,260.1
+CocktailShakerSort,ManyDupes,16384,255.8
+CocktailShakerSort,Dupes,32768,1129.9
+CocktailShakerSort,ManyDupes,32768,1125.6
+CocktailShakerSort,Sorted,131072,19256.1
+CocktailShakerSort,Dupes,65536,4640.8
+CocktailShakerSort,ManyDupes,65536,4646.6
+MergeSort,Reversed,134217728,70235.1
+MergeSort,Dupes,134217728,69928.6
+MergeSort,ManyDupes,134217728,65164.8
+MergeSort,ManyDupes,268435456,FAILED BECAUSE OF: Failed to allocate array of size 268435456 after 100 attempts: ERROR: std::bad_alloc
+IntroSort,Random,16,0
+IntroSort,Random,32,0
+IntroSort,Random,64,0
+IntroSort,Random,128,0
+IntroSort,Random,256,0
+IntroSort,Random,512,0
+IntroSort,Random,1024,0
+IntroSort,Random,2048,0.1
+IntroSort,Random,4096,0
+IntroSort,Random,8192,0.7
+IntroSort,Random,16384,0.7
+IntroSort,Random,32768,1.9
+IntroSort,Random,65536,4.6
+IntroSort,Random,131072,10.1
+IntroSort,Random,262144,21.4
+IntroSort,Random,524288,44.1
+IntroSort,Random,1048576,94.6
+IntroSort,Random,2097152,200.3
+IntroSort,Random,4194304,418
+IntroSort,Random,8388608,871
+IntroSort,Random,16777216,1766.9
+CocktailShakerSort,Dupes,131072,19259.3
+CocktailShakerSort,ManyDupes,131072,19288.8
+CocktailShakerSort,PartiallySorted,262144,78277.8
+IntroSort,PartiallySorted,16,0
+IntroSort,PartiallySorted,32,0
+IntroSort,PartiallySorted,64,0
+IntroSort,PartiallySorted,128,0
+IntroSort,PartiallySorted,256,0
+IntroSort,PartiallySorted,512,0
+IntroSort,PartiallySorted,1024,0
+IntroSort,PartiallySorted,2048,0
+IntroSort,PartiallySorted,4096,0.1
+IntroSort,PartiallySorted,8192,0.2
+IntroSort,PartiallySorted,16384,0.5
+IntroSort,PartiallySorted,32768,2
+IntroSort,PartiallySorted,65536,4.4
+IntroSort,PartiallySorted,131072,10.8
+IntroSort,PartiallySorted,262144,21.3
+IntroSort,PartiallySorted,524288,43.3
+CocktailShakerSort,Reversed,262144,77955.6
+IntroSort,Reversed,16,0
+IntroSort,Reversed,32,0
+IntroSort,Reversed,64,0
+IntroSort,Reversed,128,0
+IntroSort,Reversed,256,0
+IntroSort,Reversed,512,0
+IntroSort,Reversed,1024,0
+IntroSort,Reversed,2048,0
+IntroSort,Reversed,4096,0.2
+IntroSort,Reversed,8192,0.4
+IntroSort,Reversed,16384,0.6
+IntroSort,Reversed,32768,1.9
+IntroSort,Reversed,65536,4.3
+IntroSort,Reversed,131072,9.4
+IntroSort,PartiallySorted,1048576,95.5
+IntroSort,Reversed,262144,21.3
+IntroSort,Reversed,524288,45.9
+IntroSort,Reversed,1048576,94.2
+IntroSort,PartiallySorted,2097152,195.2
+IntroSort,Reversed,2097152,195.4
+IntroSort,PartiallySorted,4194304,413.5
+IntroSort,Random,33554432,3640.3
+IntroSort,Reversed,4194304,409.2
+IntroSort,PartiallySorted,8388608,839.4
+IntroSort,Reversed,8388608,844.5
+IntroSort,PartiallySorted,16777216,1792.7
+IntroSort,Reversed,16777216,1784
+IntroSort,Reversed,33554432,3795.7
+IntroSort,PartiallySorted,33554432,3794.4
+IntroSort,Random,67108864,7696.6
+IntroSort,Reversed,67108864,7757.9
+IntroSort,Reversed,134217728,FAILED BECAUSE OF: Failed to allocate array of size 134217728 after 100 attempts: ERROR: std::bad_alloc
+IntroSort,Reversed,268435456,FAILED BECAUSE OF: Failed to allocate array of size 268435456 after 100 attempts: ERROR: std::bad_alloc
+IntroSort,Sorted,16,0
+IntroSort,Sorted,32,0
+IntroSort,Sorted,64,0
+IntroSort,Sorted,128,0
+IntroSort,Sorted,256,0.1
+IntroSort,Sorted,512,0.1
+IntroSort,Sorted,1024,0.1
+IntroSort,Sorted,2048,0
+IntroSort,Sorted,4096,0
+IntroSort,Sorted,8192,0.3
+IntroSort,Sorted,16384,0.5
+IntroSort,Sorted,32768,1.8
+IntroSort,Sorted,65536,4.9
+IntroSort,Sorted,131072,10.6
+IntroSort,Sorted,262144,21.7
+IntroSort,Sorted,524288,45.8
+IntroSort,Sorted,1048576,94.5
+IntroSort,PartiallySorted,67108864,7674.1
+IntroSort,Sorted,2097152,203.3
+IntroSort,Sorted,4194304,406.9
+IntroSort,Sorted,8388608,828.6
+IntroSort,Sorted,16777216,1759.5
+IntroSort,Sorted,33554432,3698
+IntroSort,Random,134217728,15648.4
+IntroSort,Random,268435456,FAILED BECAUSE OF: Failed to allocate array of size 268435456 after 100 attempts: ERROR: std::bad_alloc
+IntroSort,Dupes,16,0
+IntroSort,Dupes,32,0
+IntroSort,Dupes,64,0
+IntroSort,Dupes,128,0
+IntroSort,Dupes,256,0
+IntroSort,Dupes,512,0
+IntroSort,Dupes,1024,0
+IntroSort,Dupes,2048,0
+IntroSort,Dupes,4096,0.2
+IntroSort,Dupes,8192,0.4
+IntroSort,Dupes,16384,0.5
+IntroSort,Dupes,32768,2.2
+IntroSort,Dupes,65536,5
+IntroSort,Dupes,131072,10.5
+IntroSort,Dupes,262144,22.3
+IntroSort,Dupes,524288,46
+IntroSort,Dupes,1048576,97.9
+IntroSort,Dupes,2097152,204.7
+IntroSort,Dupes,4194304,417.8
+IntroSort,Dupes,8388608,845.5
+IntroSort,Sorted,67108864,7624.3
+IntroSort,Dupes,16777216,1761.1
+IntroSort,PartiallySorted,134217728,15660.3
+IntroSort,PartiallySorted,268435456,FAILED BECAUSE OF: Failed to allocate array of size 268435456 after 100 attempts: ERROR: std::bad_alloc
+IntroSort,ManyDupes,16,0
+IntroSort,ManyDupes,32,0
+IntroSort,ManyDupes,64,0
+IntroSort,ManyDupes,128,0
+IntroSort,ManyDupes,256,0
+IntroSort,ManyDupes,512,0
+IntroSort,ManyDupes,1024,0.1
+IntroSort,ManyDupes,2048,0.2
+IntroSort,ManyDupes,4096,0.2
+IntroSort,ManyDupes,8192,0.6
+IntroSort,ManyDupes,16384,0.7
+IntroSort,ManyDupes,32768,1.9
+IntroSort,ManyDupes,65536,4.3
+IntroSort,ManyDupes,131072,10.4
+IntroSort,ManyDupes,262144,22.1
+IntroSort,ManyDupes,524288,47.3
+IntroSort,ManyDupes,1048576,95.7
+IntroSort,ManyDupes,2097152,198.3
+IntroSort,ManyDupes,4194304,407.8
+IntroSort,ManyDupes,8388608,842
+IntroSort,Dupes,33554432,3631.2
+IntroSort,ManyDupes,16777216,1753.3
+IntroSort,ManyDupes,33554432,3616.8
+CocktailShakerSort,Sorted,262144,78585
+HeapSort,Random,16,0
+HeapSort,Random,32,0
+HeapSort,Random,64,0
+HeapSort,Random,128,0
+HeapSort,Random,256,0
+HeapSort,Random,512,0.1
+HeapSort,Random,1024,0
+HeapSort,Random,2048,0.1
+HeapSort,Random,4096,0.1
+HeapSort,Random,8192,0.4
+HeapSort,Random,16384,1.4
+HeapSort,Random,32768,3.9
+HeapSort,Random,65536,8.3
+HeapSort,Random,131072,18.1
+HeapSort,Random,262144,39.4
+HeapSort,Random,524288,85.7
+IntroSort,Dupes,67108864,7402.5
+IntroSort,Dupes,134217728,FAILED BECAUSE OF: Failed to allocate array of size 134217728 after 100 attempts: ERROR: std::bad_alloc
+IntroSort,Dupes,268435456,FAILED BECAUSE OF: Failed to allocate array of size 268435456 after 100 attempts: ERROR: std::bad_alloc
+HeapSort,PartiallySorted,16,0
+HeapSort,PartiallySorted,32,0
+HeapSort,PartiallySorted,64,0
+HeapSort,PartiallySorted,128,0
+HeapSort,PartiallySorted,256,0
+HeapSort,PartiallySorted,512,0
+HeapSort,PartiallySorted,1024,0
+HeapSort,PartiallySorted,2048,0.1
+HeapSort,PartiallySorted,4096,0.3
+HeapSort,PartiallySorted,8192,0.5
+HeapSort,Random,1048576,208.2
+HeapSort,PartiallySorted,16384,1.5
+HeapSort,PartiallySorted,32768,4
+HeapSort,PartiallySorted,65536,8.3
+HeapSort,PartiallySorted,131072,17.9
+HeapSort,PartiallySorted,262144,41.5
+HeapSort,PartiallySorted,524288,110.6
+HeapSort,PartiallySorted,1048576,277.3
+HeapSort,Random,2097152,627.2
+HeapSort,PartiallySorted,2097152,542.4
+HeapSort,Random,4194304,1322.2
+HeapSort,PartiallySorted,4194304,1368.1
+IntroSort,Sorted,134217728,15534
+IntroSort,Sorted,268435456,FAILED BECAUSE OF: Failed to allocate array of size 268435456 after 100 attempts: ERROR: std::bad_alloc
+HeapSort,Reversed,16,0
+HeapSort,Reversed,32,0
+HeapSort,Reversed,64,0
+HeapSort,Reversed,128,0
+HeapSort,Reversed,256,0
+HeapSort,Reversed,512,0
+HeapSort,Reversed,1024,0.1
+HeapSort,Reversed,2048,0.3
+HeapSort,Reversed,4096,0.2
+HeapSort,Reversed,8192,0.7
+HeapSort,Reversed,16384,1.3
+HeapSort,Reversed,32768,3.1
+HeapSort,Reversed,65536,8.1
+HeapSort,Reversed,131072,19
+HeapSort,Reversed,262144,38.8
+IntroSort,ManyDupes,67108864,7555.2
+HeapSort,Reversed,524288,98.3
+HeapSort,Reversed,1048576,258.6
+HeapSort,Reversed,2097152,574.6
+HeapSort,Random,8388608,3241.2
+HeapSort,PartiallySorted,8388608,3256
+HeapSort,Reversed,4194304,1475.1
+HeapSort,Reversed,8388608,3431.4
+HeapSort,PartiallySorted,16777216,7982.7
+HeapSort,Random,16777216,8035.8
+HeapSort,Reversed,16777216,7947.9
+CocktailShakerSort,Dupes,262144,79387.5
+HeapSort,Sorted,16,0
+HeapSort,Sorted,32,0
+HeapSort,Sorted,64,0
+HeapSort,Sorted,128,0.1
+HeapSort,Sorted,256,0
+HeapSort,Sorted,512,0.1
+HeapSort,Sorted,1024,0.1
+HeapSort,Sorted,2048,0.1
+HeapSort,Sorted,4096,0.2
+HeapSort,Sorted,8192,0.4
+HeapSort,Sorted,16384,2.4
+HeapSort,Sorted,32768,5
+HeapSort,Sorted,65536,11.9
+HeapSort,Sorted,131072,21
+HeapSort,Sorted,262144,61.1
+HeapSort,Sorted,524288,109.7
+CocktailShakerSort,ManyDupes,262144,79605
+HeapSort,Dupes,16,0
+HeapSort,Dupes,32,0
+HeapSort,Dupes,64,0
+HeapSort,Dupes,128,0
+HeapSort,Dupes,256,0
+HeapSort,Dupes,512,0.1
+HeapSort,Dupes,1024,0.1
+HeapSort,Dupes,2048,0
+HeapSort,Dupes,4096,0.3
+HeapSort,Dupes,8192,0.6
+HeapSort,Dupes,16384,1.3
+HeapSort,Dupes,32768,3.5
+HeapSort,Dupes,65536,9.2
+HeapSort,Dupes,131072,19.2
+HeapSort,Dupes,262144,48
+HeapSort,Dupes,524288,125.3
+HeapSort,Sorted,1048576,278
+HeapSort,Dupes,1048576,307
+HeapSort,Sorted,2097152,717.6
+HeapSort,Dupes,2097152,722.5
+HeapSort,Sorted,4194304,1787.1
+IntroSort,ManyDupes,134217728,16151.3
+IntroSort,ManyDupes,268435456,FAILED BECAUSE OF: Failed to allocate array of size 268435456 after 100 attempts: ERROR: std::bad_alloc
+HeapSort,ManyDupes,16,0
+HeapSort,ManyDupes,32,0
+HeapSort,ManyDupes,64,0
+HeapSort,ManyDupes,128,0
+HeapSort,ManyDupes,256,0
+HeapSort,ManyDupes,512,0.1
+HeapSort,ManyDupes,1024,0
+HeapSort,ManyDupes,2048,0
+HeapSort,ManyDupes,4096,0.2
+HeapSort,ManyDupes,8192,0.4
+HeapSort,ManyDupes,16384,1.7
+HeapSort,ManyDupes,32768,4
+HeapSort,ManyDupes,65536,10.4
+HeapSort,ManyDupes,131072,27.6
+HeapSort,ManyDupes,262144,55.3
+HeapSort,Dupes,4194304,1825.2
+HeapSort,ManyDupes,524288,114
+HeapSort,ManyDupes,1048576,285.9
+HeapSort,ManyDupes,2097152,771.1
+HeapSort,ManyDupes,4194304,1725.5
+HeapSort,Sorted,8388608,4221.1
+HeapSort,Dupes,8388608,4246.4
+HeapSort,ManyDupes,8388608,4713.5
+HeapSort,PartiallySorted,33554432,21446.1
+HeapSort,Random,33554432,21593.2
+HeapSort,Sorted,16777216,10384.3
+HeapSort,Dupes,16777216,10298.5
+HeapSort,ManyDupes,16777216,10264.9
+HeapSort,Reversed,33554432,22821.2
+HeapSort,Sorted,33554432,22728.8
+HeapSort,Dupes,33554432,22742.9
+HeapSort,ManyDupes,33554432,22593.5
+HeapSort,ManyDupes,67108864,FAILED BECAUSE OF: Failed to allocate array of size 67108864 after 100 attempts: ERROR: std::bad_alloc
+HeapSort,ManyDupes,134217728,FAILED BECAUSE OF: Failed to allocate array of size 134217728 after 100 attempts: ERROR: std::bad_alloc
+HeapSort,ManyDupes,268435456,FAILED BECAUSE OF: Failed to allocate array of size 268435456 after 100 attempts: ERROR: std::bad_alloc
+TreeSort,Random,16,0
+TreeSort,Random,32,0
+TreeSort,Random,64,0.1
+TreeSort,Random,128,0
+TreeSort,Random,256,0
+TreeSort,Random,512,0.2
+TreeSort,Random,1024,0.1
+TreeSort,Random,2048,0.5
+TreeSort,Random,4096,1
+TreeSort,Random,8192,1.4
+TreeSort,Random,16384,4
+TreeSort,Random,32768,8.9
+TreeSort,Random,65536,21.9
+TreeSort,Random,131072,99.4
+TreeSort,Random,262144,223.7
+TreeSort,Random,524288,649.2
+TreeSort,Random,1048576,1687.1
+TreeSort,Random,2097152,4085.7
+TreeSort,Random,4194304,9368.1
+HeapSort,PartiallySorted,67108864,50567.2
+HeapSort,PartiallySorted,134217728,FAILED BECAUSE OF: Failed to allocate array of size 134217728 after 100 attempts: ERROR: std::bad_alloc
+HeapSort,PartiallySorted,268435456,FAILED BECAUSE OF: Failed to allocate array of size 268435456 after 100 attempts: ERROR: std::bad_alloc
+TreeSort,PartiallySorted,16,0
+TreeSort,PartiallySorted,32,0.1
+TreeSort,PartiallySorted,64,0
+TreeSort,PartiallySorted,128,0.1
+TreeSort,PartiallySorted,256,0
+TreeSort,PartiallySorted,512,0.1
+TreeSort,PartiallySorted,1024,0.1
+TreeSort,PartiallySorted,2048,0.4
+TreeSort,PartiallySorted,4096,0.8
+TreeSort,PartiallySorted,8192,1
+TreeSort,PartiallySorted,16384,2.8
+TreeSort,PartiallySorted,32768,8.9
+TreeSort,PartiallySorted,65536,27.2
+TreeSort,PartiallySorted,131072,65.7
+TreeSort,PartiallySorted,262144,207.6
+TreeSort,PartiallySorted,524288,610.7
+HeapSort,Random,67108864,50432.8
+HeapSort,Random,134217728,FAILED BECAUSE OF: Failed to allocate array of size 134217728 after 100 attempts: ERROR: std::bad_alloc
+HeapSort,Random,268435456,FAILED BECAUSE OF: Failed to allocate array of size 268435456 after 100 attempts: ERROR: std::bad_alloc
+TreeSort,Reversed,16,0
+TreeSort,Reversed,32,0.1
+TreeSort,Reversed,64,0
+TreeSort,Reversed,128,0.2
+TreeSort,Reversed,256,0.2
+TreeSort,Reversed,512,0
+TreeSort,Reversed,1024,0.3
+TreeSort,Reversed,2048,0.2
+TreeSort,Reversed,4096,0.4
+TreeSort,Reversed,8192,1.2
+TreeSort,Reversed,16384,2.8
+TreeSort,Reversed,32768,9.5
+TreeSort,Reversed,65536,21.3
+TreeSort,Reversed,131072,66.1
+TreeSort,Reversed,262144,232.2
+TreeSort,PartiallySorted,1048576,1488.9
+TreeSort,Reversed,524288,639.4
+HeapSort,Reversed,67108864,49531.2
+TreeSort,Reversed,1048576,1510.7
+TreeSort,PartiallySorted,2097152,3721.7
+TreeSort,Reversed,2097152,3744.7
+TreeSort,Random,8388608,21866.4
+TreeSort,PartiallySorted,4194304,9478.4
+TreeSort,Reversed,4194304,9600.5
+HeapSort,Dupes,67108864,47366.7
+HeapSort,Dupes,134217728,FAILED BECAUSE OF: Failed to allocate array of size 134217728 after 100 attempts: ERROR: std::bad_alloc
+HeapSort,Dupes,268435456,FAILED BECAUSE OF: Failed to allocate array of size 268435456 after 100 attempts: ERROR: std::bad_alloc
+TreeSort,Sorted,16,0
+TreeSort,Sorted,32,0
+TreeSort,Sorted,64,0
+TreeSort,Sorted,128,0
+TreeSort,Sorted,256,0.2
+TreeSort,Sorted,512,0.2
+TreeSort,Sorted,1024,0.3
+TreeSort,Sorted,2048,0.3
+TreeSort,Sorted,4096,1.2
+TreeSort,Sorted,8192,2.6
+TreeSort,Sorted,16384,5.9
+TreeSort,Sorted,32768,17.3
+HeapSort,Sorted,67108864,47533.4
+HeapSort,Sorted,134217728,FAILED BECAUSE OF: Failed to allocate array of size 134217728 after 100 attempts: ERROR: std::bad_alloc
+HeapSort,Sorted,268435456,FAILED BECAUSE OF: Failed to allocate array of size 268435456 after 100 attempts: ERROR: std::bad_alloc
+TreeSort,Dupes,16,0
+TreeSort,Dupes,32,0
+TreeSort,Dupes,64,0
+TreeSort,Dupes,128,0
+TreeSort,Dupes,256,0
+TreeSort,Dupes,512,0
+TreeSort,Dupes,1024,0.1
+TreeSort,Dupes,2048,0.1
+TreeSort,Dupes,4096,0.8
+TreeSort,Dupes,8192,3
+TreeSort,Dupes,16384,6.7
+TreeSort,Sorted,65536,38.6
+TreeSort,Dupes,32768,17.3
+TreeSort,Dupes,65536,36.3
+TreeSort,Sorted,131072,95.2
+TreeSort,Dupes,131072,93
+TreeSort,Sorted,262144,266
+TreeSort,Dupes,262144,283.6
+TreeSort,Sorted,524288,763.1
+TreeSort,Dupes,524288,744.4
+TreeSort,Sorted,1048576,1818.7
+TreeSort,Dupes,1048576,1844.8
+TreeSort,Sorted,2097152,4232.5
+TreeSort,Dupes,2097152,4177.7
+TreeSort,Sorted,4194304,10180.1
+TreeSort,Dupes,4194304,10169.7
+TreeSort,PartiallySorted,8388608,24090.2
+TreeSort,Reversed,8388608,22719.6
+TreeSort,Reversed,16777216,FAILED BECAUSE OF: Failed to allocate array of size 16777216 after 100 attempts: ERROR: std::bad_alloc
+TreeSort,Reversed,33554432,FAILED BECAUSE OF: Failed to allocate array of size 33554432 after 100 attempts: ERROR: std::bad_alloc
+TreeSort,Reversed,67108864,FAILED BECAUSE OF: Failed to allocate array of size 67108864 after 100 attempts: ERROR: std::bad_alloc
+TreeSort,Reversed,134217728,FAILED BECAUSE OF: Failed to allocate array of size 134217728 after 100 attempts: ERROR: std::bad_alloc
+TreeSort,Reversed,268435456,FAILED BECAUSE OF: Failed to allocate array of size 268435456 after 100 attempts: ERROR: std::bad_alloc
+TreeSort,ManyDupes,16,0
+TreeSort,ManyDupes,32,0
+TreeSort,ManyDupes,64,0.1
+TreeSort,ManyDupes,128,0
+TreeSort,ManyDupes,256,0.2
+TreeSort,ManyDupes,512,0
+TreeSort,ManyDupes,1024,0.3
+TreeSort,ManyDupes,2048,0.3
+TreeSort,ManyDupes,4096,0.6
+TreeSort,ManyDupes,8192,2.1
+TreeSort,ManyDupes,16384,7.8
+TreeSort,ManyDupes,32768,16.8
+TreeSort,ManyDupes,65536,32.8
+TreeSort,ManyDupes,131072,121.1
+TreeSort,ManyDupes,262144,289.8
+TreeSort,ManyDupes,524288,758.8
+TreeSort,ManyDupes,1048576,1971.3
+TreeSort,ManyDupes,2097152,4539.1
+TreeSort,ManyDupes,4194304,FAILED BECAUSE OF: Failed to allocate array of size 4194304 after 100 attempts: ERROR: std::bad_alloc
+TreeSort,ManyDupes,8388608,FAILED BECAUSE OF: Failed to allocate array of size 8388608 after 100 attempts: ERROR: std::bad_alloc
+TreeSort,ManyDupes,16777216,FAILED BECAUSE OF: Failed to allocate array of size 16777216 after 100 attempts: ERROR: std::bad_alloc
+TreeSort,ManyDupes,33554432,FAILED BECAUSE OF: Failed to allocate array of size 33554432 after 100 attempts: ERROR: std::bad_alloc
+TreeSort,ManyDupes,67108864,FAILED BECAUSE OF: Failed to allocate array of size 67108864 after 100 attempts: ERROR: std::bad_alloc
+TreeSort,ManyDupes,134217728,FAILED BECAUSE OF: Failed to allocate array of size 134217728 after 100 attempts: ERROR: std::bad_alloc
+TreeSort,ManyDupes,268435456,FAILED BECAUSE OF: Failed to allocate array of size 268435456 after 100 attempts: ERROR: std::bad_alloc
+BlockSort,Random,16,0
+BlockSort,Random,32,0
+BlockSort,Random,64,0
+BlockSort,Random,128,0
+BlockSort,Random,256,0
+BlockSort,Random,512,0
+BlockSort,Random,1024,0
+BlockSort,Random,2048,0.2
+BlockSort,Random,4096,0.2
+BlockSort,Random,8192,1.3
+BlockSort,Random,16384,4.3
+BlockSort,Random,32768,9.4
+BlockSort,Random,65536,27.2
+BlockSort,Random,131072,46.6
+BlockSort,Random,262144,110.7
+BlockSort,Random,524288,312.1
+BlockSort,Random,1048576,719.9
+BlockSort,Random,2097152,1800.7
+BlockSort,Random,4194304,FAILED BECAUSE OF: Failed to allocate array of size 4194304 after 100 attempts: ERROR: std::bad_alloc
+BlockSort,Random,8388608,FAILED BECAUSE OF: Failed to allocate array of size 8388608 after 100 attempts: ERROR: std::bad_alloc
+BlockSort,Random,16777216,FAILED BECAUSE OF: Failed to allocate array of size 16777216 after 100 attempts: ERROR: std::bad_alloc
+BlockSort,Random,33554432,FAILED BECAUSE OF: Failed to allocate array of size 33554432 after 100 attempts: ERROR: std::bad_alloc
+BlockSort,Random,67108864,FAILED BECAUSE OF: Failed to allocate array of size 67108864 after 100 attempts: ERROR: std::bad_alloc
+BlockSort,Random,134217728,FAILED BECAUSE OF: Failed to allocate array of size 134217728 after 100 attempts: ERROR: std::bad_alloc
+BlockSort,Random,268435456,FAILED BECAUSE OF: Failed to allocate array of size 268435456 after 100 attempts: ERROR: std::bad_alloc
+BlockSort,PartiallySorted,16,0
+BlockSort,PartiallySorted,32,0
+BlockSort,PartiallySorted,64,0
+BlockSort,PartiallySorted,128,0.3
+BlockSort,PartiallySorted,256,0.1
+BlockSort,PartiallySorted,512,0
+BlockSort,PartiallySorted,1024,0.1
+BlockSort,PartiallySorted,2048,2.6
+BlockSort,PartiallySorted,4096,0
+BlockSort,PartiallySorted,8192,2.2
+BlockSort,PartiallySorted,16384,7.4
+BlockSort,PartiallySorted,32768,21
+BlockSort,PartiallySorted,65536,32.8
+BlockSort,PartiallySorted,131072,90.3
+BlockSort,PartiallySorted,262144,167.3
+BlockSort,PartiallySorted,524288,311
+BlockSort,PartiallySorted,1048576,562.6
+BlockSort,PartiallySorted,2097152,1541.3
+BlockSort,PartiallySorted,4194304,FAILED BECAUSE OF: Failed to allocate array of size 4194304 after 100 attempts: ERROR: std::bad_alloc
+BlockSort,PartiallySorted,8388608,FAILED BECAUSE OF: Failed to allocate array of size 8388608 after 100 attempts: ERROR: std::bad_alloc
+BlockSort,PartiallySorted,16777216,FAILED BECAUSE OF: Failed to allocate array of size 16777216 after 100 attempts: ERROR: std::bad_alloc
+BlockSort,PartiallySorted,33554432,FAILED BECAUSE OF: Failed to allocate array of size 33554432 after 100 attempts: ERROR: std::bad_alloc
+BlockSort,PartiallySorted,67108864,FAILED BECAUSE OF: Failed to allocate array of size 67108864 after 100 attempts: ERROR: std::bad_alloc
+BlockSort,PartiallySorted,134217728,FAILED BECAUSE OF: Failed to allocate array of size 134217728 after 100 attempts: ERROR: std::bad_alloc
+BlockSort,PartiallySorted,268435456,FAILED BECAUSE OF: Failed to allocate array of size 268435456 after 100 attempts: ERROR: std::bad_alloc
+BlockSort,Reversed,16,0
+BlockSort,Reversed,32,0
+BlockSort,Reversed,64,0
+BlockSort,Reversed,128,0.1
+BlockSort,Reversed,256,0
+BlockSort,Reversed,512,0
+BlockSort,Reversed,1024,0
+BlockSort,Reversed,2048,0.2
+BlockSort,Reversed,4096,0.1
+BlockSort,Reversed,8192,0.5
+BlockSort,Reversed,16384,3.4
+BlockSort,Reversed,32768,10.9
+BlockSort,Reversed,65536,21.3
+BlockSort,Reversed,131072,55.8
+BlockSort,Reversed,262144,129.7
+BlockSort,Reversed,524288,298.2
+BlockSort,Reversed,1048576,733.3
+BlockSort,Reversed,2097152,1370.4
+BlockSort,Reversed,4194304,FAILED BECAUSE OF: Failed to allocate array of size 4194304 after 100 attempts: ERROR: std::bad_alloc
+BlockSort,Reversed,8388608,FAILED BECAUSE OF: Failed to allocate array of size 8388608 after 100 attempts: ERROR: std::bad_alloc
+BlockSort,Reversed,16777216,FAILED BECAUSE OF: Failed to allocate array of size 16777216 after 100 attempts: ERROR: std::bad_alloc
+BlockSort,Reversed,33554432,FAILED BECAUSE OF: Failed to allocate array of size 33554432 after 100 attempts: ERROR: std::bad_alloc
+BlockSort,Reversed,67108864,FAILED BECAUSE OF: Failed to allocate array of size 67108864 after 100 attempts: ERROR: std::bad_alloc
+BlockSort,Reversed,134217728,FAILED BECAUSE OF: Failed to allocate array of size 134217728 after 100 attempts: ERROR: std::bad_alloc
+BlockSort,Reversed,268435456,FAILED BECAUSE OF: Failed to allocate array of size 268435456 after 100 attempts: ERROR: std::bad_alloc
+BlockSort,Sorted,16,0
+BlockSort,Sorted,32,0
+BlockSort,Sorted,64,0
+BlockSort,Sorted,128,0.1
+BlockSort,Sorted,256,0
+BlockSort,Sorted,512,0
+BlockSort,Sorted,1024,0
+BlockSort,Sorted,2048,0.2
+BlockSort,Sorted,4096,0.3
+BlockSort,Sorted,8192,1
+BlockSort,Sorted,16384,3
+BlockSort,Sorted,32768,6
+BlockSort,Sorted,65536,18.6
+BlockSort,Sorted,131072,34
+BlockSort,Sorted,262144,86.4
+BlockSort,Sorted,524288,193.3
+BlockSort,Sorted,1048576,451.5
+BlockSort,Sorted,2097152,1298.4
+BlockSort,Sorted,4194304,FAILED BECAUSE OF: Failed to allocate array of size 4194304 after 100 attempts: ERROR: std::bad_alloc
+BlockSort,Sorted,8388608,FAILED BECAUSE OF: Failed to allocate array of size 8388608 after 100 attempts: ERROR: std::bad_alloc
+BlockSort,Sorted,16777216,FAILED BECAUSE OF: Failed to allocate array of size 16777216 after 100 attempts: ERROR: std::bad_alloc
+BlockSort,Sorted,33554432,FAILED BECAUSE OF: Failed to allocate array of size 33554432 after 100 attempts: ERROR: std::bad_alloc
+BlockSort,Sorted,67108864,FAILED BECAUSE OF: Failed to allocate array of size 67108864 after 100 attempts: ERROR: std::bad_alloc
+BlockSort,Sorted,134217728,FAILED BECAUSE OF: Failed to allocate array of size 134217728 after 100 attempts: ERROR: std::bad_alloc
+BlockSort,Sorted,268435456,FAILED BECAUSE OF: Failed to allocate array of size 268435456 after 100 attempts: ERROR: std::bad_alloc
+BlockSort,Dupes,16,0
+BlockSort,Dupes,32,0
+BlockSort,Dupes,64,0
+BlockSort,Dupes,128,0
+BlockSort,Dupes,256,0
+BlockSort,Dupes,512,0
+BlockSort,Dupes,1024,0
+BlockSort,Dupes,2048,0.1
+BlockSort,Dupes,4096,0.1
+BlockSort,Dupes,8192,0.6
+BlockSort,Dupes,16384,3.3
+BlockSort,Dupes,32768,10.4
+BlockSort,Dupes,65536,15.9
+BlockSort,Dupes,131072,41.1
+BlockSort,Dupes,262144,78.4
+BlockSort,Dupes,524288,164.2
+BlockSort,Dupes,1048576,444.9
+BlockSort,Dupes,2097152,1030.2
+BlockSort,Dupes,4194304,FAILED BECAUSE OF: Failed to allocate array of size 4194304 after 100 attempts: ERROR: std::bad_alloc
+BlockSort,Dupes,8388608,FAILED BECAUSE OF: Failed to allocate array of size 8388608 after 100 attempts: ERROR: std::bad_alloc
+BlockSort,Dupes,16777216,FAILED BECAUSE OF: Failed to allocate array of size 16777216 after 100 attempts: ERROR: std::bad_alloc
+BlockSort,Dupes,33554432,FAILED BECAUSE OF: Failed to allocate array of size 33554432 after 100 attempts: ERROR: std::bad_alloc
+BlockSort,Dupes,67108864,FAILED BECAUSE OF: Failed to allocate array of size 67108864 after 100 attempts: ERROR: std::bad_alloc
+BlockSort,Dupes,134217728,FAILED BECAUSE OF: Failed to allocate array of size 134217728 after 100 attempts: ERROR: std::bad_alloc
+BlockSort,Dupes,268435456,FAILED BECAUSE OF: Failed to allocate array of size 268435456 after 100 attempts: ERROR: std::bad_alloc
+BlockSort,ManyDupes,16,0
+BlockSort,ManyDupes,32,0
+BlockSort,ManyDupes,64,0
+BlockSort,ManyDupes,128,0
+BlockSort,ManyDupes,256,0
+BlockSort,ManyDupes,512,0
+BlockSort,ManyDupes,1024,0
+BlockSort,ManyDupes,2048,0
+BlockSort,ManyDupes,4096,0.1
+BlockSort,ManyDupes,8192,0.4
+BlockSort,ManyDupes,16384,3.2
+BlockSort,ManyDupes,32768,5.9
+BlockSort,ManyDupes,65536,19.3
+BlockSort,ManyDupes,131072,31.6
+BlockSort,ManyDupes,262144,89.4
+BlockSort,ManyDupes,524288,190.4
+BlockSort,ManyDupes,1048576,450.7
+BlockSort,ManyDupes,2097152,1064.1
+BlockSort,ManyDupes,4194304,FAILED BECAUSE OF: Failed to allocate array of size 4194304 after 100 attempts: ERROR: std::bad_alloc
+BlockSort,ManyDupes,8388608,FAILED BECAUSE OF: Failed to allocate array of size 8388608 after 100 attempts: ERROR: std::bad_alloc
+BlockSort,ManyDupes,16777216,FAILED BECAUSE OF: Failed to allocate array of size 16777216 after 100 attempts: ERROR: std::bad_alloc
+BlockSort,ManyDupes,33554432,FAILED BECAUSE OF: Failed to allocate array of size 33554432 after 100 attempts: ERROR: std::bad_alloc
+BlockSort,ManyDupes,67108864,FAILED BECAUSE OF: Failed to allocate array of size 67108864 after 100 attempts: ERROR: std::bad_alloc
+BlockSort,ManyDupes,134217728,FAILED BECAUSE OF: Failed to allocate array of size 134217728 after 100 attempts: ERROR: std::bad_alloc
+BlockSort,ManyDupes,268435456,FAILED BECAUSE OF: Failed to allocate array of size 268435456 after 100 attempts: ERROR: std::bad_alloc
+ShellSort,Random,16,0
+ShellSort,Random,32,0
+ShellSort,Random,64,0.1
+ShellSort,Random,128,0
+ShellSort,Random,256,0
+ShellSort,Random,512,0.1
+ShellSort,Random,1024,0
+ShellSort,Random,2048,0.3
+ShellSort,Random,4096,0.6
+ShellSort,Random,8192,0.7
+ShellSort,Random,16384,2.1
+ShellSort,Random,32768,11.6
+ShellSort,Random,65536,17
+ShellSort,Random,131072,50.1
+ShellSort,Random,262144,123.9
+ShellSort,Random,524288,381.7
+ShellSort,Random,1048576,931.1
+ShellSort,Random,2097152,2393.3
+ShellSort,Random,4194304,FAILED BECAUSE OF: Failed to allocate array of size 4194304 after 100 attempts: ERROR: std::bad_alloc
+ShellSort,Random,8388608,FAILED BECAUSE OF: Failed to allocate array of size 8388608 after 100 attempts: ERROR: std::bad_alloc
+ShellSort,Random,16777216,FAILED BECAUSE OF: Failed to allocate array of size 16777216 after 100 attempts: ERROR: std::bad_alloc
+ShellSort,Random,33554432,FAILED BECAUSE OF: Failed to allocate array of size 33554432 after 100 attempts: ERROR: std::bad_alloc
+ShellSort,Random,67108864,FAILED BECAUSE OF: Failed to allocate array of size 67108864 after 100 attempts: ERROR: std::bad_alloc
+ShellSort,Random,134217728,FAILED BECAUSE OF: Failed to allocate array of size 134217728 after 100 attempts: ERROR: std::bad_alloc
+ShellSort,Random,268435456,FAILED BECAUSE OF: Failed to allocate array of size 268435456 after 100 attempts: ERROR: std::bad_alloc
+ShellSort,PartiallySorted,16,0
+ShellSort,PartiallySorted,32,0
+ShellSort,PartiallySorted,64,0
+ShellSort,PartiallySorted,128,0
+ShellSort,PartiallySorted,256,0
+ShellSort,PartiallySorted,512,0.1
+ShellSort,PartiallySorted,1024,0.2
+ShellSort,PartiallySorted,2048,0.1
+ShellSort,PartiallySorted,4096,0.3
+ShellSort,PartiallySorted,8192,0.8
+ShellSort,PartiallySorted,16384,3.8
+ShellSort,PartiallySorted,32768,12.5
+ShellSort,PartiallySorted,65536,20.3
+ShellSort,PartiallySorted,131072,44.8
+ShellSort,PartiallySorted,262144,104.5
+ShellSort,PartiallySorted,524288,335.4
+ShellSort,PartiallySorted,1048576,861
+ShellSort,PartiallySorted,2097152,2423.2
+ShellSort,PartiallySorted,4194304,FAILED BECAUSE OF: Failed to allocate array of size 4194304 after 100 attempts: ERROR: std::bad_alloc
+ShellSort,PartiallySorted,8388608,FAILED BECAUSE OF: Failed to allocate array of size 8388608 after 100 attempts: ERROR: std::bad_alloc
+ShellSort,PartiallySorted,16777216,FAILED BECAUSE OF: Failed to allocate array of size 16777216 after 100 attempts: ERROR: std::bad_alloc
+ShellSort,PartiallySorted,33554432,FAILED BECAUSE OF: Failed to allocate array of size 33554432 after 100 attempts: ERROR: std::bad_alloc
+ShellSort,PartiallySorted,67108864,FAILED BECAUSE OF: Failed to allocate array of size 67108864 after 100 attempts: ERROR: std::bad_alloc
+ShellSort,PartiallySorted,134217728,FAILED BECAUSE OF: Failed to allocate array of size 134217728 after 100 attempts: ERROR: std::bad_alloc
+ShellSort,PartiallySorted,268435456,FAILED BECAUSE OF: Failed to allocate array of size 268435456 after 100 attempts: ERROR: std::bad_alloc
+ShellSort,Reversed,16,0
+ShellSort,Reversed,32,0
+ShellSort,Reversed,64,0
+ShellSort,Reversed,128,0
+ShellSort,Reversed,256,0
+ShellSort,Reversed,512,0
+ShellSort,Reversed,1024,0
+ShellSort,Reversed,2048,0.1
+ShellSort,Reversed,4096,0.2
+ShellSort,Reversed,8192,0.5
+ShellSort,Reversed,16384,1.8
+ShellSort,Reversed,32768,6.1
+ShellSort,Reversed,65536,18
+ShellSort,Reversed,131072,65.4
+ShellSort,Reversed,262144,123.1
+ShellSort,Reversed,524288,290.7
+ShellSort,Reversed,1048576,819.7
+ShellSort,Reversed,2097152,2349.5
+ShellSort,Reversed,4194304,FAILED BECAUSE OF: Failed to allocate array of size 4194304 after 100 attempts: ERROR: std::bad_alloc
+ShellSort,Reversed,8388608,FAILED BECAUSE OF: Failed to allocate array of size 8388608 after 100 attempts: ERROR: std::bad_alloc
+ShellSort,Reversed,16777216,FAILED BECAUSE OF: Failed to allocate array of size 16777216 after 100 attempts: ERROR: std::bad_alloc
+ShellSort,Reversed,33554432,FAILED BECAUSE OF: Failed to allocate array of size 33554432 after 100 attempts: ERROR: std::bad_alloc
+ShellSort,Reversed,67108864,FAILED BECAUSE OF: Failed to allocate array of size 67108864 after 100 attempts: ERROR: std::bad_alloc
+ShellSort,Reversed,134217728,FAILED BECAUSE OF: Failed to allocate array of size 134217728 after 100 attempts: ERROR: std::bad_alloc
+ShellSort,Reversed,268435456,FAILED BECAUSE OF: Failed to allocate array of size 268435456 after 100 attempts: ERROR: std::bad_alloc
+ShellSort,Sorted,16,0
+ShellSort,Sorted,32,0
+ShellSort,Sorted,64,0
+ShellSort,Sorted,128,0
+ShellSort,Sorted,256,0
+ShellSort,Sorted,512,0
+ShellSort,Sorted,1024,0
+ShellSort,Sorted,2048,0.1
+ShellSort,Sorted,4096,0.4
+ShellSort,Sorted,8192,1.3
+ShellSort,Sorted,16384,4
+ShellSort,Sorted,32768,12
+ShellSort,Sorted,65536,20
+ShellSort,Sorted,131072,48
+ShellSort,Sorted,262144,116.5
+ShellSort,Sorted,524288,313.8
+ShellSort,Sorted,1048576,802.9
+ShellSort,Sorted,2097152,2468.3
+ShellSort,Sorted,4194304,FAILED BECAUSE OF: Failed to allocate array of size 4194304 after 100 attempts: ERROR: std::bad_alloc
+ShellSort,Sorted,8388608,FAILED BECAUSE OF: Failed to allocate array of size 8388608 after 100 attempts: ERROR: std::bad_alloc
+ShellSort,Sorted,16777216,FAILED BECAUSE OF: Failed to allocate array of size 16777216 after 100 attempts: ERROR: std::bad_alloc
+ShellSort,Sorted,33554432,FAILED BECAUSE OF: Failed to allocate array of size 33554432 after 100 attempts: ERROR: std::bad_alloc
+ShellSort,Sorted,67108864,FAILED BECAUSE OF: Failed to allocate array of size 67108864 after 100 attempts: ERROR: std::bad_alloc
+ShellSort,Sorted,134217728,FAILED BECAUSE OF: Failed to allocate array of size 134217728 after 100 attempts: ERROR: std::bad_alloc
+ShellSort,Sorted,268435456,FAILED BECAUSE OF: Failed to allocate array of size 268435456 after 100 attempts: ERROR: std::bad_alloc
+ShellSort,Dupes,16,0
+ShellSort,Dupes,32,0
+ShellSort,Dupes,64,0
+ShellSort,Dupes,128,0
+ShellSort,Dupes,256,0
+ShellSort,Dupes,512,0
+ShellSort,Dupes,1024,0
+ShellSort,Dupes,2048,0.2
+ShellSort,Dupes,4096,0.3
+ShellSort,Dupes,8192,0.4
+ShellSort,Dupes,16384,2.6
+ShellSort,Dupes,32768,8.4
+ShellSort,Dupes,65536,22.8
+ShellSort,Dupes,131072,48.7
+ShellSort,Dupes,262144,124.6
+ShellSort,Dupes,524288,309.3
+ShellSort,Dupes,1048576,834
+ShellSort,Dupes,2097152,2353.7
+ShellSort,Dupes,4194304,FAILED BECAUSE OF: Failed to allocate array of size 4194304 after 100 attempts: ERROR: std::bad_alloc
+ShellSort,Dupes,8388608,FAILED BECAUSE OF: Failed to allocate array of size 8388608 after 100 attempts: ERROR: std::bad_alloc
+ShellSort,Dupes,16777216,FAILED BECAUSE OF: Failed to allocate array of size 16777216 after 100 attempts: ERROR: std::bad_alloc
+ShellSort,Dupes,33554432,FAILED BECAUSE OF: Failed to allocate array of size 33554432 after 100 attempts: ERROR: std::bad_alloc
+ShellSort,Dupes,67108864,FAILED BECAUSE OF: Failed to allocate array of size 67108864 after 100 attempts: ERROR: std::bad_alloc
+ShellSort,Dupes,134217728,FAILED BECAUSE OF: Failed to allocate array of size 134217728 after 100 attempts: ERROR: std::bad_alloc
+ShellSort,Dupes,268435456,FAILED BECAUSE OF: Failed to allocate array of size 268435456 after 100 attempts: ERROR: std::bad_alloc
+ShellSort,ManyDupes,16,0
+ShellSort,ManyDupes,32,0
+ShellSort,ManyDupes,64,0
+ShellSort,ManyDupes,128,0
+ShellSort,ManyDupes,256,0
+ShellSort,ManyDupes,512,0
+ShellSort,ManyDupes,1024,0
+ShellSort,ManyDupes,2048,0.1
+ShellSort,ManyDupes,4096,0.4
+ShellSort,ManyDupes,8192,1.5
+ShellSort,ManyDupes,16384,2.2
+ShellSort,ManyDupes,32768,8.1
+ShellSort,ManyDupes,65536,16.3
+ShellSort,ManyDupes,131072,49.7
+ShellSort,ManyDupes,262144,128.3
+ShellSort,ManyDupes,524288,336.1
+ShellSort,ManyDupes,1048576,914.3
+ShellSort,ManyDupes,2097152,2333.6
+ShellSort,ManyDupes,4194304,FAILED BECAUSE OF: Failed to allocate array of size 4194304 after 100 attempts: ERROR: std::bad_alloc
+ShellSort,ManyDupes,8388608,FAILED BECAUSE OF: Failed to allocate array of size 8388608 after 100 attempts: ERROR: std::bad_alloc
+ShellSort,ManyDupes,16777216,FAILED BECAUSE OF: Failed to allocate array of size 16777216 after 100 attempts: ERROR: std::bad_alloc
+ShellSort,ManyDupes,33554432,FAILED BECAUSE OF: Failed to allocate array of size 33554432 after 100 attempts: ERROR: std::bad_alloc
+ShellSort,ManyDupes,67108864,FAILED BECAUSE OF: Failed to allocate array of size 67108864 after 100 attempts: ERROR: std::bad_alloc
+ShellSort,ManyDupes,134217728,FAILED BECAUSE OF: Failed to allocate array of size 134217728 after 100 attempts: ERROR: std::bad_alloc
+ShellSort,ManyDupes,268435456,FAILED BECAUSE OF: Failed to allocate array of size 268435456 after 100 attempts: ERROR: std::bad_alloc
+TimSort,Random,16,0
+TimSort,Random,32,0
+TimSort,Random,64,0
+TimSort,Random,128,0
+TimSort,Random,256,0
+TimSort,Random,512,0
+TimSort,Random,1024,0
+TimSort,Random,2048,0.1
+TimSort,Random,4096,0.1
+TimSort,Random,8192,0.3
+TimSort,Random,16384,1.8
+TimSort,Random,32768,5.5
+TimSort,Random,65536,10.4
+TimSort,Random,131072,26
+TimSort,Random,262144,64.1
+TimSort,Random,524288,188.6
+TimSort,Random,1048576,357.8
+TimSort,Random,2097152,832.6
+TimSort,Random,4194304,FAILED BECAUSE OF: Failed to allocate array of size 4194304 after 100 attempts: ERROR: std::bad_alloc
+TimSort,Random,8388608,FAILED BECAUSE OF: Failed to allocate array of size 8388608 after 100 attempts: ERROR: std::bad_alloc
+TimSort,Random,16777216,FAILED BECAUSE OF: Failed to allocate array of size 16777216 after 100 attempts: ERROR: std::bad_alloc
+TimSort,Random,33554432,FAILED BECAUSE OF: Failed to allocate array of size 33554432 after 100 attempts: ERROR: std::bad_alloc
+TimSort,Random,67108864,FAILED BECAUSE OF: Failed to allocate array of size 67108864 after 100 attempts: ERROR: std::bad_alloc
+TimSort,Random,134217728,FAILED BECAUSE OF: Failed to allocate array of size 134217728 after 100 attempts: ERROR: std::bad_alloc
+TimSort,Random,268435456,FAILED BECAUSE OF: Failed to allocate array of size 268435456 after 100 attempts: ERROR: std::bad_alloc
+TimSort,PartiallySorted,16,0
+TimSort,PartiallySorted,32,0
+TimSort,PartiallySorted,64,0
+TimSort,PartiallySorted,128,0
+TimSort,PartiallySorted,256,0
+TimSort,PartiallySorted,512,0
+TimSort,PartiallySorted,1024,0
+TimSort,PartiallySorted,2048,0.1
+TimSort,PartiallySorted,4096,0.1
+TimSort,PartiallySorted,8192,0.4
+TimSort,PartiallySorted,16384,3.5
+TimSort,PartiallySorted,32768,7.8
+TimSort,PartiallySorted,65536,19.4
+TimSort,PartiallySorted,131072,46.6
+TimSort,PartiallySorted,262144,89.7
+TimSort,PartiallySorted,524288,194.2
+TimSort,PartiallySorted,1048576,337.1
+TimSort,PartiallySorted,2097152,844.9
+TimSort,PartiallySorted,4194304,FAILED BECAUSE OF: Failed to allocate array of size 4194304 after 100 attempts: ERROR: std::bad_alloc
+TimSort,PartiallySorted,8388608,FAILED BECAUSE OF: Failed to allocate array of size 8388608 after 100 attempts: ERROR: std::bad_alloc
+TimSort,PartiallySorted,16777216,FAILED BECAUSE OF: Failed to allocate array of size 16777216 after 100 attempts: ERROR: std::bad_alloc
+TimSort,PartiallySorted,33554432,FAILED BECAUSE OF: Failed to allocate array of size 33554432 after 100 attempts: ERROR: std::bad_alloc
+TimSort,PartiallySorted,67108864,FAILED BECAUSE OF: Failed to allocate array of size 67108864 after 100 attempts: ERROR: std::bad_alloc
+TimSort,PartiallySorted,134217728,FAILED BECAUSE OF: Failed to allocate array of size 134217728 after 100 attempts: ERROR: std::bad_alloc
+TimSort,PartiallySorted,268435456,FAILED BECAUSE OF: Failed to allocate array of size 268435456 after 100 attempts: ERROR: std::bad_alloc
+TimSort,Reversed,16,0
+TimSort,Reversed,32,0
+TimSort,Reversed,64,0
+TimSort,Reversed,128,0
+TimSort,Reversed,256,0
+TimSort,Reversed,512,0
+TimSort,Reversed,1024,0.1
+TimSort,Reversed,2048,0.1
+TimSort,Reversed,4096,0.3
+TimSort,Reversed,8192,0.7
+TimSort,Reversed,16384,7.3
+TimSort,Reversed,32768,16.6
+TimSort,Reversed,65536,35.4
+TimSort,Reversed,131072,43.8
+TimSort,Reversed,262144,94.2
+TimSort,Reversed,524288,194.1
+TimSort,Reversed,1048576,364.7
+TimSort,Reversed,2097152,700.7
+TimSort,Reversed,4194304,FAILED BECAUSE OF: Failed to allocate array of size 4194304 after 100 attempts: ERROR: std::bad_alloc
+TimSort,Reversed,8388608,FAILED BECAUSE OF: Failed to allocate array of size 8388608 after 100 attempts: ERROR: std::bad_alloc
+TimSort,Reversed,16777216,FAILED BECAUSE OF: Failed to allocate array of size 16777216 after 100 attempts: ERROR: std::bad_alloc
+TimSort,Reversed,33554432,FAILED BECAUSE OF: Failed to allocate array of size 33554432 after 100 attempts: ERROR: std::bad_alloc
+TimSort,Reversed,67108864,FAILED BECAUSE OF: Failed to allocate array of size 67108864 after 100 attempts: ERROR: std::bad_alloc
+TimSort,Reversed,134217728,FAILED BECAUSE OF: Failed to allocate array of size 134217728 after 100 attempts: ERROR: std::bad_alloc
+TimSort,Reversed,268435456,FAILED BECAUSE OF: Failed to allocate array of size 268435456 after 100 attempts: ERROR: std::bad_alloc
+TimSort,Sorted,16,0
+TimSort,Sorted,32,0
+TimSort,Sorted,64,0
+TimSort,Sorted,128,0
+TimSort,Sorted,256,0
+TimSort,Sorted,512,0
+TimSort,Sorted,1024,0
+TimSort,Sorted,2048,0.1
+TimSort,Sorted,4096,0.1
+TimSort,Sorted,8192,0.3
+TimSort,Sorted,16384,2.4
+TimSort,Sorted,32768,5.7
+TimSort,Sorted,65536,18.9
+TimSort,Sorted,131072,40.9
+TimSort,Sorted,262144,69.1
+TimSort,Sorted,524288,128.7
+TimSort,Sorted,1048576,267.1
+TimSort,Sorted,2097152,528.2
+TimSort,Sorted,4194304,FAILED BECAUSE OF: Failed to allocate array of size 4194304 after 100 attempts: ERROR: std::bad_alloc
+TimSort,Sorted,8388608,FAILED BECAUSE OF: Failed to allocate array of size 8388608 after 100 attempts: ERROR: std::bad_alloc
+TimSort,Sorted,16777216,FAILED BECAUSE OF: Failed to allocate array of size 16777216 after 100 attempts: ERROR: std::bad_alloc
+TimSort,Sorted,33554432,FAILED BECAUSE OF: Failed to allocate array of size 33554432 after 100 attempts: ERROR: std::bad_alloc
+TimSort,Sorted,67108864,FAILED BECAUSE OF: Failed to allocate array of size 67108864 after 100 attempts: ERROR: std::bad_alloc
+TimSort,Sorted,134217728,FAILED BECAUSE OF: Failed to allocate array of size 134217728 after 100 attempts: ERROR: std::bad_alloc
+TimSort,Sorted,268435456,FAILED BECAUSE OF: Failed to allocate array of size 268435456 after 100 attempts: ERROR: std::bad_alloc
+TimSort,Dupes,16,0
+TimSort,Dupes,32,0
+TimSort,Dupes,64,0
+TimSort,Dupes,128,0
+TimSort,Dupes,256,0
+TimSort,Dupes,512,0.1
+TimSort,Dupes,1024,0
+TimSort,Dupes,2048,0.1
+TimSort,Dupes,4096,0.1
+TimSort,Dupes,8192,0.2
+TimSort,Dupes,16384,2.1
+TimSort,Dupes,32768,5.9
+TimSort,Dupes,65536,15.4
+TimSort,Dupes,131072,27.3
+TimSort,Dupes,262144,58.6
+TimSort,Dupes,524288,128.9
+TimSort,Dupes,1048576,285.2
+TimSort,Dupes,2097152,526
+TimSort,Dupes,4194304,FAILED BECAUSE OF: Failed to allocate array of size 4194304 after 100 attempts: ERROR: std::bad_alloc
+TimSort,Dupes,8388608,FAILED BECAUSE OF: Failed to allocate array of size 8388608 after 100 attempts: ERROR: std::bad_alloc
+TimSort,Dupes,16777216,FAILED BECAUSE OF: Failed to allocate array of size 16777216 after 100 attempts: ERROR: std::bad_alloc
+TimSort,Dupes,33554432,FAILED BECAUSE OF: Failed to allocate array of size 33554432 after 100 attempts: ERROR: std::bad_alloc
+TimSort,Dupes,67108864,FAILED BECAUSE OF: Failed to allocate array of size 67108864 after 100 attempts: ERROR: std::bad_alloc
+TimSort,Dupes,134217728,FAILED BECAUSE OF: Failed to allocate array of size 134217728 after 100 attempts: ERROR: std::bad_alloc
+TimSort,Dupes,268435456,FAILED BECAUSE OF: Failed to allocate array of size 268435456 after 100 attempts: ERROR: std::bad_alloc
+TimSort,ManyDupes,16,0
+TimSort,ManyDupes,32,0
+TimSort,ManyDupes,64,0
+TimSort,ManyDupes,128,0
+TimSort,ManyDupes,256,0
+TimSort,ManyDupes,512,0
+TimSort,ManyDupes,1024,0
+TimSort,ManyDupes,2048,0
+TimSort,ManyDupes,4096,0.2
+TimSort,ManyDupes,8192,0.6
+TimSort,ManyDupes,16384,2.5
+TimSort,ManyDupes,32768,4.8
+TimSort,ManyDupes,65536,11.1
+TimSort,ManyDupes,131072,27.2
+TimSort,ManyDupes,262144,59.9
+TimSort,ManyDupes,524288,117.5
+TimSort,ManyDupes,1048576,278.2
+TimSort,ManyDupes,2097152,735.2
+TimSort,ManyDupes,4194304,FAILED BECAUSE OF: Failed to allocate array of size 4194304 after 100 attempts: ERROR: std::bad_alloc
+TimSort,ManyDupes,8388608,FAILED BECAUSE OF: Failed to allocate array of size 8388608 after 100 attempts: ERROR: std::bad_alloc
+TimSort,ManyDupes,16777216,FAILED BECAUSE OF: Failed to allocate array of size 16777216 after 100 attempts: ERROR: std::bad_alloc
+TimSort,ManyDupes,33554432,FAILED BECAUSE OF: Failed to allocate array of size 33554432 after 100 attempts: ERROR: std::bad_alloc
+TimSort,ManyDupes,67108864,FAILED BECAUSE OF: Failed to allocate array of size 67108864 after 100 attempts: ERROR: std::bad_alloc
+TimSort,ManyDupes,134217728,FAILED BECAUSE OF: Failed to allocate array of size 134217728 after 100 attempts: ERROR: std::bad_alloc
+TimSort,ManyDupes,268435456,FAILED BECAUSE OF: Failed to allocate array of size 268435456 after 100 attempts: ERROR: std::bad_alloc
+ExchangeSort,Random,16,0
+ExchangeSort,Random,32,0
+ExchangeSort,Random,64,0
+ExchangeSort,Random,128,0
+ExchangeSort,Random,256,0
+ExchangeSort,Random,512,0.1
+ExchangeSort,Random,1024,0.1
+ExchangeSort,Random,2048,2.8
+ExchangeSort,Random,4096,14.3
+ExchangeSort,Random,8192,69.6
+ExchangeSort,Random,16384,319.7
+ExchangeSort,Random,32768,1453
+HeapSort,Reversed,134217728,95609.5
+HeapSort,Reversed,268435456,FAILED BECAUSE OF: Failed to allocate array of size 268435456 after 100 attempts: ERROR: std::bad_alloc
+ExchangeSort,PartiallySorted,16,0
+ExchangeSort,PartiallySorted,32,0
+ExchangeSort,PartiallySorted,64,0
+ExchangeSort,PartiallySorted,128,0
+ExchangeSort,PartiallySorted,256,0.1
+ExchangeSort,PartiallySorted,512,0
+ExchangeSort,PartiallySorted,1024,0.3
+ExchangeSort,PartiallySorted,2048,3
+ExchangeSort,PartiallySorted,4096,18.1
+ExchangeSort,PartiallySorted,8192,68.6
+ExchangeSort,PartiallySorted,16384,295.3
+ExchangeSort,PartiallySorted,32768,1422.1
+ExchangeSort,Random,65536,6137.5
+ExchangeSort,PartiallySorted,65536,5906.2
+TreeSort,Dupes,8388608,21600.8
+TreeSort,Sorted,8388608,20502.8
+ExchangeSort,Random,131072,24166.7
+ExchangeSort,PartiallySorted,131072,23929.6
+ExchangeSort,Random,262144,100461.7
+ExchangeSort,Reversed,16,0
+ExchangeSort,Reversed,32,0
+ExchangeSort,Reversed,64,0
+ExchangeSort,Reversed,128,0
+ExchangeSort,Reversed,256,0.1
+ExchangeSort,Reversed,512,0.1
+ExchangeSort,Reversed,1024,0.8
+ExchangeSort,Reversed,2048,2.9
+ExchangeSort,Reversed,4096,13.3
+ExchangeSort,Reversed,8192,73.8
+ExchangeSort,Reversed,16384,294.9
+ExchangeSort,Reversed,32768,1335.5
+ExchangeSort,PartiallySorted,262144,100467.6
+ExchangeSort,Sorted,16,0
+ExchangeSort,Sorted,32,0
+ExchangeSort,Sorted,64,0
+ExchangeSort,Sorted,128,0
+ExchangeSort,Sorted,256,0.1
+ExchangeSort,Sorted,512,0.1
+ExchangeSort,Sorted,1024,0.6
+ExchangeSort,Sorted,2048,2.8
+ExchangeSort,Sorted,4096,15.2
+ExchangeSort,Sorted,8192,76.7
+ExchangeSort,Sorted,16384,287.1
+ExchangeSort,Sorted,32768,1446.6
+ExchangeSort,Reversed,65536,5795.2
+ExchangeSort,Sorted,65536,5748.2
+ExchangeSort,Reversed,131072,24875.2
+ExchangeSort,Sorted,131072,24399.9
+MergeSort,Dupes,268435456,FAILED BECAUSE OF: Failed to sort array of size 268435456 after 100 attempts: ERROR: std::bad_alloc
+ExchangeSort,Dupes,16,0
+ExchangeSort,Dupes,32,0
+ExchangeSort,Dupes,64,0
+ExchangeSort,Dupes,128,0
+ExchangeSort,Dupes,256,0
+ExchangeSort,Dupes,512,0.2
+ExchangeSort,Dupes,1024,0.6
+ExchangeSort,Dupes,2048,3.2
+ExchangeSort,Dupes,4096,15.8
+ExchangeSort,Dupes,8192,63.6
+ExchangeSort,Dupes,16384,355.9
+ExchangeSort,Dupes,32768,1336.3
+ExchangeSort,Dupes,65536,5762.8
+TreeSort,Random,16777216,48120.2
+MergeSort,Reversed,268435456,FAILED BECAUSE OF: Failed to sort array of size 268435456 after 100 attempts: ERROR: std::bad_alloc
+ExchangeSort,ManyDupes,16,0
+ExchangeSort,ManyDupes,32,0
+ExchangeSort,ManyDupes,64,0
+ExchangeSort,ManyDupes,128,0
+ExchangeSort,ManyDupes,256,0
+ExchangeSort,ManyDupes,512,0
+ExchangeSort,ManyDupes,1024,0.7
+ExchangeSort,ManyDupes,2048,3.3
+ExchangeSort,ManyDupes,4096,15.2
+ExchangeSort,ManyDupes,8192,83.1
+ExchangeSort,ManyDupes,16384,333.1
+ExchangeSort,ManyDupes,32768,1363
+ExchangeSort,ManyDupes,65536,5624.9
+ExchangeSort,Dupes,131072,24024.5
+TreeSort,PartiallySorted,16777216,45996.8
+TreeSort,Dupes,16777216,45873.3
+TreeSort,Sorted,16777216,46820.3
+ExchangeSort,ManyDupes,131072,23666.6
+ExchangeSort,Reversed,262144,99243.8
+CycleSort,Random,16,0
+CycleSort,Random,32,0
+CycleSort,Random,64,0
+CycleSort,Random,128,0
+CycleSort,Random,256,0.2
+CycleSort,Random,512,0.5
+CycleSort,Random,1024,1.5
+CycleSort,Random,2048,7.9
+CycleSort,Random,4096,34.8
+CycleSort,Random,8192,141.8
+CycleSort,Random,16384,562.5
+CycleSort,Random,32768,2416.4
+ExchangeSort,Sorted,262144,99189.1
+CycleSort,PartiallySorted,16,0
+CycleSort,PartiallySorted,32,0
+CycleSort,PartiallySorted,64,0
+CycleSort,PartiallySorted,128,0.1
+CycleSort,PartiallySorted,256,0.1
+CycleSort,PartiallySorted,512,0.3
+CycleSort,PartiallySorted,1024,1.7
+CycleSort,PartiallySorted,2048,7.5
+CycleSort,PartiallySorted,4096,35.7
+CycleSort,PartiallySorted,8192,150.2
+CycleSort,PartiallySorted,16384,658.1
+CycleSort,PartiallySorted,32768,2432.8
+CycleSort,Random,65536,10229.1
+CycleSort,PartiallySorted,65536,9909.5
+TreeSort,Random,33554432,103506.4
+TreeSort,Random,67108864,FAILED BECAUSE OF: Failed to allocate array of size 67108864 after 100 attempts: ERROR: std::bad_alloc
+TreeSort,Random,134217728,FAILED BECAUSE OF: Failed to allocate array of size 134217728 after 100 attempts: ERROR: std::bad_alloc
+TreeSort,Random,268435456,FAILED BECAUSE OF: Failed to allocate array of size 268435456 after 100 attempts: ERROR: std::bad_alloc
+CycleSort,Reversed,16,0
+CycleSort,Reversed,32,0
+CycleSort,Reversed,64,0.1
+CycleSort,Reversed,128,0.1
+CycleSort,Reversed,256,0.2
+CycleSort,Reversed,512,0.5
+CycleSort,Reversed,1024,1.9
+CycleSort,Reversed,2048,8.1
+CycleSort,Reversed,4096,36.1
+CycleSort,Reversed,8192,152.7
+CycleSort,Reversed,16384,603
+CycleSort,Reversed,32768,2375.8
+CycleSort,Reversed,65536,9703
+ExchangeSort,Dupes,262144,98382.9
+CycleSort,Sorted,16,0
+CycleSort,Sorted,32,0
+CycleSort,Sorted,64,0
+CycleSort,Sorted,128,0
+CycleSort,Sorted,256,0.1
+CycleSort,Sorted,512,0.2
+CycleSort,Sorted,1024,1.8
+CycleSort,Sorted,2048,7.9
+CycleSort,Sorted,4096,33.8
+CycleSort,Sorted,8192,138.7
+CycleSort,Sorted,16384,597.9
+CycleSort,Sorted,32768,2365.1
+CycleSort,Random,131072,38940.3
+CycleSort,Sorted,65536,9629.4
+CycleSort,PartiallySorted,131072,38799.1
+ExchangeSort,ManyDupes,262144,96800
+CycleSort,Dupes,16,0
+CycleSort,Dupes,32,0.1
+CycleSort,Dupes,64,0
+CycleSort,Dupes,128,0
+CycleSort,Dupes,256,0.1
+CycleSort,Dupes,512,1.5
+CycleSort,Dupes,1024,1.3
+CycleSort,Dupes,2048,9.6
+CycleSort,Dupes,4096,43.4
+CycleSort,Dupes,8192,156.6
+CycleSort,Dupes,16384,597.3
+CycleSort,Dupes,32768,2376
+TreeSort,PartiallySorted,33554432,108391.3
+CycleSort,Dupes,65536,9576.4
+TreeSort,Sorted,33554432,99340.1
+CycleSort,Reversed,131072,37835.9
+CycleSort,Sorted,131072,37599.6
+CycleSort,Sorted,262144,FAILED BECAUSE OF: Failed to allocate array of size 262144 after 100 attempts: ERROR: std::bad_alloc
+CycleSort,ManyDupes,16,0
+CycleSort,ManyDupes,32,0
+CycleSort,ManyDupes,64,0
+CycleSort,ManyDupes,128,0
+CycleSort,ManyDupes,256,0
+CycleSort,ManyDupes,512,0.3
+CycleSort,ManyDupes,1024,1.6
+CycleSort,ManyDupes,2048,6.4
+CycleSort,ManyDupes,4096,30.8
+CycleSort,ManyDupes,8192,FAILED BECAUSE OF: Failed to allocate array of size 8192 after 100 attempts: ERROR: std::bad_alloc
+CycleSort,ManyDupes,16384,FAILED BECAUSE OF: Failed to allocate array of size 16384 after 100 attempts: ERROR: std::bad_alloc
+CycleSort,ManyDupes,32768,FAILED BECAUSE OF: Failed to allocate array of size 32768 after 100 attempts: ERROR: std::bad_alloc
+CycleSort,ManyDupes,65536,FAILED BECAUSE OF: Failed to allocate array of size 65536 after 100 attempts: ERROR: std::bad_alloc
+CycleSort,Dupes,131072,37430.8
+CycleSort,ManyDupes,131072,FAILED BECAUSE OF: Failed to allocate array of size 131072 after 100 attempts: ERROR: std::bad_alloc
+CycleSort,Dupes,262144,FAILED BECAUSE OF: Failed to allocate array of size 262144 after 100 attempts: ERROR: std::bad_alloc
+PatienceSort,Random,16,0
+PatienceSort,Random,32,0.1
+PatienceSort,Random,64,0
+PatienceSort,Random,128,0
+PatienceSort,Random,256,0.1
+PatienceSort,Random,512,0
+PatienceSort,Random,1024,0
+CycleSort,ManyDupes,262144,FAILED BECAUSE OF: Failed to allocate array of size 262144 after 100 attempts: ERROR: std::bad_alloc
+PatienceSort,PartiallySorted,16,0
+PatienceSort,PartiallySorted,32,0
+PatienceSort,Random,2048,0.4
+PatienceSort,PartiallySorted,64,0
+PatienceSort,PartiallySorted,128,0
+PatienceSort,PartiallySorted,256,0
+PatienceSort,PartiallySorted,512,0.1
+PatienceSort,PartiallySorted,1024,0.1
+PatienceSort,Random,4096,0.8
+PatienceSort,PartiallySorted,2048,0.4
+PatienceSort,PartiallySorted,4096,0.8
+PatienceSort,Random,8192,FAILED BECAUSE OF: Failed to allocate array of size 8192 after 100 attempts: ERROR: std::bad_alloc
+PatienceSort,PartiallySorted,8192,FAILED BECAUSE OF: Failed to allocate array of size 8192 after 100 attempts: ERROR: std::bad_alloc
+PatienceSort,Random,16384,FAILED BECAUSE OF: Failed to allocate array of size 16384 after 100 attempts: ERROR: std::bad_alloc
+PatienceSort,PartiallySorted,16384,FAILED BECAUSE OF: Failed to allocate array of size 16384 after 100 attempts: ERROR: std::bad_alloc
+PatienceSort,Random,32768,FAILED BECAUSE OF: Failed to allocate array of size 32768 after 100 attempts: ERROR: std::bad_alloc
+PatienceSort,PartiallySorted,32768,FAILED BECAUSE OF: Failed to allocate array of size 32768 after 100 attempts: ERROR: std::bad_alloc
+PatienceSort,Random,65536,FAILED BECAUSE OF: Failed to allocate array of size 65536 after 100 attempts: ERROR: std::bad_alloc
+PatienceSort,PartiallySorted,65536,FAILED BECAUSE OF: Failed to allocate array of size 65536 after 100 attempts: ERROR: std::bad_alloc
+PatienceSort,Random,131072,FAILED BECAUSE OF: Failed to allocate array of size 131072 after 100 attempts: ERROR: std::bad_alloc
+PatienceSort,PartiallySorted,131072,FAILED BECAUSE OF: Failed to allocate array of size 131072 after 100 attempts: ERROR: std::bad_alloc
+PatienceSort,Random,262144,FAILED BECAUSE OF: Failed to allocate array of size 262144 after 100 attempts: ERROR: std::bad_alloc
+PatienceSort,PartiallySorted,262144,FAILED BECAUSE OF: Failed to allocate array of size 262144 after 100 attempts: ERROR: std::bad_alloc
+PatienceSort,Random,524288,FAILED BECAUSE OF: Failed to allocate array of size 524288 after 100 attempts: ERROR: std::bad_alloc
+PatienceSort,PartiallySorted,524288,FAILED BECAUSE OF: Failed to allocate array of size 524288 after 100 attempts: ERROR: std::bad_alloc
+PatienceSort,Random,1048576,FAILED BECAUSE OF: Failed to allocate array of size 1048576 after 100 attempts: ERROR: std::bad_alloc
+PatienceSort,PartiallySorted,1048576,FAILED BECAUSE OF: Failed to allocate array of size 1048576 after 100 attempts: ERROR: std::bad_alloc
+PatienceSort,Random,2097152,FAILED BECAUSE OF: Failed to allocate array of size 2097152 after 100 attempts: ERROR: std::bad_alloc
+PatienceSort,PartiallySorted,2097152,FAILED BECAUSE OF: Failed to allocate array of size 2097152 after 100 attempts: ERROR: std::bad_alloc
+PatienceSort,Random,4194304,FAILED BECAUSE OF: Failed to allocate array of size 4194304 after 100 attempts: ERROR: std::bad_alloc
+PatienceSort,PartiallySorted,4194304,FAILED BECAUSE OF: Failed to allocate array of size 4194304 after 100 attempts: ERROR: std::bad_alloc
+PatienceSort,Random,8388608,FAILED BECAUSE OF: Failed to allocate array of size 8388608 after 100 attempts: ERROR: std::bad_alloc
+PatienceSort,PartiallySorted,8388608,FAILED BECAUSE OF: Failed to allocate array of size 8388608 after 100 attempts: ERROR: std::bad_alloc
+PatienceSort,Random,16777216,FAILED BECAUSE OF: Failed to allocate array of size 16777216 after 100 attempts: ERROR: std::bad_alloc
+PatienceSort,PartiallySorted,16777216,FAILED BECAUSE OF: Failed to allocate array of size 16777216 after 100 attempts: ERROR: std::bad_alloc
+PatienceSort,Random,33554432,FAILED BECAUSE OF: Failed to allocate array of size 33554432 after 100 attempts: ERROR: std::bad_alloc
+PatienceSort,PartiallySorted,33554432,FAILED BECAUSE OF: Failed to allocate array of size 33554432 after 100 attempts: ERROR: std::bad_alloc
+PatienceSort,Random,67108864,FAILED BECAUSE OF: Failed to allocate array of size 67108864 after 100 attempts: ERROR: std::bad_alloc
+PatienceSort,PartiallySorted,67108864,FAILED BECAUSE OF: Failed to allocate array of size 67108864 after 100 attempts: ERROR: std::bad_alloc
+PatienceSort,Random,134217728,FAILED BECAUSE OF: Failed to allocate array of size 134217728 after 100 attempts: ERROR: std::bad_alloc
+PatienceSort,PartiallySorted,134217728,FAILED BECAUSE OF: Failed to allocate array of size 134217728 after 100 attempts: ERROR: std::bad_alloc
+PatienceSort,Random,268435456,FAILED BECAUSE OF: Failed to allocate array of size 268435456 after 100 attempts: ERROR: std::bad_alloc
+PatienceSort,Reversed,16,0
+PatienceSort,Reversed,32,0
+PatienceSort,Reversed,64,0
+PatienceSort,Reversed,128,0
+PatienceSort,Reversed,256,0
+PatienceSort,Reversed,512,0
+PatienceSort,PartiallySorted,268435456,FAILED BECAUSE OF: Failed to allocate array of size 268435456 after 100 attempts: ERROR: std::bad_alloc
+PatienceSort,Reversed,1024,0.1
+PatienceSort,Sorted,16,0
+PatienceSort,Sorted,32,0
+PatienceSort,Sorted,64,0
+PatienceSort,Reversed,2048,0.1
+PatienceSort,Sorted,128,0
+PatienceSort,Sorted,256,0
+PatienceSort,Sorted,512,0.1
+PatienceSort,Sorted,1024,0.3
+PatienceSort,Reversed,4096,0.9
+PatienceSort,Sorted,2048,0.2
+PatienceSort,Sorted,4096,1
+PatienceSort,Reversed,8192,FAILED BECAUSE OF: Failed to allocate array of size 8192 after 100 attempts: ERROR: std::bad_alloc
+PatienceSort,Sorted,8192,FAILED BECAUSE OF: Failed to allocate array of size 8192 after 100 attempts: ERROR: std::bad_alloc
+PatienceSort,Reversed,16384,FAILED BECAUSE OF: Failed to allocate array of size 16384 after 100 attempts: ERROR: std::bad_alloc
+PatienceSort,Sorted,16384,FAILED BECAUSE OF: Failed to allocate array of size 16384 after 100 attempts: ERROR: std::bad_alloc
+PatienceSort,Reversed,32768,FAILED BECAUSE OF: Failed to allocate array of size 32768 after 100 attempts: ERROR: std::bad_alloc
+PatienceSort,Sorted,32768,FAILED BECAUSE OF: Failed to allocate array of size 32768 after 100 attempts: ERROR: std::bad_alloc
+PatienceSort,Reversed,65536,FAILED BECAUSE OF: Failed to allocate array of size 65536 after 100 attempts: ERROR: std::bad_alloc
+PatienceSort,Sorted,65536,FAILED BECAUSE OF: Failed to allocate array of size 65536 after 100 attempts: ERROR: std::bad_alloc
+PatienceSort,Reversed,131072,FAILED BECAUSE OF: Failed to allocate array of size 131072 after 100 attempts: ERROR: std::bad_alloc
+PatienceSort,Sorted,131072,FAILED BECAUSE OF: Failed to allocate array of size 131072 after 100 attempts: ERROR: std::bad_alloc
+PatienceSort,Reversed,262144,FAILED BECAUSE OF: Failed to allocate array of size 262144 after 100 attempts: ERROR: std::bad_alloc
+PatienceSort,Sorted,262144,FAILED BECAUSE OF: Failed to allocate array of size 262144 after 100 attempts: ERROR: std::bad_alloc
+PatienceSort,Reversed,524288,FAILED BECAUSE OF: Failed to allocate array of size 524288 after 100 attempts: ERROR: std::bad_alloc
+PatienceSort,Sorted,524288,FAILED BECAUSE OF: Failed to allocate array of size 524288 after 100 attempts: ERROR: std::bad_alloc
+PatienceSort,Reversed,1048576,FAILED BECAUSE OF: Failed to allocate array of size 1048576 after 100 attempts: ERROR: std::bad_alloc
+PatienceSort,Reversed,2097152,FAILED BECAUSE OF: Failed to allocate array of size 2097152 after 100 attempts: ERROR: std::bad_alloc
+PatienceSort,Sorted,1048576,FAILED BECAUSE OF: Failed to allocate array of size 1048576 after 100 attempts: ERROR: std::bad_alloc
+PatienceSort,Reversed,4194304,FAILED BECAUSE OF: Failed to allocate array of size 4194304 after 100 attempts: ERROR: std::bad_alloc
+PatienceSort,Sorted,2097152,FAILED BECAUSE OF: Failed to allocate array of size 2097152 after 100 attempts: ERROR: std::bad_alloc
+PatienceSort,Reversed,8388608,FAILED BECAUSE OF: Failed to allocate array of size 8388608 after 100 attempts: ERROR: std::bad_alloc
+PatienceSort,Sorted,4194304,FAILED BECAUSE OF: Failed to allocate array of size 4194304 after 100 attempts: ERROR: std::bad_alloc
+PatienceSort,Reversed,16777216,FAILED BECAUSE OF: Failed to allocate array of size 16777216 after 100 attempts: ERROR: std::bad_alloc
+PatienceSort,Sorted,8388608,FAILED BECAUSE OF: Failed to allocate array of size 8388608 after 100 attempts: ERROR: std::bad_alloc
+PatienceSort,Reversed,33554432,FAILED BECAUSE OF: Failed to allocate array of size 33554432 after 100 attempts: ERROR: std::bad_alloc
+PatienceSort,Sorted,16777216,FAILED BECAUSE OF: Failed to allocate array of size 16777216 after 100 attempts: ERROR: std::bad_alloc
+PatienceSort,Reversed,67108864,FAILED BECAUSE OF: Failed to allocate array of size 67108864 after 100 attempts: ERROR: std::bad_alloc
+PatienceSort,Sorted,33554432,FAILED BECAUSE OF: Failed to allocate array of size 33554432 after 100 attempts: ERROR: std::bad_alloc
+PatienceSort,Reversed,134217728,FAILED BECAUSE OF: Failed to allocate array of size 134217728 after 100 attempts: ERROR: std::bad_alloc
+PatienceSort,Sorted,67108864,FAILED BECAUSE OF: Failed to allocate array of size 67108864 after 100 attempts: ERROR: std::bad_alloc
+PatienceSort,Reversed,268435456,FAILED BECAUSE OF: Failed to allocate array of size 268435456 after 100 attempts: ERROR: std::bad_alloc
+PatienceSort,Dupes,16,0
+PatienceSort,Dupes,32,0
+PatienceSort,Dupes,64,0
+PatienceSort,Sorted,134217728,FAILED BECAUSE OF: Failed to allocate array of size 134217728 after 100 attempts: ERROR: std::bad_alloc
+PatienceSort,Dupes,128,0
+PatienceSort,Dupes,256,0
+PatienceSort,Dupes,512,0.1
+PatienceSort,Dupes,1024,0.1
+PatienceSort,Dupes,2048,0.2
+PatienceSort,Sorted,268435456,FAILED BECAUSE OF: Failed to allocate array of size 268435456 after 100 attempts: ERROR: std::bad_alloc
+PatienceSort,ManyDupes,16,0
+PatienceSort,ManyDupes,32,0
+PatienceSort,ManyDupes,64,0.1
+PatienceSort,ManyDupes,128,0
+PatienceSort,Dupes,4096,1.1
+PatienceSort,ManyDupes,256,0
+PatienceSort,ManyDupes,512,0.1
+PatienceSort,ManyDupes,1024,0
+PatienceSort,ManyDupes,2048,0.2
+PatienceSort,ManyDupes,4096,0.6
+PatienceSort,Dupes,8192,FAILED BECAUSE OF: Failed to allocate array of size 8192 after 100 attempts: ERROR: std::bad_alloc
+PatienceSort,ManyDupes,8192,FAILED BECAUSE OF: Failed to allocate array of size 8192 after 100 attempts: ERROR: std::bad_alloc
+PatienceSort,Dupes,16384,FAILED BECAUSE OF: Failed to allocate array of size 16384 after 100 attempts: ERROR: std::bad_alloc
+PatienceSort,ManyDupes,16384,FAILED BECAUSE OF: Failed to allocate array of size 16384 after 100 attempts: ERROR: std::bad_alloc
+PatienceSort,Dupes,32768,FAILED BECAUSE OF: Failed to allocate array of size 32768 after 100 attempts: ERROR: std::bad_alloc
+PatienceSort,ManyDupes,32768,FAILED BECAUSE OF: Failed to allocate array of size 32768 after 100 attempts: ERROR: std::bad_alloc
+PatienceSort,Dupes,65536,FAILED BECAUSE OF: Failed to allocate array of size 65536 after 100 attempts: ERROR: std::bad_alloc
+PatienceSort,ManyDupes,65536,FAILED BECAUSE OF: Failed to allocate array of size 65536 after 100 attempts: ERROR: std::bad_alloc
+PatienceSort,Dupes,131072,FAILED BECAUSE OF: Failed to allocate array of size 131072 after 100 attempts: ERROR: std::bad_alloc
+PatienceSort,ManyDupes,131072,FAILED BECAUSE OF: Failed to allocate array of size 131072 after 100 attempts: ERROR: std::bad_alloc
+PatienceSort,Dupes,262144,FAILED BECAUSE OF: Failed to allocate array of size 262144 after 100 attempts: ERROR: std::bad_alloc
+PatienceSort,ManyDupes,262144,FAILED BECAUSE OF: Failed to allocate array of size 262144 after 100 attempts: ERROR: std::bad_alloc
+PatienceSort,Dupes,524288,FAILED BECAUSE OF: Failed to allocate array of size 524288 after 100 attempts: ERROR: std::bad_alloc
+PatienceSort,ManyDupes,524288,FAILED BECAUSE OF: Failed to allocate array of size 524288 after 100 attempts: ERROR: std::bad_alloc
+PatienceSort,Dupes,1048576,FAILED BECAUSE OF: Failed to allocate array of size 1048576 after 100 attempts: ERROR: std::bad_alloc
+PatienceSort,Dupes,2097152,FAILED BECAUSE OF: Failed to allocate array of size 2097152 after 100 attempts: ERROR: std::bad_alloc
+PatienceSort,ManyDupes,1048576,FAILED BECAUSE OF: Failed to allocate array of size 1048576 after 100 attempts: ERROR: std::bad_alloc
+PatienceSort,Dupes,4194304,FAILED BECAUSE OF: Failed to allocate array of size 4194304 after 100 attempts: ERROR: std::bad_alloc
+PatienceSort,ManyDupes,2097152,FAILED BECAUSE OF: Failed to allocate array of size 2097152 after 100 attempts: ERROR: std::bad_alloc
+PatienceSort,Dupes,8388608,FAILED BECAUSE OF: Failed to allocate array of size 8388608 after 100 attempts: ERROR: std::bad_alloc
+PatienceSort,ManyDupes,4194304,FAILED BECAUSE OF: Failed to allocate array of size 4194304 after 100 attempts: ERROR: std::bad_alloc
+PatienceSort,Dupes,16777216,FAILED BECAUSE OF: Failed to allocate array of size 16777216 after 100 attempts: ERROR: std::bad_alloc
+PatienceSort,ManyDupes,8388608,FAILED BECAUSE OF: Failed to allocate array of size 8388608 after 100 attempts: ERROR: std::bad_alloc
+PatienceSort,Dupes,33554432,FAILED BECAUSE OF: Failed to allocate array of size 33554432 after 100 attempts: ERROR: std::bad_alloc
+PatienceSort,ManyDupes,16777216,FAILED BECAUSE OF: Failed to allocate array of size 16777216 after 100 attempts: ERROR: std::bad_alloc
+PatienceSort,Dupes,67108864,FAILED BECAUSE OF: Failed to allocate array of size 67108864 after 100 attempts: ERROR: std::bad_alloc
+PatienceSort,ManyDupes,33554432,FAILED BECAUSE OF: Failed to allocate array of size 33554432 after 100 attempts: ERROR: std::bad_alloc
+PatienceSort,Dupes,134217728,FAILED BECAUSE OF: Failed to allocate array of size 134217728 after 100 attempts: ERROR: std::bad_alloc
+PatienceSort,ManyDupes,67108864,FAILED BECAUSE OF: Failed to allocate array of size 67108864 after 100 attempts: ERROR: std::bad_alloc
+PatienceSort,Dupes,268435456,FAILED BECAUSE OF: Failed to allocate array of size 268435456 after 100 attempts: ERROR: std::bad_alloc
+SmoothSort,Random,16,0
+SmoothSort,Random,32,0
+SmoothSort,Random,64,0.1
+SmoothSort,Random,128,0.1
+SmoothSort,Random,256,0.2
+PatienceSort,ManyDupes,134217728,FAILED BECAUSE OF: Failed to allocate array of size 134217728 after 100 attempts: ERROR: std::bad_alloc
+SmoothSort,Random,512,0.1
+SmoothSort,Random,1024,0.5
+PatienceSort,ManyDupes,268435456,FAILED BECAUSE OF: Failed to allocate array of size 268435456 after 100 attempts: ERROR: std::bad_alloc
+SmoothSort,PartiallySorted,16,0
+SmoothSort,PartiallySorted,32,0
+SmoothSort,PartiallySorted,64,0
+SmoothSort,PartiallySorted,128,0
+SmoothSort,PartiallySorted,256,0.2
+SmoothSort,PartiallySorted,512,0.1
+SmoothSort,Random,2048,2.1
+SmoothSort,PartiallySorted,1024,0.6
+SmoothSort,PartiallySorted,2048,2.2
+SmoothSort,Random,4096,8.2
+SmoothSort,Random,8192,FAILED BECAUSE OF: Failed to allocate array of size 8192 after 100 attempts: ERROR: std::bad_alloc
+SmoothSort,PartiallySorted,4096,8.1
+SmoothSort,Random,16384,FAILED BECAUSE OF: Failed to allocate array of size 16384 after 100 attempts: ERROR: std::bad_alloc
+SmoothSort,PartiallySorted,8192,FAILED BECAUSE OF: Failed to allocate array of size 8192 after 100 attempts: ERROR: std::bad_alloc
+SmoothSort,Random,32768,FAILED BECAUSE OF: Failed to allocate array of size 32768 after 100 attempts: ERROR: std::bad_alloc
+SmoothSort,PartiallySorted,16384,FAILED BECAUSE OF: Failed to allocate array of size 16384 after 100 attempts: ERROR: std::bad_alloc
+SmoothSort,Random,65536,FAILED BECAUSE OF: Failed to allocate array of size 65536 after 100 attempts: ERROR: std::bad_alloc
+SmoothSort,PartiallySorted,32768,FAILED BECAUSE OF: Failed to allocate array of size 32768 after 100 attempts: ERROR: std::bad_alloc
+SmoothSort,Random,131072,FAILED BECAUSE OF: Failed to allocate array of size 131072 after 100 attempts: ERROR: std::bad_alloc
+SmoothSort,PartiallySorted,65536,FAILED BECAUSE OF: Failed to allocate array of size 65536 after 100 attempts: ERROR: std::bad_alloc
+SmoothSort,Random,262144,FAILED BECAUSE OF: Failed to allocate array of size 262144 after 100 attempts: ERROR: std::bad_alloc
+SmoothSort,PartiallySorted,131072,FAILED BECAUSE OF: Failed to allocate array of size 131072 after 100 attempts: ERROR: std::bad_alloc
+SmoothSort,Random,524288,FAILED BECAUSE OF: Failed to allocate array of size 524288 after 100 attempts: ERROR: std::bad_alloc
+SmoothSort,PartiallySorted,262144,FAILED BECAUSE OF: Failed to allocate array of size 262144 after 100 attempts: ERROR: std::bad_alloc
+SmoothSort,Random,1048576,FAILED BECAUSE OF: Failed to allocate array of size 1048576 after 100 attempts: ERROR: std::bad_alloc
+SmoothSort,PartiallySorted,524288,FAILED BECAUSE OF: Failed to allocate array of size 524288 after 100 attempts: ERROR: std::bad_alloc
+SmoothSort,Random,2097152,FAILED BECAUSE OF: Failed to allocate array of size 2097152 after 100 attempts: ERROR: std::bad_alloc
+SmoothSort,PartiallySorted,1048576,FAILED BECAUSE OF: Failed to allocate array of size 1048576 after 100 attempts: ERROR: std::bad_alloc
+SmoothSort,Random,4194304,FAILED BECAUSE OF: Failed to allocate array of size 4194304 after 100 attempts: ERROR: std::bad_alloc
+SmoothSort,PartiallySorted,2097152,FAILED BECAUSE OF: Failed to allocate array of size 2097152 after 100 attempts: ERROR: std::bad_alloc
+SmoothSort,Random,8388608,FAILED BECAUSE OF: Failed to allocate array of size 8388608 after 100 attempts: ERROR: std::bad_alloc
+SmoothSort,PartiallySorted,4194304,FAILED BECAUSE OF: Failed to allocate array of size 4194304 after 100 attempts: ERROR: std::bad_alloc
+SmoothSort,Random,16777216,FAILED BECAUSE OF: Failed to allocate array of size 16777216 after 100 attempts: ERROR: std::bad_alloc
+SmoothSort,PartiallySorted,8388608,FAILED BECAUSE OF: Failed to allocate array of size 8388608 after 100 attempts: ERROR: std::bad_alloc
+SmoothSort,Random,33554432,FAILED BECAUSE OF: Failed to allocate array of size 33554432 after 100 attempts: ERROR: std::bad_alloc
+SmoothSort,PartiallySorted,16777216,FAILED BECAUSE OF: Failed to allocate array of size 16777216 after 100 attempts: ERROR: std::bad_alloc
+SmoothSort,Random,67108864,FAILED BECAUSE OF: Failed to allocate array of size 67108864 after 100 attempts: ERROR: std::bad_alloc
+SmoothSort,PartiallySorted,33554432,FAILED BECAUSE OF: Failed to allocate array of size 33554432 after 100 attempts: ERROR: std::bad_alloc
+SmoothSort,Random,134217728,FAILED BECAUSE OF: Failed to allocate array of size 134217728 after 100 attempts: ERROR: std::bad_alloc
+SmoothSort,PartiallySorted,67108864,FAILED BECAUSE OF: Failed to allocate array of size 67108864 after 100 attempts: ERROR: std::bad_alloc
+SmoothSort,Random,268435456,FAILED BECAUSE OF: Failed to allocate array of size 268435456 after 100 attempts: ERROR: std::bad_alloc
+SmoothSort,Reversed,16,0
+SmoothSort,Reversed,32,0
+SmoothSort,PartiallySorted,134217728,FAILED BECAUSE OF: Failed to allocate array of size 134217728 after 100 attempts: ERROR: std::bad_alloc
+SmoothSort,Reversed,64,0
+SmoothSort,Reversed,128,0
+SmoothSort,Reversed,256,0
+SmoothSort,Reversed,512,0.1
+SmoothSort,Reversed,1024,0.5
+SmoothSort,PartiallySorted,268435456,FAILED BECAUSE OF: Failed to allocate array of size 268435456 after 100 attempts: ERROR: std::bad_alloc
+SmoothSort,Sorted,16,0.1
+SmoothSort,Sorted,32,0
+SmoothSort,Sorted,64,0
+SmoothSort,Sorted,128,0
+SmoothSort,Sorted,256,0
+SmoothSort,Sorted,512,0.1
+SmoothSort,Sorted,1024,0.2
+SmoothSort,Reversed,2048,1.8
+SmoothSort,Sorted,2048,1.9
+SmoothSort,Reversed,4096,8
+SmoothSort,Reversed,8192,FAILED BECAUSE OF: Failed to allocate array of size 8192 after 100 attempts: ERROR: std::bad_alloc
+SmoothSort,Sorted,4096,7.9
+SmoothSort,Reversed,16384,FAILED BECAUSE OF: Failed to allocate array of size 16384 after 100 attempts: ERROR: std::bad_alloc
+SmoothSort,Sorted,8192,FAILED BECAUSE OF: Failed to allocate array of size 8192 after 100 attempts: ERROR: std::bad_alloc
+SmoothSort,Reversed,32768,FAILED BECAUSE OF: Failed to allocate array of size 32768 after 100 attempts: ERROR: std::bad_alloc
+SmoothSort,Sorted,16384,FAILED BECAUSE OF: Failed to allocate array of size 16384 after 100 attempts: ERROR: std::bad_alloc
+SmoothSort,Reversed,65536,FAILED BECAUSE OF: Failed to allocate array of size 65536 after 100 attempts: ERROR: std::bad_alloc
+SmoothSort,Sorted,32768,FAILED BECAUSE OF: Failed to allocate array of size 32768 after 100 attempts: ERROR: std::bad_alloc
+SmoothSort,Sorted,65536,FAILED BECAUSE OF: Failed to allocate array of size 65536 after 100 attempts: ERROR: std::bad_alloc
+SmoothSort,Reversed,131072,FAILED BECAUSE OF: Failed to allocate array of size 131072 after 100 attempts: ERROR: std::bad_alloc
+SmoothSort,Sorted,131072,FAILED BECAUSE OF: Failed to allocate array of size 131072 after 100 attempts: ERROR: std::bad_alloc
+SmoothSort,Reversed,262144,FAILED BECAUSE OF: Failed to allocate array of size 262144 after 100 attempts: ERROR: std::bad_alloc
+SmoothSort,Reversed,524288,FAILED BECAUSE OF: Failed to allocate array of size 524288 after 100 attempts: ERROR: std::bad_alloc
+SmoothSort,Sorted,262144,FAILED BECAUSE OF: Failed to allocate array of size 262144 after 100 attempts: ERROR: std::bad_alloc
+SmoothSort,Reversed,1048576,FAILED BECAUSE OF: Failed to allocate array of size 1048576 after 100 attempts: ERROR: std::bad_alloc
+SmoothSort,Sorted,524288,FAILED BECAUSE OF: Failed to allocate array of size 524288 after 100 attempts: ERROR: std::bad_alloc
+SmoothSort,Reversed,2097152,FAILED BECAUSE OF: Failed to allocate array of size 2097152 after 100 attempts: ERROR: std::bad_alloc
+SmoothSort,Sorted,1048576,FAILED BECAUSE OF: Failed to allocate array of size 1048576 after 100 attempts: ERROR: std::bad_alloc
+SmoothSort,Sorted,2097152,FAILED BECAUSE OF: Failed to allocate array of size 2097152 after 100 attempts: ERROR: std::bad_alloc
+SmoothSort,Reversed,4194304,FAILED BECAUSE OF: Failed to allocate array of size 4194304 after 100 attempts: ERROR: std::bad_alloc
+SmoothSort,Sorted,4194304,FAILED BECAUSE OF: Failed to allocate array of size 4194304 after 100 attempts: ERROR: std::bad_alloc
+SmoothSort,Reversed,8388608,FAILED BECAUSE OF: Failed to allocate array of size 8388608 after 100 attempts: ERROR: std::bad_alloc
+SmoothSort,Reversed,16777216,FAILED BECAUSE OF: Failed to allocate array of size 16777216 after 100 attempts: ERROR: std::bad_alloc
+SmoothSort,Sorted,8388608,FAILED BECAUSE OF: Failed to allocate array of size 8388608 after 100 attempts: ERROR: std::bad_alloc
+SmoothSort,Reversed,33554432,FAILED BECAUSE OF: Failed to allocate array of size 33554432 after 100 attempts: ERROR: std::bad_alloc
+SmoothSort,Sorted,16777216,FAILED BECAUSE OF: Failed to allocate array of size 16777216 after 100 attempts: ERROR: std::bad_alloc
+SmoothSort,Reversed,67108864,FAILED BECAUSE OF: Failed to allocate array of size 67108864 after 100 attempts: ERROR: std::bad_alloc
+SmoothSort,Sorted,33554432,FAILED BECAUSE OF: Failed to allocate array of size 33554432 after 100 attempts: ERROR: std::bad_alloc
+SmoothSort,Reversed,134217728,FAILED BECAUSE OF: Failed to allocate array of size 134217728 after 100 attempts: ERROR: std::bad_alloc
+SmoothSort,Sorted,67108864,FAILED BECAUSE OF: Failed to allocate array of size 67108864 after 100 attempts: ERROR: std::bad_alloc
+SmoothSort,Reversed,268435456,FAILED BECAUSE OF: Failed to allocate array of size 268435456 after 100 attempts: ERROR: std::bad_alloc
+SmoothSort,Dupes,16,0
+SmoothSort,Sorted,134217728,FAILED BECAUSE OF: Failed to allocate array of size 134217728 after 100 attempts: ERROR: std::bad_alloc
+SmoothSort,Dupes,32,0
+SmoothSort,Dupes,64,0.1
+SmoothSort,Dupes,128,0
+SmoothSort,Dupes,256,0
+SmoothSort,Dupes,512,0
+SmoothSort,Dupes,1024,0.5
+SmoothSort,Sorted,268435456,FAILED BECAUSE OF: Failed to allocate array of size 268435456 after 100 attempts: ERROR: std::bad_alloc
+SmoothSort,ManyDupes,16,0
+SmoothSort,ManyDupes,32,0
+SmoothSort,ManyDupes,64,0
+SmoothSort,ManyDupes,128,0
+SmoothSort,ManyDupes,256,0
+SmoothSort,ManyDupes,512,0.2
+SmoothSort,ManyDupes,1024,0.5
+SmoothSort,Dupes,2048,1.8
+SmoothSort,ManyDupes,2048,1.7
+SmoothSort,Dupes,4096,8
+SmoothSort,ManyDupes,4096,7.7
+SmoothSort,Dupes,8192,FAILED BECAUSE OF: Failed to allocate array of size 8192 after 100 attempts: ERROR: std::bad_alloc
+SmoothSort,ManyDupes,8192,FAILED BECAUSE OF: Failed to allocate array of size 8192 after 100 attempts: ERROR: std::bad_alloc
+SmoothSort,Dupes,16384,FAILED BECAUSE OF: Failed to allocate array of size 16384 after 100 attempts: ERROR: std::bad_alloc
+SmoothSort,ManyDupes,16384,FAILED BECAUSE OF: Failed to allocate array of size 16384 after 100 attempts: ERROR: std::bad_alloc
+SmoothSort,Dupes,32768,FAILED BECAUSE OF: Failed to allocate array of size 32768 after 100 attempts: ERROR: std::bad_alloc
+SmoothSort,ManyDupes,32768,FAILED BECAUSE OF: Failed to allocate array of size 32768 after 100 attempts: ERROR: std::bad_alloc
+SmoothSort,Dupes,65536,FAILED BECAUSE OF: Failed to allocate array of size 65536 after 100 attempts: ERROR: std::bad_alloc
+SmoothSort,ManyDupes,65536,FAILED BECAUSE OF: Failed to allocate array of size 65536 after 100 attempts: ERROR: std::bad_alloc
+SmoothSort,Dupes,131072,FAILED BECAUSE OF: Failed to allocate array of size 131072 after 100 attempts: ERROR: std::bad_alloc
+SmoothSort,ManyDupes,131072,FAILED BECAUSE OF: Failed to allocate array of size 131072 after 100 attempts: ERROR: std::bad_alloc
+SmoothSort,Dupes,262144,FAILED BECAUSE OF: Failed to allocate array of size 262144 after 100 attempts: ERROR: std::bad_alloc
+SmoothSort,ManyDupes,262144,FAILED BECAUSE OF: Failed to allocate array of size 262144 after 100 attempts: ERROR: std::bad_alloc
+SmoothSort,Dupes,524288,FAILED BECAUSE OF: Failed to allocate array of size 524288 after 100 attempts: ERROR: std::bad_alloc
+SmoothSort,ManyDupes,524288,FAILED BECAUSE OF: Failed to allocate array of size 524288 after 100 attempts: ERROR: std::bad_alloc
+SmoothSort,Dupes,1048576,FAILED BECAUSE OF: Failed to allocate array of size 1048576 after 100 attempts: ERROR: std::bad_alloc
+SmoothSort,ManyDupes,1048576,FAILED BECAUSE OF: Failed to allocate array of size 1048576 after 100 attempts: ERROR: std::bad_alloc
+SmoothSort,Dupes,2097152,FAILED BECAUSE OF: Failed to allocate array of size 2097152 after 100 attempts: ERROR: std::bad_alloc
+SmoothSort,ManyDupes,2097152,FAILED BECAUSE OF: Failed to allocate array of size 2097152 after 100 attempts: ERROR: std::bad_alloc
+SmoothSort,Dupes,4194304,FAILED BECAUSE OF: Failed to allocate array of size 4194304 after 100 attempts: ERROR: std::bad_alloc
+SmoothSort,ManyDupes,4194304,FAILED BECAUSE OF: Failed to allocate array of size 4194304 after 100 attempts: ERROR: std::bad_alloc
+SmoothSort,Dupes,8388608,FAILED BECAUSE OF: Failed to allocate array of size 8388608 after 100 attempts: ERROR: std::bad_alloc
+SmoothSort,ManyDupes,8388608,FAILED BECAUSE OF: Failed to allocate array of size 8388608 after 100 attempts: ERROR: std::bad_alloc
+SmoothSort,Dupes,16777216,FAILED BECAUSE OF: Failed to allocate array of size 16777216 after 100 attempts: ERROR: std::bad_alloc
+SmoothSort,ManyDupes,16777216,FAILED BECAUSE OF: Failed to allocate array of size 16777216 after 100 attempts: ERROR: std::bad_alloc
+SmoothSort,Dupes,33554432,FAILED BECAUSE OF: Failed to allocate array of size 33554432 after 100 attempts: ERROR: std::bad_alloc
+SmoothSort,ManyDupes,33554432,FAILED BECAUSE OF: Failed to allocate array of size 33554432 after 100 attempts: ERROR: std::bad_alloc
+SmoothSort,Dupes,67108864,FAILED BECAUSE OF: Failed to allocate array of size 67108864 after 100 attempts: ERROR: std::bad_alloc
+SmoothSort,ManyDupes,67108864,FAILED BECAUSE OF: Failed to allocate array of size 67108864 after 100 attempts: ERROR: std::bad_alloc
+SmoothSort,Dupes,134217728,FAILED BECAUSE OF: Failed to allocate array of size 134217728 after 100 attempts: ERROR: std::bad_alloc
+SmoothSort,ManyDupes,134217728,FAILED BECAUSE OF: Failed to allocate array of size 134217728 after 100 attempts: ERROR: std::bad_alloc
+SmoothSort,Dupes,268435456,FAILED BECAUSE OF: Failed to allocate array of size 268435456 after 100 attempts: ERROR: std::bad_alloc
+StrandSort,Random,16,0
+StrandSort,Random,32,0
+StrandSort,Random,64,0
+StrandSort,Random,128,0
+StrandSort,Random,256,0.1
+StrandSort,Random,512,0.1
+SmoothSort,ManyDupes,268435456,FAILED BECAUSE OF: Failed to allocate array of size 268435456 after 100 attempts: ERROR: std::bad_alloc
+StrandSort,Random,1024,0.3
+StrandSort,PartiallySorted,16,0
+StrandSort,PartiallySorted,32,0
+StrandSort,PartiallySorted,64,0.1
+StrandSort,PartiallySorted,128,0
+StrandSort,PartiallySorted,256,0.1
+StrandSort,PartiallySorted,512,0.2
+StrandSort,PartiallySorted,1024,0.1
+StrandSort,Random,2048,16.2
+StrandSort,PartiallySorted,2048,16.3
+StrandSort,Random,4096,37.3
+StrandSort,PartiallySorted,4096,38.1
+StrandSort,Random,8192,FAILED BECAUSE OF: Failed to allocate array of size 8192 after 100 attempts: ERROR: std::bad_alloc
+StrandSort,PartiallySorted,8192,FAILED BECAUSE OF: Failed to allocate array of size 8192 after 100 attempts: ERROR: std::bad_alloc
+StrandSort,Random,16384,FAILED BECAUSE OF: Failed to allocate array of size 16384 after 100 attempts: ERROR: std::bad_alloc
+StrandSort,PartiallySorted,16384,FAILED BECAUSE OF: Failed to allocate array of size 16384 after 100 attempts: ERROR: std::bad_alloc
+StrandSort,Random,32768,FAILED BECAUSE OF: Failed to allocate array of size 32768 after 100 attempts: ERROR: std::bad_alloc
+StrandSort,PartiallySorted,32768,FAILED BECAUSE OF: Failed to allocate array of size 32768 after 100 attempts: ERROR: std::bad_alloc
+StrandSort,Random,65536,FAILED BECAUSE OF: Failed to allocate array of size 65536 after 100 attempts: ERROR: std::bad_alloc
+StrandSort,PartiallySorted,65536,FAILED BECAUSE OF: Failed to allocate array of size 65536 after 100 attempts: ERROR: std::bad_alloc
+StrandSort,Random,131072,FAILED BECAUSE OF: Failed to allocate array of size 131072 after 100 attempts: ERROR: std::bad_alloc
+StrandSort,PartiallySorted,131072,FAILED BECAUSE OF: Failed to allocate array of size 131072 after 100 attempts: ERROR: std::bad_alloc
+StrandSort,Random,262144,FAILED BECAUSE OF: Failed to allocate array of size 262144 after 100 attempts: ERROR: std::bad_alloc
+StrandSort,PartiallySorted,262144,FAILED BECAUSE OF: Failed to allocate array of size 262144 after 100 attempts: ERROR: std::bad_alloc
+StrandSort,Random,524288,FAILED BECAUSE OF: Failed to allocate array of size 524288 after 100 attempts: ERROR: std::bad_alloc
+StrandSort,PartiallySorted,524288,FAILED BECAUSE OF: Failed to allocate array of size 524288 after 100 attempts: ERROR: std::bad_alloc
+StrandSort,Random,1048576,FAILED BECAUSE OF: Failed to allocate array of size 1048576 after 100 attempts: ERROR: std::bad_alloc
+StrandSort,PartiallySorted,1048576,FAILED BECAUSE OF: Failed to allocate array of size 1048576 after 100 attempts: ERROR: std::bad_alloc
+StrandSort,Random,2097152,FAILED BECAUSE OF: Failed to allocate array of size 2097152 after 100 attempts: ERROR: std::bad_alloc
+StrandSort,PartiallySorted,2097152,FAILED BECAUSE OF: Failed to allocate array of size 2097152 after 100 attempts: ERROR: std::bad_alloc
+StrandSort,Random,4194304,FAILED BECAUSE OF: Failed to allocate array of size 4194304 after 100 attempts: ERROR: std::bad_alloc
+StrandSort,PartiallySorted,4194304,FAILED BECAUSE OF: Failed to allocate array of size 4194304 after 100 attempts: ERROR: std::bad_alloc
+StrandSort,Random,8388608,FAILED BECAUSE OF: Failed to allocate array of size 8388608 after 100 attempts: ERROR: std::bad_alloc
+StrandSort,PartiallySorted,8388608,FAILED BECAUSE OF: Failed to allocate array of size 8388608 after 100 attempts: ERROR: std::bad_alloc
+StrandSort,Random,16777216,FAILED BECAUSE OF: Failed to allocate array of size 16777216 after 100 attempts: ERROR: std::bad_alloc
+StrandSort,PartiallySorted,16777216,FAILED BECAUSE OF: Failed to allocate array of size 16777216 after 100 attempts: ERROR: std::bad_alloc
+StrandSort,Random,33554432,FAILED BECAUSE OF: Failed to allocate array of size 33554432 after 100 attempts: ERROR: std::bad_alloc
+StrandSort,PartiallySorted,33554432,FAILED BECAUSE OF: Failed to allocate array of size 33554432 after 100 attempts: ERROR: std::bad_alloc
+StrandSort,Random,67108864,FAILED BECAUSE OF: Failed to allocate array of size 67108864 after 100 attempts: ERROR: std::bad_alloc
+StrandSort,PartiallySorted,67108864,FAILED BECAUSE OF: Failed to allocate array of size 67108864 after 100 attempts: ERROR: std::bad_alloc
+StrandSort,Random,134217728,FAILED BECAUSE OF: Failed to allocate array of size 134217728 after 100 attempts: ERROR: std::bad_alloc
+StrandSort,PartiallySorted,134217728,FAILED BECAUSE OF: Failed to allocate array of size 134217728 after 100 attempts: ERROR: std::bad_alloc
+StrandSort,Random,268435456,FAILED BECAUSE OF: Failed to allocate array of size 268435456 after 100 attempts: ERROR: std::bad_alloc
+StrandSort,Reversed,16,0
+StrandSort,Reversed,32,0
+StrandSort,Reversed,64,0.1
+StrandSort,Reversed,128,0
+StrandSort,Reversed,256,0
+StrandSort,Reversed,512,0.1
+StrandSort,PartiallySorted,268435456,FAILED BECAUSE OF: Failed to allocate array of size 268435456 after 100 attempts: ERROR: std::bad_alloc
+StrandSort,Sorted,16,0
+StrandSort,Reversed,1024,0.4
+StrandSort,Sorted,32,0
+StrandSort,Sorted,64,0
+StrandSort,Sorted,128,0
+StrandSort,Sorted,256,0
+StrandSort,Sorted,512,0.1
+StrandSort,Sorted,1024,0.2
+StrandSort,Reversed,2048,18.4
+StrandSort,Sorted,2048,19.1
+StrandSort,Reversed,4096,34.2
+StrandSort,Reversed,8192,FAILED BECAUSE OF: Failed to allocate array of size 8192 after 100 attempts: ERROR: std::bad_alloc
+StrandSort,Sorted,4096,36.1
+StrandSort,Reversed,16384,FAILED BECAUSE OF: Failed to allocate array of size 16384 after 100 attempts: ERROR: std::bad_alloc
+StrandSort,Reversed,32768,FAILED BECAUSE OF: Failed to allocate array of size 32768 after 100 attempts: ERROR: std::bad_alloc
+StrandSort,Sorted,8192,FAILED BECAUSE OF: Failed to allocate array of size 8192 after 100 attempts: ERROR: std::bad_alloc
+StrandSort,Reversed,65536,FAILED BECAUSE OF: Failed to allocate array of size 65536 after 100 attempts: ERROR: std::bad_alloc
+StrandSort,Sorted,16384,FAILED BECAUSE OF: Failed to allocate array of size 16384 after 100 attempts: ERROR: std::bad_alloc
+StrandSort,Reversed,131072,FAILED BECAUSE OF: Failed to allocate array of size 131072 after 100 attempts: ERROR: std::bad_alloc
+StrandSort,Sorted,32768,FAILED BECAUSE OF: Failed to allocate array of size 32768 after 100 attempts: ERROR: std::bad_alloc
+StrandSort,Reversed,262144,FAILED BECAUSE OF: Failed to allocate array of size 262144 after 100 attempts: ERROR: std::bad_alloc
+StrandSort,Sorted,65536,FAILED BECAUSE OF: Failed to allocate array of size 65536 after 100 attempts: ERROR: std::bad_alloc
+StrandSort,Reversed,524288,FAILED BECAUSE OF: Failed to allocate array of size 524288 after 100 attempts: ERROR: std::bad_alloc
+StrandSort,Sorted,131072,FAILED BECAUSE OF: Failed to allocate array of size 131072 after 100 attempts: ERROR: std::bad_alloc
+StrandSort,Reversed,1048576,FAILED BECAUSE OF: Failed to allocate array of size 1048576 after 100 attempts: ERROR: std::bad_alloc
+StrandSort,Sorted,262144,FAILED BECAUSE OF: Failed to allocate array of size 262144 after 100 attempts: ERROR: std::bad_alloc
+StrandSort,Reversed,2097152,FAILED BECAUSE OF: Failed to allocate array of size 2097152 after 100 attempts: ERROR: std::bad_alloc
+StrandSort,Sorted,524288,FAILED BECAUSE OF: Failed to allocate array of size 524288 after 100 attempts: ERROR: std::bad_alloc
+StrandSort,Reversed,4194304,FAILED BECAUSE OF: Failed to allocate array of size 4194304 after 100 attempts: ERROR: std::bad_alloc
+StrandSort,Sorted,1048576,FAILED BECAUSE OF: Failed to allocate array of size 1048576 after 100 attempts: ERROR: std::bad_alloc
+StrandSort,Reversed,8388608,FAILED BECAUSE OF: Failed to allocate array of size 8388608 after 100 attempts: ERROR: std::bad_alloc
+StrandSort,Sorted,2097152,FAILED BECAUSE OF: Failed to allocate array of size 2097152 after 100 attempts: ERROR: std::bad_alloc
+StrandSort,Reversed,16777216,FAILED BECAUSE OF: Failed to allocate array of size 16777216 after 100 attempts: ERROR: std::bad_alloc
+StrandSort,Sorted,4194304,FAILED BECAUSE OF: Failed to allocate array of size 4194304 after 100 attempts: ERROR: std::bad_alloc
+StrandSort,Reversed,33554432,FAILED BECAUSE OF: Failed to allocate array of size 33554432 after 100 attempts: ERROR: std::bad_alloc
+StrandSort,Sorted,8388608,FAILED BECAUSE OF: Failed to allocate array of size 8388608 after 100 attempts: ERROR: std::bad_alloc
+StrandSort,Reversed,67108864,FAILED BECAUSE OF: Failed to allocate array of size 67108864 after 100 attempts: ERROR: std::bad_alloc
+StrandSort,Sorted,16777216,FAILED BECAUSE OF: Failed to allocate array of size 16777216 after 100 attempts: ERROR: std::bad_alloc
+StrandSort,Reversed,134217728,FAILED BECAUSE OF: Failed to allocate array of size 134217728 after 100 attempts: ERROR: std::bad_alloc
+StrandSort,Reversed,268435456,FAILED BECAUSE OF: Failed to allocate array of size 268435456 after 100 attempts: ERROR: std::bad_alloc
+StrandSort,Sorted,33554432,FAILED BECAUSE OF: Failed to allocate array of size 33554432 after 100 attempts: ERROR: std::bad_alloc
+StrandSort,Dupes,16,0
+StrandSort,Dupes,32,0
+StrandSort,Dupes,64,0
+StrandSort,Dupes,128,0
+StrandSort,Dupes,256,0.1
+StrandSort,Dupes,512,0
+StrandSort,Dupes,1024,0.3
+StrandSort,Sorted,67108864,FAILED BECAUSE OF: Failed to allocate array of size 67108864 after 100 attempts: ERROR: std::bad_alloc
+StrandSort,Sorted,134217728,FAILED BECAUSE OF: Failed to allocate array of size 134217728 after 100 attempts: ERROR: std::bad_alloc
+StrandSort,Sorted,268435456,FAILED BECAUSE OF: Failed to allocate array of size 268435456 after 100 attempts: ERROR: std::bad_alloc
+StrandSort,ManyDupes,16,0.1
+StrandSort,ManyDupes,32,0
+StrandSort,ManyDupes,64,0
+StrandSort,ManyDupes,128,0.1
+StrandSort,ManyDupes,256,0
+StrandSort,ManyDupes,512,0.1
+StrandSort,ManyDupes,1024,0.2
+StrandSort,Dupes,2048,14.9
+StrandSort,ManyDupes,2048,16.6
+StrandSort,Dupes,4096,36.5
+StrandSort,Dupes,8192,FAILED BECAUSE OF: Failed to allocate array of size 8192 after 100 attempts: ERROR: std::bad_alloc
+StrandSort,Dupes,16384,FAILED BECAUSE OF: Failed to allocate array of size 16384 after 100 attempts: ERROR: std::bad_alloc
+StrandSort,ManyDupes,4096,35.2
+StrandSort,Dupes,32768,FAILED BECAUSE OF: Failed to allocate array of size 32768 after 100 attempts: ERROR: std::bad_alloc
+StrandSort,ManyDupes,8192,FAILED BECAUSE OF: Failed to allocate array of size 8192 after 100 attempts: ERROR: std::bad_alloc
+StrandSort,Dupes,65536,FAILED BECAUSE OF: Failed to allocate array of size 65536 after 100 attempts: ERROR: std::bad_alloc
+StrandSort,ManyDupes,16384,FAILED BECAUSE OF: Failed to allocate array of size 16384 after 100 attempts: ERROR: std::bad_alloc
+StrandSort,Dupes,131072,FAILED BECAUSE OF: Failed to allocate array of size 131072 after 100 attempts: ERROR: std::bad_alloc
+StrandSort,ManyDupes,32768,FAILED BECAUSE OF: Failed to allocate array of size 32768 after 100 attempts: ERROR: std::bad_alloc
+StrandSort,Dupes,262144,FAILED BECAUSE OF: Failed to allocate array of size 262144 after 100 attempts: ERROR: std::bad_alloc
+StrandSort,ManyDupes,65536,FAILED BECAUSE OF: Failed to allocate array of size 65536 after 100 attempts: ERROR: std::bad_alloc
+StrandSort,Dupes,524288,FAILED BECAUSE OF: Failed to allocate array of size 524288 after 100 attempts: ERROR: std::bad_alloc
+StrandSort,ManyDupes,131072,FAILED BECAUSE OF: Failed to allocate array of size 131072 after 100 attempts: ERROR: std::bad_alloc
+StrandSort,Dupes,1048576,FAILED BECAUSE OF: Failed to allocate array of size 1048576 after 100 attempts: ERROR: std::bad_alloc
+StrandSort,ManyDupes,262144,FAILED BECAUSE OF: Failed to allocate array of size 262144 after 100 attempts: ERROR: std::bad_alloc
+StrandSort,Dupes,2097152,FAILED BECAUSE OF: Failed to allocate array of size 2097152 after 100 attempts: ERROR: std::bad_alloc
+StrandSort,ManyDupes,524288,FAILED BECAUSE OF: Failed to allocate array of size 524288 after 100 attempts: ERROR: std::bad_alloc
+StrandSort,Dupes,4194304,FAILED BECAUSE OF: Failed to allocate array of size 4194304 after 100 attempts: ERROR: std::bad_alloc
+StrandSort,ManyDupes,1048576,FAILED BECAUSE OF: Failed to allocate array of size 1048576 after 100 attempts: ERROR: std::bad_alloc
+StrandSort,Dupes,8388608,FAILED BECAUSE OF: Failed to allocate array of size 8388608 after 100 attempts: ERROR: std::bad_alloc
+StrandSort,ManyDupes,2097152,FAILED BECAUSE OF: Failed to allocate array of size 2097152 after 100 attempts: ERROR: std::bad_alloc
+StrandSort,Dupes,16777216,FAILED BECAUSE OF: Failed to allocate array of size 16777216 after 100 attempts: ERROR: std::bad_alloc
+StrandSort,ManyDupes,4194304,FAILED BECAUSE OF: Failed to allocate array of size 4194304 after 100 attempts: ERROR: std::bad_alloc
+StrandSort,Dupes,33554432,FAILED BECAUSE OF: Failed to allocate array of size 33554432 after 100 attempts: ERROR: std::bad_alloc
+StrandSort,ManyDupes,8388608,FAILED BECAUSE OF: Failed to allocate array of size 8388608 after 100 attempts: ERROR: std::bad_alloc
+StrandSort,Dupes,67108864,FAILED BECAUSE OF: Failed to allocate array of size 67108864 after 100 attempts: ERROR: std::bad_alloc
+StrandSort,ManyDupes,16777216,FAILED BECAUSE OF: Failed to allocate array of size 16777216 after 100 attempts: ERROR: std::bad_alloc
+StrandSort,Dupes,134217728,FAILED BECAUSE OF: Failed to allocate array of size 134217728 after 100 attempts: ERROR: std::bad_alloc
+StrandSort,ManyDupes,33554432,FAILED BECAUSE OF: Failed to allocate array of size 33554432 after 100 attempts: ERROR: std::bad_alloc
+StrandSort,Dupes,268435456,FAILED BECAUSE OF: Failed to allocate array of size 268435456 after 100 attempts: ERROR: std::bad_alloc
+StrandSort,ManyDupes,67108864,FAILED BECAUSE OF: Failed to allocate array of size 67108864 after 100 attempts: ERROR: std::bad_alloc
+StrandSort,ManyDupes,134217728,FAILED BECAUSE OF: Failed to allocate array of size 134217728 after 100 attempts: ERROR: std::bad_alloc
+StrandSort,ManyDupes,268435456,FAILED BECAUSE OF: Failed to allocate array of size 268435456 after 100 attempts: ERROR: std::bad_alloc
+CycleSort,Reversed,262144,FAILED BECAUSE OF: Failed to allocate array of size 262144 after 100 attempts: ERROR: std::bad_alloc
+CycleSort,Random,262144,FAILED BECAUSE OF: Failed to allocate array of size 262144 after 100 attempts: ERROR: std::bad_alloc
+CycleSort,PartiallySorted,262144,133026
+TreeSort,Dupes,33554432,FAILED BECAUSE OF: Failed to sort array of size 33554432 after 100 attempts: ERROR: std::bad_alloc
+TreeSort,Dupes,67108864,FAILED BECAUSE OF: Failed to allocate array of size 67108864 after 100 attempts: ERROR: std::bad_alloc
+TreeSort,Dupes,134217728,FAILED BECAUSE OF: Failed to allocate array of size 134217728 after 100 attempts: ERROR: std::bad_alloc
+TreeSort,Dupes,268435456,FAILED BECAUSE OF: Failed to allocate array of size 268435456 after 100 attempts: ERROR: std::bad_alloc
+TreeSort,PartiallySorted,67108864,FAILED BECAUSE OF: Failed to sort array of size 67108864 after 100 attempts: ERROR: std::bad_alloc
+TreeSort,PartiallySorted,134217728,FAILED BECAUSE OF: Failed to allocate array of size 134217728 after 100 attempts: ERROR: std::bad_alloc
+TreeSort,PartiallySorted,268435456,FAILED BECAUSE OF: Failed to allocate array of size 268435456 after 100 attempts: ERROR: std::bad_alloc
+TreeSort,Sorted,67108864,FAILED BECAUSE OF: Failed to sort array of size 67108864 after 100 attempts: ERROR: std::bad_alloc
+TreeSort,Sorted,134217728,FAILED BECAUSE OF: Failed to allocate array of size 134217728 after 100 attempts: ERROR: std::bad_alloc
+TreeSort,Sorted,268435456,FAILED BECAUSE OF: Failed to allocate array of size 268435456 after 100 attempts: ERROR: std::bad_alloc

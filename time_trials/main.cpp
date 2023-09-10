@@ -16,8 +16,10 @@
 #include "sorting_algorithms/AllAlgorithms.hpp"
 #include "utils/DataGeneration.hpp"
 
+using std::string, std::unordered_map, std::vector, std::map, std::cout, std::endl;
+
 enum TrialType { Random, PartiallySorted, Reversed, Sorted, Dupes, ManyDupes };
-const std::string TYPE_LOOK_UP[6] = {"Random", "PartiallySorted", "Reversed",
+const string TYPE_LOOK_UP[6] = {"Random", "PartiallySorted", "Reversed",
                                      "Sorted", "Dupes",           "ManyDupes"};
 
 // file
@@ -27,17 +29,18 @@ std::mutex fileMutex;
 std::mutex mtx;
 std::condition_variable cv;
 using TaskType =
-    std::tuple<std::string, void (*)(std::vector<int>&), int, TrialType>;
+    std::tuple<string, void (*)(std::vector<int>&), TrialType>;
 std::queue<TaskType> workQueue;
 const TaskType STOP_SIGNAL = {"STOP", nullptr, NULL, Random};
 
 // consts
 const int TRIAL_COUNT = 10;
-const int MAX_GEN_RETRY_COUNT = 100;
-const int MAX_SORT_RETRY_COUNT = 100;
+const int MAX_GEN_RETRY_COUNT = 256;
+const int MAX_SORT_RETRY_COUNT = 128;
 const int MAX_THREAD_COUNT = 8;
 
 const int MIN_ARRAY_SIZE = 16;
+const int MAX_ARRAY_SIZE = (1<<28);
 
 int getNextArraySize(int size) {
   return size << 1;
@@ -143,7 +146,7 @@ void workerThread() {
       break;  // Exit the loop and thus exit the thread
     }
 
-    const auto& [name, func, MAX_ARRAY_SIZE, type] = task;
+    const auto& [name, func, type] = task;
 
     for (int size = MIN_ARRAY_SIZE; size <= MAX_ARRAY_SIZE; size = getNextArraySize(size)) {
       std::cout << "Running " << name << " Using Data Type: " << type
@@ -167,17 +170,17 @@ void workerThread() {
 }
 
 struct TrialData {
-  std::string name;
-  std::string type;
+  string name;
+  string type;
   int size;
   double time;
 
-  TrialData(const std::string& n, const std::string& t, int s, double ti)
+  TrialData(const string& n, const string& t, int s, double ti)
       : name(n), type(t), size(s), time(ti) {}
 };
 
-void reformatCSV(const std::string& inputFilename,
-                 const std::string& outputFilename) {
+void reformatCSV(const string& inputFilename,
+                 const string& outputFilename) {
   std::ifstream inFile(inputFilename);
   std::ofstream outFile(outputFilename);
 
@@ -187,14 +190,14 @@ void reformatCSV(const std::string& inputFilename,
   }
 
   // Read current CSV data and store in a map of maps for easy lookup
-  std::map<std::string, std::map<int, std::map<std::string, std::string>>> dataMap;
-  std::string line;
+  std::map<string, std::map<int, std::map<string, string>>> dataMap;
+  string line;
 
   while (std::getline(inFile, line)) {
     std::istringstream ss(line);
-    std::string name, type;
+    string name, type;
     int size;
-    std::string time;
+    string time;
 
     std::getline(ss, name, ',');
     std::getline(ss, type, ',');
@@ -231,7 +234,7 @@ void reformatCSV(const std::string& inputFilename,
   outFile.close();
 }
 
-void reformatCSVByType(const std::string& inputFilename, const std::string& outputFilename) {
+void reformatCSVByType(const string& inputFilename, const string& outputFilename) {
     std::ifstream inFile(inputFilename);
     std::ofstream outFile(outputFilename);
 
@@ -240,14 +243,14 @@ void reformatCSVByType(const std::string& inputFilename, const std::string& outp
         return;
     }
 
-    std::map<std::string, std::map<int, std::map<std::string, std::string>>> dataMap;
-    std::string line;
+    std::map<string, std::map<int, std::map<string, string>>> dataMap;
+    string line;
 
     while (std::getline(inFile, line)) {
         std::istringstream ss(line);
-        std::string name, type;
+        string name, type;
         int size;
-        std::string time;
+        string time;
 
         std::getline(ss, name, ',');
         std::getline(ss, type, ',');
@@ -302,9 +305,9 @@ int main() {
     for (const auto& type :
          {Random, PartiallySorted, Reversed, Sorted, Dupes, ManyDupes}) {
 
-      const auto& [name, func, MAX_ARRAY_SIZE] = algorithm;
+      const auto& [name, func] = algorithm;
 
-      workQueue.push({name, func, MAX_ARRAY_SIZE, type});
+      workQueue.push({name, func, type});
     }
   }
 
