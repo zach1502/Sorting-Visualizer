@@ -33,7 +33,7 @@ int main() {
 
   bool isFailed = false;
 
-  for (auto &[name, algorithm, _] : algorithms) {
+  for (auto &[name, algorithm] : algorithms) {
     std::vector<int> dataCopy(data);
     try {
       algorithm(dataCopy);

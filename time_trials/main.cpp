@@ -5,22 +5,23 @@
 #include <iomanip>
 #include <iostream>
 #include <map>
-#include <unordered_map>
 #include <mutex>
 #include <queue>
 #include <random>
 #include <sstream>
 #include <thread>
+#include <unordered_map>
 #include <vector>
 
 #include "sorting_algorithms/AllAlgorithms.hpp"
 #include "utils/DataGeneration.hpp"
 
-using std::string, std::unordered_map, std::vector, std::map, std::cout, std::endl;
+using std::string, std::unordered_map, std::vector, std::map, std::cout,
+    std::endl;
 
 enum TrialType { Random, PartiallySorted, Reversed, Sorted, Dupes, ManyDupes };
 const string TYPE_LOOK_UP[6] = {"Random", "PartiallySorted", "Reversed",
-                                     "Sorted", "Dupes",           "ManyDupes"};
+                                "Sorted", "Dupes",           "ManyDupes"};
 
 // file
 std::mutex fileMutex;
@@ -28,10 +29,9 @@ std::mutex fileMutex;
 // work
 std::mutex mtx;
 std::condition_variable cv;
-using TaskType =
-    std::tuple<string, void (*)(std::vector<int>&), TrialType>;
+using TaskType = std::tuple<string, void (*)(std::vector<int>&), TrialType>;
 std::queue<TaskType> workQueue;
-const TaskType STOP_SIGNAL = {"STOP", nullptr, NULL, Random};
+const TaskType STOP_SIGNAL = {"STOP", nullptr, Random};
 
 // consts
 const int TRIAL_COUNT = 10;
@@ -40,11 +40,9 @@ const int MAX_SORT_RETRY_COUNT = 128;
 const int MAX_THREAD_COUNT = 8;
 
 const int MIN_ARRAY_SIZE = 16;
-const int MAX_ARRAY_SIZE = (1<<28);
+const int MAX_ARRAY_SIZE = (1 << 28);
 
-int getNextArraySize(int size) {
-  return size << 1;
-}
+int getNextArraySize(int size) { return size << 1; }
 
 void generateData(TrialType type, int size, std::vector<int>& data) {
   switch (type) {
@@ -125,8 +123,8 @@ double runTrial(void (*sortingAlgorithm)(std::vector<int>&),
             .count();
 
     averageDuration = (i - 1) * averageDuration / i + duration / i;
-    std::cout << " took " << std::setprecision(15) << duration
-              << " ms" << std::endl;
+    std::cout << " took " << std::setprecision(15) << duration << " ms"
+              << std::endl;
   }
 
   return averageDuration;
@@ -148,7 +146,8 @@ void workerThread() {
 
     const auto& [name, func, type] = task;
 
-    for (int size = MIN_ARRAY_SIZE; size <= MAX_ARRAY_SIZE; size = getNextArraySize(size)) {
+    for (int size = MIN_ARRAY_SIZE; size <= MAX_ARRAY_SIZE;
+         size = getNextArraySize(size)) {
       std::cout << "Running " << name << " Using Data Type: " << type
                 << " With Array Size: " << size << "..." << std::endl;
       try {
@@ -179,8 +178,7 @@ struct TrialData {
       : name(n), type(t), size(s), time(ti) {}
 };
 
-void reformatCSV(const string& inputFilename,
-                 const string& outputFilename) {
+void reformatCSV(const string& inputFilename, const string& outputFilename) {
   std::ifstream inFile(inputFilename);
   std::ofstream outFile(outputFilename);
 
@@ -234,60 +232,61 @@ void reformatCSV(const string& inputFilename,
   outFile.close();
 }
 
-void reformatCSVByType(const string& inputFilename, const string& outputFilename) {
-    std::ifstream inFile(inputFilename);
-    std::ofstream outFile(outputFilename);
+void reformatCSVByType(const string& inputFilename,
+                       const string& outputFilename) {
+  std::ifstream inFile(inputFilename);
+  std::ofstream outFile(outputFilename);
 
-    if (!inFile.is_open() || !outFile.is_open()) {
-        std::cerr << "Failed to open files." << std::endl;
-        return;
+  if (!inFile.is_open() || !outFile.is_open()) {
+    std::cerr << "Failed to open files." << std::endl;
+    return;
+  }
+
+  std::map<string, std::map<int, std::map<string, string>>> dataMap;
+  string line;
+
+  while (std::getline(inFile, line)) {
+    std::istringstream ss(line);
+    string name, type;
+    int size;
+    string time;
+
+    std::getline(ss, name, ',');
+    std::getline(ss, type, ',');
+    ss >> size;
+    std::getline(ss, line, ',');  // To discard the comma
+    ss >> time;
+
+    dataMap[type][size][name] = time;
+  }
+
+  for (const auto& [type, sizeMap] : dataMap) {
+    outFile << type << std::endl;
+    outFile << "n";
+
+    // Write headers
+    for (const auto& [size, nameMap] : sizeMap) {
+      for (const auto& [name, time] : nameMap) {
+        outFile << "," << name;
+      }
+      break;  // Only need to write the headers once
+    }
+    outFile << std::endl;
+
+    // Write data
+    for (const auto& [size, nameMap] : sizeMap) {
+      outFile << size;
+      for (const auto& [name, time] : nameMap) {
+        outFile << "," << time;
+      }
+      outFile << std::endl;
     }
 
-    std::map<string, std::map<int, std::map<string, string>>> dataMap;
-    string line;
+    outFile << std::endl;
+  }
 
-    while (std::getline(inFile, line)) {
-        std::istringstream ss(line);
-        string name, type;
-        int size;
-        string time;
-
-        std::getline(ss, name, ',');
-        std::getline(ss, type, ',');
-        ss >> size;
-        std::getline(ss, line, ',');  // To discard the comma
-        ss >> time;
-
-        dataMap[type][size][name] = time;
-    }
-
-    for (const auto& [type, sizeMap] : dataMap) {
-        outFile << type << std::endl;
-        outFile << "n";
-        
-        // Write headers
-        for (const auto& [size, nameMap] : sizeMap) {
-            for (const auto& [name, time] : nameMap) {
-                outFile << "," << name;
-            }
-            break;  // Only need to write the headers once
-        }
-        outFile << std::endl;
-
-        // Write data
-        for (const auto& [size, nameMap] : sizeMap) {
-            outFile << size;
-            for (const auto& [name, time] : nameMap) {
-                outFile << "," << time;
-            }
-            outFile << std::endl;
-        }
-        
-        outFile << std::endl;
-    }
-
-    inFile.close();
-    outFile.close();
+  inFile.close();
+  outFile.close();
 }
 
 int main() {
@@ -304,7 +303,6 @@ int main() {
   for (const auto& algorithm : algorithms) {
     for (const auto& type :
          {Random, PartiallySorted, Reversed, Sorted, Dupes, ManyDupes}) {
-
       const auto& [name, func] = algorithm;
 
       workQueue.push({name, func, type});

@@ -27,9 +27,8 @@
 #include "GnomeSort.hpp"
 #include "OddEvenSort.hpp"
 #include "OddEvenSortMultithreading.hpp"
-
-const int FULL_TEST = 1<<28; // for n log(n) or better
-const int SMALL_TEST = 1<<18; // for anything worse
+#include "PigeonholeSort.hpp"
+#include "BucketSort.hpp"
 
 const std::vector<std::pair<std::string, void (*)(std::vector<int> &)>>
     algorithms = {
@@ -56,4 +55,6 @@ const std::vector<std::pair<std::string, void (*)(std::vector<int> &)>>
         {"GnomeSort", GnomeSort},
         {"OddEvenSort", OddEvenSort},
         {"OddEvenSortMultithreading", OddEvenSortMultiThreading},
+        {"PigeonholeSort", PigeonholeSort},
+        {"BucketSort", BucketSort},
 };
