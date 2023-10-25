@@ -29,7 +29,7 @@ void combineBuckets(std::vector<T>& array, std::vector<std::vector<T>>& buckets)
 }
 
 template <typename RandomAccessIterator>
-void spreadSort(RandomAccessIterator first, RandomAccessIterator last) {
+void SpreadSort(RandomAccessIterator first, RandomAccessIterator last) {
   if (std::distance(first, last) < 2)
     return;
 
@@ -50,7 +50,7 @@ void spreadSort(RandomAccessIterator first, RandomAccessIterator last) {
 
   for (auto& bucket : buckets) {
     if (bucket.size() > 1) {
-      spreadSort(bucket.begin(), bucket.end());
+      SpreadSort(bucket.begin(), bucket.end());
     } else if (bucket.size() == 1) {
       insertionSort(bucket.begin(), bucket.end());
     }
@@ -61,7 +61,7 @@ void spreadSort(RandomAccessIterator first, RandomAccessIterator last) {
 
 // since it is supposed to be efficient at sorting ints AND floats, I'm going to honor the fact that it can.
 template <typename T>
-void spreadSort(std::vector<T>& array) {
+void SpreadSort(std::vector<T>& array) {
   if (array.size() < 2) return;
-  spreadSort(array.begin(), array.end());
+  SpreadSort(array.begin(), array.end());
 }

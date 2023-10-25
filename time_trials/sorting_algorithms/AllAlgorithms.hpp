@@ -29,6 +29,8 @@
 #include "OddEvenSortMultithreading.hpp"
 #include "PigeonholeSort.hpp"
 #include "BucketSort.hpp"
+#include "CountingSort.hpp"
+#include "SpreadSort.hpp"
 
 const std::vector<std::pair<std::string, void (*)(std::vector<int> &)>>
     algorithms = {
@@ -57,4 +59,6 @@ const std::vector<std::pair<std::string, void (*)(std::vector<int> &)>>
         {"OddEvenSortMultithreading", OddEvenSortMultiThreading},
         {"PigeonholeSort", PigeonholeSort},
         {"BucketSort", BucketSort},
+        {"CountingSort", CountingSort},
+        {"SpreadSort", SpreadSort},
 };
