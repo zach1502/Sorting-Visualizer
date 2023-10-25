@@ -1,67 +1,60 @@
 #pragma once
 
+#include <iostream>
 #include <vector>
-#include <algorithm>
-#include <iterator>
 
-template <typename RandomAccessIterator>
-void insertionSort(RandomAccessIterator first, RandomAccessIterator last) {
-  if (first == last) return;
-  for (RandomAccessIterator i = first + 1; i != last; ++i) {
-    auto key = std::move(*i);
-    RandomAccessIterator j = i;
-    while (j > first && *(j - 1) > key) {
-      *j = std::move(*(j - 1));
+void insertionSort(std::vector<int> &array, int start, int end) {
+  for (int i = start + 1; i <= end; ++i) {
+    int key = array[i];
+    int j = i - 1;
+
+    while (j >= start && array[j] > key) {
+      array[j + 1] = array[j];
       --j;
     }
-    *j = std::move(key);
+    array[j + 1] = key;
   }
 }
 
-template <typename T>
-void combineBuckets(std::vector<T>& array, std::vector<std::vector<T>>& buckets) {
-  size_t index = 0;
-  for (auto& bucket : buckets) {
-    for (auto& element : bucket) {
-      array[index++] = std::move(element);
-    }
-  }
-}
+void bucketSort(std::vector<int> &array, int start, int end, int divisor) {
+  if (start >= end) return;
 
-template <typename RandomAccessIterator>
-void SpreadSort(RandomAccessIterator first, RandomAccessIterator last) {
-  if (std::distance(first, last) < 2)
-    return;
+  const int numBuckets = 256;  // Using 256 buckets
+  std::vector<std::vector<int>> buckets(numBuckets);
 
-  auto min_max = std::minmax_element(first, last);
-  auto min_val = *min_max.first;
-  auto max_val = *min_max.second;
-
-  if (min_val == max_val)
-    return; // The array is already sorted
-
-  size_t bucket_count = std::distance(first, last);
-  std::vector<std::vector<typename std::iterator_traits<RandomAccessIterator>::value_type>> buckets(bucket_count);
-
-  for (auto it = first; it != last; ++it) {
-    size_t index = bucket_count * (*it - min_val) / (max_val - min_val);
-    buckets[index].push_back(std::move(*it));
+  for (int i = start; i <= end; ++i) {
+    int index = (array[i] / divisor) % numBuckets;
+    buckets[index].push_back(array[i]);
   }
 
-  for (auto& bucket : buckets) {
+  int idx = start;
+  for (auto &bucket : buckets) {
     if (bucket.size() > 1) {
-      SpreadSort(bucket.begin(), bucket.end());
-    } else if (bucket.size() == 1) {
-      insertionSort(bucket.begin(), bucket.end());
+      // Using insertion sort for small arrays
+      if (bucket.size() < 10) {
+        insertionSort(bucket, 0, bucket.size() - 1);
+      } else {
+        int maxElement = *max_element(bucket.begin(), bucket.end());
+        int nextDivisor = divisor * numBuckets;
+        if (maxElement / nextDivisor > 0) {
+          // Recursively sort using bucket sort if elements have more digits
+          bucketSort(bucket, 0, bucket.size() - 1, nextDivisor);
+        }
+      }
+    }
+
+    // Copy bucket back to original array
+    for (int value : bucket) {
+      array[idx++] = value;
     }
   }
-
-  combineBuckets(*first, buckets);
 }
 
-// since it is supposed to be efficient at sorting ints AND floats, I'm going to honor the fact that it can.
-template <typename T>
-void SpreadSort(std::vector<T>& array) {
-  if (array.size() < 2) return;
-  SpreadSort(array.begin(), array.end());
+void SpreadSort(std::vector<int> &array) {
+  if (array.empty()) return;
+
+  int maxElement = *max_element(array.begin(), array.end());
+  if (maxElement > 0) {
+    bucketSort(array, 0, array.size() - 1, 1);
+  }
 }

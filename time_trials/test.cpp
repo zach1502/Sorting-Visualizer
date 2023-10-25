@@ -25,7 +25,7 @@ bool vectorIsEqual(const std::vector<int> &lhs, const std::vector<int> &rhs) {
 // test for all sorting algorithms
 int main() {
 
-  std::vector<int> data(100);
+  std::vector<int> data(128);
   generateRandomData(data.size(), data);
 
   std::vector<int> sortedData(data);
