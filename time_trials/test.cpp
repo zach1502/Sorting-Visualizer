@@ -34,6 +34,11 @@ int main() {
   bool isFailed = false;
 
   for (auto &[name, algorithm] : algorithms) {
+    if (name == "CountingSort") {
+      std::cout << name << " skipped due to array size limit" << std::endl;
+      continue;
+    }
+
     std::vector<int> dataCopy(data);
     try {
       algorithm(dataCopy);

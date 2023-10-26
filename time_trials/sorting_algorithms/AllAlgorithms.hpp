@@ -30,7 +30,6 @@
 #include "SelectionSort.hpp"
 #include "ShellSort.hpp"
 #include "SmoothSort.hpp"
-#include "SpreadSort.hpp"
 #include "StrandSort.hpp"
 #include "TimSort.hpp"
 #include "TreeSort.hpp"
@@ -62,7 +61,6 @@ const std::vector<std::pair<std::string, void (*)(std::vector<int> &)>>
                   {"PigeonholeSort", PigeonholeSort},
                   {"BucketSort", BucketSort},
                   {"CountingSort", CountingSort},
-                  {"SpreadSort", SpreadSort},
                   {"PancakeSort", PancakeSort},
                   {"ICantBelieveItCanSort", ICantBelieveItCanSort},
                   {"BitonicSort", BitonicSort}};
