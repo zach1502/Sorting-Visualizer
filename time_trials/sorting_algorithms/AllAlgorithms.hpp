@@ -62,7 +62,7 @@ const std::vector<std::pair<std::string, void (*)(std::vector<int> &)>>
                   {"PigeonholeSort", PigeonholeSort},
                   {"BucketSort", BucketSort},
                   {"CountingSort", CountingSort},
-                  //{"SpreadSort", SpreadSort},
+                  {"SpreadSort", SpreadSort},
                   {"PancakeSort", PancakeSort},
                   {"ICantBelieveItCanSort", ICantBelieveItCanSort},
                   {"BitonicSort", BitonicSort}};

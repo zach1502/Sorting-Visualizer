@@ -18,9 +18,4 @@ void BitonicSort(std::vector<int>& arr) {
       }
     }
   }
-
-  // print arr
-  for (int i = 0; i < arr.size(); i++) {
-    std::cout << arr[i] << " ";
-  }
 }
