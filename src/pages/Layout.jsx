@@ -13,7 +13,7 @@ function Layout({ children }) {
             Algorithm Visualizer
           </Typography>
           <Button color="inherit" component={Link} to="/">Home</Button>
-          <Button color="inherit" component={Link} to="/sorting">Sorting</Button>
+          <Button color="inherit" component={Link} to="sorting">Sorting</Button>
         </Toolbar>
       </AppBar>
 

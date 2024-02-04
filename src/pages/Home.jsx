@@ -17,7 +17,7 @@ const Home = () => {
       <Typography variant="h5" gutterBottom>
         Understand algorithms better by visualizing them.
       </Typography>
-      <Button variant="contained" color="primary" size="large" component={Link} to="/sorting">
+      <Button variant="contained" color="primary" size="large" component={Link} to="sorting">
         Get Started With Sorting Algorithms
       </Button>
     </Box>
