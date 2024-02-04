@@ -68,11 +68,11 @@ function* smoothSort(arr) {
   // Build the Leonardo heap by merging
   // pairs of adjacent trees
   while (p > 0) {
-    if ((r & 0x03) == 0) {
+    if ((r & 0x03) === 0) {
       yield* heapify(arr, r, q);
     }
 
-    if (leonardo(r) == p) {
+    if (leonardo(r) === p) {
       r = r + 1;
     } else {
       r = r - 1;

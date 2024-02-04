@@ -10,7 +10,7 @@ function App() {
       <Layout>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="sorting" element={<SortingVisualizer />} />
+          <Route path="/sorting" element={<SortingVisualizer />} />
           {/* <Route path='/graphs' element={<Graphs />} />
           <Route path="*" element={<NotFound />} /> */}
         </Routes>

@@ -78,7 +78,7 @@ function* merge(arr, l, m, r) {
 }
 
 function* timsort(arr) {
-  yield _.cloneDeep(n);
+  yield _.cloneDeep(arr);
   const n = arr.length;
   const RUN = Math.ceil(Math.sqrt(n));
   for (let i = 0; i < n; i += RUN) {

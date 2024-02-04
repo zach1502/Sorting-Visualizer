@@ -5,7 +5,7 @@ function* gnomeSort(arr) {
   let index = 0;
 
   while (index < arr.length) {
-    if (index == 0 || arr[index].value >= arr[index - 1].value) {
+    if (index === 0 || arr[index].value >= arr[index - 1].value) {
       index++;
 
       if (index === arr.length) {

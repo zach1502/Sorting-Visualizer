@@ -2,7 +2,6 @@ import _ from 'lodash';
 
 function* cycleSort(arr) {
   yield _.cloneDeep(arr);
-  let writes = 0;
 
   for (let cycle_start = 0; cycle_start < arr.length - 1; cycle_start++) {
     let item = arr[cycle_start];
@@ -32,7 +31,6 @@ function* cycleSort(arr) {
     // Swap item with arr[pos]
     [arr[pos], item] = [item, arr[pos]];
     arr[pos].isComparing = true; // Highlight swap
-    writes++;
 
     yield _.cloneDeep(arr);
     arr[pos].isComparing = false;
@@ -52,7 +50,6 @@ function* cycleSort(arr) {
       // Swap item with arr[pos]
       [arr[pos], item] = [item, arr[pos]];
       arr[pos].isComparing = true; // Highlight swap
-      writes++;
 
       yield _.cloneDeep(arr);
       arr[pos].isComparing = false;

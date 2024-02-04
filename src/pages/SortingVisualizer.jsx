@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Grid, Typography } from '@mui/material';
+import { Box, Grid } from '@mui/material';
 import AlgorithmSelector from '../components/AlgorithmSelector'
 import algorithmDescriptions from '../utils/AlgorithmDescriptions';
 
@@ -10,7 +10,7 @@ import StepButtons from '../modules/StepButtons';
 import Legend from '../modules/Legend';
 import Annotations from '../modules/Annotations';
 
-import bubbleSort from '../algorithms/BubbleSort';
+import bubbleSort from '../sorting_algorithms/BubbleSort';
 import _ from 'lodash';
 
 let timeoutId = null;
@@ -71,9 +71,9 @@ function SortingVisualizer() {
     stepThrough(currentStep);
   }
 
-  const pauseSorting = () => {
+  const pauseSorting = React.useCallback(() => {
     if (timeoutId) clearTimeout(timeoutId);
-  };
+  }, []);
 
   const stepReset = React.useCallback(() => {
     setCurrentStep(0);
